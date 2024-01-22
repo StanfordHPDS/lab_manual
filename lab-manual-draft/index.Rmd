@@ -1,0 +1,22 @@
+--- 
+title: "Health Policy Data Science Lab Manual"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib, packages.bib]
+description: "Lab manual for Health Policy Data Science Lab members working with Lab Co-Director Sherri Rose at Stanford University."
+link-citations: yes
+---
+
+# Stanford Lab Manual
+
+The [Health Policy Data Science Lab](http://healthpolicydatascience.org/) at Stanford is a group of interdisciplinary researchers who develop and apply quantitative methods to solve problems in health policy, leveraging techniques from statistics, computer science, economics, epidemiology, and decision science.
+
+This manual will evolve over time to incorporate contributions from Lab members and collaborators. We drew inspiration from the lab manuals of our colleagues, including [Jade Benjamin-Chung](https://jadebc.github.io/lab-manual/index.html) and [Russ Poldrack](https://poldracklab.org/labguide/).
+
+Feel free to draw from this manual (and please cite it if you do)!  
+
+<br>
+<br>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.

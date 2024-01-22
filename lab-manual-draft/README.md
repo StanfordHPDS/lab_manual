@@ -1,0 +1,1 @@
+Lab manual for Health Policy Data Science Lab members working with Lab Co-Director Sherri Rose at Stanford University.
