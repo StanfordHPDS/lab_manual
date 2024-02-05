@@ -17,9 +17,9 @@ If you do not need to meet a particular week (e.g., making steady progress and d
 
 If there are repeated meeting cancellations, we should discuss the underlying reasons.
 
-Please also see the below Section \@ref(meeting-agendas) for details on recurring meeting agendas.
+Please also see @sec-meeting-agendas for details on recurring meeting agendas.
 
-## Meeting Agendas
+## Meeting Agendas {#sec-meeting-agendas}
 
 Trainees must prepare an agenda prior to each recurring meeting with Dr. Rose. Create a google doc (invite Dr. Rose as editor) that you’ll add to in reverse chronological order for each meeting with the information below included. Update the google doc by 11AM *one business day* before our meeting. Repeatedly not creating agendas will result in cancelled meetings.
 
@@ -55,5 +55,5 @@ Food at Lab events is funded by the Lab and free to Lab attendees. We expect tha
 
 We have a Lab **slack**. Lab members can search for "HPDS Lab" in the [Workspaces at Stanford](https://stanford.enterprise.slack.com/) and request to join.
 
-Please keep in mind our Lab philosophy on working hours in Section \@ref(working-hours). Do not assume that because you have sent a slack message or email that you should get an instant reply.
+Please keep in mind our Lab philosophy on working hours in @sec-working-hours. Do not assume that because you have sent a slack message or email that you should get an instant reply.
 

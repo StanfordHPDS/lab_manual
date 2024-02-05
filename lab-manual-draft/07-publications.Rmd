@@ -20,23 +20,23 @@ Example Lab publications by journal type: [statistics](https://onlinelibrary.wil
 
 The journal lists below are not exhaustive and largely focus on outlets where Lab members have previously published their work. Decisions about where to submit manuscripts for publication are made collaboratively to balance the needs and priorities of the team with as much deference as possible to what is best for the trainee author(s).
 
-#### Health Economics & Policy {-}
+#### Health Economics & Policy {.unnumbered}
 
 [Journal of Health Economics](https://www.journals.elsevier.com/journal-of-health-economics), [American Journal of Health Economics](https://www.journals.uchicago.edu/toc/ajhe/current), [Health Affairs](https://www.healthaffairs.org/), [Health Services Research](https://www.hsr.org/), [Medical Care](https://journals.lww.com/lww-medicalcare/pages/default.aspx), [Medical Decision Making](https://journals.sagepub.com/home/mdm),  [JAMA Health Forum](https://jamanetwork.com/journals/jama-health-forum)
 
-#### Epidemiology & Public Health {-}
+#### Epidemiology & Public Health {.unnumbered}
 
 [American Journal of Epidemiology](https://academic.oup.com/aje), [Epidemiology](https://journals.lww.com/epidem/pages/default.aspx), [International Journal of Epidemiology](https://academic.oup.com/ije), [American Journal of Public Health](https://ajph.aphapublications.org/)
 
-#### Statistics {-}
+#### Statistics {.unnumbered}
 
 [Journal of the American Statistical Association](https://www.tandfonline.com/toc/uasa20/current), [Biometrics](https://onlinelibrary.wiley.com/journal/15410420), [Biostatistics](https://academic.oup.com/biostatistics) (_COI: Sherri is Co-Editor-in-Chief_), [Statistics in Medicine](https://onlinelibrary.wiley.com/journal/10970258), [Statistical Methods in Medical Research](https://journals.sagepub.com/home/smm)
 
-#### Clinical {-}
+#### Clinical {.unnumbered}
 
 [NEJM](https://www.nejm.org/), [JAMA](https://jamanetwork.com/), [JAMA Internal Medicine](https://jamanetwork.com/journals/jamainternalmedicine), [JAMA Psychiatry](https://jamanetwork.com/journals/jamapsychiatry)
 
-#### Health Informatics & Digital Health {-}
+#### Health Informatics & Digital Health {.unnumbered}
 
 [JAMIA](https://academic.oup.com/jamia), [BMJ Health & Care Informatics](https://informatics.bmj.com/), [Lancet Digital Health](https://www.thelancet.com/journals/landig/home)
 

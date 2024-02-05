@@ -9,37 +9,37 @@ If we have discussed a conference and Dr. Rose is funding your trip, please send
 
 We include below a noncomprehensive list of conferences that may be of interest to Lab members.
 
-#### Algorithmic Bias & Fairness {-}
+#### Algorithmic Bias & Fairness {.unnumbered}
 
 - [ACM FAccT](https://facctconference.org)
 - [AAI/ACM AI, Ethics, & Society](https://www.aies-conference.com/)
 - [ACM EAAMO](https://eaamo.org/)
 - [IEEE SaTML](https://satml.org/)
 
-#### Machine Learning for Health {-}
+#### Machine Learning for Health {.unnumbered}
 
 - [Machine Learning for Health Care](https://www.mlforhc.org/)
 - [CHIL](https://www.chilconference.org/)
 - [Machine Learning for Health](https://ml4health.github.io/)
 
-#### Statistics {-}
+#### Statistics {.unnumbered}
 
 - [International Conference on Health Policy Statistics](https://ww2.amstat.org/meetings/ichps/2020/)
 - [ENAR](https://www.enar.org/meetings/future.cfm)
 - [Joint Statistical Meetings](https://www.amstat.org/asa/meetings/Joint-Statistical-Meetings.aspx)
 
-#### Health Economics {-}
+#### Health Economics {.unnumbered}
 
 - [ASHEcon](https://www.ashecon.org/conferences/)
 - [iHEA](https://healtheconomics.org/)
 - [Economics of AI](https://www.economicsofai.com/nber-conference-toronto-2023)
 
-#### Health Policy {-}
+#### Health Policy {.unnumbered}
 
 - [AcademyHealth](https://academyhealth.org/events/2023-06/2023-annual-research-meeting)
 - [ISPOR](https://www.ispor.org/conferences-education/conferences)
 
-#### Decision Science {-}
+#### Decision Science {.unnumbered}
 
 - [SMDM](https://smdm.org/meetings)
 

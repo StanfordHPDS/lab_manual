@@ -19,11 +19,11 @@ Lab experts on the STARR data include Marika Cusick.
 
 The [Center for Population Health Sciences (PHS)](https://med.stanford.edu/phs.html)...
 
-#### Medicare Data {-}
+#### Medicare Data {.unnumbered}
 
 Lab experts on Medicare data include Marissa Reitsma.
 
-#### American Family Cohort Registry {-}
+#### American Family Cohort Registry {.unnumbered}
 
 The American Family Cohort (AFC) Registry was created and is updated by the American Board of Family Medicine (ABFM). 
 

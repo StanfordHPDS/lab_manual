@@ -143,13 +143,13 @@ Dr. Rose is also Co-Principal Investigator on the following two grants:
 
 ### Reporting Requirements
 
-#### Hourly Work {-} 
+#### Hourly Work {.unnumbered} 
 
-#### Participating in Interim and Annual Reports {-} 
+#### Participating in Interim and Annual Reports {.unnumbered} 
 
-#### Conflict of Interest Reporting {-}
+#### Conflict of Interest Reporting {.unnumbered}
 
-#### Fellowship & Resources Reporting {-}
+#### Fellowship & Resources Reporting {.unnumbered}
 
 - For Other Support pages
 
@@ -176,11 +176,11 @@ Lab experts on the STARR data include Marika Cusick.
 
 The [Center for Population Health Sciences (PHS)](https://med.stanford.edu/phs.html)...
 
-#### Medicare Data {-}
+#### Medicare Data {.unnumbered}
 
 Lab experts on Medicare data include Marissa Reitsma.
 
-#### American Family Cohort Registry {-}
+#### American Family Cohort Registry {.unnumbered}
 
 The American Family Cohort (AFC) Registry was created and is updated by the American Board of Family Medicine (ABFM). 
 
@@ -255,13 +255,13 @@ by Sherri Rose
 
 Much of the software we use in the Lab is available open source for free. Please let Dr. Rose know if there is non-free software that would be helpful for your research and we can likely purchase this with research funds.
 
-#### Statistical Computing {-}
+#### Statistical Computing {.unnumbered}
 
 - R: [Download Free](https://cran.r-project.org/)
 - RStudio: [Download Free](https://posit.co/products/open-source/rstudio/)
 - Python: [Download Free](https://www.python.org/downloads/)
 
-#### Illustration {-}
+#### Illustration {.unnumbered}
 
 - OmniGraffle: [Purchase Subscription or One-Time Download](https://store.omnigroup.com/omnigraffle)
 - Adobe Illustrator: [Free via Stanford Branner Earth Science Library](https://library.stanford.edu/branner/using-branner-library) or [Purchase Adobe Creative Cloud License](https://web.stanford.edu/dept/its/cgi-bin/services/software/portal/detail.php?action=view_product&product_id=1163) 
@@ -281,37 +281,37 @@ If we have discussed a conference and Dr. Rose is funding your trip, please send
 
 We include below a noncomprehensive list of conferences that may be of interest to Lab members.
 
-#### Algorithmic Bias & Fairness {-}
+#### Algorithmic Bias & Fairness {.unnumbered}
 
 - [ACM FAccT](https://facctconference.org)
 - [AAI/ACM AI, Ethics, & Society](https://www.aies-conference.com/)
 - [ACM EAAMO](https://eaamo.org/)
 - [IEEE SaTML](https://satml.org/)
 
-#### Machine Learning for Health {-}
+#### Machine Learning for Health {.unnumbered}
 
 - [Machine Learning for Health Care](https://www.mlforhc.org/)
 - [CHIL](https://www.chilconference.org/)
 - [Machine Learning for Health](https://ml4health.github.io/)
 
-#### Statistics {-}
+#### Statistics {.unnumbered}
 
 - [International Conference on Health Policy Statistics](https://ww2.amstat.org/meetings/ichps/2020/)
 - [ENAR](https://www.enar.org/meetings/future.cfm)
 - [Joint Statistical Meetings](https://www.amstat.org/asa/meetings/Joint-Statistical-Meetings.aspx)
 
-#### Health Economics {-}
+#### Health Economics {.unnumbered}
 
 - [ASHEcon](https://www.ashecon.org/conferences/)
 - [iHEA](https://healtheconomics.org/)
 - [Economics of AI](https://www.economicsofai.com/nber-conference-toronto-2023)
 
-#### Health Policy {-}
+#### Health Policy {.unnumbered}
 
 - [AcademyHealth](https://academyhealth.org/events/2023-06/2023-annual-research-meeting)
 - [ISPOR](https://www.ispor.org/conferences-education/conferences)
 
-#### Decision Science {-}
+#### Decision Science {.unnumbered}
 
 - [SMDM](https://smdm.org/meetings)
 
@@ -348,23 +348,23 @@ Example Lab publications by journal type: [statistics](https://onlinelibrary.wil
 
 The journal lists below are not exhaustive and largely focus on outlets where Lab members have previously published their work. Decisions about where to submit manuscripts for publication are made collaboratively to balance the needs and priorities of the team with as much deference as possible to what is best for the trainee author(s).
 
-#### Health Economics & Policy {-}
+#### Health Economics & Policy {.unnumbered}
 
 [Journal of Health Economics](https://www.journals.elsevier.com/journal-of-health-economics), [American Journal of Health Economics](https://www.journals.uchicago.edu/toc/ajhe/current), [Health Affairs](https://www.healthaffairs.org/), [Health Services Research](https://www.hsr.org/), [Medical Care](https://journals.lww.com/lww-medicalcare/pages/default.aspx), [Medical Decision Making](https://journals.sagepub.com/home/mdm),  [JAMA Health Forum](https://jamanetwork.com/journals/jama-health-forum)
 
-#### Epidemiology & Public Health {-}
+#### Epidemiology & Public Health {.unnumbered}
 
 [American Journal of Epidemiology](https://academic.oup.com/aje), [Epidemiology](https://journals.lww.com/epidem/pages/default.aspx), [International Journal of Epidemiology](https://academic.oup.com/ije), [American Journal of Public Health](https://ajph.aphapublications.org/)
 
-#### Statistics {-}
+#### Statistics {.unnumbered}
 
 [Journal of the American Statistical Association](https://www.tandfonline.com/toc/uasa20/current), [Biometrics](https://onlinelibrary.wiley.com/journal/15410420), [Biostatistics](https://academic.oup.com/biostatistics) (_COI: Sherri is Co-Editor-in-Chief_), [Statistics in Medicine](https://onlinelibrary.wiley.com/journal/10970258), [Statistical Methods in Medical Research](https://journals.sagepub.com/home/smm)
 
-#### Clinical {-}
+#### Clinical {.unnumbered}
 
 [NEJM](https://www.nejm.org/), [JAMA](https://jamanetwork.com/), [JAMA Internal Medicine](https://jamanetwork.com/journals/jamainternalmedicine), [JAMA Psychiatry](https://jamanetwork.com/journals/jamapsychiatry)
 
-#### Health Informatics & Digital Health {-}
+#### Health Informatics & Digital Health {.unnumbered}
 
 [JAMIA](https://academic.oup.com/jamia), [BMJ Health & Care Informatics](https://informatics.bmj.com/), [Lancet Digital Health](https://www.thelancet.com/journals/landig/home)
 

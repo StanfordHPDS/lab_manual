@@ -12,9 +12,9 @@ We strive for a culture of mutual respect in all of our communications, meetings
 
 A key value in the Lab is deep respect for the people and communities whose information is represented in the data we study. We engage seriously in learning about the policies, institutional structures, societal biases, and lived experiences that underlie these data sources.
 
-This respect also involves careful attention to data privacy and protection, discussed in Section \@ref(data).
+This respect also involves careful attention to data privacy and protection, discussed in @sec-data.
 
-## Working Hours
+## Working Hours {#sec-working-hours}
 
 Lab members are encouraged to work efficiently and effectively on a schedule that works well for them. **We do not support a culture of overwork!** 
 

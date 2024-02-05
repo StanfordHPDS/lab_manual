@@ -19,11 +19,11 @@ Lab experts on the STARR data include Marika Cusick.
 
 The [Center for Population Health Sciences (PHS)](https://med.stanford.edu/phs.html)...
 
-#### Medicare Data {-}
+#### Medicare Data {.unnumbered}
 
 Lab experts on Medicare data include Marissa Reitsma.
 
-#### American Family Cohort Registry {-}
+#### American Family Cohort Registry {.unnumbered}
 
 The American Family Cohort (AFC) Registry was created and is updated by the American Board of Family Medicine (ABFM). 
 
@@ -73,7 +73,7 @@ We are in the process of bringing the [Chronic Renal Insufficiency Cohort Study 
 
 ## OMOP
 
-## Data Sharing
+## Data Sharing {#sec-data}
 
 Many of our studies involve secondary analyses of existing health databases. It is typically not permitted for us to share such data due to privacy considerations. Thus, we often created simulated data that has some similar properties to the health databases to share along with our code and published results.
 

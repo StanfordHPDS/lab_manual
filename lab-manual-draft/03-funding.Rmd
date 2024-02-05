@@ -23,12 +23,12 @@ Dr. Rose is also Co-Principal Investigator on the following two grants:
 
 ### Reporting Requirements
 
-#### Hourly Work {-} 
+#### Hourly Work {.unnumbered} 
 
-#### Participating in Interim and Annual Reports {-} 
+#### Participating in Interim and Annual Reports {.unnumbered} 
 
-#### Conflict of Interest Reporting {-}
+#### Conflict of Interest Reporting {.unnumbered}
 
-#### Fellowship & Resources Reporting {-}
+#### Fellowship & Resources Reporting {.unnumbered}
 
 - For Other Support pages
