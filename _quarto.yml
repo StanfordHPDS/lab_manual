@@ -7,7 +7,7 @@ book:
   date: "2/5/2024"
   chapters:
     - chapters/00-index.qmd
-    - chapters/01-intro.qmd
+    - chapters/01-culture.qmd
     - chapters/02-policies.qmd
     - chapters/03-funding.qmd
     - chapters/04-data.qmd
