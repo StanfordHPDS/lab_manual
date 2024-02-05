@@ -1,0 +1,342 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Health Policy Data Science Lab Manual",
+    "section": "",
+    "text": "Health Policy Data Science Lab Manual\nThe Health Policy Data Science Lab at Stanford is a group of interdisciplinary researchers who develop and apply quantitative methods to solve problems in health policy, leveraging techniques from statistics, computer science, economics, epidemiology, and decision science.\nThis manual will evolve over time to incorporate contributions from Lab members and collaborators. We drew inspiration from the lab manuals of our colleagues, including Jade Benjamin-Chung and Russ Poldrack.\nFeel free to draw from this manual (and please cite it if you do)!\n  This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.",
+    "crumbs": [
+      "Health Policy Data Science Lab Manual"
+    ]
+  },
+  {
+    "objectID": "chapters/01-culture.html#mutual-respect-in-the-lab",
+    "href": "chapters/01-culture.html#mutual-respect-in-the-lab",
+    "title": "1  Lab Culture",
+    "section": "1.1 Mutual Respect in the Lab",
+    "text": "1.1 Mutual Respect in the Lab\nWe strive for a culture of mutual respect in all of our communications, meetings, and policies. Please demonstrate respect for all Lab members by, for example, practicing active listening, speaking only for yourself and not others, and not dominating conversations. Mutual respect for each other’s time includes being prepared (including drafting agendas), planning ahead, and starting/ending meetings at the scheduled time.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lab Culture</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01-culture.html#respect-for-the-people-represented-in-study-data",
+    "href": "chapters/01-culture.html#respect-for-the-people-represented-in-study-data",
+    "title": "1  Lab Culture",
+    "section": "1.2 Respect for the People Represented in Study Data",
+    "text": "1.2 Respect for the People Represented in Study Data\nA key value in the Lab is deep respect for the people and communities whose information is represented in the data we study. We engage seriously in learning about the policies, institutional structures, societal biases, and lived experiences that underlie these data sources.\nThis respect also involves careful attention to data privacy and protection, discussed in Section 4.5.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lab Culture</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01-culture.html#sec-working-hours",
+    "href": "chapters/01-culture.html#sec-working-hours",
+    "title": "1  Lab Culture",
+    "section": "1.3 Working Hours",
+    "text": "1.3 Working Hours\nLab members are encouraged to work efficiently and effectively on a schedule that works well for them. We do not support a culture of overwork!\nDr. Rose does not expect you to be working in the evenings or on weekends and asks that you respect Lab members’ evening and weekend time as well. This includes not expecting Dr. Rose to review your work product, submit letters, or otherwise be available for typical work tasks outside business hours.\nWe embrace time off, breaks from meetings, and vacations!",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lab Culture</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01-culture.html#trainee-support-access-and-accomodations",
+    "href": "chapters/01-culture.html#trainee-support-access-and-accomodations",
+    "title": "1  Lab Culture",
+    "section": "1.4 Trainee Support, Access, and Accomodations",
+    "text": "1.4 Trainee Support, Access, and Accomodations\nYour physical and mental health are incredibly important. Please familiarize yourself with the mental health and crisis assistance resources available for students at Stanford as well as mental health resources for postdoctoral scholars.\nStanford is committed to providing equal educational opportunities for disabled students. Disabled students are a valued and essential part of the Stanford community. If you experience disability, please register with the Office of Accessible Education (OAE). Professional staff at OAE will evaluate your needs, support appropriate and reasonable accommodations, and prepare an Academic Accommodation Letter for faculty. If you already have an Academic Accommodation Letter, Stanford invites you to share your letter with your advisor. Academic Accommodation Letters should be shared at the earliest possible opportunity so we may partner with you and OAE to identify any barriers to access and inclusion that might be encountered in your experience.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lab Culture</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-policies.html#joining-the-lab",
+    "href": "chapters/02-policies.html#joining-the-lab",
+    "title": "2  General Policies",
+    "section": "2.1 Joining the Lab",
+    "text": "2.1 Joining the Lab\nDr. Rose keeps a page updated on her website regarding whether she is taking new students, hiring postdocs, or available for dissertation committees. At Stanford, we’ve had students from many different graduate programs join the lab, including health policy, biomedical data science, computer science, and chemical engineering programs.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>General Policies</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-policies.html#recurring-meetings",
+    "href": "chapters/02-policies.html#recurring-meetings",
+    "title": "2  General Policies",
+    "section": "2.2 Recurring Meetings",
+    "text": "2.2 Recurring Meetings\nLab trainees meet individually with Dr. Rose regularly. This is typically weekly or every other week depending on the needs of the trainee and their projects. Meetings are either 25 minutes or 50 minutes to allow for breaks between meetings. Dr. Rose expects trainees to manage the meeting such that it ends on time.\nIn general, Dr. Rose expects progress to be made between each meeting. Progress can include struggling with the material. Dr. Rose cares that you are engaged and taking initiative to advance the project. We’ll discuss what you learned and where you are still confused. When we identify areas where you have gaps, Dr. Rose does expect you to invest in learning the required material and to follow through to fill those gaps. All trainees must be making satisfactory academic progress in line with the expectations of their graduate degree program.\nIf you do not need to meet a particular week (e.g., making steady progress and don’t have questions, busy preparing for an exam and did not work on research that week, etc), please email Dr. Rose in advance so she can efficiently reallocate the meeting time. Your physical and mental health are important. If you need to cancel a meeting for health or personal reasons, email Dr. Rose. As much notice as is possible is helpful, but it is always better to cancel a meeting short notice than to attend when you are sick!\nIf there are repeated meeting cancellations, we should discuss the underlying reasons.\nPlease also see Section 2.3 for details on recurring meeting agendas.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>General Policies</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-policies.html#sec-meeting-agendas",
+    "href": "chapters/02-policies.html#sec-meeting-agendas",
+    "title": "2  General Policies",
+    "section": "2.3 Meeting Agendas",
+    "text": "2.3 Meeting Agendas\nTrainees must prepare an agenda prior to each recurring meeting with Dr. Rose. Create a google doc (invite Dr. Rose as editor) that you’ll add to in reverse chronological order for each meeting with the information below included. Update the google doc by 11AM one business day before our meeting. Repeatedly not creating agendas will result in cancelled meetings.\n[Meeting Date]\n\nWhat has been completed since previous meeting:\nTopics to discuss at the meeting:\nWhat will be completed by the next meeting:",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>General Policies</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-policies.html#individual-development-plans",
+    "href": "chapters/02-policies.html#individual-development-plans",
+    "title": "2  General Policies",
+    "section": "2.4 Individual Development Plans",
+    "text": "2.4 Individual Development Plans\nIf Dr. Rose is your primary advisor, students and postdoctoral scholars should complete the Stanford Individual Development Plan (IDP) when joining the Lab and then annually thereafter (student forms, initial form for postdocs, annual form for postdocs). This applies regardless of home department. Trainees should plan to check in on progress made toward IDP goals once a quarter. Dr. Rose expects that trainees will be responsible for scheduling the annual IDP meetings and adding the IDP check-ins once a quarter to the agenda for an existing recurring meeting.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>General Policies</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-policies.html#academic-progress-in-graduate-degree-programs",
+    "href": "chapters/02-policies.html#academic-progress-in-graduate-degree-programs",
+    "title": "2  General Policies",
+    "section": "2.5 Academic Progress in Graduate Degree Programs",
+    "text": "2.5 Academic Progress in Graduate Degree Programs\nIf you are a graduate student and Dr. Rose is your primary advisor, please create and regularly update a shared document that includes major degree requirements (e.g., coursework, teaching, qualifying exams, etc) and completion status (e.g., completed, planned completion date). Include links at the top to the graduate degree handbook from your home department as well as key contacts in your home department who should be kept apprised of your academic progress. This document will be discussed quarterly along with the IDP check-ins, and students should add it to the agenda for an existing recurring meeting.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>General Policies</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-policies.html#registering-for-units",
+    "href": "chapters/02-policies.html#registering-for-units",
+    "title": "2  General Policies",
+    "section": "2.6 Registering for Units",
+    "text": "2.6 Registering for Units\nGraduate students should discuss their plans to register for research units with Dr. Rose each term (often BIOMEDIN 299 or HRP 399). Units should be taken credit/no credit and not for a letter grade. Permission codes are currently required to register for research units.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>General Policies</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-policies.html#deadlines",
+    "href": "chapters/02-policies.html#deadlines",
+    "title": "2  General Policies",
+    "section": "2.7 Deadlines",
+    "text": "2.7 Deadlines\nWe aim to set ambitious yet feasible target deadlines for work product in a collaborative process. It is often the case that research takes longer than we expect, and an internal agreed-upon deadline is no longer possible. If you anticipate missing a deadline, contact Dr. Rose. It is an expectation in the Lab that all members are proactive about discussing revised deadlines rather than waiting until after the deadline has passed. If a trainee is repeatedly missing deadlines, we should discuss the underlying reasons.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>General Policies</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-policies.html#lab-meetings-events",
+    "href": "chapters/02-policies.html#lab-meetings-events",
+    "title": "2  General Policies",
+    "section": "2.8 Lab Meetings & Events",
+    "text": "2.8 Lab Meetings & Events\nThe Lab holds Lab Meetings and various types of events throughout the year, including lunches, data jamborees, coffee chats, and journal clubs. If you have ideas for events, suggestions are always welcome.\nFood at Lab events is funded by the Lab and free to Lab attendees. We expect that trainees who RSVP and submit food orders will show up to the event, barring illness or personal situation. If you need to change your RSVP, please contact Dr. Rose to help us avoid food waste.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>General Policies</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-policies.html#communication",
+    "href": "chapters/02-policies.html#communication",
+    "title": "2  General Policies",
+    "section": "2.9 Communication",
+    "text": "2.9 Communication\nWe have a Lab slack. Lab members can search for “HPDS Lab” in the Workspaces at Stanford and request to join.\nPlease keep in mind our Lab philosophy on working hours in Section 1.3. Do not assume that because you have sent a slack message or email that you should get an instant reply.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>General Policies</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03-funding.html#for-graduate-students",
+    "href": "chapters/03-funding.html#for-graduate-students",
+    "title": "3  Funding",
+    "section": "3.1 For Graduate Students",
+    "text": "3.1 For Graduate Students",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Funding</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03-funding.html#for-postdoctoral-scholars",
+    "href": "chapters/03-funding.html#for-postdoctoral-scholars",
+    "title": "3  Funding",
+    "section": "3.2 For Postdoctoral Scholars",
+    "text": "3.2 For Postdoctoral Scholars",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Funding</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03-funding.html#active-lab-funding",
+    "href": "chapters/03-funding.html#active-lab-funding",
+    "title": "3  Funding",
+    "section": "3.3 Active Lab Funding",
+    "text": "3.3 Active Lab Funding\nThe Health Policy Data Science Lab at Stanford currently has three active grants where Dr. Rose is the Principal Investigator:\n\nNIH Director’s Pioneer Award\nNLM R01 Grant\nLaura and John Arnold Foundation Grant\n\nDr. Rose is also Co-Principal Investigator on the following two grants:\n\nStanford Impact Labs Grant\nStanford HAI Hoffman-Yee Grant\n\n\n3.3.1 Trainee Responsibilities on Funded Grants\n\n\n3.3.2 Reporting Requirements\n\nHourly Work\n\n\nParticipating in Interim and Annual Reports\n\n\nConflict of Interest Reporting\n\n\nFellowship & Resources Reporting\n\nFor Other Support pages",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Funding</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-data.html#irbs",
+    "href": "chapters/04-data.html#irbs",
+    "title": "4  Data",
+    "section": "4.1 IRBs",
+    "text": "4.1 IRBs",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-data.html#data-at-stanford",
+    "href": "chapters/04-data.html#data-at-stanford",
+    "title": "4  Data",
+    "section": "4.2 Data at Stanford",
+    "text": "4.2 Data at Stanford\n\n4.2.1 STARR Data\nLab experts on the STARR data include Marika Cusick.\n\n\n4.2.2 Center for Population Health Sciences\nThe Center for Population Health Sciences (PHS)…\n\nMedicare Data\nLab experts on Medicare data include Marissa Reitsma.\n\n\nAmerican Family Cohort Registry\nThe American Family Cohort (AFC) Registry was created and is updated by the American Board of Family Medicine (ABFM).\nLab experts on the ABFM AFC Cohort Registry data include Agata Foryciarz, Gabriela Basel, and Marika Cusick.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-data.html#bringing-data-to-stanford",
+    "href": "chapters/04-data.html#bringing-data-to-stanford",
+    "title": "4  Data",
+    "section": "4.3 Bringing Data to Stanford",
+    "text": "4.3 Bringing Data to Stanford\nThe key steps in bringing a new data set to Stanford include completing submitting an IRB and a data risk assessment review.\n\n4.3.1 Data Risk Assessment\nThe data risk assessment (DRA) review process at Stanford must be followed to bring external data to Stanford. A summary of this process is included below. However, the DRA review process is subject to change and should be confirmed and followed as described on the DRA website.\n\nReview the Stanford Risk Classifications to determine the level of risk of your requested data.\nIf the requested data are high risk, then you will need to submit a DRA. If you are not sure if the data are high risk, there is also a pre-screening form that helps assess whether a DRA form is necessary.\nIn the DRA form, you will need the following information:\n\nProject information\n\nProject leader contact information\nIRB information (if applicable)\nFunding source\nAny other relevant parties involved in the project (e.g., Stanford Health Care)\nAny other individuals who will be involved with the data\n\nWho are you getting the data from? (third party)\n\nContact information (e.g., name and email address)\nData flow diagram\nAre the data going in or out of the U.S.?\n\nBrief description of the project and reason for needing this data source\nBrief description of the data source\n\nElements (e.g., lab results, diagnoses or procedures)\nNumber of records\nData dictionary (if available)\nData source (e.g., institutions and individuals involved in producing the data)\nWhether the data are identified or de-identified and how are the data de-identified? (e.g., Safe Harbor method)\n\n\nAwait the DRA review. You may get follow-up questions from the University Privacy Office, such as:\n\nHow do you plan to store the data?\nWill Stanford data be used or shared?\nWill data be shared back with the third party?\n\n\nLab experts on the DRA process include Marika Cusick.\n\n\n4.3.2 Datasets\nWe are in the process of bringing the Chronic Renal Insufficiency Cohort Study (CRIC) from NIDDK to Stanford.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-data.html#omop",
+    "href": "chapters/04-data.html#omop",
+    "title": "4  Data",
+    "section": "4.4 OMOP",
+    "text": "4.4 OMOP",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-data.html#sec-data",
+    "href": "chapters/04-data.html#sec-data",
+    "title": "4  Data",
+    "section": "4.5 Data Sharing",
+    "text": "4.5 Data Sharing\nMany of our studies involve secondary analyses of existing health databases. It is typically not permitted for us to share such data due to privacy considerations. Thus, we often created simulated data that has some similar properties to the health databases to share along with our code and published results.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-data.html#simulated-data",
+    "href": "chapters/04-data.html#simulated-data",
+    "title": "4  Data",
+    "section": "4.6 Simulated Data",
+    "text": "4.6 Simulated Data\nMany of our projects involve simulating data to test our methodology under situations where we know the underlying truth and because we cannot share certain health data due to privacy considerations. Simulating data is an important skill to learn.\nExamples of detailed simulation studies designed by Lab alums include work from Irina Degtiar and Anna Zink.\nNote: Creating simulated data is different than designing a microsimulation study. It can be confusing!",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/05-computing.html#nero-gcp",
+    "href": "chapters/05-computing.html#nero-gcp",
+    "title": "5  Computing Resources",
+    "section": "5.1 Nero GCP",
+    "text": "5.1 Nero GCP",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Computing Resources</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/05-computing.html#sherlock",
+    "href": "chapters/05-computing.html#sherlock",
+    "title": "5  Computing Resources",
+    "section": "5.2 Sherlock",
+    "text": "5.2 Sherlock",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Computing Resources</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/05-computing.html#software",
+    "href": "chapters/05-computing.html#software",
+    "title": "5  Computing Resources",
+    "section": "5.3 Software",
+    "text": "5.3 Software\nMuch of the software we use in the Lab is available open source for free. Please let Dr. Rose know if there is non-free software that would be helpful for your research and we can likely purchase this with research funds.\n\nStatistical Computing\n\nR: Download Free\nRStudio: Download Free\nPython: Download Free\n\n\n\nIllustration\n\nOmniGraffle: Purchase Subscription or One-Time Download\nAdobe Illustrator: Free via Stanford Branner Earth Science Library or Purchase Adobe Creative Cloud License",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Computing Resources</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/05-computing.html#github",
+    "href": "chapters/05-computing.html#github",
+    "title": "5  Computing Resources",
+    "section": "5.4 Github",
+    "text": "5.4 Github",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Computing Resources</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/06-conferences.html#conferences-by-field",
+    "href": "chapters/06-conferences.html#conferences-by-field",
+    "title": "6  Conferences",
+    "section": "6.1 Conferences by Field",
+    "text": "6.1 Conferences by Field\nWe include below a noncomprehensive list of conferences that may be of interest to Lab members.\n\nAlgorithmic Bias & Fairness\n\nACM FAccT\nAAI/ACM AI, Ethics, & Society\nACM EAAMO\nIEEE SaTML\n\n\n\nMachine Learning for Health\n\nMachine Learning for Health Care\nCHIL\nMachine Learning for Health\n\n\n\nStatistics\n\nInternational Conference on Health Policy Statistics\nENAR\nJoint Statistical Meetings\n\n\n\nHealth Economics\n\nASHEcon\niHEA\nEconomics of AI\n\n\n\nHealth Policy\n\nAcademyHealth\nISPOR\n\n\n\nDecision Science\n\nSMDM",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Conferences</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/06-conferences.html#stanford-travel-policies",
+    "href": "chapters/06-conferences.html#stanford-travel-policies",
+    "title": "6  Conferences",
+    "section": "6.2 Stanford Travel Policies",
+    "text": "6.2 Stanford Travel Policies\nFlights MUST be purchased through Stanford Travel. They are not reimbursable if they are purchased any other way.\nHealth Policy and Biomedical Data Science Students: If you are presenting at a conference, submit for up to $1,000 of those expenses to be reimbursed through the Biosciences Travel Grant Program. You are eligible for one conference per year and these funds should be used first before research grant resources.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Conferences</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/07-publications.html#authorship",
+    "href": "chapters/07-publications.html#authorship",
+    "title": "7  Publications",
+    "section": "7.1 Authorship",
+    "text": "7.1 Authorship\nWe aim to discuss authorship early in the research process and have continuing conversations regarding team member roles. Plans can change and contributions may evolve over time. If you have authorship questions during the process of working on a project, we want you to feel empowered to ask these questions! It is an expectation in the Lab that no new authors are invited to join an existing Lab project (i.e., where Dr. Rose is the lead PI) without the prior agreement of, at a minimum, Dr. Rose and the first author(s). The Lab follows the ICMJE recommendations regarding who is included as an author.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Publications</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/07-publications.html#preprints",
+    "href": "chapters/07-publications.html#preprints",
+    "title": "7  Publications",
+    "section": "7.2 Preprints",
+    "text": "7.2 Preprints",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Publications</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/07-publications.html#on-least-publishable-units",
+    "href": "chapters/07-publications.html#on-least-publishable-units",
+    "title": "7  Publications",
+    "section": "7.3 On Least Publishable Units",
+    "text": "7.3 On Least Publishable Units",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Publications</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/07-publications.html#types-of-papers",
+    "href": "chapters/07-publications.html#types-of-papers",
+    "title": "7  Publications",
+    "section": "7.4 Types of Papers",
+    "text": "7.4 Types of Papers\nThe structure and content of a manuscript varies by discipline and audience.\nExample Lab publications by journal type: statistics, medical, health policy, health services research, health economics, computer science conference paper.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Publications</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/07-publications.html#journals",
+    "href": "chapters/07-publications.html#journals",
+    "title": "7  Publications",
+    "section": "7.5 Journals",
+    "text": "7.5 Journals\nThe journal lists below are not exhaustive and largely focus on outlets where Lab members have previously published their work. Decisions about where to submit manuscripts for publication are made collaboratively to balance the needs and priorities of the team with as much deference as possible to what is best for the trainee author(s).\n\nHealth Economics & Policy\nJournal of Health Economics, American Journal of Health Economics, Health Affairs, Health Services Research, Medical Care, Medical Decision Making, JAMA Health Forum\n\n\nEpidemiology & Public Health\nAmerican Journal of Epidemiology, Epidemiology, International Journal of Epidemiology, American Journal of Public Health\n\n\nStatistics\nJournal of the American Statistical Association, Biometrics, Biostatistics (COI: Sherri is Co-Editor-in-Chief), Statistics in Medicine, Statistical Methods in Medical Research\n\n\nClinical\nNEJM, JAMA, JAMA Internal Medicine, JAMA Psychiatry\n\n\nHealth Informatics & Digital Health\nJAMIA, BMJ Health & Care Informatics, Lancet Digital Health",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Publications</span>"
+    ]
+  }
+]
