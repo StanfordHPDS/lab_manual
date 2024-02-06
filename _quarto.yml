@@ -1,0 +1,28 @@
+project:
+  type: book
+
+book:
+  title: "Health Policy Data Science Lab Manual"
+  author: "Sherri Rose"
+  date: "2/5/2024"
+  chapters:
+    - index.qmd
+    - chapters/01-culture.qmd
+    - chapters/02-policies.qmd
+    - chapters/03-funding.qmd
+    - chapters/04-data.qmd
+    - chapters/05-computing.qmd
+    - chapters/06-conferences.qmd
+    - chapters/07-publications.qmd
+    - chapters/99-references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+
+
