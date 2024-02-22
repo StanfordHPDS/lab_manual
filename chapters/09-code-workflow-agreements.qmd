@@ -258,6 +258,12 @@ For R users, there are two helpful functions in usethis to manage your git setup
 See also the [PR workflow vignette](https://usethis.r-lib.org/articles/pr-functions.html) for making and managing pull requests in R. You might also find [Happy Git and GitHub for the useR](https://happygitwithr.com/) a helpful perspective.
 :::
 
+### Release on GitHub {#sec-gh-release}
+
+GitHub has a mechanism for [making formal releases of repositories](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). This takes a snapshot of the repository at the time of release and attaches a name.
+
+Making a "release", of course, has its origins in software versions. However, it's also helpful in tracking significant milestones in a project. For instance, make a release upon submission to a journal and another upon publication. That allows you to easily revisit the state of the repository at those two time points. GitHub also makes downloading the repository in releases easy, making it an excellent point to direct people not using Git.
+
 ## Documentation
 
 The first step in documenting your code is writing clear, readable code. In other words, someone else should be able to read your code and understand what it's doing. The best way to test this out is a code review: can somebody else understand your code? Code that is itself readable is sometimes called *self-documenting* code. It's not always possible and shouldn't be the only type of documentation, but it's an excellent goal to strive towards.
@@ -477,12 +483,6 @@ rye fetch
 ## Opt-in Workflows {#sec-opt-in}
 
 Opt-in workflows are things we do not require for a project but for which we offer guidance. Such workflows also allow the team to experiment with new things and see what works for projects and when.
-
-### Release on GitHub {#sec-gh-release}
-
-GitHub has a mechanism for [making formal releases of repositories](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). This takes a snapshot of the repository at the time of release and attaches a name.
-
-Making a "release", of course, has its origins in software versions. However, it's also helpful in tracking significant milestones in a project. For instance, make a release upon submission to a journal and another upon publication. That allows you to easily view the state of the repository at those two time points. GitHub also makes downloading the repository in releases easy, making it an excellent point to direct people not using Git.
 
 ### Pipelines {#sec-pipelines}
 

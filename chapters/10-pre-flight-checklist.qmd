@@ -31,6 +31,7 @@ Note: for pre-prints, run through this checklist for both uploading to the pre-p
 - [ ] Check <https://www.zotero.org/styles> for a citation style file for the journal of interest, and include the file in your Quarto metadata and in the repository
 - [ ] For sensitive data, no small cells (<11) are included in tables or figures (future: run x tool on output to make sure)
 - [ ] Share with co-authors for comments
+- [ ] Use a GitHub release for the submission version. See @sec-gh-release for details.
 - [ ] Submit to archive service like OSF
 - [ ] If there are any research outputs other than a journal article, such as a dataset, register them for a DOI at a service like OSF or Zenodo
 
@@ -40,7 +41,6 @@ Note: for pre-prints, run through this checklist for both uploading to the pre-p
 
 ### Opt-in Workflows (@sec-opt-in)
 
-- [ ] Opt-in: Use a GitHub release for the submission version. See @sec-gh-release for details.
 - [ ] Opt-in: if code contains tests, tests pass. See @sec-tests for details.
 - [ ] Opt-in: Pipeline code is documented and with clear instructions for running the pipeline. See @sec-pipeline for details.
 - [ ] Opt-in: Dockerfile is included in repository with clear instructions for running the image. See @sec-docker for details.
