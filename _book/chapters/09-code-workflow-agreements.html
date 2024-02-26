@@ -224,7 +224,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#dont-include-absolute-directories-that-are-not-accessible-to-others" id="toc-dont-include-absolute-directories-that-are-not-accessible-to-others" class="nav-link" data-scroll-target="#dont-include-absolute-directories-that-are-not-accessible-to-others"><span class="header-section-number">8.4.2</span> Don’t include absolute directories that are not accessible to others</a></li>
   </ul></li>
   <li><a href="#sec-quarto" id="toc-sec-quarto" class="nav-link" data-scroll-target="#sec-quarto"><span class="header-section-number">8.5</span> Generate reproducible documents with Quarto</a></li>
-  <li><a href="#use-git-and-github" id="toc-use-git-and-github" class="nav-link" data-scroll-target="#use-git-and-github"><span class="header-section-number">8.6</span> Use Git and GitHub</a></li>
+  <li><a href="#use-git-and-github" id="toc-use-git-and-github" class="nav-link" data-scroll-target="#use-git-and-github"><span class="header-section-number">8.6</span> Use Git and GitHub</a>
+  <ul class="collapse">
+  <li><a href="#sec-gh-release" id="toc-sec-gh-release" class="nav-link" data-scroll-target="#sec-gh-release"><span class="header-section-number">8.6.1</span> Release on GitHub</a></li>
+  </ul></li>
   <li><a href="#documentation" id="toc-documentation" class="nav-link" data-scroll-target="#documentation"><span class="header-section-number">8.7</span> Documentation</a>
   <ul class="collapse">
   <li><a href="#a-note-about-comments" id="toc-a-note-about-comments" class="nav-link" data-scroll-target="#a-note-about-comments"><span class="header-section-number">8.7.1</span> A note about comments</a></li>
@@ -238,10 +241,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#sec-pkg-env" id="toc-sec-pkg-env" class="nav-link" data-scroll-target="#sec-pkg-env"><span class="header-section-number">8.9</span> Lock your package versions</a></li>
   <li><a href="#sec-opt-in" id="toc-sec-opt-in" class="nav-link" data-scroll-target="#sec-opt-in"><span class="header-section-number">8.10</span> Opt-in Workflows</a>
   <ul class="collapse">
-  <li><a href="#sec-gh-release" id="toc-sec-gh-release" class="nav-link" data-scroll-target="#sec-gh-release"><span class="header-section-number">8.10.1</span> Release on GitHub</a></li>
-  <li><a href="#sec-pipelines" id="toc-sec-pipelines" class="nav-link" data-scroll-target="#sec-pipelines"><span class="header-section-number">8.10.2</span> Pipelines</a></li>
-  <li><a href="#sec-tests" id="toc-sec-tests" class="nav-link" data-scroll-target="#sec-tests"><span class="header-section-number">8.10.3</span> Testing</a></li>
-  <li><a href="#sec-docker" id="toc-sec-docker" class="nav-link" data-scroll-target="#sec-docker"><span class="header-section-number">8.10.4</span> Docker</a></li>
+  <li><a href="#sec-pipelines" id="toc-sec-pipelines" class="nav-link" data-scroll-target="#sec-pipelines"><span class="header-section-number">8.10.1</span> Pipelines</a></li>
+  <li><a href="#sec-tests" id="toc-sec-tests" class="nav-link" data-scroll-target="#sec-tests"><span class="header-section-number">8.10.2</span> Testing</a></li>
+  <li><a href="#sec-docker" id="toc-sec-docker" class="nav-link" data-scroll-target="#sec-docker"><span class="header-section-number">8.10.3</span> Docker</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -507,6 +509,11 @@ Tip
 <p>See also the <a href="https://usethis.r-lib.org/articles/pr-functions.html">PR workflow vignette</a> for making and managing pull requests in R. You might also find <a href="https://happygitwithr.com/">Happy Git and GitHub for the useR</a> a helpful perspective.</p>
 </div>
 </div>
+<section id="sec-gh-release" class="level3" data-number="8.6.1">
+<h3 data-number="8.6.1" class="anchored" data-anchor-id="sec-gh-release"><span class="header-section-number">8.6.1</span> Release on GitHub</h3>
+<p>GitHub has a mechanism for <a href="https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository">making formal releases of repositories</a>. This takes a snapshot of the repository at the time of release and attaches a name.</p>
+<p>Making a “release”, of course, has its origins in software versions. However, it’s also helpful in tracking significant milestones in a project. For instance, make a release upon submission to a journal and another upon publication. That allows you to easily revisit the state of the repository at those two time points. GitHub also makes downloading the repository in releases easy, making it an excellent point to direct people not using Git.</p>
+</section>
 </section>
 <section id="documentation" class="level2" data-number="8.7">
 <h2 data-number="8.7" class="anchored" data-anchor-id="documentation"><span class="header-section-number">8.7</span> Documentation</h2>
@@ -590,7 +597,7 @@ Tip
 </section>
 <section id="provide-guidance-on-how-to-run-your-code" class="level3" data-number="8.8.2">
 <h3 data-number="8.8.2" class="anchored" data-anchor-id="provide-guidance-on-how-to-run-your-code"><span class="header-section-number">8.8.2</span> Provide guidance on how to run your code</h3>
-<p>Your <code>README</code> should include guidance on how to run your code. For instance, if there is a command to run the entire project, include information about that process (this is usually related to pipeline-managed code as discussed in the optional <a href="#sec-pipelines" class="quarto-xref"><span>Section&nbsp;8.10.2</span></a>). If you intend the user to run scripts in a particular order, describe how.</p>
+<p>Your <code>README</code> should include guidance on how to run your code. For instance, if there is a command to run the entire project, include information about that process (this is usually related to pipeline-managed code as discussed in the optional <a href="#sec-pipelines" class="quarto-xref"><span>Section&nbsp;8.10.1</span></a>). If you intend the user to run scripts in a particular order, describe how.</p>
 </section>
 </section>
 <section id="sec-pkg-env" class="level2" data-number="8.9">
@@ -691,13 +698,8 @@ Note
 <section id="sec-opt-in" class="level2" data-number="8.10">
 <h2 data-number="8.10" class="anchored" data-anchor-id="sec-opt-in"><span class="header-section-number">8.10</span> Opt-in Workflows</h2>
 <p>Opt-in workflows are things we do not require for a project but for which we offer guidance. Such workflows also allow the team to experiment with new things and see what works for projects and when.</p>
-<section id="sec-gh-release" class="level3" data-number="8.10.1">
-<h3 data-number="8.10.1" class="anchored" data-anchor-id="sec-gh-release"><span class="header-section-number">8.10.1</span> Release on GitHub</h3>
-<p>GitHub has a mechanism for <a href="https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository">making formal releases of repositories</a>. This takes a snapshot of the repository at the time of release and attaches a name.</p>
-<p>Making a “release”, of course, has its origins in software versions. However, it’s also helpful in tracking significant milestones in a project. For instance, make a release upon submission to a journal and another upon publication. That allows you to easily view the state of the repository at those two time points. GitHub also makes downloading the repository in releases easy, making it an excellent point to direct people not using Git.</p>
-</section>
-<section id="sec-pipelines" class="level3" data-number="8.10.2">
-<h3 data-number="8.10.2" class="anchored" data-anchor-id="sec-pipelines"><span class="header-section-number">8.10.2</span> Pipelines</h3>
+<section id="sec-pipelines" class="level3" data-number="8.10.1">
+<h3 data-number="8.10.1" class="anchored" data-anchor-id="sec-pipelines"><span class="header-section-number">8.10.1</span> Pipelines</h3>
 <p>Pipeline tools are software that manage the execution of code. What’s practical about this for research projects is that pipeline tools track the relationship between components in your project (meaning it knows which order to run things in automatically) and will only run those components when they are out of date (meaning you don’t necessarily need to rerun your entire project because you updated one part of the code).</p>
 <p>Pipeline tools are helpful for projects of any size, but they are particularly suited to complex or computationally intense projects.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
@@ -722,8 +724,8 @@ Note
 </div>
 </div>
 </section>
-<section id="sec-tests" class="level3" data-number="8.10.3">
-<h3 data-number="8.10.3" class="anchored" data-anchor-id="sec-tests"><span class="header-section-number">8.10.3</span> Testing</h3>
+<section id="sec-tests" class="level3" data-number="8.10.2">
+<h3 data-number="8.10.2" class="anchored" data-anchor-id="sec-tests"><span class="header-section-number">8.10.2</span> Testing</h3>
 <p>In scientific work, two types of code tests are useful: code expectations and data expectations. Code should <em>behave</em> the way you expect, and data should <em>exist</em> the way you expect. If that is not the case, you either have identified a problem with your code and data or a problem with your expectations.</p>
 <p>Automating such tests in code expectations is helpful because you can run them whenever you have code or data changes. Moreover, you’re probably already probing these expectations informally in some form or another.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
@@ -741,8 +743,8 @@ Note
 </div>
 </div>
 </section>
-<section id="sec-docker" class="level3" data-number="8.10.4">
-<h3 data-number="8.10.4" class="anchored" data-anchor-id="sec-docker"><span class="header-section-number">8.10.4</span> Docker</h3>
+<section id="sec-docker" class="level3" data-number="8.10.3">
+<h3 data-number="8.10.3" class="anchored" data-anchor-id="sec-docker"><span class="header-section-number">8.10.3</span> Docker</h3>
 <p><a href="https://docs.docker.com/get-started/overview/">Docker</a> is a tool for reproducing not just the software and packages used in an analysis but the entire computational environment. As it’s got more of a learning curve, we do not currently require it for projects. However, consider it for projects where reproducibility is crucial or where you want to feel more confident that the code will be runable for many years.</p>
 <p>Docker is a general tool that works with R, Python, and just about anything else you like to use.</p>
 <p>Here’s a Docker tutorial for data analysis: <a href="https://github.com/RamiKrispin/sdsu-docker-workshop" class="uri">https://github.com/RamiKrispin/sdsu-docker-workshop</a>.</p>
