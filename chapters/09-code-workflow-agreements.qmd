@@ -104,8 +104,7 @@ We do not currently require a linter, but they can be handy to analyze your code
 
 In R, use [lintr](https://lintr.r-lib.org/). Linting works particularly well in RStudio, which will tag lines of code with specific suggestions.
 
-```{r}
-#| eval: false
+```r
 lintr::lint_dir()
 ```
 
