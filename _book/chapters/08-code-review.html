@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.358">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Health Policy Data Science Lab Manual - 8&nbsp; Code review</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../chapters/99-references.html" rel="next">
+<link href="../chapters/07-publications.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/08-code-review.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Code review</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Health Policy Data Science Lab Manual</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Health Policy Data Science Lab Manual</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/01-culture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Lab Culture</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/02-policies.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">General Policies</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/03-funding.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Funding</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/04-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Data</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/05-computing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Computing Resources</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/06-conferences.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Conferences</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/07-publications.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Publications</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/08-code-review.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Code review</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/99-references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#why-code-review" id="toc-why-code-review" class="nav-link active" data-scroll-target="#why-code-review"><span class="header-section-number">8.1</span> Why code review?</a>
+  <ul class="collapse">
+  <li><a href="#code-review-makes-better-science" id="toc-code-review-makes-better-science" class="nav-link" data-scroll-target="#code-review-makes-better-science"><span class="header-section-number">8.1.1</span> Code review makes better science</a></li>
+  <li><a href="#code-review-makes-better-teams" id="toc-code-review-makes-better-teams" class="nav-link" data-scroll-target="#code-review-makes-better-teams"><span class="header-section-number">8.1.2</span> Code review makes better teams</a></li>
+  </ul></li>
+  <li><a href="#code-review-guidelines" id="toc-code-review-guidelines" class="nav-link" data-scroll-target="#code-review-guidelines"><span class="header-section-number">8.2</span> Code Review Guidelines</a></li>
+  <li><a href="#when-to-stop-for-a-code-review" id="toc-when-to-stop-for-a-code-review" class="nav-link" data-scroll-target="#when-to-stop-for-a-code-review"><span class="header-section-number">8.3</span> When to stop for a code review</a>
+  <ul class="collapse">
+  <li><a href="#code-review-gates" id="toc-code-review-gates" class="nav-link" data-scroll-target="#code-review-gates"><span class="header-section-number">8.3.1</span> Code review gates</a></li>
+  <li><a href="#that-said-prefer-smaller-changes-per-review" id="toc-that-said-prefer-smaller-changes-per-review" class="nav-link" data-scroll-target="#that-said-prefer-smaller-changes-per-review"><span class="header-section-number">8.3.2</span> That said, prefer smaller changes per review</a></li>
+  <li><a href="#code-review-is-progress-too" id="toc-code-review-is-progress-too" class="nav-link" data-scroll-target="#code-review-is-progress-too"><span class="header-section-number">8.3.3</span> Code review is progress, too</a></li>
+  </ul></li>
+  <li><a href="#pre-review-checklist" id="toc-pre-review-checklist" class="nav-link" data-scroll-target="#pre-review-checklist"><span class="header-section-number">8.4</span> Pre-review checklist</a></li>
+  <li><a href="#requesting-a-code-review" id="toc-requesting-a-code-review" class="nav-link" data-scroll-target="#requesting-a-code-review"><span class="header-section-number">8.5</span> Requesting a code review</a>
+  <ul class="collapse">
+  <li><a href="#identifying-reviewers" id="toc-identifying-reviewers" class="nav-link" data-scroll-target="#identifying-reviewers"><span class="header-section-number">8.5.1</span> Identifying reviewers</a></li>
+  <li><a href="#writing-a-good-description" id="toc-writing-a-good-description" class="nav-link" data-scroll-target="#writing-a-good-description"><span class="header-section-number">8.5.2</span> Writing a good description</a></li>
+  <li><a href="#iterating-on-code-review" id="toc-iterating-on-code-review" class="nav-link" data-scroll-target="#iterating-on-code-review"><span class="header-section-number">8.5.3</span> Iterating on code review</a></li>
+  </ul></li>
+  <li><a href="#giving-a-code-review" id="toc-giving-a-code-review" class="nav-link" data-scroll-target="#giving-a-code-review"><span class="header-section-number">8.6</span> Giving a code review</a>
+  <ul class="collapse">
+  <li><a href="#what-to-look-for-in-a-code-review" id="toc-what-to-look-for-in-a-code-review" class="nav-link" data-scroll-target="#what-to-look-for-in-a-code-review"><span class="header-section-number">8.6.1</span> What to look for in a code review</a></li>
+  <li><a href="#what-to-avoid" id="toc-what-to-avoid" class="nav-link" data-scroll-target="#what-to-avoid"><span class="header-section-number">8.6.2</span> What to avoid</a></li>
+  </ul></li>
+  <li><a href="#timeline-and-speed-of-review" id="toc-timeline-and-speed-of-review" class="nav-link" data-scroll-target="#timeline-and-speed-of-review"><span class="header-section-number">8.7</span> Timeline and speed of review</a>
+  <ul class="collapse">
+  <li><a href="#lgtm" id="toc-lgtm" class="nav-link" data-scroll-target="#lgtm"><span class="header-section-number">8.7.1</span> LGTM</a></li>
+  <li><a href="#giving-comments-and-responding-to-reviewee-comments" id="toc-giving-comments-and-responding-to-reviewee-comments" class="nav-link" data-scroll-target="#giving-comments-and-responding-to-reviewee-comments"><span class="header-section-number">8.7.2</span> Giving comments and responding to reviewee comments</a></li>
+  </ul></li>
+  <li><a href="#appendix-code-review-tools-on-github" id="toc-appendix-code-review-tools-on-github" class="nav-link" data-scroll-target="#appendix-code-review-tools-on-github"><span class="header-section-number">8.8</span> Appendix: Code review tools on GitHub</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Code review</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+<p>By Malcolm Barrett</p>
+<section id="why-code-review" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="why-code-review"><span class="header-section-number">8.1</span> Why code review?</h2>
+<p>Code review is a process by which a second person reviews code before it is merged into the main branch of a repository. If that sounds like software engineering to you, you may wonder if code review is suitable for science. Code review is a critical, if modern, part of the scientific process. Code review is a way to ensure that code is reproducible and that it is understandable and maintainable by others. Code review is also a way to share knowledge and learn from others.</p>
+<section id="code-review-makes-better-science" class="level3" data-number="8.1.1">
+<h3 data-number="8.1.1" class="anchored" data-anchor-id="code-review-makes-better-science"><span class="header-section-number">8.1.1</span> Code review makes better science</h3>
+<p>In software engineering, code review emerged as programmers realized it was much easier and cheaper to fix bugs before a product reached the user. In science, code review is a way to catch bugs before your research reaches the public. Bugs, from a scientific point of view, have the same meaning as in software engineering (i.e., a mistake in the code) and a broader meaning (i.e., an error in the analysis). Code review is a way to catch both types of bugs.</p>
+<p>Code review is also a way to ensure that code is reproducible. A second person who can run your code is a good reproducibility test: it simulates what would happen when someone else, much further removed from the project, tries to run your code. Working with the reviewer to make the code run for them will produce more robust code.</p>
+<p>Finally, code review is a way to ensure that code is understandable and maintainable by others. When you are deep into a project, you often are so in tune with the work that very complex things can seem obvious. A second person can help you identify places where this may not be so. A bit of back and forth between the author and the reviewer is natural, as the author explains their code and the reviewer asks questions. When you treat this exchange as a continuous improvement process, you’ll find that your code’s ability to stand on its own improves.</p>
+<p>All three of these goals also help your most important collaborator: future you, who has no idea what current you was thinking when you wrote that code. No, really, you will forget.</p>
+</section>
+<section id="code-review-makes-better-teams" class="level3" data-number="8.1.2">
+<h3 data-number="8.1.2" class="anchored" data-anchor-id="code-review-makes-better-teams"><span class="header-section-number">8.1.2</span> Code review makes better teams</h3>
+<p>Code review is inherently collaborative. At times, the life of a researcher can feel isolated and lonely. Code review brings someone else into your work and your way of thinking. That relationship is fertile ground for learning and growth.</p>
+<p>Reviewing code is a virtuous cycle of education. More experienced coders can help less experienced ones write more idiomatic code. More experienced scientists can improve the use of specific models and methodology and other types of domain knowledge. Less experienced coders can help more experienced users learn new paradigms in coding. They also serve as a test that code is understandable. Because of this cycle, junior and senior members of the lab should participate as both reviewers and reviewees.</p>
+</section>
+</section>
+<section id="code-review-guidelines" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="code-review-guidelines"><span class="header-section-number">8.2</span> Code Review Guidelines</h2>
+<p><strong>Note</strong>: These guidelines are adapted from <a href="https://google.github.io/eng-practices/">Google’s code review guidelines</a>. This document expands the ideas in Google’s process to the research setting. Where possible, we cite Google’s original guidelines using block quotes,</p>
+<blockquote class="blockquote">
+<p>Like this.</p>
+</blockquote>
+<p>Google uses its own tools for managing code and code review, so sometimes you’ll see terms that are a little different. A big one is “CL”, changelist. A CL is Google’s equivalent of a pull request (PR).</p>
+</section>
+<section id="when-to-stop-for-a-code-review" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="when-to-stop-for-a-code-review"><span class="header-section-number">8.3</span> When to stop for a code review</h2>
+<p>In software engineering, code review is a part of daily life. In science, we don’t always write code every day. Some members of the lab may go weeks or months without writing code. Finishing an analysis before stopping for a code review is also tempting. In other words, adapting the code review process to science requires some flexibility.</p>
+<p>Remember that code review is a continuous improvement process. That means early and often is better. But what does that mean for a research project?</p>
+<section id="code-review-gates" class="level3" data-number="8.3.1">
+<h3 data-number="8.3.1" class="anchored" data-anchor-id="code-review-gates"><span class="header-section-number">8.3.1</span> Code review gates</h3>
+<p>At HPDS Lab, we stop at several vital checkpoints or <em>gates</em> for code review. For a traditional research project, these gates are:</p>
+<ul>
+<li>Initial data pull (e.g., a SQL query or API call)</li>
+<li>Descriptive tables and figures</li>
+<li>Modeling and related tables</li>
+<li>Reporting</li>
+</ul>
+<p>Your project might not fit this template exactly. For example, if you also have a simulation component to your project, you’ll probably want to stop at several points to review the simulation code. Or, you may have no models in the analysis but a more extensive descriptive analysis. In this case, reviewing the descriptive work is probably too large of a code review to be effective.</p>
+<p><strong>The general principle is to decide when you absolutely must stop for a code review. Make as many or as few as feels right between them, but always stop at the gates.</strong></p>
+</section>
+<section id="that-said-prefer-smaller-changes-per-review" class="level3" data-number="8.3.2">
+<h3 data-number="8.3.2" class="anchored" data-anchor-id="that-said-prefer-smaller-changes-per-review"><span class="header-section-number">8.3.2</span> That said, prefer smaller changes per review</h3>
+<p>Smaller changes are more effective and more satisfying to reviewers and reviewees because they are easier to understand and quicker to review.</p>
+<p>Here are some relevant points from <a href="https://google.github.io/eng-practices/review/developer/small-cls.html">Google’s guidelines</a>:</p>
+<blockquote class="blockquote">
+<p>Small, simple CLs are:</p>
+<ul>
+<li>Reviewed more quickly. It’s easier for a reviewer to find five minutes several times to review small CLs than to set aside a 30 minute block to review one large CL.</li>
+<li>Reviewed more thoroughly. With large changes, reviewers and authors tend to get frustrated by large volumes of detailed commentary shifting back and forth—sometimes to the point where important points get missed or dropped.</li>
+<li>Less likely to introduce bugs. Since you’re making fewer changes, it’s easier for you and your reviewer to reason effectively about the impact of the CL and see if a bug has been introduced. …</li>
+<li>Easier to merge. Working on a large CL takes a long time, so you will have lots of conflicts when you merge, and you will have to merge frequently.</li>
+<li>Easier to design well. It’s a lot easier to polish the design and code health of a small change than it is to refine all the details of a large change.</li>
+<li>Less blocking on reviews. Sending self-contained portions of your overall change allows you to continue coding while you wait for your current CL in review. …</li>
+</ul>
+</blockquote>
+<p>There are three good ways to think about the size of your PR: number of lines changed, numbers of files changed, and the scope of the changes.</p>
+<p>In software engineering, 100-500 lines of code are often considered the optimal PR size. For research, it depends on the nature of the code. For some types of data cleaning, you may need more lines than this. For some modeling problems, you may want to step well before this number of lines. Each review should be digestible for the reviewer. You’ll get a feel for what is too big as you do more code reviews.</p>
+<p>Similarly, you should limit the number of files changed or added where reasonable. Sometimes, a change to your project automatically generates many files, e.g., figures for a report. That’s okay. But breaking up the review into smaller pieces is a good idea if you are making changes to many unrelated files.</p>
+<p>Finally, keep your changes focused on one area.</p>
+<blockquote class="blockquote">
+<p>In general, the right size for a CL is one self-contained change.</p>
+</blockquote>
+<p>You should be able to describe what the change is succinctly. It’s also okay for such changes to touch different parts of your project. For instance, when it comes time to model, you may need to modify your data cleaning code for the process to work. But if you then decide to make unrelated changes to an earlier figure, handle that in a separate PR and review.</p>
+<p>As a note, “too small” is rarely a problem in code review. Lean towards smaller reviews.</p>
+</section>
+<section id="code-review-is-progress-too" class="level3" data-number="8.3.3">
+<h3 data-number="8.3.3" class="anchored" data-anchor-id="code-review-is-progress-too"><span class="header-section-number">8.3.3</span> Code review is progress, too</h3>
+<p>Often, it can be challenging to stop and wait on your project. For researchers in particular, where often a single person leads an analysis, you may feel like you are the only one who can do the work. But remember that code review <em>is part of the work</em>. It’s not a delay in the work. It is the work.</p>
+<p>Code review <em>is</em> progress. Have a cup of tea and enjoy your project moving forward in peace!</p>
+</section>
+</section>
+<section id="pre-review-checklist" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="pre-review-checklist"><span class="header-section-number">8.4</span> Pre-review checklist</h2>
+<!-- TODO: flesh this out with specific guidance after team agreements -->
+<p>Your code review should meet lab standards. Before requesting a review, make sure you have done the following:</p>
+<ul>
+<li>Prefer making a change as a <em>pull request</em>. PRs are more straightforward to review than code on the main branch because they are isolated from other changes. GitHub also has tools to help you review code as a PR.</li>
+<li>Re-run your code from a black slate environment. This means running your code in an entirely fresh session so that you know your code matches your results.</li>
+<li>Follow the code style guide for the language you are using. Prefer an automatic tool to style your code for you.</li>
+<li>Make sure it is clear how to run the code. This might be related to where to run the code (e.g., GCP) or how to install the project dependencies.</li>
+</ul>
+</section>
+<section id="requesting-a-code-review" class="level2" data-number="8.5">
+<h2 data-number="8.5" class="anchored" data-anchor-id="requesting-a-code-review"><span class="header-section-number">8.5</span> Requesting a code review</h2>
+<section id="identifying-reviewers" class="level3" data-number="8.5.1">
+<h3 data-number="8.5.1" class="anchored" data-anchor-id="identifying-reviewers"><span class="header-section-number">8.5.1</span> Identifying reviewers</h3>
+<p>Google has a process called <a href="https://abseil.io/resources/swe-book/html/ch03.html#what_is_the_readability_processquestion">readability reviews</a>. In short, someone with readability credentials is an expert on how Google uses a particular language. Readability helps maintain a consistent style and propagate idiomatic code for a given language. Google also requires reviews from another person familiar with the project and an “owner” of the code.</p>
+<p>When identifying a reviewer, use this framework. Who can review your code from the perspective of the language you are using? Who can review your code from the perspective of the domain you are working in? Who can review your code from a methodological standpoint? Usually, you are the owner of your research project, but sometimes, you are contributing to someone else’s code. In that case, make sure they are part of the review process.</p>
+<p>For sensitive data, prefer to have a reviewer who has access to the data so they can run the code.</p>
+<p>Note: you are probably the person most familiar with your project. That’s okay. The reviewer is there to help you make the code better, so they don’t necessarily need to be an expert.</p>
+<p>Ideally, you should pick only one or two reviewers because many can slow down the process. The best way to do this is to identify someone who meets as many of the requirements for your review as possible, e.g., who can help improve both your code and the methodology. If you can’t find someone who meets your requirements, you can ask more than one person to review your code.</p>
+<p>If you’re not sure who to ask, start with Malcolm.</p>
+<p>It may be that someone is not available to do the review promptly. It’s better to have someone else review the code, although it’s a judgment call. Occasionally, you should wait for a particular person to be available if they serve as a critical reviewer. Talk openly about timelines and expectations with your reviewer.</p>
+</section>
+<section id="writing-a-good-description" class="level3" data-number="8.5.2">
+<h3 data-number="8.5.2" class="anchored" data-anchor-id="writing-a-good-description"><span class="header-section-number">8.5.2</span> Writing a good description</h3>
+<p>The description of your code review should be a summary of what you are trying to accomplish.</p>
+<blockquote class="blockquote">
+<p>The first line should be a short, focused summary, while the rest of the description should fill in the details and include any supplemental information a reader needs to understand the changelist holistically. It might include a brief description of the problem that’s being solved and why this is the best approach. If there are any shortcomings to the approach, they should be mentioned. If relevant, include background information such as bug numbers, benchmark results, and links to design documents.</p>
+</blockquote>
+<p>See <a href="https://google.github.io/eng-practices/review/developer/cl-descriptions.html#bad">Google’s documentation</a> for examples of good and bad descriptions.</p>
+<p>You may also want to guide reviewers on where to focus their attention.</p>
+<p>Polish the description before requesting a review and before merging.</p>
+<blockquote class="blockquote">
+<p>CLs can undergo significant change during review. It can be worthwhile to review a CL description before submitting the CL, to ensure that the description still reflects what the CL does.</p>
+</blockquote>
+</section>
+<section id="iterating-on-code-review" class="level3" data-number="8.5.3">
+<h3 data-number="8.5.3" class="anchored" data-anchor-id="iterating-on-code-review"><span class="header-section-number">8.5.3</span> Iterating on code review</h3>
+<section id="responding-to-reviewer-comments" class="level4" data-number="8.5.3.1">
+<h4 data-number="8.5.3.1" class="anchored" data-anchor-id="responding-to-reviewer-comments"><span class="header-section-number">8.5.3.1</span> Responding to reviewer comments</h4>
+<p>When you receive comments from a reviewer, you should make a change or respond to them. If you don’t understand a comment, ask for clarification. If you disagree with a comment, explain why and discuss it. Occasionally, you may want a third party to help decide on a change.</p>
+<p>Be respectful and expect the same from your reviewer. Our goal is to improve each other’s work. Remember that, much like a peer review, the review is about your work, not you. Nevertheless, receiving feedback on a project you’ve worked hard on can be difficult. If you are frustrated, take a break and return to it later. Assume good intent from your reviewer.</p>
+<blockquote class="blockquote">
+<p>Remember, courtesy and respect should always be a first priority</p>
+</blockquote>
+</section>
+</section>
+</section>
+<section id="giving-a-code-review" class="level2" data-number="8.6">
+<h2 data-number="8.6" class="anchored" data-anchor-id="giving-a-code-review"><span class="header-section-number">8.6</span> Giving a code review</h2>
+<p>The first and most important rule of code review is that you are there to <em>improve</em> the code, not perfect it. If the code review ends with the code in a better state than it started, you have succeeded.</p>
+<section id="what-to-look-for-in-a-code-review" class="level3" data-number="8.6.1">
+<h3 data-number="8.6.1" class="anchored" data-anchor-id="what-to-look-for-in-a-code-review"><span class="header-section-number">8.6.1</span> What to look for in a code review</h3>
+<p>The key things we look for in a code review are <em>correctness</em>, <em>readability</em>, and <em>reproducibility</em>. Keep your eye out for bugs, where the code is hard to understand, and where the code is hard to run.</p>
+<p>Some other relevant points from the Google documentation are below.</p>
+<p><a href="https://google.github.io/eng-practices/review/reviewer/navigate.html">Approaching a code review</a>:</p>
+<blockquote class="blockquote">
+<ul>
+<li>Does the change make sense? Does it have a good description?</li>
+<li>Look at the most important part of the change first. Is it well-designed overall?</li>
+<li>Look at the rest of the CL in an appropriate sequence.</li>
+</ul>
+</blockquote>
+<p><a href="https://google.github.io/eng-practices/review/reviewer/looking-for.html">Detailed points to review:</a></p>
+<blockquote class="blockquote">
+<p>In the general case, look at every line of code that you have been assigned to review. Some things like data files, generated code, or large data structures you can scan over sometimes, but don’t scan over a human-written class, function, or block of code and assume that what’s inside of it is okay. Obviously some code deserves more careful scrutiny than other code—that’s a judgment call that you have to make—but you should at least be sure that you understand what all the code is doing. If it’s too hard for you to read the code and this is slowing down the review, then you should let the developer know that and wait for them to clarify it before you try to review it. At Google, we hire great software engineers, and you are one of them. If you can’t understand the code, it’s very likely that other developers won’t either. So you’re also helping future developers understand this code, when you ask the developer to clarify it.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>What if it doesn’t make sense for you to review every line? … In these cases, note in a comment which parts you reviewed.</p>
+</blockquote>
+<p>Points to consider:</p>
+<blockquote class="blockquote">
+<ul>
+<li>The code is well-designed. …</li>
+<li>Any parallel programming is done safely.</li>
+<li>The code isn’t more complex than it needs to be.</li>
+<li>The developer isn’t implementing things they might need in the future but don’t know they need now. …</li>
+<li>The developer used clear names for everything.</li>
+<li>Comments are clear and useful, and mostly explain why instead of what.</li>
+<li>Code is appropriately documented […]</li>
+<li>The code conforms to our style guides.</li>
+</ul>
+</blockquote>
+<p>Use GitHub’s comments and suggestion features to speed up the process and put discussions close to the code.</p>
+</section>
+<section id="what-to-avoid" class="level3" data-number="8.6.2">
+<h3 data-number="8.6.2" class="anchored" data-anchor-id="what-to-avoid"><span class="header-section-number">8.6.2</span> What to avoid</h3>
+<p>A fine line exists between making code more idiomatic and making it your code. Avoid the latter. Just because you would do something differently doesn’t mean it’s wrong.</p>
+<p>Additionally, you should avoid making changes unrelated to the code review. File a new issue to address in a separate change.</p>
+<p>Finally, there is a topic that is usually inappropriate for code review: <em>design</em> of the analysis. Not only is a code review a poor fit for such a discussion, but it also hampers the rigor of the study, e.g., adding in ad-hoc analyses that deviate from the research plan. If an analysis has a plan or pre-registration, it is appropriate to discuss if something in the code is done <em>differently</em> from the plan.</p>
+</section>
+</section>
+<section id="timeline-and-speed-of-review" class="level2" data-number="8.7">
+<h2 data-number="8.7" class="anchored" data-anchor-id="timeline-and-speed-of-review"><span class="header-section-number">8.7</span> Timeline and speed of review</h2>
+<p>Discuss your timeline for review with the author. If you cannot review the code promptly, let the author know. Fast code review is essential to maintain both momentum on a project and satisfaction with the review process.</p>
+<p>Google’s <a href="https://google.github.io/eng-practices/review/reviewer/speed.html">entire guide on the speed of reviews</a> is excellent. Here are some important points:</p>
+<ul>
+<li>Prioritize reviews but not at the expense of your own focus time. Try to get to it when you have a break in your focused work.</li>
+<li>Google recommends a single business day as a turnaround time. This goal is good, but it’s not always possible in a research setting with competing priorities. Nevertheless, make code review an important part of your workday. Discuss the timeline for review with the author. Your pending review should not be blocking their progress.</li>
+</ul>
+<section id="lgtm" class="level3" data-number="8.7.1">
+<h3 data-number="8.7.1" class="anchored" data-anchor-id="lgtm"><span class="header-section-number">8.7.1</span> LGTM</h3>
+<p>The traditional stamp of approval is “LGTM” – “looks good to me!” However you say it, make a clear statement of approval, even if only through GitHub’s approval mechanism.</p>
+</section>
+<section id="giving-comments-and-responding-to-reviewee-comments" class="level3" data-number="8.7.2">
+<h3 data-number="8.7.2" class="anchored" data-anchor-id="giving-comments-and-responding-to-reviewee-comments"><span class="header-section-number">8.7.2</span> Giving comments and responding to reviewee comments</h3>
+<p>Per Google’s <a href="https://google.github.io/eng-practices/review/reviewer/comments.html">How to write code review comments</a>:</p>
+<blockquote class="blockquote">
+<ul>
+<li>Be kind.</li>
+<li>Explain your reasoning.</li>
+<li>Balance giving explicit directions with just pointing out problems and letting the developer decide.</li>
+<li>Encourage developers to simplify code or add code comments instead of just explaining the complexity to you.</li>
+</ul>
+</blockquote>
+<p>Also, clarify when something is a suggestion or for the author’s information. If you have a suggestion that is out of scope for the review, <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/incorporating-feedback-in-your-pull-request#opening-an-issue-for-an-out-of-scope-suggestion">file a separate issue</a>.</p>
+<p>There is also some evidence that <a href="https://developers.googleblog.com/2022/06/Using-research-to-make-code-review-more-equitable.html">women and racial minorities are more likely to experience pushback in code review</a>. Be mindful that your review is helpful and not harmful.</p>
+<p>Sometimes, authors may disagree with you.</p>
+<blockquote class="blockquote">
+<p>When a developer disagrees with your suggestion, first take a moment to consider if they are correct. Often, they are closer to the code than you are, and so they might really have a better insight about certain aspects of it. Does their argument make sense? Does it make sense from a code health perspective? If so, let them know that they are right and let the issue drop.</p>
+</blockquote>
+<p>In research, too, the author is often much closer to the code and project than you. Nevertheless, your job is to help the author improve their code, so it’s okay to (politely) advocate for a change you think is important. If you can’t agree, ask a third party to help.</p>
+<blockquote class="blockquote">
+<p>Remember, courtesy and respect should always be a first priority</p>
+</blockquote>
+<p>By the way, remember to point out things you like!</p>
+<blockquote class="blockquote">
+<p>If you see something nice in the CL, tell the developer, especially when they addressed one of your comments in a great way. Code reviews often just focus on mistakes, but they should offer encouragement and appreciation for good practices, as well. It’s sometimes even more valuable, in terms of mentoring, to tell a developer what they did right than to tell them what they did wrong.</p>
+</blockquote>
+</section>
+</section>
+<section id="appendix-code-review-tools-on-github" class="level2" data-number="8.8">
+<h2 data-number="8.8" class="anchored" data-anchor-id="appendix-code-review-tools-on-github"><span class="header-section-number">8.8</span> Appendix: Code review tools on GitHub</h2>
+<p>GitHub offers <a href="https://github.com/features/code-review">top-notch tools for code review</a>. Use a <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests">pull request workflow</a> to manage your code changes to take advantage of them. Here are some recommended articles on tools for code review:</p>
+<ul>
+<li><a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request">Reviewing pull requests</a></li>
+<li><a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/commenting-on-a-pull-request">Commenting on changes and making suggested changes</a></li>
+<li><a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/incorporating-feedback-in-your-pull-request">Accepting changes</a></li>
+<li>Sometimes, a PR results in a merge conflict. <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github">GitHub has a GUI for handling basic conflicts</a>. You might also like something like <a href="https://www.gitkraken.com/learn/git/tutorials/how-to-resolve-merge-conflict-in-git">GitKraken to help you manage more complex conflicts</a>.</li>
+<li><a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request">Merging a pull request</a></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        for (let i = 0; i < 2; i++) {
+          container.appendChild(note.children[i].cloneNode(true));
+        }
+        return container.innerHTML
+      } else {
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        console.log("RESIZE");
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/07-publications.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Publications</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../chapters/99-references.html" class="pagination-link">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
