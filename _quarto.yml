@@ -14,6 +14,7 @@ book:
     - chapters/05-computing.qmd
     - chapters/06-conferences.qmd
     - chapters/07-publications.qmd
+    - chapters/08-code-review.qmd
     - chapters/09-code-workflow-agreements.qmd
     - chapters/10-pre-flight-checklist.qmd
     - chapters/99-references.qmd
