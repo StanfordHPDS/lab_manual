@@ -40,7 +40,7 @@ jobs:
       # - name: Setup Julia
       #   uses: julia-actions/setup-julia@v1
 
-      NOTE: If Publishing to GitHub Pages, set the permissions correctly (see top of this yaml)
+      # NOTE: If Publishing to GitHub Pages, set the permissions correctly (see top of this yaml)
       - name: Publish to GitHub Pages (and render)
         uses: quarto-dev/quarto-actions/publish@v2
         with:
