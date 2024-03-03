@@ -1,0 +1,46 @@
+# Pre-Flight Checklist for Publications {#sec-checklist}
+
+## Crosscheck
+
+As discussed in @sec-code-review and @sec-agreements, your analysis should be regularly checked for correctness and adherence to lab agreements, *not* just at the end of the project. However, it's useful to have a final check (by you and at least one other person) before submitting for publication. Regular code review will make this final check quicker and easier, so please do both.
+
+Note: for pre-prints, run through this checklist for both uploading to the pre-print server as well as for when you formally submit the project to a journal.
+
+## Pre-Flight Checklist
+
+### Repository and files
+
+- [ ] No sensitive data is included in the repository. If such data is identified, remove from repo and git history. Check files, Jupyter caches, etc.
+- [ ] There is a `README` file (any of: `README.md`, `README.Rmd`, `README.qmd`)
+- [ ] `README` contains clear instructions on how to run the code. See @sec-readme for details.
+- [ ] If repo is private, make it public
+
+### Code and reproducibility
+
+- [ ] The code follows the team style guide. See @sec-code-style for details.
+- [ ] Query code from user interfaces, e.g., Redivis or BigQuery, are up to date in version control
+- [ ] The code uses a package environment to lock packages. See @sec-pkg-env for details.
+- [ ] Manuscript is generatable via Quarto. See See @sec-quarto for details.
+- [ ] Run the code one last time in a fresh environment, preferably on a different computer. See @sec-running-code for details.
+
+### Submission
+
+- [ ] Check any Data Use Agreements for relevant datasets that require review from a third party
+- [ ] Check if journal has specific code and reproducibility guidelines
+- [ ] Check figures and tables for correctness
+- [ ] Check <https://www.zotero.org/styles> for a citation style file for the journal of interest, and include the file in your Quarto metadata and in the repository
+- [ ] For sensitive data, no small cells (<11) are included in tables or figures (future: run x tool on output to make sure)
+- [ ] Share with co-authors for comments
+- [ ] Use a GitHub release for the submission version. See @sec-gh-release for details.
+- [ ] Submit to archive service like OSF
+- [ ] If there are any research outputs other than a journal article, such as a dataset, register them for a DOI at a service like OSF or Zenodo
+
+### Acceptance
+
+- [ ] If the project exists as a pre-print, update the pre-print page to include information about the peer-reviewed publication.
+
+### Opt-in Workflows (@sec-opt-in)
+
+- [ ] Opt-in: if code contains tests, tests pass. See @sec-tests for details.
+- [ ] Opt-in: Pipeline code is documented and with clear instructions for running the pipeline. See @sec-pipeline for details.
+- [ ] Opt-in: Dockerfile is included in repository with clear instructions for running the image. See @sec-docker for details.

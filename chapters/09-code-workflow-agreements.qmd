@@ -1,0 +1,559 @@
+# Code Workflow Team Agreements {#sec-agreements}
+
+## Team Agreements
+
+This chapter documents the code workflow team agreements for our lab. By team agreements, we mean a set of coding principles and workflows we have all agreed to adhere to. This is a living document: we can update as the team and coding ecosystem change over time. If you have concerns or suggestions about our workflows, feel free to propose alternatives for the team to consider collectively.
+
+We focus on workflows that allow individual members freedom to code how they prefer while maintaining reproducibility and ease of collaboration. Thus, we don't tell you which language to use or, for the most part, which tools to use within a given language (unless there is a key tool we use to maintain the agreements).
+
+Currently, most of our team uses R, Python, or both. Thus, we offer language-specific guidance for those two languages. We'll add relevant recommendations if other languages become more prominent in the team.
+
+Throughout this document, we'll organize language-specific guidance in tab sets like this:
+
+::: {.panel-tabset}
+## R
+
+This is how we do it in R.
+
+## Python
+
+This is how we do it in Python.
+:::
+
+::: {.callout-tip}
+Contact Malcolm for support if you want help setting up or using any guidelines in this document.
+:::
+
+## Code style {#sec-code-style}
+
+Consistency of code style is essential for collaboration. It speeds up the reading of code and reduces debates on what code should look like. We prefer automated styling tools such that you can write however you like and quickly follow the team style guide by running the tool.
+
+::: {.panel-tabset}
+## R
+
+R code should follow the [Tidyverse style guide](https://style.tidyverse.org/index.html), automatically styled by the styler package. Despite the name, this guide also applies to non-Tidyverse code, including base R and data.table.
+
+```r
+# style all R-related files in the current directory
+styler::style_dir()
+```
+
+Note that you should run styler interactively in the console, not in one of your R scripts.
+
+Styler also has a helpful add-in for RStudio to let you style the active file, a code selection, etc.
+
+## Python
+
+For Python, we use TODO.
+
+**TODO: Decide on a code style**
+**Option 1: [ruff](https://docs.astral.sh/ruff/)**
+
+[Ruff](https://docs.astral.sh/ruff/) uses the [Black style guide](https://black.readthedocs.io/en/stable/the_black_code_style/current_style.html) is more performant and extensible. 
+
+Ruff is installable through pip:
+
+```bash
+pip install ruff
+```
+
+Run this command in the terminal to format the Python code in your directory:
+
+
+```bash
+ruff format
+```
+
+**Option 2: [black](https://black.readthedocs.io)**
+
+Black uses the [Black style guide](https://black.readthedocs.io/en/stable/the_black_code_style/current_style.html). 
+
+Black is installable through pip:
+
+```bash
+pip install black
+```
+
+Run this command in the terminal to format the Python code in your directory:
+
+```bash
+black .
+```
+
+**Option 3: [rye](https://rye-up.com/)**
+
+[Rye](https://rye-up.com/) is a global Python manager. It uses the [Ruff](https://docs.astral.sh/ruff/) to format Python code using the [Black style guide](https://black.readthedocs.io/en/stable/the_black_code_style/current_style.html). 
+
+Rye is not installable via pip; follow the [instructions on the website](https://rye-up.com/) to install it.
+
+Run this command in the terminal to format the Python code in your directory:
+
+```bash
+rye fmt
+```
+:::
+
+
+::: {.callout-tip}
+
+We do not currently require a linter, but they can be handy to analyze your code for areas of improvement.
+
+::: {.panel-tabset}
+
+## R
+
+In R, use [lintr](https://lintr.r-lib.org/). Linting works particularly well in RStudio, which will tag lines of code with specific suggestions.
+
+```{r}
+#| eval: false
+lintr::lint_dir()
+```
+
+
+## Python
+
+In Python, use TODO.
+
+*Note: black does not have a linter, but Ruff and Rye do. For black, Flake8 might be the complementary linter*
+
+*Note: Quarto files are not widely supported yet. See this issue for ruff: https://github.com/astral-sh/ruff/issues/6140*
+
+:::
+::: 
+
+## Naming things
+
+Naming things is an aspect of code style, but it merits a little extra attention because it is important to readability. In general, strive to make your code *self-documenting*, e.g., someone else should be able to read your code and understand what it's doing without talking to you about it. Self-documenting is easier said than done, so code clearness is an essential type of feedback in code review.
+
+Use descriptive names for objects in code, e.g., `model_results` instead of `out` or `kangaroo_data` instead of `k`. 
+
+::: {.callout-tip}
+It's OK to use terse names where the meaning is generally understood, like `n` for counts or `i` and `j` for loop counters.
+:::
+
+Similarly, for functions, describe what the function is doing, preferably in verb format, e.g., `simulate_data()` is better than `f()` or `data_simulator()`
+
+For both R and Python, prefer `snake_case` over `camelCase` and other naming style conventions unless otherwise appropriate, e.g., the name of a class for object-oriented programming in Python.
+
+## Project organization
+
+We try to be flexible about project organization, as being too prescriptive often backfires. The rule of thumb is to try to make it obvious where everything is by using descriptive folder and file names, e.g., `R/` or `scripts/` to organize source code and `output` or `reports` to organize research outputs. You should also include guidance on the organization of your project in a `README` (see @sec-readme).
+
+For instance, an R project might look like this:
+
+```
+R/
+figures/
+reports/
+my_project.Rproj
+```
+
+or like 
+
+```
+sql/
+functions/
+run.R
+my_project.Rproj
+```
+
+Both setups are understandable and reasonable; the vital part is that users know where to find important files and how to use them.
+
+There are a few tools that will help you set up a project.
+
+::: {.panel-tabset}
+## R
+
+RStudio supports the idea of *RStudio Projects*. These are handy setups because they set your working directory wherever your project is on your computer. See See [Project-Oriented Workflows](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/) for more.
+
+Use the RStudio interface to create a new project or create one in the console with `usethis::create_project("/path/to/your/new/project")`.
+
+## Python
+
+**if we use Rye**
+
+For Python users, running `rye init project_name` will set up a directory called `project_name` with several files pre-established as a git repository.
+:::
+
+We also have a couple of essential guidelines for what is in a project. 
+
+### Don't include sensitive information on Git and GitHub
+
+[.gitignore](https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files) any sensitive data. For instance, your `.gitignore` file should contain lines for `data/` and `data-raw/` if those two folders contain sensitive data. Another common source of information leaks is cached data, such as Jupyter checkpoints or a knitr cache. 
+
+::: {.callout-tip}
+For R users, consider running `usethis::git_vaccinate()` in the console. Running this command will add standard R-related files that shouldn't be in version control to your global gitignore. It won't protect you from including sensitive data, but it serves as a backup configuration for files that usually don't need to be included. 
+
+usethis also has a function called `use_git_ignore()` for adding files and folders to `.gitignore`, which might feel more natural to the R workflow.
+:::
+
+A project that has sensitive data and uses Jupyter might have a `.gitignore` file in the root directory that looks like this:
+
+```
+data/
+.ipynb_checkpoints
+*/__pycache__
+```
+
+Here, `data/` is ignored because it contains sensitive data, `.ipynb_checkpoints` is ignored because it might accidentally have such data, and `__pycache__` is ignored not because it is a data cache (despite its name) but that it's a commonly ignored development output in Python projects.
+
+
+::: {.callout-tip}
+See [GitHub's collection](https://github.com/github/gitignore) of commonly gitignored files and folders organized by programming language for more suggestions on files you might want to exclude from your repository. Not all these are related to sensitive information; some are output objects considered unnecessary or cluttering.
+:::
+
+### Don't include absolute directories that are not accessible to others
+
+A common mistake in code is to hardcode a path that only exists on your computer, e.g.
+
+```python
+df = pd.read_csv("/users/malcolmbarrett/Downloads/data.csv")
+```
+
+Prefer file paths that are relative to the root directory of your project. `data.csv` should be in my project directory, which I can access with relative paths:
+
+```python
+df = pd.read_csv("data/data.csv")
+```
+
+::: {.callout-tip}
+For R users, the [here](https://here.r-lib.org/) package can let you refer to files and folders from the root directory of your project no matter where the code exists. here can be helpful when, for instance, you have a report in a `reports/` folder but want to refer to a data file in the `data/` folder. Instead of backtracking `../data/data.csv`, you can write `here("data", "data.csv")`
+:::
+
+## Generate reproducible documents with Quarto {#sec-quarto}
+
+Prefer using [Quarto](https://quarto.org/) for documents, particularly those that generate a research product like a journal article. Quarto is a scientific publishing framework that weaves [Markdown-based](https://commonmark.org/help/tutorial/) text with computational results from R, Python, Julia, etc. You can also mix languages in a single document.
+
+You can also use Quarto interactively in RStudio and VS Code much as you can with R Markdown or Jupyter notebooks.
+
+The documentation on the Quarto website is excellent, so check that for guidance on the latest features. A handy collection of pages for research is the [Scholarly Writing](https://quarto.org/docs/authoring/front-matter.html) section of the Authoring guide.
+
+::: {.panel-tabset}
+## R
+
+RStudio comes with an installation of Quarto, so you likely don't need to install it. However, if you install a newer version of Quarto, RStudio will use that automatically, making it reasonably seamless to upgrade.
+
+If you prefer, you can also use R and [Quarto in VS Code](https://quarto.org/docs/tools/vscode.html).
+
+Prefer Quarto over R Markdown; Quarto supersedes R Markdown and all significant improvements and developments will be there instead of R Markdown.
+
+## Python
+
+Prefer Quarto `.qmd` files over Jupyter files; Quarto can run interactively like a notebook but has better reproducibility and version control properties. That said, you *can* use both using Quarto to [render Jupyter files](https://quarto.org/docs/tools/jupyter-lab.html). Quarto also has tooling for [switching back and forth between formats](https://quarto.org/docs/tools/jupyter-lab.html#converting-notebooks).
+
+The best way to use Quarto for Python projects is [VS Code](https://quarto.org/docs/tools/vscode.html) using the Quarto extension. This extension allows you to render files easily while also running code interactively. RStudio also supports Python projects, so it's another good option if you also use R.
+:::
+
+
+## Use Git and GitHub
+
+You should manage your project with version control and hosted for collaborators to access. We use [Git](https://www.atlassian.com/git) and [GitHub](https://docs.github.com/en/get-started/start-your-journey/hello-world) for managing and hosting version-controlled repositories, respectfully. We also have a [GitHub organization](https://github.com/StanfordHPDS) where we keep team projects.
+
+See @sec-code-review for how to manage code changes to your repository.
+
+:::{.callout-tip}
+
+For R users, there are two helpful functions in usethis to manage your git setup for a project: `usethis::use_git()` will initialize a git repository and activate the git UI in RStudio; `usethis::use_github()` will create and link a GitHub repository, as well as make your first push. Note that `use_github()` has an `organisation` argument where you can specify a GitHub organization to create the repository under, such as `use_github(organisation = "StanfordHPDS")`.
+
+See also the [PR workflow vignette](https://usethis.r-lib.org/articles/pr-functions.html) for making and managing pull requests in R. You might also find [Happy Git and GitHub for the useR](https://happygitwithr.com/) a helpful perspective.
+:::
+
+### Release on GitHub {#sec-gh-release}
+
+GitHub has a mechanism for [making formal releases of repositories](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). This takes a snapshot of the repository at the time of release and attaches a name.
+
+Making a "release", of course, has its origins in software versions. However, it's also helpful in tracking significant milestones in a project. For instance, make a release upon submission to a journal and another upon publication. That allows you to easily revisit the state of the repository at those two time points. GitHub also makes downloading the repository in releases easy, making it an excellent point to direct people not using Git.
+
+## Documentation
+
+The first step in documenting your code is writing clear, readable code. In other words, someone else should be able to read your code and understand what it's doing. The best way to test this out is a code review: can somebody else understand your code? Code that is itself readable is sometimes called *self-documenting* code. It's not always possible and shouldn't be the only type of documentation, but it's an excellent goal to strive towards.
+
+### A note about comments
+
+Comments exist in virtually every programming language because programming languages are for humans, not computers. Adding commentary is essential to making it understandable to a person.
+
+That said, many comments are of two less helpful varieties: [what comments](https://www.reddit.com/r/ProgrammerHumor/comments/8w54mx/code_comments_be_like/) and deodorant comments. "What" comments explain what the code is doing, usually redundantly. This type of comment is unnecessary because it's clear from the code what is happening:
+
+```
+# add 1 and 2 together
+1 + 2
+```
+
+*Deodorant* comments are added because the code is unclear. This idea comes from what Martin Fowler calls "[code smells](https://en.wikipedia.org/wiki/Code_smell)", a particular odor in code that suggests a more profound problem or lack of clarity.
+
+> ...comments aren't a bad smell; indeed they are a sweet smell. The reason we mention comments here is that comments often are used as a deodorant.
+
+Sometimes, blocks of comments explain code that could be refactored to be more straightforward:
+
+> When you feel the need to write a comment, first try to refactor the code so that any comment becomes superfluous
+
+Again, code comments are *not* bad. They are helpful and sometimes downright necessary. Some code is unavoidably complex, so context as to why and what the code is doing makes it more understandable.
+
+When you get feedback in a code review that something is hard to understand, try to clarify the code, then add comments as necessary.
+
+### `README` {#sec-readme}
+
+A `README` file is commonly included in a project to explain how to use it or other relevant information. `README.md` files have [special properties on GitHub](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes). These are text files that use markdown syntax. When you visit a repository on GitHub, the `README` is rendered and serves as a front page for your project. You can manually include a `README.md` file or render one with a `README.Rmd` or `README.qmd` file.
+
+::: {.callout-tip}
+For R users, running `usethis::use_readme_md()` and `usethis::use_readme_rmd()` will create `README.md` and `README.Rmd`, respectively. You only need to pick one of these.
+
+<!-- TODO: Keep if we use Rye -->
+For Python users, `rye init` will automatically create a `README.md` file. 
+:::
+
+For our purposes, a `README` should include *at least*: 
+
+* A description of the project, such as an abstract
+* A brief explanation of the file structure of the repository
+* Details on how to run the code (@sec-running-code) in the project, such as installing dependencies, versions of R or Python for the project, etc.
+* Any other necessary information to understand or use the project
+
+## Running code {#sec-running-code}
+
+### Use a blank slate
+
+You should regularly run your code in a *blank slate*---running everything from scratch.
+
+::: {.panel-tabset}
+## R
+
+By default, R stores and loads the interactive environment you use between R sessions. This is a bad default for reproducibility. Teach R not to do this by running this command once in your terminal:
+
+```r
+usethis::use_blank_slate()
+```
+
+Relatedly, your script should *not* contain `rm(list = ls())`. Using a blank slate and restarting your R session is the better approach because it *really* starts from scratch, whereas `rm(list = ls())` only clears objects in the global environment. See [Project-Oriented Workflows](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/) for a discussion on this.
+
+## Python
+
+In Python, the primary way that people end up with environments that are out of sync with their code is by not [regularly restarting their Jupyter kernel](https://academic.oup.com/gigascience/article/doi/10.1093/gigascience/giad113/7516267?login=false). Instead, regularly restart the kernel and run all cells to make sure your code still works (and works as you expect).
+
+Note that this applies only to Jupyter Notebooks. While Quarto uses the Jupyter kernel for running Python code, it always starts a new session when rendering.
+:::
+
+::: {.callout-tip}
+Rendering a Quarto document always runs code from scratch by default. 
+:::
+
+### Provide guidance on how to run your code
+
+Your `README` should include guidance on how to run your code. For instance, if there is a command to run the entire project, include information about that process (this is usually related to pipeline-managed code as discussed in the optional @sec-pipelines). If you intend the user to run scripts in a particular order, describe how.
+ 
+## Lock your package versions {#sec-pkg-env}
+
+Installing project dependencies is a part of running code, but its peculiarities for reproducibility merit some attention of its own.
+
+Both packages within a language and languages themselves frequently change, making running code over time (as new versions are released) and space (the versions on your computer vs. someone else's computer) difficult.
+
+A vital check of this problem is code review. The reviewer serves as a proxy for being able to run your code somewhere else. If it doesn't work for your reviewer, discuss and document the process to make it so.
+
+There are also tools for installing versions of packages local to the project such that a project will always use identical package versions. 
+
+::: {.callout-note} 
+We leave it up to the project's author *when* they activate a package environment manager. Sometimes, waiting while you iterate through a project, adding and removing dependencies as you go, is helpful. Sometimes, it's easier to start in a controlled environment.
+
+At the very least, your project should *end* in such a state. The last check for this is pre-submission (@sec-checklist).
+:::
+
+Here are the tools we use for managing software versions.
+
+::: {.panel-tabset}
+## R
+
+In R, use the [renv](https://rstudio.github.io/renv/articles/renv.html) package to manage R package versions. renv is an interactive tool, so you should use it primarily in the console.
+
+To initiate a project:
+
+```r
+renv::init()
+```
+
+Among other things, this will create `renv.lock`, which needs to be included in your git repository.
+
+Check a project's dependency status with 
+
+```r
+renv::status()
+```
+
+And update the packages in your lock file with
+
+```r
+renv::snapshot()
+```
+
+When you use renv, your project `README` should explain how to use it, e.g.
+
+```r 
+# install.packages("renv")
+# install the dependencies for the project
+renv::restore()
+```
+
+One common problem in renv is that it keeps track of but does not manage the R version. If you need to switch between R versions, consider using [rig](https://github.com/r-lib/rig). Rig is not an R package but a separate software that lets you install and switch between R versions. On servers, [RStudio Workbench will let you change versions](https://support.posit.co/hc/en-us/articles/212364537-Using-multiple-versions-of-R-with-RStudio-Workbench-RStudio-Server-Pro), as well, provided that they are installed.
+
+## Python
+
+Note: The Python ecosystem for managing environments is vast. See <https://alpopkes.com/posts/python/packaging_tools/> for an overview.
+
+**We need to decide which approach to use**.
+
+*Managing Python packages*
+
+**Option 1: [venv](https://docs.python.org/3/library/venv.html) + [pip](https://pip.pypa.io/en/stable/)**
+
+```bash
+# create a new virtual environment called projectenv
+python3 -m venv projectenv
+
+# activate the environment projectenv
+source projectenv/bin/activate
+
+# add a package to your environment
+pip install polars
+```
+
+
+**Option 2: [conda](https://docs.conda.io/en/latest/)**
+
+```bash
+# create a new virtual environment called projectenv
+conda create --name projectenv
+
+# activate the environment projectenv
+conda activate projectenv
+
+# add a package to your environment
+conda install polars
+```
+
+**Option 3: [rye](https://rye-up.com/)**
+
+```bash
+# after `rye init project_name` and `rye pin python_version`, create the virtual environment:
+rye sync
+
+# activate the environment 
+. .venv/bin/activate
+
+# add a package to your environment
+rye add polars
+```
+
+*Managing Python versions*
+
+**Option 1: [pyenv](https://github.com/pyenv/pyenv)**
+
+```bash
+# install python 3.12.1
+pyenv install 3.12.1
+
+# use python 3.12.1 for the local project
+pyenv local 3.12.1
+```
+
+**Option 2: [conda](https://docs.conda.io/en/latest/)**
+
+Conda treats Python like other packages, so managing it is similar. One helpful thing you can do is specify a Python version while creating an environment.
+
+```bash
+# create a new virtual environment called projectenv
+conda create --name projectenv python=3.12.1
+
+# activate the environment projectenv
+conda activate projectenv
+```
+
+See the [Conda documentation](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-python.html) for other ways of interacting with the Python version.
+
+**Option 3: [rye](https://rye-up.com/)**
+
+```bash
+# use python 3.12.1 for the local project
+rye pin 3.12.1
+
+# install the pinned version, python 3.12.1
+rye fetch
+```
+
+:::
+
+## Opt-in Workflows {#sec-opt-in}
+
+Opt-in workflows are things we do not require for a project but for which we offer guidance. Such workflows also allow the team to experiment with new things and see what works for projects and when.
+
+### Pipelines {#sec-pipelines}
+
+Pipeline tools are software that manage the execution of code. What's practical about this for research projects is that pipeline tools track the relationship between components in your project (meaning it knows which order to run things in automatically) and will only run those components when they are out of date (meaning you don't necessarily need to rerun your entire project because you updated one part of the code).
+
+Pipeline tools are helpful for projects of any size, but they are particularly suited to complex or computationally intense projects.
+
+::: {.panel-tabset}
+## R
+
+The best pipeline tool in R is the targets package. targets is a native R tool, making it easy to work with R objects. It works particularly well with Quarto and R Markdown, allowing you to reduce the amount of code in a report while managing it reproducibly.
+
+targets has [excellent documentation and tutorials](https://books.ropensci.org/targets/), so we point you there for guidance.
+
+It's also possible to use tools like Make and Snakemake, among others (see the Python tab), with R, although we recommend targets for projects that are mostly R.
+
+## Python
+
+**TODO: decide on which to use**
+
+Python has several pipeline tools that are used in data engineering. For these larger data projects, these tools are sometimes called *orchestration* tools. That said, many of them are much more complex than is needed for a single research project.
+
+Here are the tools we should explore:
+
+1. [Make](https://www.gnu.org/software/make/): Make is one of the oldest and most popular pipeline tools, over 40 years old. It shows its age in some ways, but it's also battle-tested. See [this tutorial](https://third-bit.com/py-rse/automate.html) for an example of running an analysis with Make.
+2. [Snakemake](https://snakemake.github.io/): a Python tool influenced by Make, it's very similar in spirit but more modern. It's easier to read and customize, and you can write Python code within the Snakefile. It also works nicely with Python and R scripts. One handy thing is that you can access Snakemake inputs and outputs through magic objects for both Python and R. That makes it useful for, e.g., dynamic rules and rules where you want to use inputs for reports. Snakemake has good support for Conda environments in particular.
+3. [Dagster](https://docs.dagster.io/getting-started/hello-dagster). Dagster is a different approach that uses decorators to tag Python functions as "assets," the apparent equivalent of targets in other tools. It has a nice UI tool for visualizing the nodes and relationships of the project, as well as "materializing" (running) them. Dagster is a company, but the tool has an open-source version. 
+4. [Prefect](https://www.prefect.io/opensource) Prefect is an increasingly popular tool for orchestration. Like Dagster, it is a company-based open-source tool that uses decorators to tag Python functions. It also has a UI.
+
+:::
+
+### Testing {#sec-tests}
+
+In scientific work, two types of code tests are useful: code expectations and data expectations. Code should *behave* the way you expect, and data should *exist* the way you expect. If that is not the case, you either have identified a problem with your code and data or a problem with your expectations.
+
+Automating such tests in code expectations is helpful because you can run them whenever you have code or data changes. Moreover, you're probably already probing these expectations informally in some form or another. 
+
+::: {.panel-tabset}
+## R
+
+You can write code tests using simple tools in base R like `stop()` and `stopifnot()`, but the most robust suite for testing code is the testthat package. While [testthat](https://testthat.r-lib.org/) is designed for R packages, it's also useful for testing functions in your analysis code. In addition to the testthat documentation, see the [testing chapter of R Packages](https://r-pkgs.org/) for more.
+
+There are several tools for testing data. Again, you can use simple logical statements with `stop()` and friends, but the most comprehensive tool in R for data quality checks is [pointblank](https://rstudio.github.io/pointblank/). 
+
+In RStudio, you can automate tests even when you're not in a package by activating "package mode". All this means is adding a [`DESCRIPTION` file](https://r-pkgs.org/description.html). To do this, run `usethis::use_description(check_name = FALSE)` and restart RStudio. Then, you can run any tests in the `test/` folder via the Build pane.
+
+## Python
+
+You can write code tests using simple tools in Python like `assert`, but there are also many libraries for formal testing. The most popular is [unittest](https://docs.python.org/3/library/unittest.html).
+
+There are several tools for testing data. Again, you can use simple logical statements with `assert` and friends, but the most comprehensive tool in Python for data quality checks is [Great Expectations](https://rstudio.github.io/pointblank/). 
+:::
+
+
+### Docker {#sec-docker}
+
+[Docker](https://docs.docker.com/get-started/overview/) is a tool for reproducing not just the software and packages used in an analysis but the entire computational environment. As it's got more of a learning curve, we do not currently require it for projects. However, consider it for projects where reproducibility is crucial or where you want to feel more confident that the code will be runable for many years. 
+
+Docker is a general tool that works with R, Python, and just about anything else you like to use.
+
+Here's a Docker tutorial for data analysis: <https://github.com/RamiKrispin/sdsu-docker-workshop>.
+
+If interest in Docker grows on the team, we'll also explore creating support for Docker workflows, such as prebuilt images and Dockerfiles the team can lean on.
+
+::: {.panel-tabset}
+## R
+
+Docker doesn't require a different approach for R, but many existing images save time. Here is an overview of running R code in Docker: <https://raps-with-r.dev/repro_cont.html>.
+
+## Python
+Docker doesn't require a different approach for Python, but some Python-specific tools will save time. Here's a tutorial on setting up and using Docker with Python in VS Code: 
+<https://github.com/RamiKrispin/vscode-python>
+
+:::
