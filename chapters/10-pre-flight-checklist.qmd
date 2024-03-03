@@ -42,5 +42,5 @@ Note: for pre-prints, run through this checklist for both uploading to the pre-p
 ### Opt-in Workflows (@sec-opt-in)
 
 - [ ] Opt-in: if code contains tests, tests pass. See @sec-tests for details.
-- [ ] Opt-in: Pipeline code is documented and with clear instructions for running the pipeline. See @sec-pipeline for details.
+- [ ] Opt-in: Pipeline code is documented and with clear instructions for running the pipeline. See @sec-pipelines for details.
 - [ ] Opt-in: Dockerfile is included in repository with clear instructions for running the image. See @sec-docker for details.
