@@ -1,5 +1,4 @@
 # Computing Resources
-by Sherri Rose
 
 ## Nero GCP
 
@@ -19,5 +18,3 @@ Much of the software we use in the Lab is available open source for free. Please
 
 - OmniGraffle: [Purchase Subscription or One-Time Download](https://store.omnigroup.com/omnigraffle)
 - Adobe Illustrator: [Free via Stanford Branner Earth Science Library](https://library.stanford.edu/branner/using-branner-library) or [Purchase Adobe Creative Cloud License](https://web.stanford.edu/dept/its/cgi-bin/services/software/portal/detail.php?action=view_product&product_id=1163) 
-
-## Github
