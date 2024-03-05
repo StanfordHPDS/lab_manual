@@ -2,7 +2,7 @@ project:
   type: book
 
 book:
-  title: "Health Policy Data Science Lab Manual"
+  title: "Health Policy Data Science Lab"
   chapters:
     - index.qmd
     - chapters/01-culture.qmd
