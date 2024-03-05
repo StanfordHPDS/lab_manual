@@ -3,8 +3,6 @@ project:
 
 book:
   title: "Health Policy Data Science Lab Manual"
-  author: "Sherri Rose"
-  date: "2/5/2024"
   chapters:
     - index.qmd
     - chapters/01-culture.qmd
