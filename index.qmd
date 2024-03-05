@@ -1,4 +1,4 @@
-# {.unnumbered}
+# Lab Manual {.unnumbered}
 
 The [Health Policy Data Science Lab](http://healthpolicydatascience.org/) at Stanford is a group of interdisciplinary researchers who develop and apply quantitative methods to solve problems in health policy, leveraging techniques from statistics, computer science, economics, epidemiology, and decision science.
 
