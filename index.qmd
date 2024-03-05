@@ -1,3 +1,5 @@
+# {.unnumbered}
+
 The [Health Policy Data Science Lab](http://healthpolicydatascience.org/) at Stanford is a group of interdisciplinary researchers who develop and apply quantitative methods to solve problems in health policy, leveraging techniques from statistics, computer science, economics, epidemiology, and decision science.
 
 This manual will evolve over time to incorporate additional contributions from Lab members and collaborators. Contributors include [Malcolm Barrett](https://malco.io/), [Marika Cusick](https://marikacusick.com/), and [Sherri Rose](https://drsherrirose.org/). We drew inspiration from the lab manuals of our colleagues, including [Jade Benjamin-Chung](https://jadebc.github.io/lab-manual/index.html) and [Russ Poldrack](https://poldracklab.org/labguide/).
