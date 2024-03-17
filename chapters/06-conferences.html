@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.550">
+<meta name="generator" content="quarto-1.4.551">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -157,7 +157,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/08-code-review.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Code review</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Code Review</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -188,7 +188,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#conferences-by-field" id="toc-conferences-by-field" class="nav-link active" data-scroll-target="#conferences-by-field"><span class="header-section-number">6.1</span> Conferences by Field</a></li>
+  <li><a href="#sec-conferences-field" id="toc-sec-conferences-field" class="nav-link active" data-scroll-target="#sec-conferences-field"><span class="header-section-number">6.1</span> Conferences by Field</a></li>
   <li><a href="#stanford-travel-policies" id="toc-stanford-travel-policies" class="nav-link" data-scroll-target="#stanford-travel-policies"><span class="header-section-number">6.2</span> Stanford Travel Policies</a></li>
   </ul>
 </nav>
@@ -217,8 +217,8 @@ ul.task-list li input[type="checkbox"] {
 
 <p>Conferences provide an opportunity to learn about new research, get feedback on your own research, practice presentation skills, take a short course, network, and more. Dr.&nbsp;Rose is happy to discuss conferences relevant to your research and career goals in our meetings.</p>
 <p>If we have discussed a conference and Dr.&nbsp;Rose is funding your trip, please send Dr.&nbsp;Rose a projected budget for the trip <em>before</em> purchasing plane tickets, registrations, or reserving hotels.</p>
-<section id="conferences-by-field" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="conferences-by-field"><span class="header-section-number">6.1</span> Conferences by Field</h2>
+<section id="sec-conferences-field" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="sec-conferences-field"><span class="header-section-number">6.1</span> Conferences by Field</h2>
 <p>We include below a noncomprehensive list of conferences that may be of interest to Lab members.</p>
 <section id="algorithmic-bias-fairness" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="algorithmic-bias-fairness">Algorithmic Bias &amp; Fairness</h4>
@@ -240,9 +240,15 @@ ul.task-list li input[type="checkbox"] {
 <section id="statistics" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="statistics">Statistics</h4>
 <ul>
-<li><a href="https://ww2.amstat.org/meetings/ichps/2020/">International Conference on Health Policy Statistics</a></li>
+<li><a href="https://ww2.amstat.org/meetings/ichps/2025/">International Conference on Health Policy Statistics</a></li>
 <li><a href="https://www.enar.org/meetings/future.cfm">ENAR</a></li>
 <li><a href="https://www.amstat.org/asa/meetings/Joint-Statistical-Meetings.aspx">Joint Statistical Meetings</a></li>
+</ul>
+</section>
+<section id="epidemiology" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="epidemiology">Epidemiology</h4>
+<ul>
+<li><a href="https://epiresearch.org/annual-meeting/">Society for Epidemiologic Research</a></li>
 </ul>
 </section>
 <section id="health-economics" class="level4 unnumbered">
@@ -269,8 +275,8 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="stanford-travel-policies" class="level2" data-number="6.2">
 <h2 data-number="6.2" class="anchored" data-anchor-id="stanford-travel-policies"><span class="header-section-number">6.2</span> Stanford Travel Policies</h2>
-<p>Flights <strong>MUST</strong> be purchased through Stanford Travel. They are not reimbursable if they are purchased any other way.</p>
-<p><strong>Health Policy and Biomedical Data Science Students</strong>: If you are presenting at a conference, submit for up to $1,000 of those expenses to be reimbursed through the <a href="https://oge.stanford.edu/financial/travel-grant-program/">Biosciences Travel Grant Program</a>. You are eligible for one conference per year and these funds should be used first before research grant resources.</p>
+<p>Flights for Lab trainees and staff <strong>must</strong> be purchased through Stanford Travel. They are not reimbursable otherwise.</p>
+<p><strong>Health Policy and Biomedical Data Science Students</strong>: If you are presenting at a conference, submit for up to $1,000 of those expenses to be reimbursed through the <a href="https://oge.stanford.edu/financial/travel-grant-program/">Biosciences Travel Grant Program</a>. You are eligible for one conference per year.</p>
 
 
 </section>
@@ -355,6 +361,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -389,7 +413,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');

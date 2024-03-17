@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.550">
+<meta name="generator" content="quarto-1.4.551">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -157,7 +157,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/08-code-review.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Code review</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Code Review</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -188,20 +188,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#irbs" id="toc-irbs" class="nav-link active" data-scroll-target="#irbs"><span class="header-section-number">4.1</span> IRBs</a></li>
-  <li><a href="#data-at-stanford" id="toc-data-at-stanford" class="nav-link" data-scroll-target="#data-at-stanford"><span class="header-section-number">4.2</span> Data at Stanford</a>
+  <li><a href="#human-subjects-training" id="toc-human-subjects-training" class="nav-link active" data-scroll-target="#human-subjects-training"><span class="header-section-number">4.1</span> Human Subjects Training</a></li>
+  <li><a href="#computer-encryption-and-security-management" id="toc-computer-encryption-and-security-management" class="nav-link" data-scroll-target="#computer-encryption-and-security-management"><span class="header-section-number">4.2</span> Computer Encryption and Security Management</a></li>
+  <li><a href="#irbs" id="toc-irbs" class="nav-link" data-scroll-target="#irbs"><span class="header-section-number">4.3</span> IRBs</a></li>
+  <li><a href="#data-at-stanford" id="toc-data-at-stanford" class="nav-link" data-scroll-target="#data-at-stanford"><span class="header-section-number">4.4</span> Data at Stanford</a>
   <ul class="collapse">
-  <li><a href="#starr-data" id="toc-starr-data" class="nav-link" data-scroll-target="#starr-data"><span class="header-section-number">4.2.1</span> STARR Data</a></li>
-  <li><a href="#center-for-population-health-sciences" id="toc-center-for-population-health-sciences" class="nav-link" data-scroll-target="#center-for-population-health-sciences"><span class="header-section-number">4.2.2</span> Center for Population Health Sciences</a></li>
+  <li><a href="#starr-data" id="toc-starr-data" class="nav-link" data-scroll-target="#starr-data"><span class="header-section-number">4.4.1</span> STARR Data</a></li>
+  <li><a href="#center-for-population-health-sciences" id="toc-center-for-population-health-sciences" class="nav-link" data-scroll-target="#center-for-population-health-sciences"><span class="header-section-number">4.4.2</span> Center for Population Health Sciences</a></li>
   </ul></li>
-  <li><a href="#bringing-data-to-stanford" id="toc-bringing-data-to-stanford" class="nav-link" data-scroll-target="#bringing-data-to-stanford"><span class="header-section-number">4.3</span> Bringing Data to Stanford</a>
-  <ul class="collapse">
-  <li><a href="#data-risk-assessment" id="toc-data-risk-assessment" class="nav-link" data-scroll-target="#data-risk-assessment"><span class="header-section-number">4.3.1</span> Data Risk Assessment</a></li>
-  <li><a href="#datasets" id="toc-datasets" class="nav-link" data-scroll-target="#datasets"><span class="header-section-number">4.3.2</span> Datasets</a></li>
-  </ul></li>
-  <li><a href="#omop" id="toc-omop" class="nav-link" data-scroll-target="#omop"><span class="header-section-number">4.4</span> OMOP</a></li>
-  <li><a href="#sec-data" id="toc-sec-data" class="nav-link" data-scroll-target="#sec-data"><span class="header-section-number">4.5</span> Data Sharing</a></li>
-  <li><a href="#simulated-data" id="toc-simulated-data" class="nav-link" data-scroll-target="#simulated-data"><span class="header-section-number">4.6</span> Simulated Data</a></li>
+  <li><a href="#bringing-data-to-stanford" id="toc-bringing-data-to-stanford" class="nav-link" data-scroll-target="#bringing-data-to-stanford"><span class="header-section-number">4.5</span> Bringing Data to Stanford</a></li>
+  <li><a href="#data-sharing" id="toc-data-sharing" class="nav-link" data-scroll-target="#data-sharing"><span class="header-section-number">4.6</span> Data Sharing</a></li>
+  <li><a href="#simulated-data" id="toc-simulated-data" class="nav-link" data-scroll-target="#simulated-data"><span class="header-section-number">4.7</span> Simulated Data</a></li>
   </ul>
 </nav>
     </div>
@@ -210,7 +207,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Data</span></h1>
+<h1 class="title"><span id="sec-data" class="quarto-section-identifier"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Data</span></span></h1>
 </div>
 
 
@@ -227,41 +224,45 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>To add:</p>
-<ul>
-<li>Human subjects training</li>
-<li>link back to respect for persons</li>
-<li>stress ASK before doing</li>
-</ul>
-<section id="irbs" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="irbs"><span class="header-section-number">4.1</span> IRBs</h2>
+<p>Working with data as part of research studies must be grounded in respect for the people and communities whose information is represented in the data, as stressed in <a href="01-culture.html#sec-respect-people-data" class="quarto-xref"><span>Section 1.2</span></a>.</p>
+<p>We must follow precise and strict rules to maintain data privacy and protection. <strong>A key tenet is that if you are not sure whether you can take an action with a data set or output produced from analyzing a data set, stop and ask. Always.</strong></p>
+<p>In particular, we must <strong>never</strong> download any data to your personal computer (even though the computer is encrypted) or export results, tables, or figures that have cell sizes or categories with fewer than 11 observations. Make certain you understand all additional or superseding project-specific policies related to where data and results can be stored.</p>
+<p>Key information regarding working with data is included here, but this information is not comprehensive. Always confirm with Dr.&nbsp;Rose that all necessary steps have been completed before accessing any data.</p>
+<section id="human-subjects-training" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="human-subjects-training"><span class="header-section-number">4.1</span> Human Subjects Training</h2>
+<p>Each team member must complete required trainings on <a href="https://researchcompliance.stanford.edu/panels/hs/for-all-researchers/training/citi">the protection of human subjects</a> when working with study data. Additional trainings may be required depending on the study.</p>
 </section>
-<section id="data-at-stanford" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="data-at-stanford"><span class="header-section-number">4.2</span> Data at Stanford</h2>
-<section id="starr-data" class="level3" data-number="4.2.1">
-<h3 data-number="4.2.1" class="anchored" data-anchor-id="starr-data"><span class="header-section-number">4.2.1</span> STARR Data</h3>
-<p>Lab experts on the STARR data include Marika Cusick.</p>
+<section id="computer-encryption-and-security-management" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="computer-encryption-and-security-management"><span class="header-section-number">4.2</span> Computer Encryption and Security Management</h2>
+<p>In order to work with study data, your computer <a href="https://uit.stanford.edu/service/encryption/wholedisk">must be encrypted</a> and have <a href="https://uit.stanford.edu/service/bigfix">security management software</a>. Please confirm your computer is compliant with the most up-to-date requirements listed on Stanford’s websites as these processes can change.</p>
 </section>
-<section id="center-for-population-health-sciences" class="level3" data-number="4.2.2">
-<h3 data-number="4.2.2" class="anchored" data-anchor-id="center-for-population-health-sciences"><span class="header-section-number">4.2.2</span> Center for Population Health Sciences</h3>
-<p>The <a href="https://med.stanford.edu/phs.html">Center for Population Health Sciences (PHS)</a>…</p>
+<section id="irbs" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="irbs"><span class="header-section-number">4.3</span> IRBs</h2>
+<p>Institutional Review Board (IRB) approvals are required for many of the studies we conduct, which can include studies involving the secondary analysis of de-identified data. Before accessing such data, you will need to either be added to an already approved IRB protocol or we will complete and submit a new IRB protocol for our project.</p>
+</section>
+<section id="data-at-stanford" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="data-at-stanford"><span class="header-section-number">4.4</span> Data at Stanford</h2>
+<p>This section includes an abbreviated overview of the data sets stored at Stanford that inform our active research projects in the Lab.</p>
+<section id="starr-data" class="level3" data-number="4.4.1">
+<h3 data-number="4.4.1" class="anchored" data-anchor-id="starr-data"><span class="header-section-number">4.4.1</span> STARR Data</h3>
+<p>The <a href="https://med.stanford.edu/starr-tools.html">STAnford Research Repository (STARR)</a> contains data from Stanford Health Care. Lab experts on the STARR data include Marika Cusick.</p>
+</section>
+<section id="center-for-population-health-sciences" class="level3" data-number="4.4.2">
+<h3 data-number="4.4.2" class="anchored" data-anchor-id="center-for-population-health-sciences"><span class="header-section-number">4.4.2</span> Center for Population Health Sciences</h3>
+<p>The Data Core at the Stanford <a href="https://med.stanford.edu/phs.html">Center for Population Health Sciences (PHS)</a> provides access to a range of health data sources. There are additional training requirements in order to access data at PHS and these must be completed before working with PHS data.</p>
 <section id="medicare-data" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="medicare-data">Medicare Data</h4>
-<p>Lab experts on Medicare data include Marissa Reitsma.</p>
+<p>Lab experts on Medicare data include Marissa Reitsma and Oana Enache.</p>
 </section>
 <section id="american-family-cohort-registry" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="american-family-cohort-registry">American Family Cohort Registry</h4>
-<p>The American Family Cohort (AFC) Registry was created and is updated by the American Board of Family Medicine (ABFM).</p>
-<p>Lab experts on the ABFM AFC Cohort Registry data include Agata Foryciarz, Gabriela Basel, and Marika Cusick.</p>
+<p>The American Family Cohort (AFC) Registry of primary care data was created and is updated by the American Board of Family Medicine (ABFM). Lab experts on the ABFM AFC Cohort Registry data include Agata Foryciarz, Gabriela Basel, and Marika Cusick.</p>
 </section>
 </section>
 </section>
-<section id="bringing-data-to-stanford" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="bringing-data-to-stanford"><span class="header-section-number">4.3</span> Bringing Data to Stanford</h2>
-<p>The key steps in bringing a new data set to Stanford include completing submitting an IRB and a data risk assessment review.</p>
-<section id="data-risk-assessment" class="level3" data-number="4.3.1">
-<h3 data-number="4.3.1" class="anchored" data-anchor-id="data-risk-assessment"><span class="header-section-number">4.3.1</span> Data Risk Assessment</h3>
-<p>The <a href="https://uit.stanford.edu/security/dra">data risk assessment (DRA) review</a> process at Stanford must be followed to bring external data to Stanford. A summary of this process is included below. However, the DRA review process is subject to change and should be confirmed and followed as described on the DRA website.</p>
+<section id="bringing-data-to-stanford" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="bringing-data-to-stanford"><span class="header-section-number">4.5</span> Bringing Data to Stanford</h2>
+<p>The key steps in bringing a new external data set to Stanford include submitting an IRB and a data risk assessment review (DRA). A summary of the <a href="https://uit.stanford.edu/security/dra">DRA review</a> process at Stanford is included below. However, the DRA review process is subject to change and should be confirmed and followed as described on the DRA website.</p>
 <ul>
 <li>Review the <a href="https://uit.stanford.edu/guide/riskclassifications">Stanford Risk Classifications</a> to determine the level of risk of your requested data.</li>
 <li>If the requested data are high risk, then you will need to submit a <a href="https://uit.stanford.edu/security/dra">DRA</a>. If you are not sure if the data are high risk, there is also a pre-screening form that helps assess whether a DRA form is necessary.</li>
@@ -300,23 +301,15 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p>Lab experts on the DRA process include Marika Cusick.</p>
 </section>
-<section id="datasets" class="level3" data-number="4.3.2">
-<h3 data-number="4.3.2" class="anchored" data-anchor-id="datasets"><span class="header-section-number">4.3.2</span> Datasets</h3>
-<p>We are in the process of bringing the <a href="https://repository.niddk.nih.gov/studies/cric/">Chronic Renal Insufficiency Cohort Study (CRIC)</a> from NIDDK to Stanford.</p>
+<section id="data-sharing" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="data-sharing"><span class="header-section-number">4.6</span> Data Sharing</h2>
+<p>Many of our studies involve secondary analyses of existing health databases. It is typically not permitted for us to share such data due to privacy considerations. Thus, we often created simulated data that has some similar properties to the health databases to share along with our code and published results. However, in certain cases, this type of simulated data sharing may not be permitted by the data use agreement.</p>
 </section>
-</section>
-<section id="omop" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="omop"><span class="header-section-number">4.4</span> OMOP</h2>
-</section>
-<section id="sec-data" class="level2" data-number="4.5">
-<h2 data-number="4.5" class="anchored" data-anchor-id="sec-data"><span class="header-section-number">4.5</span> Data Sharing</h2>
-<p>Many of our studies involve secondary analyses of existing health databases. It is typically not permitted for us to share such data due to privacy considerations. Thus, we often created simulated data that has some similar properties to the health databases to share along with our code and published results.</p>
-</section>
-<section id="simulated-data" class="level2" data-number="4.6">
-<h2 data-number="4.6" class="anchored" data-anchor-id="simulated-data"><span class="header-section-number">4.6</span> Simulated Data</h2>
+<section id="simulated-data" class="level2" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="simulated-data"><span class="header-section-number">4.7</span> Simulated Data</h2>
 <p>Many of our projects involve simulating data to test our methodology under situations where we know the underlying truth and because we cannot share certain health data due to privacy considerations. Simulating data is an important skill to learn.</p>
 <p>Examples of detailed simulation studies designed by Lab alums include work from <a href="https://onlinelibrary.wiley.com/doi/10.1111/biom.13863">Irina Degtiar</a> and <a href="https://onlinelibrary.wiley.com/doi/10.1111/biom.13206">Anna Zink</a>.</p>
-<p><em>Note: Creating simulated data is different than designing a microsimulation study. It can be confusing!</em></p>
+<p><em>Note: Creating simulated data of this type is different than designing a microsimulation study.</em></p>
 
 
 </section>
@@ -401,6 +394,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -435,7 +446,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');

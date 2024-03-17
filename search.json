@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Stanford Health Policy Data Science",
     "section": "",
-    "text": "Lab Manual\nThe Health Policy Data Science Lab at Stanford is a group of interdisciplinary researchers who develop and apply quantitative methods to solve problems in health policy, leveraging techniques from statistics, computer science, economics, epidemiology, and decision science.\nThis manual will evolve over time to incorporate additional contributions from Lab members and collaborators. Contributors include Malcolm Barrett, Marika Cusick, and Sherri Rose. We drew inspiration from the lab manuals of our colleagues, including Jade Benjamin-Chung and Russ Poldrack.\nFeel free to draw from this manual (and please cite it if you do)!\n  This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.",
+    "text": "Lab Manual\nThe Health Policy Data Science Lab at Stanford is a group of interdisciplinary researchers who develop and apply quantitative methods to solve problems in health policy, leveraging techniques from statistics, computer science, economics, epidemiology, and decision science. The faculty PI at Stanford is Professor Sherri Rose.\nThis manual will evolve over time to incorporate additional contributions from Lab members and collaborators. Contributors include Malcolm Barrett, Marika Cusick, and Sherri Rose.\nFeel free to draw from this manual (and please cite it if you do)! We drew inspiration from the lab manuals of our colleagues, including Jade Benjamin-Chung and Russ Poldrack.\nThis work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.",
     "crumbs": [
       "Lab Manual"
     ]
@@ -20,11 +20,11 @@
     ]
   },
   {
-    "objectID": "chapters/01-culture.html#respect-for-the-people-represented-in-study-data",
-    "href": "chapters/01-culture.html#respect-for-the-people-represented-in-study-data",
+    "objectID": "chapters/01-culture.html#sec-respect-people-data",
+    "href": "chapters/01-culture.html#sec-respect-people-data",
     "title": "1  Lab Culture",
     "section": "1.2 Respect for the People Represented in Study Data",
-    "text": "1.2 Respect for the People Represented in Study Data\nA key value in the Lab is deep respect for the people and communities whose information is represented in the data we study. We engage seriously in learning about the policies, institutional structures, societal biases, and lived experiences that underlie these data sources.\nThis respect also involves careful attention to data privacy and protection, discussed in Section 4.5.",
+    "text": "1.2 Respect for the People Represented in Study Data\nA key value in the Lab is deep respect for the people and communities whose information is represented in the data we study. We engage seriously in learning about the policies, institutional structures, societal biases, and lived experiences that underlie these data sources.\nThis respect also involves careful attention to data privacy and protection, discussed in Chapter 4.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lab Culture</span>"
     ]
@@ -54,7 +54,7 @@
     "href": "chapters/02-policies.html",
     "title": "2  General Policies",
     "section": "",
-    "text": "2.1 Joining the Lab\nDr. Rose keeps a page updated on her website regarding whether she is taking new students, hiring postdocs, or available for dissertation committees. At Stanford, we’ve had students from many different graduate programs join the lab, including health policy, biomedical data science, computer science, and chemical engineering programs.",
+    "text": "2.1 Joining the Lab\nDr. Rose keeps a page updated on her website regarding whether she is taking new students, hiring postdocs, or available for dissertation committees. At Stanford, we’ve had students from many different graduate programs join the Lab, including health policy, biomedical data science, computer science, and chemical engineering programs.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>General Policies</span>"
     ]
@@ -64,7 +64,7 @@
     "href": "chapters/02-policies.html#recurring-meetings",
     "title": "2  General Policies",
     "section": "2.2 Recurring Meetings",
-    "text": "2.2 Recurring Meetings\nLab trainees meet individually with Dr. Rose regularly. This is typically weekly or every other week depending on the needs of the trainee and their projects. Meetings are either 25 minutes or 50 minutes to allow for breaks between meetings. Dr. Rose expects trainees to manage the meeting such that it ends on time.\nIn general, Dr. Rose expects progress to be made between each meeting. Progress can include struggling with the material. Dr. Rose cares that you are engaged and taking initiative to advance the project. We’ll discuss what you learned and where you are still confused. When we identify areas where you have gaps, Dr. Rose does expect you to invest in learning the required material and to follow through to fill those gaps. All trainees must be making satisfactory academic progress in line with the expectations of their graduate degree program.\nIf you do not need to meet a particular week (e.g., making steady progress and don’t have questions, busy preparing for an exam and did not work on research that week, etc), please email Dr. Rose in advance so she can efficiently reallocate the meeting time. Your physical and mental health are important. If you need to cancel a meeting for health or personal reasons, email Dr. Rose. As much notice as is possible is helpful, but it is always better to cancel a meeting short notice than to attend when you are sick!\nIf there are repeated meeting cancellations, we should discuss the underlying reasons.\nPlease also see Section 2.3 for details on recurring meeting agendas.",
+    "text": "2.2 Recurring Meetings\nLab trainees meet individually with Dr. Rose regularly. This is typically weekly or every other week depending on the needs of the trainee and their projects. Meetings are either 25 minutes or 50 minutes to allow for breaks between meetings. Dr. Rose expects trainees to manage the meeting such that it ends on time.\nIn general, Dr. Rose expects progress to be made between each meeting. Progress can include struggling with the material. Dr. Rose cares that you are engaged and taking initiative to advance the project. We’ll discuss what you learned and where you are still confused. When we identify areas where you have gaps, Dr. Rose does expect you to invest in learning the required material and to follow through to fill those gaps. All trainees must be making satisfactory academic progress in line with the expectations of their graduate degree program.\nIf you do not need to meet a particular week (e.g., making steady progress and don’t have questions), please email Dr. Rose in advance so she can efficiently reallocate the meeting time. Your physical and mental health are important. If you need to cancel a meeting for health or personal reasons, email Dr. Rose. As much notice as is possible is helpful, but it is always better to cancel a meeting short notice than to attend when you are sick!\nIf there are repeated meeting cancellations, we should discuss the underlying reasons.\nPlease also see Section 2.3 for details on recurring meeting agendas.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>General Policies</span>"
     ]
@@ -130,11 +130,21 @@
     ]
   },
   {
+    "objectID": "chapters/02-policies.html#recommendation-letters",
+    "href": "chapters/02-policies.html#recommendation-letters",
+    "title": "2  General Policies",
+    "section": "2.9 Recommendation Letters",
+    "text": "2.9 Recommendation Letters\nDr. Rose receives a variety of requests for letters from current and former trainees, including for graduate school, job applications, fellowships, and awards. Please know she treats your letter requests with the seriousness they deserve and recognizes their importance. Dr. Rose asks that you respect the time it takes her to write, revise, and send letters by giving plenty of notice and being organized with your requests.\nIt essential that you ask Dr. Rose if she can write you a recommendation letter before submitting her name as a recommender. It may be the case that a letter from someone else will be more beneficial for you or that the deadline is too soon for her to accommodate your request.\nIn general, please give Dr. Rose at least 4 weeks notice when requesting a letter, and more time than that when possible. If the deadline is sooner than 4 weeks, she may not be able to write the letter, particularly during times of the year when she receives a high volume of letter requests.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>General Policies</span>"
+    ]
+  },
+  {
     "objectID": "chapters/02-policies.html#communication",
     "href": "chapters/02-policies.html#communication",
     "title": "2  General Policies",
-    "section": "2.9 Communication",
-    "text": "2.9 Communication\nWe have a Lab slack. Lab members can search for “HPDS Lab” in the Workspaces at Stanford and request to join.\nPlease keep in mind our Lab philosophy on working hours in Section 1.3. Do not assume that because you have sent a slack message or email that you should get an instant reply.",
+    "section": "2.10 Communication",
+    "text": "2.10 Communication\nWe have a Lab slack. Lab members can search for “HPDS Lab” in the Workspaces at Stanford and request to join.\nPlease keep in mind our Lab philosophy on working hours in Section 1.3. Do not assume that because you have sent a slack message or email that you should get an instant reply.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>General Policies</span>"
     ]
@@ -144,7 +154,17 @@
     "href": "chapters/03-funding.html",
     "title": "3  Funding",
     "section": "",
-    "text": "3.1 For Graduate Students",
+    "text": "3.1 For Graduate Students\nGraduate students may be funded by training grants, research grants, individual fellowships, and other sources.\nInternal Stanford fellowship funding opportunities include:",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Funding</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03-funding.html#for-graduate-students",
+    "href": "chapters/03-funding.html#for-graduate-students",
+    "title": "3  Funding",
+    "section": "",
+    "text": "Knight-Hennessy Scholars\nDiversifying Academia, Recruiting Excellence (DARE) Doctoral Fellowship\nStanford Graduate Fellowship in Science & Engineering (SGF)\nStanford Interdisciplinary Graduate Fellowship (SIGF)\nStanford Data Science Scholars\nStanford Bio-X Fellows\nResearch, Action, and Impact through Strategic Engagement (RAISE) Doctoral Fellowship.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Funding</span>"
     ]
@@ -154,7 +174,7 @@
     "href": "chapters/03-funding.html#for-postdoctoral-scholars",
     "title": "3  Funding",
     "section": "3.2 For Postdoctoral Scholars",
-    "text": "3.2 For Postdoctoral Scholars",
+    "text": "3.2 For Postdoctoral Scholars\nFunding opportunities for postdoctoral scholars include training grants, research grants, individual fellowships, and other sources.\nInternal Stanford fellowship funding opportunities include:\n\nPropel Postdoctoral Scholars Program\nStanford Science Fellows\n\nAdditional Stanford fellowships can be found at the Office of Postdoctoral Affairs website.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Funding</span>"
     ]
@@ -164,7 +184,7 @@
     "href": "chapters/03-funding.html#active-lab-funding",
     "title": "3  Funding",
     "section": "3.3 Active Lab Funding",
-    "text": "3.3 Active Lab Funding\nThe Health Policy Data Science Lab at Stanford currently has three active grants where Dr. Rose is the Principal Investigator:\n\nNIH Director’s Pioneer Award\nNLM R01 Grant\nLaura and John Arnold Foundation Grant\n\nDr. Rose is also Co-Principal Investigator on the following two grants:\n\nStanford Impact Labs Grant\nStanford HAI Hoffman-Yee Grant\n\n\n3.3.1 Trainee Responsibilities on Funded Grants\n\n\n3.3.2 Reporting Requirements\n\nHourly Work\n\n\nParticipating in Interim and Annual Reports\n\n\nConflict of Interest Reporting\n\n\nFellowship & Resources Reporting\n\nFor Other Support pages",
+    "text": "3.3 Active Lab Funding\nThe Health Policy Data Science Lab at Stanford currently has three active research grants where Dr. Rose is the Principal Investigator:\n\nNIH Director’s Pioneer Award\nNLM R01 Grant\nLaura and John Arnold Foundation Grant\n\nDr. Rose is also Co-Principal Investigator on the following two research grants:\n\nStanford Impact Labs Grant\nStanford HAI Hoffman-Yee Grant",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Funding</span>"
     ]
@@ -174,7 +194,27 @@
     "href": "chapters/04-data.html",
     "title": "4  Data",
     "section": "",
-    "text": "4.1 IRBs",
+    "text": "4.1 Human Subjects Training\nEach team member must complete required trainings on the protection of human subjects when working with study data. Additional trainings may be required depending on the study.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-data.html#computer-encryption-and-security-management",
+    "href": "chapters/04-data.html#computer-encryption-and-security-management",
+    "title": "4  Data",
+    "section": "4.2 Computer Encryption and Security Management",
+    "text": "4.2 Computer Encryption and Security Management\nIn order to work with study data, your computer must be encrypted and have security management software. Please confirm your computer is compliant with the most up-to-date requirements listed on Stanford’s websites as these processes can change.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-data.html#irbs",
+    "href": "chapters/04-data.html#irbs",
+    "title": "4  Data",
+    "section": "4.3 IRBs",
+    "text": "4.3 IRBs\nInstitutional Review Board (IRB) approvals are required for many of the studies we conduct, which can include studies involving the secondary analysis of de-identified data. Before accessing such data, you will need to either be added to an already approved IRB protocol or we will complete and submit a new IRB protocol for our project.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data</span>"
     ]
@@ -183,8 +223,8 @@
     "objectID": "chapters/04-data.html#data-at-stanford",
     "href": "chapters/04-data.html#data-at-stanford",
     "title": "4  Data",
-    "section": "4.2 Data at Stanford",
-    "text": "4.2 Data at Stanford\n\n4.2.1 STARR Data\nLab experts on the STARR data include Marika Cusick.\n\n\n4.2.2 Center for Population Health Sciences\nThe Center for Population Health Sciences (PHS)…\n\nMedicare Data\nLab experts on Medicare data include Marissa Reitsma.\n\n\nAmerican Family Cohort Registry\nThe American Family Cohort (AFC) Registry was created and is updated by the American Board of Family Medicine (ABFM).\nLab experts on the ABFM AFC Cohort Registry data include Agata Foryciarz, Gabriela Basel, and Marika Cusick.",
+    "section": "4.4 Data at Stanford",
+    "text": "4.4 Data at Stanford\nThis section includes an abbreviated overview of the data sets stored at Stanford that inform our active research projects in the Lab.\n\n4.4.1 STARR Data\nThe STAnford Research Repository (STARR) contains data from Stanford Health Care. Lab experts on the STARR data include Marika Cusick.\n\n\n4.4.2 Center for Population Health Sciences\nThe Data Core at the Stanford Center for Population Health Sciences (PHS) provides access to a range of health data sources. There are additional training requirements in order to access data at PHS and these must be completed before working with PHS data.\n\nMedicare Data\nLab experts on Medicare data include Marissa Reitsma and Oana Enache.\n\n\nAmerican Family Cohort Registry\nThe American Family Cohort (AFC) Registry of primary care data was created and is updated by the American Board of Family Medicine (ABFM). Lab experts on the ABFM AFC Cohort Registry data include Agata Foryciarz, Gabriela Basel, and Marika Cusick.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data</span>"
     ]
@@ -193,28 +233,18 @@
     "objectID": "chapters/04-data.html#bringing-data-to-stanford",
     "href": "chapters/04-data.html#bringing-data-to-stanford",
     "title": "4  Data",
-    "section": "4.3 Bringing Data to Stanford",
-    "text": "4.3 Bringing Data to Stanford\nThe key steps in bringing a new data set to Stanford include completing submitting an IRB and a data risk assessment review.\n\n4.3.1 Data Risk Assessment\nThe data risk assessment (DRA) review process at Stanford must be followed to bring external data to Stanford. A summary of this process is included below. However, the DRA review process is subject to change and should be confirmed and followed as described on the DRA website.\n\nReview the Stanford Risk Classifications to determine the level of risk of your requested data.\nIf the requested data are high risk, then you will need to submit a DRA. If you are not sure if the data are high risk, there is also a pre-screening form that helps assess whether a DRA form is necessary.\nIn the DRA form, you will need the following information:\n\nProject information\n\nProject leader contact information\nIRB information (if applicable)\nFunding source\nAny other relevant parties involved in the project (e.g., Stanford Health Care)\nAny other individuals who will be involved with the data\n\nWho are you getting the data from? (third party)\n\nContact information (e.g., name and email address)\nData flow diagram\nAre the data going in or out of the U.S.?\n\nBrief description of the project and reason for needing this data source\nBrief description of the data source\n\nElements (e.g., lab results, diagnoses or procedures)\nNumber of records\nData dictionary (if available)\nData source (e.g., institutions and individuals involved in producing the data)\nWhether the data are identified or de-identified and how are the data de-identified? (e.g., Safe Harbor method)\n\n\nAwait the DRA review. You may get follow-up questions from the University Privacy Office, such as:\n\nHow do you plan to store the data?\nWill Stanford data be used or shared?\nWill data be shared back with the third party?\n\n\nLab experts on the DRA process include Marika Cusick.\n\n\n4.3.2 Datasets\nWe are in the process of bringing the Chronic Renal Insufficiency Cohort Study (CRIC) from NIDDK to Stanford.",
+    "section": "4.5 Bringing Data to Stanford",
+    "text": "4.5 Bringing Data to Stanford\nThe key steps in bringing a new external data set to Stanford include submitting an IRB and a data risk assessment review (DRA). A summary of the DRA review process at Stanford is included below. However, the DRA review process is subject to change and should be confirmed and followed as described on the DRA website.\n\nReview the Stanford Risk Classifications to determine the level of risk of your requested data.\nIf the requested data are high risk, then you will need to submit a DRA. If you are not sure if the data are high risk, there is also a pre-screening form that helps assess whether a DRA form is necessary.\nIn the DRA form, you will need the following information:\n\nProject information\n\nProject leader contact information\nIRB information (if applicable)\nFunding source\nAny other relevant parties involved in the project (e.g., Stanford Health Care)\nAny other individuals who will be involved with the data\n\nWho are you getting the data from? (third party)\n\nContact information (e.g., name and email address)\nData flow diagram\nAre the data going in or out of the U.S.?\n\nBrief description of the project and reason for needing this data source\nBrief description of the data source\n\nElements (e.g., lab results, diagnoses or procedures)\nNumber of records\nData dictionary (if available)\nData source (e.g., institutions and individuals involved in producing the data)\nWhether the data are identified or de-identified and how are the data de-identified? (e.g., Safe Harbor method)\n\n\nAwait the DRA review. You may get follow-up questions from the University Privacy Office, such as:\n\nHow do you plan to store the data?\nWill Stanford data be used or shared?\nWill data be shared back with the third party?\n\n\nLab experts on the DRA process include Marika Cusick.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data</span>"
     ]
   },
   {
-    "objectID": "chapters/04-data.html#omop",
-    "href": "chapters/04-data.html#omop",
+    "objectID": "chapters/04-data.html#data-sharing",
+    "href": "chapters/04-data.html#data-sharing",
     "title": "4  Data",
-    "section": "4.4 OMOP",
-    "text": "4.4 OMOP",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/04-data.html#sec-data",
-    "href": "chapters/04-data.html#sec-data",
-    "title": "4  Data",
-    "section": "4.5 Data Sharing",
-    "text": "4.5 Data Sharing\nMany of our studies involve secondary analyses of existing health databases. It is typically not permitted for us to share such data due to privacy considerations. Thus, we often created simulated data that has some similar properties to the health databases to share along with our code and published results.",
+    "section": "4.6 Data Sharing",
+    "text": "4.6 Data Sharing\nMany of our studies involve secondary analyses of existing health databases. It is typically not permitted for us to share such data due to privacy considerations. Thus, we often created simulated data that has some similar properties to the health databases to share along with our code and published results. However, in certain cases, this type of simulated data sharing may not be permitted by the data use agreement.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data</span>"
     ]
@@ -223,8 +253,8 @@
     "objectID": "chapters/04-data.html#simulated-data",
     "href": "chapters/04-data.html#simulated-data",
     "title": "4  Data",
-    "section": "4.6 Simulated Data",
-    "text": "4.6 Simulated Data\nMany of our projects involve simulating data to test our methodology under situations where we know the underlying truth and because we cannot share certain health data due to privacy considerations. Simulating data is an important skill to learn.\nExamples of detailed simulation studies designed by Lab alums include work from Irina Degtiar and Anna Zink.\nNote: Creating simulated data is different than designing a microsimulation study. It can be confusing!",
+    "section": "4.7 Simulated Data",
+    "text": "4.7 Simulated Data\nMany of our projects involve simulating data to test our methodology under situations where we know the underlying truth and because we cannot share certain health data due to privacy considerations. Simulating data is an important skill to learn.\nExamples of detailed simulation studies designed by Lab alums include work from Irina Degtiar and Anna Zink.\nNote: Creating simulated data of this type is different than designing a microsimulation study.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data</span>"
     ]
@@ -234,7 +264,7 @@
     "href": "chapters/05-computing.html",
     "title": "5  Computing Resources",
     "section": "",
-    "text": "5.1 Nero GCP",
+    "text": "5.1 Nero GCP\nStanford’s Nero Google Cloud Platform (GCP) is the environment often most suitable or required for the analysis of data sources discussed in Chapter 4. There are costs associated with Nero GCP and we must keep careful track of these.\nIf you have questions about which environment you should use for your data analyses, please ask so we can be certain to follow all data security and privacy requirements.",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Computing Resources</span>"
     ]
@@ -244,7 +274,7 @@
     "href": "chapters/05-computing.html#sherlock",
     "title": "5  Computing Resources",
     "section": "5.2 Sherlock",
-    "text": "5.2 Sherlock",
+    "text": "5.2 Sherlock\nStanford has a High Performance Computing cluster called Sherlock. See this information on getting started, connecting, and submitting jobs. The Lab has a dedicated node on Sherlock.\nSherlock is most frequently used for analyses involving simulated data as it is not designed for data with a high risk classification. If you have questions about which environment you should use for your data analyses, please ask so we can be certain to follow all data security and privacy requirements.",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Computing Resources</span>"
     ]
@@ -270,11 +300,11 @@
     ]
   },
   {
-    "objectID": "chapters/06-conferences.html#conferences-by-field",
-    "href": "chapters/06-conferences.html#conferences-by-field",
+    "objectID": "chapters/06-conferences.html#sec-conferences-field",
+    "href": "chapters/06-conferences.html#sec-conferences-field",
     "title": "6  Conferences",
     "section": "",
-    "text": "Algorithmic Bias & Fairness\n\nACM FAccT\nAAI/ACM AI, Ethics, & Society\nACM EAAMO\nIEEE SaTML\n\n\n\nMachine Learning for Health\n\nMachine Learning for Health Care\nCHIL\nMachine Learning for Health\n\n\n\nStatistics\n\nInternational Conference on Health Policy Statistics\nENAR\nJoint Statistical Meetings\n\n\n\nHealth Economics\n\nASHEcon\niHEA\nEconomics of AI\n\n\n\nHealth Policy\n\nAcademyHealth\nISPOR\n\n\n\nDecision Science\n\nSMDM",
+    "text": "Algorithmic Bias & Fairness\n\nACM FAccT\nAAI/ACM AI, Ethics, & Society\nACM EAAMO\nIEEE SaTML\n\n\n\nMachine Learning for Health\n\nMachine Learning for Health Care\nCHIL\nMachine Learning for Health\n\n\n\nStatistics\n\nInternational Conference on Health Policy Statistics\nENAR\nJoint Statistical Meetings\n\n\n\nEpidemiology\n\nSociety for Epidemiologic Research\n\n\n\nHealth Economics\n\nASHEcon\niHEA\nEconomics of AI\n\n\n\nHealth Policy\n\nAcademyHealth\nISPOR\n\n\n\nDecision Science\n\nSMDM",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Conferences</span>"
     ]
@@ -284,7 +314,7 @@
     "href": "chapters/06-conferences.html#stanford-travel-policies",
     "title": "6  Conferences",
     "section": "6.2 Stanford Travel Policies",
-    "text": "6.2 Stanford Travel Policies\nFlights MUST be purchased through Stanford Travel. They are not reimbursable if they are purchased any other way.\nHealth Policy and Biomedical Data Science Students: If you are presenting at a conference, submit for up to $1,000 of those expenses to be reimbursed through the Biosciences Travel Grant Program. You are eligible for one conference per year and these funds should be used first before research grant resources.",
+    "text": "6.2 Stanford Travel Policies\nFlights for Lab trainees and staff must be purchased through Stanford Travel. They are not reimbursable otherwise.\nHealth Policy and Biomedical Data Science Students: If you are presenting at a conference, submit for up to $1,000 of those expenses to be reimbursed through the Biosciences Travel Grant Program. You are eligible for one conference per year.",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Conferences</span>"
     ]
@@ -294,7 +324,7 @@
     "href": "chapters/07-publications.html",
     "title": "7  Publications",
     "section": "",
-    "text": "7.1 Authorship\nWe aim to discuss authorship early in the research process and have continuing conversations regarding team member roles. Plans can change and contributions may evolve over time. If you have authorship questions during the process of working on a project, we want you to feel empowered to ask these questions! It is an expectation in the Lab that no new authors are invited to join an existing Lab project (i.e., where Dr. Rose is the lead PI) without the prior agreement of, at a minimum, Dr. Rose and the first author(s). The Lab follows the ICMJE recommendations regarding who is included as an author.",
+    "text": "7.1 Authorship\nWe aim to discuss authorship early in the research process and have continuing conversations regarding team member roles. Plans can change and contributions may evolve over time. If you have authorship questions during the process of working on a project, we want you to feel empowered to ask these questions!\nIt is an expectation in the Lab that no new authors are invited to join an existing Lab project (i.e., where Dr. Rose is the lead PI) without the prior agreement of, at a minimum, Dr. Rose and the first author(s).\nThe Lab follows the ICMJE recommendations regarding who is included as an author.",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Publications</span>"
     ]
@@ -304,7 +334,7 @@
     "href": "chapters/07-publications.html#preprints",
     "title": "7  Publications",
     "section": "7.2 Preprints",
-    "text": "7.2 Preprints",
+    "text": "7.2 Preprints\nWe typically post preprints on arXiv, medRxiv, or as an NBER Working Paper.",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Publications</span>"
     ]
@@ -314,7 +344,7 @@
     "href": "chapters/07-publications.html#on-least-publishable-units",
     "title": "7  Publications",
     "section": "7.3 On Least Publishable Units",
-    "text": "7.3 On Least Publishable Units",
+    "text": "7.3 On Least Publishable Units\nWe aim to write papers with an appropriate scope suitable for the goals of the project. We do not focus on salami slicing or least publishable unit papers. This is not to confuse least publishable units with short, rigorous papers. Short papers can be good and high quality with strong standards.",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Publications</span>"
     ]
@@ -324,7 +354,7 @@
     "href": "chapters/07-publications.html#types-of-papers",
     "title": "7  Publications",
     "section": "7.4 Types of Papers",
-    "text": "7.4 Types of Papers\nThe structure and content of a manuscript varies by discipline and audience.\nExample Lab publications by journal type: statistics, medical, health policy, health services research, health economics, computer science conference paper.",
+    "text": "7.4 Types of Papers\nThe structure and content of a manuscript varies by discipline and audience.\nExample Lab publications by journal type: statistics, medical, health policy, health services research, health economics, epidemiology, computer science conference paper.",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Publications</span>"
     ]
@@ -334,7 +364,7 @@
     "href": "chapters/07-publications.html#journals",
     "title": "7  Publications",
     "section": "7.5 Journals",
-    "text": "7.5 Journals\nThe journal lists below are not exhaustive and largely focus on outlets where Lab members have previously published their work. Decisions about where to submit manuscripts for publication are made collaboratively to balance the needs and priorities of the team with as much deference as possible to what is best for the trainee author(s).\n\nHealth Economics & Policy\nJournal of Health Economics, American Journal of Health Economics, Health Affairs, Health Services Research, Medical Care, Medical Decision Making, JAMA Health Forum\n\n\nEpidemiology & Public Health\nAmerican Journal of Epidemiology, Epidemiology, International Journal of Epidemiology, American Journal of Public Health\n\n\nStatistics\nJournal of the American Statistical Association, Biometrics, Biostatistics (COI: Sherri is Co-Editor-in-Chief), Statistics in Medicine, Statistical Methods in Medical Research\n\n\nClinical\nNEJM, JAMA, JAMA Internal Medicine, JAMA Psychiatry\n\n\nHealth Informatics & Digital Health\nJAMIA, BMJ Health & Care Informatics, Lancet Digital Health",
+    "text": "7.5 Journals\nThe journal lists below are not exhaustive and largely focus on outlets where Lab members have previously published their work. Decisions about where to submit manuscripts for publication are made collaboratively to balance the needs and priorities of the team with as much deference as possible to what is best for the trainee author(s). We also publish in peer-reviewed conference proceedings, see Section 6.1.\n\nHealth Economics & Policy\nJournal of Health Economics, American Journal of Health Economics, Health Affairs, Health Services Research, Medical Care, Medical Decision Making, JAMA Health Forum\n\n\nEpidemiology & Public Health\nAmerican Journal of Epidemiology, Epidemiology, International Journal of Epidemiology, American Journal of Public Health\n\n\nStatistics\nJournal of the American Statistical Association, Biometrics, Biostatistics (COI: Sherri was Co-Editor-in-Chief), Statistics in Medicine, Statistical Methods in Medical Research\n\n\nClinical\nNEJM, JAMA, JAMA Internal Medicine, JAMA Psychiatry\n\n\nHealth Informatics & Digital Health\nJAMIA, BMJ Health & Care Informatics, Lancet Digital Health",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Publications</span>"
     ]
@@ -342,91 +372,91 @@
   {
     "objectID": "chapters/08-code-review.html",
     "href": "chapters/08-code-review.html",
-    "title": "8  Code review",
+    "title": "8  Code Review",
     "section": "",
     "text": "8.1 Why code review?\nCode review is a process by which a second person reviews code before it is merged into the main branch of a repository. If that sounds like software engineering to you, you may wonder if code review is suitable for science. Code review is a critical, if modern, part of the scientific process. Code review is a way to ensure that code is reproducible and that it is understandable and maintainable by others. Code review is also a way to share knowledge and learn from others.",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Code review</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Code Review</span>"
     ]
   },
   {
     "objectID": "chapters/08-code-review.html#why-code-review",
     "href": "chapters/08-code-review.html#why-code-review",
-    "title": "8  Code review",
+    "title": "8  Code Review",
     "section": "",
     "text": "8.1.1 Code review makes better science\nIn software engineering, code review emerged as programmers realized it was much easier and cheaper to fix bugs before a product reached the user. In science, code review is a way to catch bugs before your research reaches the public. Bugs, from a scientific point of view, have the same meaning as in software engineering (i.e., a mistake in the code) and a broader meaning (i.e., an error in the analysis). Code review is a way to catch both types of bugs.\nCode review is also a way to ensure that code is reproducible. A second person who can run your code is a good reproducibility test: it simulates what would happen when someone else, much further removed from the project, tries to run your code. Working with the reviewer to make the code run for them will produce more robust code.\nFinally, code review is a way to ensure that code is understandable and maintainable by others. When you are deep into a project, you often are so in tune with the work that very complex things can seem obvious. A second person can help you identify places where this may not be so. A bit of back and forth between the author and the reviewer is natural, as the author explains their code and the reviewer asks questions. When you treat this exchange as a continuous improvement process, you’ll find that your code’s ability to stand on its own improves.\nAll three of these goals also help your most important collaborator: future you, who has no idea what current you was thinking when you wrote that code. No, really, you will forget.\n\n\n8.1.2 Code review makes better teams\nCode review is inherently collaborative. At times, the life of a researcher can feel isolated and lonely. Code review brings someone else into your work and your way of thinking. That relationship is fertile ground for learning and growth.\nReviewing code is a virtuous cycle of education. More experienced coders can help less experienced ones write more idiomatic code. More experienced scientists can improve the use of specific models and methodology and other types of domain knowledge. Less experienced coders can help more experienced users learn new paradigms in coding. They also serve as a test that code is understandable. Because of this cycle, junior and senior members of the lab should participate as both reviewers and reviewees.",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Code review</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Code Review</span>"
     ]
   },
   {
     "objectID": "chapters/08-code-review.html#code-review-guidelines",
     "href": "chapters/08-code-review.html#code-review-guidelines",
-    "title": "8  Code review",
+    "title": "8  Code Review",
     "section": "8.2 Code Review Guidelines",
     "text": "8.2 Code Review Guidelines\nNote: These guidelines are adapted from Google’s code review guidelines. This document expands the ideas in Google’s process to the research setting. Where possible, we cite Google’s original guidelines using block quotes,\n\nLike this.\n\nGoogle uses its own tools for managing code and code review, so sometimes you’ll see terms that are a little different. A big one is “CL”, changelist. A CL is Google’s equivalent of a pull request (PR).",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Code review</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Code Review</span>"
     ]
   },
   {
     "objectID": "chapters/08-code-review.html#when-to-stop-for-a-code-review",
     "href": "chapters/08-code-review.html#when-to-stop-for-a-code-review",
-    "title": "8  Code review",
+    "title": "8  Code Review",
     "section": "8.3 When to stop for a code review",
     "text": "8.3 When to stop for a code review\nIn software engineering, code review is a part of daily life. In science, we don’t always write code every day. Some members of the lab may go weeks or months without writing code. Finishing an analysis before stopping for a code review is also tempting. In other words, adapting the code review process to science requires some flexibility.\nRemember that code review is a continuous improvement process. That means early and often is better. But what does that mean for a research project?\n\n8.3.1 Code review gates\nAt HPDS Lab, we stop at several vital checkpoints or gates for code review. For a traditional research project, these gates are:\n\nInitial data pull (e.g., a SQL query or API call)\nDescriptive tables and figures\nModeling and related tables\nReporting\n\nYour project might not fit this template exactly. For example, if you also have a simulation component to your project, you’ll probably want to stop at several points to review the simulation code. Or, you may have no models in the analysis but a more extensive descriptive analysis. In this case, reviewing the descriptive work is probably too large of a code review to be effective.\nThe general principle is to decide when you absolutely must stop for a code review. Make as many or as few as feels right between them, but always stop at the gates.\n\n\n8.3.2 That said, prefer smaller changes per review\nSmaller changes are more effective and more satisfying to reviewers and reviewees because they are easier to understand and quicker to review.\nHere are some relevant points from Google’s guidelines:\n\nSmall, simple CLs are:\n\nReviewed more quickly. It’s easier for a reviewer to find five minutes several times to review small CLs than to set aside a 30 minute block to review one large CL.\nReviewed more thoroughly. With large changes, reviewers and authors tend to get frustrated by large volumes of detailed commentary shifting back and forth—sometimes to the point where important points get missed or dropped.\nLess likely to introduce bugs. Since you’re making fewer changes, it’s easier for you and your reviewer to reason effectively about the impact of the CL and see if a bug has been introduced. …\nEasier to merge. Working on a large CL takes a long time, so you will have lots of conflicts when you merge, and you will have to merge frequently.\nEasier to design well. It’s a lot easier to polish the design and code health of a small change than it is to refine all the details of a large change.\nLess blocking on reviews. Sending self-contained portions of your overall change allows you to continue coding while you wait for your current CL in review. …\n\n\nThere are three good ways to think about the size of your PR: number of lines changed, numbers of files changed, and the scope of the changes.\nIn software engineering, 100-500 lines of code are often considered the optimal PR size. For research, it depends on the nature of the code. For some types of data cleaning, you may need more lines than this. For some modeling problems, you may want to step well before this number of lines. Each review should be digestible for the reviewer. You’ll get a feel for what is too big as you do more code reviews.\nSimilarly, you should limit the number of files changed or added where reasonable. Sometimes, a change to your project automatically generates many files, e.g., figures for a report. That’s okay. But breaking up the review into smaller pieces is a good idea if you are making changes to many unrelated files.\nFinally, keep your changes focused on one area.\n\nIn general, the right size for a CL is one self-contained change.\n\nYou should be able to describe what the change is succinctly. It’s also okay for such changes to touch different parts of your project. For instance, when it comes time to model, you may need to modify your data cleaning code for the process to work. But if you then decide to make unrelated changes to an earlier figure, handle that in a separate PR and review.\nAs a note, “too small” is rarely a problem in code review. Lean towards smaller reviews.\n\n\n8.3.3 Code review is progress, too\nOften, it can be challenging to stop and wait on your project. For researchers in particular, where often a single person leads an analysis, you may feel like you are the only one who can do the work. But remember that code review is part of the work. It’s not a delay in the work. It is the work.\nCode review is progress. Have a cup of tea and enjoy your project moving forward in peace!",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Code review</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Code Review</span>"
     ]
   },
   {
     "objectID": "chapters/08-code-review.html#pre-review-checklist",
     "href": "chapters/08-code-review.html#pre-review-checklist",
-    "title": "8  Code review",
+    "title": "8  Code Review",
     "section": "8.4 Pre-review checklist",
     "text": "8.4 Pre-review checklist\n\nYour code review should meet lab standards. Before requesting a review, make sure you have done the following:\n\nPrefer making a change as a pull request. PRs are more straightforward to review than code on the main branch because they are isolated from other changes. GitHub also has tools to help you review code as a PR.\nRe-run your code from a black slate environment. This means running your code in an entirely fresh session so that you know your code matches your results.\nFollow the code style guide for the language you are using. Prefer an automatic tool to style your code for you.\nMake sure it is clear how to run the code. This might be related to where to run the code (e.g., GCP) or how to install the project dependencies.",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Code review</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Code Review</span>"
     ]
   },
   {
     "objectID": "chapters/08-code-review.html#requesting-a-code-review",
     "href": "chapters/08-code-review.html#requesting-a-code-review",
-    "title": "8  Code review",
+    "title": "8  Code Review",
     "section": "8.5 Requesting a code review",
     "text": "8.5 Requesting a code review\n\n8.5.1 Identifying reviewers\nGoogle has a process called readability reviews. In short, someone with readability credentials is an expert on how Google uses a particular language. Readability helps maintain a consistent style and propagate idiomatic code for a given language. Google also requires reviews from another person familiar with the project and an “owner” of the code.\nWhen identifying a reviewer, use this framework. Who can review your code from the perspective of the language you are using? Who can review your code from the perspective of the domain you are working in? Who can review your code from a methodological standpoint? Usually, you are the owner of your research project, but sometimes, you are contributing to someone else’s code. In that case, make sure they are part of the review process.\nFor sensitive data, prefer to have a reviewer who has access to the data so they can run the code.\nNote: you are probably the person most familiar with your project. That’s okay. The reviewer is there to help you make the code better, so they don’t necessarily need to be an expert.\nIdeally, you should pick only one or two reviewers because many can slow down the process. The best way to do this is to identify someone who meets as many of the requirements for your review as possible, e.g., who can help improve both your code and the methodology. If you can’t find someone who meets your requirements, you can ask more than one person to review your code.\nIf you’re not sure who to ask, start with Malcolm.\nIt may be that someone is not available to do the review promptly. It’s better to have someone else review the code, although it’s a judgment call. Occasionally, you should wait for a particular person to be available if they serve as a critical reviewer. Talk openly about timelines and expectations with your reviewer.\n\n\n8.5.2 Writing a good description\nThe description of your code review should be a summary of what you are trying to accomplish.\n\nThe first line should be a short, focused summary, while the rest of the description should fill in the details and include any supplemental information a reader needs to understand the changelist holistically. It might include a brief description of the problem that’s being solved and why this is the best approach. If there are any shortcomings to the approach, they should be mentioned. If relevant, include background information such as bug numbers, benchmark results, and links to design documents.\n\nSee Google’s documentation for examples of good and bad descriptions.\nYou may also want to guide reviewers on where to focus their attention.\nPolish the description before requesting a review and before merging.\n\nCLs can undergo significant change during review. It can be worthwhile to review a CL description before submitting the CL, to ensure that the description still reflects what the CL does.\n\n\n\n8.5.3 Iterating on code review\n\n8.5.3.1 Responding to reviewer comments\nWhen you receive comments from a reviewer, you should make a change or respond to them. If you don’t understand a comment, ask for clarification. If you disagree with a comment, explain why and discuss it. Occasionally, you may want a third party to help decide on a change.\nBe respectful and expect the same from your reviewer. Our goal is to improve each other’s work. Remember that, much like a peer review, the review is about your work, not you. Nevertheless, receiving feedback on a project you’ve worked hard on can be difficult. If you are frustrated, take a break and return to it later. Assume good intent from your reviewer.\n\nRemember, courtesy and respect should always be a first priority",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Code review</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Code Review</span>"
     ]
   },
   {
     "objectID": "chapters/08-code-review.html#giving-a-code-review",
     "href": "chapters/08-code-review.html#giving-a-code-review",
-    "title": "8  Code review",
+    "title": "8  Code Review",
     "section": "8.6 Giving a code review",
     "text": "8.6 Giving a code review\nThe first and most important rule of code review is that you are there to improve the code, not perfect it. If the code review ends with the code in a better state than it started, you have succeeded.\n\n8.6.1 What to look for in a code review\nThe key things we look for in a code review are correctness, readability, and reproducibility. Keep your eye out for bugs, where the code is hard to understand, and where the code is hard to run.\nSome other relevant points from the Google documentation are below.\nApproaching a code review:\n\n\nDoes the change make sense? Does it have a good description?\nLook at the most important part of the change first. Is it well-designed overall?\nLook at the rest of the CL in an appropriate sequence.\n\n\nDetailed points to review:\n\nIn the general case, look at every line of code that you have been assigned to review. Some things like data files, generated code, or large data structures you can scan over sometimes, but don’t scan over a human-written class, function, or block of code and assume that what’s inside of it is okay. Obviously some code deserves more careful scrutiny than other code—that’s a judgment call that you have to make—but you should at least be sure that you understand what all the code is doing. If it’s too hard for you to read the code and this is slowing down the review, then you should let the developer know that and wait for them to clarify it before you try to review it. At Google, we hire great software engineers, and you are one of them. If you can’t understand the code, it’s very likely that other developers won’t either. So you’re also helping future developers understand this code, when you ask the developer to clarify it.\n\n\nWhat if it doesn’t make sense for you to review every line? … In these cases, note in a comment which parts you reviewed.\n\nPoints to consider:\n\n\nThe code is well-designed. …\nAny parallel programming is done safely.\nThe code isn’t more complex than it needs to be.\nThe developer isn’t implementing things they might need in the future but don’t know they need now. …\nThe developer used clear names for everything.\nComments are clear and useful, and mostly explain why instead of what.\nCode is appropriately documented […]\nThe code conforms to our style guides.\n\n\nUse GitHub’s comments and suggestion features to speed up the process and put discussions close to the code.\n\n\n8.6.2 What to avoid\nA fine line exists between making code more idiomatic and making it your code. Avoid the latter. Just because you would do something differently doesn’t mean it’s wrong.\nAdditionally, you should avoid making changes unrelated to the code review. File a new issue to address in a separate change.\nFinally, there is a topic that is usually inappropriate for code review: design of the analysis. Not only is a code review a poor fit for such a discussion, but it also hampers the rigor of the study, e.g., adding in ad-hoc analyses that deviate from the research plan. If an analysis has a plan or pre-registration, it is appropriate to discuss if something in the code is done differently from the plan.",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Code review</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Code Review</span>"
     ]
   },
   {
     "objectID": "chapters/08-code-review.html#timeline-and-speed-of-review",
     "href": "chapters/08-code-review.html#timeline-and-speed-of-review",
-    "title": "8  Code review",
+    "title": "8  Code Review",
     "section": "8.7 Timeline and speed of review",
     "text": "8.7 Timeline and speed of review\nDiscuss your timeline for review with the author. If you cannot review the code promptly, let the author know. Fast code review is essential to maintain both momentum on a project and satisfaction with the review process.\nGoogle’s entire guide on the speed of reviews is excellent. Here are some important points:\n\nPrioritize reviews but not at the expense of your own focus time. Try to get to it when you have a break in your focused work.\nGoogle recommends a single business day as a turnaround time. This goal is good, but it’s not always possible in a research setting with competing priorities. Nevertheless, make code review an important part of your workday. Discuss the timeline for review with the author. Your pending review should not be blocking their progress.\n\n\n8.7.1 LGTM\nThe traditional stamp of approval is “LGTM” – “looks good to me!” However you say it, make a clear statement of approval, even if only through GitHub’s approval mechanism.\n\n\n8.7.2 Giving comments and responding to reviewee comments\nPer Google’s How to write code review comments:\n\n\nBe kind.\nExplain your reasoning.\nBalance giving explicit directions with just pointing out problems and letting the developer decide.\nEncourage developers to simplify code or add code comments instead of just explaining the complexity to you.\n\n\nAlso, clarify when something is a suggestion or for the author’s information. If you have a suggestion that is out of scope for the review, file a separate issue.\nThere is also some evidence that women and racial minorities are more likely to experience pushback in code review. Be mindful that your review is helpful and not harmful.\nSometimes, authors may disagree with you.\n\nWhen a developer disagrees with your suggestion, first take a moment to consider if they are correct. Often, they are closer to the code than you are, and so they might really have a better insight about certain aspects of it. Does their argument make sense? Does it make sense from a code health perspective? If so, let them know that they are right and let the issue drop.\n\nIn research, too, the author is often much closer to the code and project than you. Nevertheless, your job is to help the author improve their code, so it’s okay to (politely) advocate for a change you think is important. If you can’t agree, ask a third party to help.\n\nRemember, courtesy and respect should always be a first priority\n\nBy the way, remember to point out things you like!\n\nIf you see something nice in the CL, tell the developer, especially when they addressed one of your comments in a great way. Code reviews often just focus on mistakes, but they should offer encouragement and appreciation for good practices, as well. It’s sometimes even more valuable, in terms of mentoring, to tell a developer what they did right than to tell them what they did wrong.",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Code review</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Code Review</span>"
     ]
   },
   {
     "objectID": "chapters/08-code-review.html#appendix-code-review-tools-on-github",
     "href": "chapters/08-code-review.html#appendix-code-review-tools-on-github",
-    "title": "8  Code review",
+    "title": "8  Code Review",
     "section": "8.8 Appendix: Code review tools on GitHub",
     "text": "8.8 Appendix: Code review tools on GitHub\nGitHub offers top-notch tools for code review. Use a pull request workflow to manage your code changes to take advantage of them. Here are some recommended articles on tools for code review:\n\nReviewing pull requests\nCommenting on changes and making suggested changes\nAccepting changes\nSometimes, a PR results in a merge conflict. GitHub has a GUI for handling basic conflicts. You might also like something like GitKraken to help you manage more complex conflicts.\nMerging a pull request",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Code review</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Code Review</span>"
     ]
   },
   {

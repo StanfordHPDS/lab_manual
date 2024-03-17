@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.550">
+<meta name="generator" content="quarto-1.4.551">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -157,7 +157,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/08-code-review.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Code review</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Code Review</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -189,7 +189,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#mutual-respect-in-the-lab" id="toc-mutual-respect-in-the-lab" class="nav-link active" data-scroll-target="#mutual-respect-in-the-lab"><span class="header-section-number">1.1</span> Mutual Respect in the Lab</a></li>
-  <li><a href="#respect-for-the-people-represented-in-study-data" id="toc-respect-for-the-people-represented-in-study-data" class="nav-link" data-scroll-target="#respect-for-the-people-represented-in-study-data"><span class="header-section-number">1.2</span> Respect for the People Represented in Study Data</a></li>
+  <li><a href="#sec-respect-people-data" id="toc-sec-respect-people-data" class="nav-link" data-scroll-target="#sec-respect-people-data"><span class="header-section-number">1.2</span> Respect for the People Represented in Study Data</a></li>
   <li><a href="#sec-working-hours" id="toc-sec-working-hours" class="nav-link" data-scroll-target="#sec-working-hours"><span class="header-section-number">1.3</span> Working Hours</a></li>
   <li><a href="#trainee-support-access-and-accomodations" id="toc-trainee-support-access-and-accomodations" class="nav-link" data-scroll-target="#trainee-support-access-and-accomodations"><span class="header-section-number">1.4</span> Trainee Support, Access, and Accomodations</a></li>
   </ul>
@@ -222,10 +222,10 @@ ul.task-list li input[type="checkbox"] {
 <h2 data-number="1.1" class="anchored" data-anchor-id="mutual-respect-in-the-lab"><span class="header-section-number">1.1</span> Mutual Respect in the Lab</h2>
 <p>We strive for a culture of mutual respect in all of our communications, meetings, and policies. Please demonstrate respect for all Lab members by, for example, practicing active listening, speaking only for yourself and not others, and not dominating conversations. Mutual respect for each other’s time includes being prepared (including drafting agendas), planning ahead, and starting/ending meetings at the scheduled time.</p>
 </section>
-<section id="respect-for-the-people-represented-in-study-data" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="respect-for-the-people-represented-in-study-data"><span class="header-section-number">1.2</span> Respect for the People Represented in Study Data</h2>
+<section id="sec-respect-people-data" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="sec-respect-people-data"><span class="header-section-number">1.2</span> Respect for the People Represented in Study Data</h2>
 <p>A key value in the Lab is deep respect for the people and communities whose information is represented in the data we study. We engage seriously in learning about the policies, institutional structures, societal biases, and lived experiences that underlie these data sources.</p>
-<p>This respect also involves careful attention to data privacy and protection, discussed in <a href="04-data.html#sec-data" class="quarto-xref"><span>Section 4.5</span></a>.</p>
+<p>This respect also involves careful attention to data privacy and protection, discussed in <a href="04-data.html" class="quarto-xref"><span>Chapter 4</span></a>.</p>
 </section>
 <section id="sec-working-hours" class="level2" data-number="1.3">
 <h2 data-number="1.3" class="anchored" data-anchor-id="sec-working-hours"><span class="header-section-number">1.3</span> Working Hours</h2>
@@ -321,6 +321,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -355,7 +373,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
