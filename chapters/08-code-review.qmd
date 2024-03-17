@@ -1,4 +1,4 @@
-# Code review {#sec-code-review}
+# Code Review {#sec-code-review}
 By Malcolm Barrett
 
 ## Why code review?

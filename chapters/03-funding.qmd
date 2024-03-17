@@ -1,33 +1,43 @@
 # Funding
 
+Funding sources for team members in the Lab vary and Dr. Rose is happy to discuss funding-related questions.
+
 ## For Graduate Students
+
+Graduate students may be funded by training grants, research grants, individual fellowships, and other sources.
+
+Internal Stanford fellowship funding opportunities include: 
+
+- [Knight-Hennessy Scholars](https://knight-hennessy.stanford.edu/)
+- [Diversifying Academia, Recruiting Excellence (DARE) Doctoral Fellowship](https://vpge.stanford.edu/fellowships-funding/dare)
+- [Stanford Graduate Fellowship in Science & Engineering (SGF)](https://vpge.stanford.edu/fellowships-funding/sgf)
+- [Stanford Interdisciplinary Graduate Fellowship (SIGF)](https://vpge.stanford.edu/fellowships-funding/sigf)
+- [Stanford Data Science Scholars](https://datascience.stanford.edu/programs/stanford-data-science-scholars-program)
+- [Stanford Bio-X Fellows](https://biox.stanford.edu/research/phd-fellows)
+- [Research, Action, and Impact through Strategic Engagement (RAISE) Doctoral Fellowship.](https://vpge.stanford.edu/fellowships-funding/RAISE)
 
 ## For Postdoctoral Scholars
 
+Funding opportunities for postdoctoral scholars include training grants, research grants, individual fellowships, and other sources.
+
+Internal Stanford fellowship funding opportunities include:
+
+- [Propel Postdoctoral Scholars Program](https://propel.stanford.edu/)
+- [Stanford Science Fellows](https://stanfordsciencefellows.stanford.edu/)
+
+Additional Stanford fellowships can be [found at the Office of Postdoctoral Affairs website](https://postdocs.stanford.edu/fellowships).
+
+
 ## Active Lab Funding
 
-The Health Policy Data Science Lab at Stanford currently has three active grants where Dr. Rose is the Principal Investigator:
+The Health Policy Data Science Lab at Stanford currently has three active research grants where Dr. Rose is the Principal Investigator:
 
-- [NIH Director's Pioneer Award](https://reporter.nih.gov/search/ghBZmjOA8UyUXCt3VGZAZg/project-details/10485672)
-- [NLM R01 Grant](https://reporter.nih.gov/search/ghBZmjOA8UyUXCt3VGZAZg/project-details/10676234)
-- [Laura and John Arnold Foundation Grant](https://www.arnoldventures.org/grants/the-board-of-trustees-of-the-leland-stanford-junior-university-10)
+- [NIH Director's Pioneer Award](https://reporter.nih.gov/search/R0ax3FyETEay4NSDOfAgcQ/project-details/10695095)
+- [NLM R01 Grant](https://reporter.nih.gov/search/khy78csY1EyUuTahahnzTQ/project-details/10676234)
+- Laura and John Arnold Foundation Grant
 
-Dr. Rose is also Co-Principal Investigator on the following two grants:
+Dr. Rose is also Co-Principal Investigator on the following two research grants:
 
 - [Stanford Impact Labs Grant](https://impact.stanford.edu/organization/health-care-fairness-impact-lab)
 - [Stanford HAI Hoffman-Yee Grant](https://hai.stanford.edu/2022-hoffman-yee-grant-recipients#eae)
 
-
-### Trainee Responsibilities on Funded Grants
-
-### Reporting Requirements
-
-#### Hourly Work {.unnumbered} 
-
-#### Participating in Interim and Annual Reports {.unnumbered} 
-
-#### Conflict of Interest Reporting {.unnumbered}
-
-#### Fellowship & Resources Reporting {.unnumbered}
-
-- For Other Support pages

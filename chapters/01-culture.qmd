@@ -6,7 +6,7 @@ The culture of the Health Policy Data Science Lab is inquisitive, collaborative,
 
 We strive for a culture of mutual respect in all of our communications, meetings, and policies. Please demonstrate respect for all Lab members by, for example, practicing active listening, speaking only for yourself and not others, and not dominating conversations. Mutual respect for each other's time includes being prepared (including drafting agendas), planning ahead, and starting/ending meetings at the scheduled time.
 
-## Respect for the People Represented in Study Data
+## Respect for the People Represented in Study Data {#sec-respect-people-data}
 
 A key value in the Lab is deep respect for the people and communities whose information is represented in the data we study. We engage seriously in learning about the policies, institutional structures, societal biases, and lived experiences that underlie these data sources.
 

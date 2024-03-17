@@ -2,7 +2,15 @@
 
 ## Nero GCP
 
+Stanford's [Nero Google Cloud Platform (GCP)](https://nero-docs.stanford.edu/gcp-overview.html) is the environment often most suitable or required for the analysis of data sources discussed in @sec-data. There are costs associated with Nero GCP and we must keep careful track of these. 
+
+If you have questions about which environment you should use for your data analyses, please ask so we can be certain to follow all data security and privacy requirements.
+
 ## Sherlock
+
+Stanford has a High Performance Computing cluster called [Sherlock](https://www.sherlock.stanford.edu/docs/). See this information on [getting started](https://www.sherlock.stanford.edu/docs/getting-started/), [connecting](https://www.sherlock.stanford.edu/docs/getting-started/connecting/), and [submitting jobs](https://www.sherlock.stanford.edu/docs/getting-started/submitting/). The Lab has a dedicated node on Sherlock. 
+
+Sherlock is most frequently used for analyses involving simulated data as it is [not designed for data with a high risk classification](https://www.sherlock.stanford.edu/docs/concepts/#data-risk-classification). If you have questions about which environment you should use for your data analyses, please ask so we can be certain to follow all data security and privacy requirements.
 
 ## Software
 
