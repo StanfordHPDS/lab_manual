@@ -4,7 +4,7 @@ Conferences provide an opportunity to learn about new research, get feedback on 
 
 If we have discussed a conference and Dr. Rose is funding your trip, please send Dr. Rose a projected budget for the trip *before* purchasing plane tickets, registrations, or reserving hotels. 
 
-## Conferences by Field
+## Conferences by Field {#sec-conferences-field}
 
 We include below a noncomprehensive list of conferences that may be of interest to Lab members.
 
@@ -23,9 +23,13 @@ We include below a noncomprehensive list of conferences that may be of interest 
 
 #### Statistics {.unnumbered}
 
-- [International Conference on Health Policy Statistics](https://ww2.amstat.org/meetings/ichps/2020/)
+- [International Conference on Health Policy Statistics](https://ww2.amstat.org/meetings/ichps/2025/)
 - [ENAR](https://www.enar.org/meetings/future.cfm)
 - [Joint Statistical Meetings](https://www.amstat.org/asa/meetings/Joint-Statistical-Meetings.aspx)
+
+#### Epidemiology {.unnumbered}
+
+- [Society for Epidemiologic Research](https://epiresearch.org/annual-meeting/)
 
 #### Health Economics {.unnumbered}
 
@@ -45,8 +49,8 @@ We include below a noncomprehensive list of conferences that may be of interest 
 
 ## Stanford Travel Policies
 
-Flights **MUST** be purchased through Stanford Travel. They are not reimbursable if they are purchased any other way. 
+Flights for Lab trainees and staff **must** be purchased through Stanford Travel. They are not reimbursable otherwise. 
 
-**Health Policy and Biomedical Data Science Students**: If you are presenting at a conference, submit for up to $1,000 of those expenses to be reimbursed through the [Biosciences Travel Grant Program](https://oge.stanford.edu/financial/travel-grant-program/). You are eligible for one conference per year and these funds should be used first before research grant resources.
+**Health Policy and Biomedical Data Science Students**: If you are presenting at a conference, submit for up to $1,000 of those expenses to be reimbursed through the [Biosciences Travel Grant Program](https://oge.stanford.edu/financial/travel-grant-program/). You are eligible for one conference per year.
 
 

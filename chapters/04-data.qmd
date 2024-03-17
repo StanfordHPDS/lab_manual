@@ -1,80 +1,78 @@
-# Data
+# Data {#sec-data}
 
-To add:
+Working with data as part of research studies must be grounded in respect for the people and communities whose information is represented in the data, as stressed in @sec-respect-people-data.
 
-- Human subjects training
-- link back to respect for persons
-- stress ASK before doing
+We must follow precise and strict rules to maintain data privacy and protection. **A key tenet is that if you are not sure whether you can take an action with a data set or output produced from analyzing a data set, stop and ask. Always.**
+
+In particular, we must **never** download any data to your personal computer (even though the computer is encrypted) or export results, tables, or figures that have cell sizes or categories with fewer than 11 observations. Make certain you understand all additional or superseding project-specific policies related to where data and results can be stored.
+
+Key information regarding working with data is included here, but this information is not comprehensive. Always confirm with Dr. Rose that all necessary steps have been completed before accessing any data.
+
+## Human Subjects Training
+
+Each team member must complete required trainings on [the protection of human subjects](https://researchcompliance.stanford.edu/panels/hs/for-all-researchers/training/citi) when working with study data. Additional trainings may be required depending on the study.
+
+## Computer Encryption and Security Management
+
+In order to work with study data, your computer [must be encrypted](https://uit.stanford.edu/service/encryption/wholedisk) and have [security management software](https://uit.stanford.edu/service/bigfix). Please confirm your computer is compliant with the most up-to-date requirements listed on Stanford's websites as these processes can change.
 
 ## IRBs
 
+Institutional Review Board (IRB) approvals are required for many of the studies we conduct, which can include studies involving the secondary analysis of de-identified data. Before accessing such data, you will need to either be added to an already approved IRB protocol or we will complete and submit a new IRB protocol for our project.
+
 ## Data at Stanford
 
-### STARR Data
+This section includes an abbreviated overview of the data sets stored at Stanford that inform our active research projects in the Lab. 
 
-Lab experts on the STARR data include Marika Cusick.
+### STARR Data
+The [STAnford Research Repository (STARR)](https://med.stanford.edu/starr-tools.html) contains data from Stanford Health Care. Lab experts on the STARR data include Marika Cusick.
 
 ### Center for Population Health Sciences
 
-The [Center for Population Health Sciences (PHS)](https://med.stanford.edu/phs.html)...
+The Data Core at the Stanford  [Center for Population Health Sciences (PHS)](https://med.stanford.edu/phs.html) provides access to a range of health data sources. There are additional training requirements in order to access data at PHS and these must be completed before working with PHS data.
 
 #### Medicare Data {.unnumbered}
 
-Lab experts on Medicare data include Marissa Reitsma.
+Lab experts on Medicare data include Marissa Reitsma and Oana Enache.
 
 #### American Family Cohort Registry {.unnumbered}
 
-The American Family Cohort (AFC) Registry was created and is updated by the American Board of Family Medicine (ABFM). 
-
-
-Lab experts on the ABFM AFC Cohort Registry data include Agata Foryciarz, Gabriela Basel, and Marika Cusick.
+The American Family Cohort (AFC) Registry of primary care data was created and is updated by the American Board of Family Medicine (ABFM). Lab experts on the ABFM AFC Cohort Registry data include Agata Foryciarz, Gabriela Basel, and Marika Cusick.
 
 ## Bringing Data to Stanford
 
-The key steps in bringing a new data set to Stanford include completing submitting an IRB and a data risk assessment review.
+The key steps in bringing a new external data set to Stanford include submitting an IRB and a data risk assessment review (DRA). A summary of the [DRA review](https://uit.stanford.edu/security/dra) process at Stanford is included below. However, the DRA review process is subject to change and should be confirmed and followed as described on the DRA website.
 
-### Data Risk Assessment
-
-The [data risk assessment (DRA) review](https://uit.stanford.edu/security/dra) process at Stanford must be followed to bring external data to Stanford. A summary of this process is included below. However, the DRA review process is subject to change and should be confirmed and followed as described on the DRA website.
-
-- Review the [Stanford Risk Classifications](https://uit.stanford.edu/guide/riskclassifications) to determine the level of risk of your requested data.
-- If the requested data are high risk, then you will need to submit a [DRA](https://uit.stanford.edu/security/dra). If you are not sure if the data are high risk, there is also a pre-screening form that helps assess whether a DRA form is necessary.
-- In the DRA form, you will need the following information: 
-  - Project information
-    - Project leader contact information
-    - IRB information (if applicable)
-    - Funding source 
-    - Any other relevant parties involved in the project (e.g., Stanford Health Care)
-    - Any other individuals who will be involved with the data 
-  - Who are you getting the data from? (third party) 
-    - Contact information (e.g., name and email address)
-    - Data flow diagram
-    - Are the data going in or out of the U.S.?
-  - Brief description of the project and reason for needing this data source 
-  - Brief description of the data source 
-    - Elements (e.g., lab results, diagnoses or procedures) 
-    - Number of records
-    - Data dictionary (if available) 
-    - Data source (e.g., institutions and individuals involved in producing the data)
-    - Whether the data are identified or de-identified and how are the data de-identified? (e.g., Safe Harbor method)
-- Await the DRA review. You may get follow-up questions from the University Privacy Office, such as:
-  - How do you plan to store the data? 
-  - Will Stanford data be used or shared? 
-  - Will data be shared back with the third party? 
-
-
+-   Review the [Stanford Risk Classifications](https://uit.stanford.edu/guide/riskclassifications) to determine the level of risk of your requested data.
+-   If the requested data are high risk, then you will need to submit a [DRA](https://uit.stanford.edu/security/dra). If you are not sure if the data are high risk, there is also a pre-screening form that helps assess whether a DRA form is necessary.
+-   In the DRA form, you will need the following information:
+    -   Project information
+        -   Project leader contact information
+        -   IRB information (if applicable)
+        -   Funding source
+        -   Any other relevant parties involved in the project (e.g., Stanford Health Care)
+        -   Any other individuals who will be involved with the data
+    -   Who are you getting the data from? (third party)
+        -   Contact information (e.g., name and email address)
+        -   Data flow diagram
+        -   Are the data going in or out of the U.S.?
+    -   Brief description of the project and reason for needing this data source
+    -   Brief description of the data source
+        -   Elements (e.g., lab results, diagnoses or procedures)
+        -   Number of records
+        -   Data dictionary (if available)
+        -   Data source (e.g., institutions and individuals involved in producing the data)
+        -   Whether the data are identified or de-identified and how are the data de-identified? (e.g., Safe Harbor method)
+-   Await the DRA review. You may get follow-up questions from the University Privacy Office, such as:
+    -   How do you plan to store the data?
+    -   Will Stanford data be used or shared?
+    -   Will data be shared back with the third party?
 
 Lab experts on the DRA process include Marika Cusick.
 
-### Datasets
+## Data Sharing
 
-We are in the process of bringing the [Chronic Renal Insufficiency Cohort Study (CRIC)](https://repository.niddk.nih.gov/studies/cric/) from NIDDK to Stanford.
-
-## OMOP
-
-## Data Sharing {#sec-data}
-
-Many of our studies involve secondary analyses of existing health databases. It is typically not permitted for us to share such data due to privacy considerations. Thus, we often created simulated data that has some similar properties to the health databases to share along with our code and published results.
+Many of our studies involve secondary analyses of existing health databases. It is typically not permitted for us to share such data due to privacy considerations. Thus, we often created simulated data that has some similar properties to the health databases to share along with our code and published results. However, in certain cases, this type of simulated data sharing may not be permitted by the data use agreement.
 
 ## Simulated Data
 
@@ -82,4 +80,4 @@ Many of our projects involve simulating data to test our methodology under situa
 
 Examples of detailed simulation studies designed by Lab alums include work from [Irina Degtiar](https://onlinelibrary.wiley.com/doi/10.1111/biom.13863) and [Anna Zink](https://onlinelibrary.wiley.com/doi/10.1111/biom.13206).
 
-*Note: Creating simulated data is different than designing a microsimulation study. It can be confusing!*
+*Note: Creating simulated data of this type is different than designing a microsimulation study.*
