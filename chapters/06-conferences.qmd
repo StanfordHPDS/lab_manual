@@ -4,6 +4,8 @@ Conferences provide an opportunity to learn about new research, get feedback on 
 
 If we have discussed a conference and Dr. Rose is funding your trip, please send Dr. Rose a projected budget for the trip *before* purchasing plane tickets, registrations, or reserving hotels. 
 
+Lab members can view our internal list of upcoming conference presentations [here](https://github.com/StanfordHPDS/conferences).
+
 ## Conferences by Field {#sec-conferences-field}
 
 We include below a noncomprehensive list of conferences that may be of interest to Lab members.
