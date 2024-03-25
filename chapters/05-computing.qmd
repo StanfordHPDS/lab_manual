@@ -8,7 +8,9 @@ If you have questions about which environment you should use for your data analy
 
 ## Sherlock
 
-Stanford has a High Performance Computing cluster called [Sherlock](https://www.sherlock.stanford.edu/docs/). See this information on [getting started](https://www.sherlock.stanford.edu/docs/getting-started/), [connecting](https://www.sherlock.stanford.edu/docs/getting-started/connecting/), and [submitting jobs](https://www.sherlock.stanford.edu/docs/getting-started/submitting/). The Lab has a dedicated node on Sherlock. 
+Stanford has a High Performance Computing cluster called [Sherlock](https://www.sherlock.stanford.edu/docs/). See this information on [getting started](https://www.sherlock.stanford.edu/docs/getting-started/), [connecting](https://www.sherlock.stanford.edu/docs/getting-started/connecting/), and [submitting jobs](https://www.sherlock.stanford.edu/docs/getting-started/submitting/). 
+
+The Lab has a dedicated node on Sherlock. Lab members can view internal documentation on submitting jobs to our node [here](https://github.com/StanfordHPDS/sherlock).
 
 Sherlock is most frequently used for analyses involving simulated data as it is [not designed for data with a high risk classification](https://www.sherlock.stanford.edu/docs/concepts/#data-risk-classification). If you have questions about which environment you should use for your data analyses, please ask so we can be certain to follow all data security and privacy requirements.
 
