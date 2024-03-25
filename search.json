@@ -274,7 +274,7 @@
     "href": "chapters/05-computing.html#sherlock",
     "title": "5  Computing Resources",
     "section": "5.2 Sherlock",
-    "text": "5.2 Sherlock\nStanford has a High Performance Computing cluster called Sherlock. See this information on getting started, connecting, and submitting jobs. The Lab has a dedicated node on Sherlock.\nSherlock is most frequently used for analyses involving simulated data as it is not designed for data with a high risk classification. If you have questions about which environment you should use for your data analyses, please ask so we can be certain to follow all data security and privacy requirements.",
+    "text": "5.2 Sherlock\nStanford has a High Performance Computing cluster called Sherlock. See this information on getting started, connecting, and submitting jobs.\nThe Lab has a dedicated node on Sherlock. Lab members can view internal documentation on submitting jobs to our node here.\nSherlock is most frequently used for analyses involving simulated data as it is not designed for data with a high risk classification. If you have questions about which environment you should use for your data analyses, please ask so we can be certain to follow all data security and privacy requirements.",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Computing Resources</span>"
     ]
