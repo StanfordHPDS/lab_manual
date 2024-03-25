@@ -27,6 +27,8 @@ Example Lab publications by journal type: [statistics](https://onlinelibrary.wil
 
 The journal lists below are not exhaustive and largely focus on outlets where Lab members have previously published their work. Decisions about where to submit manuscripts for publication are made collaboratively to balance the needs and priorities of the team with as much deference as possible to what is best for the trainee author(s). We also publish in peer-reviewed conference proceedings, see @sec-conferences-field.
 
+Lab members can view our internal list of upcoming and recent publications [here](https://github.com/StanfordHPDS/publications).
+
 #### Health Economics & Policy {.unnumbered}
 
 [Journal of Health Economics](https://www.journals.elsevier.com/journal-of-health-economics), [American Journal of Health Economics](https://www.journals.uchicago.edu/toc/ajhe/current), [Health Affairs](https://www.healthaffairs.org/), [Health Services Research](https://www.hsr.org/), [Medical Care](https://journals.lww.com/lww-medicalcare/pages/default.aspx), [Medical Decision Making](https://journals.sagepub.com/home/mdm),  [JAMA Health Forum](https://jamanetwork.com/journals/jama-health-forum)
