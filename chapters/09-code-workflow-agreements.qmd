@@ -44,12 +44,7 @@ Styler also has a helpful add-in for RStudio to let you style the active file, a
 
 ## Python
 
-For Python, we use TODO.
-
-**TODO: Decide on a code style**
-**Option 1: [ruff](https://docs.astral.sh/ruff/)**
-
-[Ruff](https://docs.astral.sh/ruff/) uses the [Black style guide](https://black.readthedocs.io/en/stable/the_black_code_style/current_style.html) is more performant and extensible. 
+For Python, we use the [Black style guide](https://black.readthedocs.io/en/stable/the_black_code_style/current_style.html). Black comes with its own styler, but [Ruff](https://docs.astral.sh/ruff/) implements it more quickly and flexibly, so that's our recommendation. Either tool is fine in practice, though, as it should result in the same styling.
 
 Ruff is installable through pip:
 
@@ -64,33 +59,7 @@ Run this command in the terminal to format the Python code in your directory:
 ruff format
 ```
 
-**Option 2: [black](https://black.readthedocs.io)**
-
-Black uses the [Black style guide](https://black.readthedocs.io/en/stable/the_black_code_style/current_style.html). 
-
-Black is installable through pip:
-
-```bash
-pip install black
-```
-
-Run this command in the terminal to format the Python code in your directory:
-
-```bash
-black .
-```
-
-**Option 3: [rye](https://rye-up.com/)**
-
-[Rye](https://rye-up.com/) is a global Python manager. It uses the [Ruff](https://docs.astral.sh/ruff/) to format Python code using the [Black style guide](https://black.readthedocs.io/en/stable/the_black_code_style/current_style.html). 
-
-Rye is not installable via pip; follow the [instructions on the website](https://rye-up.com/) to install it.
-
-Run this command in the terminal to format the Python code in your directory:
-
-```bash
-rye fmt
-```
+*Note: Quarto files are not widely supported yet. See this issue for ruff: https://github.com/astral-sh/ruff/issues/6140*
 :::
 
 
@@ -111,12 +80,20 @@ lintr::lint_dir()
 
 ## Python
 
-In Python, use TODO.
+In Python, use [Ruff's linter](https://docs.astral.sh/ruff/linter/). 
 
-*Note: black does not have a linter, but Ruff and Rye do. For black, Flake8 might be the complementary linter*
+```python
+ruff check 
+```
 
-*Note: Quarto files are not widely supported yet. See this issue for ruff: https://github.com/astral-sh/ruff/issues/6140*
+You can also automatically fix any suggestions or re-lint on changes.
 
+```python
+# lint and fix
+ruff check --fix    
+# re-lint when files change
+ruff check --watch 
+```
 :::
 ::: 
 
@@ -160,18 +137,10 @@ Both setups are understandable and reasonable; the vital part is that users know
 
 There are a few tools that will help you set up a project.
 
-::: {.panel-tabset}
-## R
-
+::: {.callout-tip}
 RStudio supports the idea of *RStudio Projects*. These are handy setups because they set your working directory wherever your project is on your computer. See See [Project-Oriented Workflows](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/) for more.
 
 Use the RStudio interface to create a new project or create one in the console with `usethis::create_project("/path/to/your/new/project")`.
-
-## Python
-
-**if we use Rye**
-
-For Python users, running `rye init project_name` will set up a directory called `project_name` with several files pre-established as a git repository.
 :::
 
 We also have a couple of essential guidelines for what is in a project. 
@@ -243,7 +212,6 @@ Prefer Quarto `.qmd` files over Jupyter files; Quarto can run interactively like
 The best way to use Quarto for Python projects is [VS Code](https://quarto.org/docs/tools/vscode.html) using the Quarto extension. This extension allows you to render files easily while also running code interactively. RStudio also supports Python projects, so it's another good option if you also use R.
 :::
 
-
 ## Use Git and GitHub
 
 You should manage your project with version control and hosted for collaborators to access. We use [Git](https://www.atlassian.com/git) and [GitHub](https://docs.github.com/en/get-started/start-your-journey/hello-world) for managing and hosting version-controlled repositories, respectfully. We also have a [GitHub organization](https://github.com/StanfordHPDS) where we keep team projects.
@@ -296,9 +264,6 @@ A `README` file is commonly included in a project to explain how to use it or ot
 
 ::: {.callout-tip}
 For R users, running `usethis::use_readme_md()` and `usethis::use_readme_rmd()` will create `README.md` and `README.Rmd`, respectively. You only need to pick one of these.
-
-<!-- TODO: Keep if we use Rye -->
-For Python users, `rye init` will automatically create a `README.md` file. 
 :::
 
 For our purposes, a `README` should include *at least*: 
@@ -395,67 +360,13 @@ One common problem in renv is that it keeps track of but does not manage the R v
 
 ## Python
 
-Note: The Python ecosystem for managing environments is vast. See <https://alpopkes.com/posts/python/packaging_tools/> for an overview.
+Note: The Python ecosystem for managing environments is vast. See <https://alpopkes.com/posts/python/packaging_tools/> for an overview. 
 
-**We need to decide which approach to use**.
+We currently recommend [Conda](https://docs.conda.io/en/latest/) via the [miniconda distribution](https://docs.anaconda.com/free/miniconda/index.html). Conda allows you to install packages from Conda channels, set up virtual environments, and control the version of Python. 
 
-*Managing Python packages*
+Notably, we recommend a *Conda-first* approach. If you're installing a package, use `conda install` before trying `pip install`. PyPi and Conda channels build packages differently, so it's best to stick with one style where possible. However, Conda has a smaller, more refined selection of packages compared to PyPi, so some packages may only be available via `pip`. See [this blog post](https://www.anaconda.com/blog/understanding-conda-and-pip) for more information on the differences between the two.
 
-**Option 1: [venv](https://docs.python.org/3/library/venv.html) + [pip](https://pip.pypa.io/en/stable/)**
-
-```bash
-# create a new virtual environment called projectenv
-python3 -m venv projectenv
-
-# activate the environment projectenv
-source projectenv/bin/activate
-
-# add a package to your environment
-pip install polars
-```
-
-
-**Option 2: [conda](https://docs.conda.io/en/latest/)**
-
-```bash
-# create a new virtual environment called projectenv
-conda create --name projectenv
-
-# activate the environment projectenv
-conda activate projectenv
-
-# add a package to your environment
-conda install polars
-```
-
-**Option 3: [rye](https://rye-up.com/)**
-
-```bash
-# after `rye init project_name` and `rye pin python_version`, create the virtual environment:
-rye sync
-
-# activate the environment 
-. .venv/bin/activate
-
-# add a package to your environment
-rye add polars
-```
-
-*Managing Python versions*
-
-**Option 1: [pyenv](https://github.com/pyenv/pyenv)**
-
-```bash
-# install python 3.12.1
-pyenv install 3.12.1
-
-# use python 3.12.1 for the local project
-pyenv local 3.12.1
-```
-
-**Option 2: [conda](https://docs.conda.io/en/latest/)**
-
-Conda treats Python like other packages, so managing it is similar. One helpful thing you can do is specify a Python version while creating an environment.
+Conda treats Python like other packages, so managing it is similar. One helpful thing you can do is specify a Python version while creating an environment. See the [Conda documentation](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-python.html) for other ways of interacting with the Python version.
 
 ```bash
 # create a new virtual environment called projectenv
@@ -463,20 +374,10 @@ conda create --name projectenv python=3.12.1
 
 # activate the environment projectenv
 conda activate projectenv
+
+# add a package to your environment
+conda install polars
 ```
-
-See the [Conda documentation](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-python.html) for other ways of interacting with the Python version.
-
-**Option 3: [rye](https://rye-up.com/)**
-
-```bash
-# use python 3.12.1 for the local project
-rye pin 3.12.1
-
-# install the pinned version, python 3.12.1
-rye fetch
-```
-
 :::
 
 ## Opt-in Workflows {#sec-opt-in}
@@ -500,17 +401,15 @@ It's also possible to use tools like Make and Snakemake, among others (see the P
 
 ## Python
 
-**TODO: decide on which to use**
-
 Python has several pipeline tools that are used in data engineering. For these larger data projects, these tools are sometimes called *orchestration* tools. That said, many of them are much more complex than is needed for a single research project.
 
-Here are the tools we should explore:
+We don't currently have a recommendation. Here are the tools we should explore:
 
 1. [Make](https://www.gnu.org/software/make/): Make is one of the oldest and most popular pipeline tools, over 40 years old. It shows its age in some ways, but it's also battle-tested. See [this tutorial](https://third-bit.com/py-rse/automate.html) for an example of running an analysis with Make.
 2. [Snakemake](https://snakemake.github.io/): a Python tool influenced by Make, it's very similar in spirit but more modern. It's easier to read and customize, and you can write Python code within the Snakefile. It also works nicely with Python and R scripts. One handy thing is that you can access Snakemake inputs and outputs through magic objects for both Python and R. That makes it useful for, e.g., dynamic rules and rules where you want to use inputs for reports. Snakemake has good support for Conda environments in particular.
-3. [Dagster](https://docs.dagster.io/getting-started/hello-dagster). Dagster is a different approach that uses decorators to tag Python functions as "assets," the apparent equivalent of targets in other tools. It has a nice UI tool for visualizing the nodes and relationships of the project, as well as "materializing" (running) them. Dagster is a company, but the tool has an open-source version. 
-4. [Prefect](https://www.prefect.io/opensource) Prefect is an increasingly popular tool for orchestration. Like Dagster, it is a company-based open-source tool that uses decorators to tag Python functions. It also has a UI.
-
+3. [Dagster](https://docs.dagster.io/getting-started/hello-dagster): Dagster is a different approach that uses decorators to tag Python functions as "assets," the apparent equivalent of targets in other tools. It has a nice UI tool for visualizing the nodes and relationships of the project, as well as "materializing" (running) them. Dagster is a company, but the tool has an open-source version. 
+4. [Prefect](https://www.prefect.io/opensource): Prefect is an increasingly popular tool for orchestration. Like Dagster, it is a company-based open-source tool that uses decorators to tag Python functions. It also has a UI.
+5. [AirFlow](https://airflow.apache.org/): AirFlow is an open-source orchestration tool. Notably, Google Cloud supports a UI for creating and running AirFlow called [Cloud Composer](https://cloud.google.com/composer/docs/composer-2/composer-overview). AirFlow also has a recent decorator-based API called [TaskFlow](https://airflow.apache.org/docs/apache-airflow/stable/tutorial/taskflow.html), which is more in line with some of the above tools.
 :::
 
 ### Testing {#sec-tests}
@@ -554,5 +453,4 @@ Docker doesn't require a different approach for R, but many existing images save
 ## Python
 Docker doesn't require a different approach for Python, but some Python-specific tools will save time. Here's a tutorial on setting up and using Docker with Python in VS Code: 
 <https://github.com/RamiKrispin/vscode-python>
-
 :::
