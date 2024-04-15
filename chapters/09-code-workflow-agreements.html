@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.551">
+<meta name="generator" content="quarto-1.4.553">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -322,24 +322,12 @@ Tip
 <p>Styler also has a helpful add-in for RStudio to let you style the active file, a code selection, etc.</p>
 </div>
 <div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
-<p>For Python, we use TODO.</p>
-<p><strong>TODO: Decide on a code style</strong> <strong>Option 1: <a href="https://docs.astral.sh/ruff/">ruff</a></strong></p>
-<p><a href="https://docs.astral.sh/ruff/">Ruff</a> uses the <a href="https://black.readthedocs.io/en/stable/the_black_code_style/current_style.html">Black style guide</a> is more performant and extensible.</p>
+<p>For Python, we use the <a href="https://black.readthedocs.io/en/stable/the_black_code_style/current_style.html">Black style guide</a>. Black comes with its own styler, but <a href="https://docs.astral.sh/ruff/">Ruff</a> implements it more quickly and flexibly, so that’s our recommendation. Either tool is fine in practice, though, as it should result in the same styling.</p>
 <p>Ruff is installable through pip:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install ruff</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Run this command in the terminal to format the Python code in your directory:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ruff</span> format</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>Option 2: <a href="https://black.readthedocs.io">black</a></strong></p>
-<p>Black uses the <a href="https://black.readthedocs.io/en/stable/the_black_code_style/current_style.html">Black style guide</a>.</p>
-<p>Black is installable through pip:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install black</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Run this command in the terminal to format the Python code in your directory:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">black</span> .</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>Option 3: <a href="https://rye-up.com/">rye</a></strong></p>
-<p><a href="https://rye-up.com/">Rye</a> is a global Python manager. It uses the <a href="https://docs.astral.sh/ruff/">Ruff</a> to format Python code using the <a href="https://black.readthedocs.io/en/stable/the_black_code_style/current_style.html">Black style guide</a>.</p>
-<p>Rye is not installable via pip; follow the <a href="https://rye-up.com/">instructions on the website</a> to install it.</p>
-<p>Run this command in the terminal to format the Python code in your directory:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">rye</span> fmt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><em>Note: Quarto files are not widely supported yet. See this issue for ruff: https://github.com/astral-sh/ruff/issues/6140</em></p>
 </div>
 </div>
 </div>
@@ -359,12 +347,16 @@ Tip
 <div class="tab-content">
 <div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
 <p>In R, use <a href="https://lintr.r-lib.org/">lintr</a>. Linting works particularly well in RStudio, which will tag lines of code with specific suggestions.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>lintr<span class="sc">::</span><span class="fu">lint_dir</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>lintr<span class="sc">::</span><span class="fu">lint_dir</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
-<p>In Python, use TODO.</p>
-<p><em>Note: black does not have a linter, but Ruff and Rye do. For black, Flake8 might be the complementary linter</em></p>
-<p><em>Note: Quarto files are not widely supported yet. See this issue for ruff: https://github.com/astral-sh/ruff/issues/6140</em></p>
+<p>In Python, use <a href="https://docs.astral.sh/ruff/linter/">Ruff’s linter</a>.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>ruff check </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>You can also automatically fix any suggestions or re-lint on changes.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># lint and fix</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>ruff check <span class="op">--</span>fix    </span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># re-lint when files change</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>ruff check <span class="op">--</span>watch </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -406,17 +398,18 @@ run.R
 my_project.Rproj</code></pre>
 <p>Both setups are understandable and reasonable; the vital part is that users know where to find important files and how to use them.</p>
 <p>There are a few tools that will help you set up a project.</p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false">Python</a></li></ul>
-<div class="tab-content">
-<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>RStudio supports the idea of <em>RStudio Projects</em>. These are handy setups because they set your working directory wherever your project is on your computer. See See <a href="https://www.tidyverse.org/blog/2017/12/workflow-vs-script/">Project-Oriented Workflows</a> for more.</p>
 <p>Use the RStudio interface to create a new project or create one in the console with <code>usethis::create_project("/path/to/your/new/project")</code>.</p>
-</div>
-<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
-<p><strong>if we use Rye</strong></p>
-<p>For Python users, running <code>rye init project_name</code> will set up a directory called <code>project_name</code> with several files pre-established as a git repository.</p>
-</div>
 </div>
 </div>
 <p>We also have a couple of essential guidelines for what is in a project.</p>
@@ -459,9 +452,9 @@ Tip
 <section id="dont-include-absolute-directories-that-are-not-accessible-to-others" class="level3" data-number="9.4.2">
 <h3 data-number="9.4.2" class="anchored" data-anchor-id="dont-include-absolute-directories-that-are-not-accessible-to-others"><span class="header-section-number">9.4.2</span> Don’t include absolute directories that are not accessible to others</h3>
 <p>A common mistake in code is to hardcode a path that only exists on your computer, e.g.</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"/users/malcolmbarrett/Downloads/data.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"/users/malcolmbarrett/Downloads/data.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Prefer file paths that are relative to the root directory of your project. <code>data.csv</code> should be in my project directory, which I can access with relative paths:</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"data/data.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"data/data.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -483,14 +476,14 @@ Tip
 <p>You can also use Quarto interactively in RStudio and VS Code much as you can with R Markdown or Jupyter notebooks.</p>
 <p>The documentation on the Quarto website is excellent, so check that for guidance on the latest features. A handy collection of pages for research is the <a href="https://quarto.org/docs/authoring/front-matter.html">Scholarly Writing</a> section of the Authoring guide.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false">Python</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false">Python</a></li></ul>
 <div class="tab-content">
-<div id="tabset-5-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-5-1-tab">
+<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
 <p>RStudio comes with an installation of Quarto, so you likely don’t need to install it. However, if you install a newer version of Quarto, RStudio will use that automatically, making it reasonably seamless to upgrade.</p>
 <p>If you prefer, you can also use R and <a href="https://quarto.org/docs/tools/vscode.html">Quarto in VS Code</a>.</p>
 <p>Prefer Quarto over R Markdown; Quarto supersedes R Markdown and all significant improvements and developments will be there instead of R Markdown.</p>
 </div>
-<div id="tabset-5-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-2-tab">
+<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
 <p>Prefer Quarto <code>.qmd</code> files over Jupyter files; Quarto can run interactively like a notebook but has better reproducibility and version control properties. That said, you <em>can</em> use both using Quarto to <a href="https://quarto.org/docs/tools/jupyter-lab.html">render Jupyter files</a>. Quarto also has tooling for <a href="https://quarto.org/docs/tools/jupyter-lab.html#converting-notebooks">switching back and forth between formats</a>.</p>
 <p>The best way to use Quarto for Python projects is <a href="https://quarto.org/docs/tools/vscode.html">VS Code</a> using the Quarto extension. This extension allows you to render files easily while also running code interactively. RStudio also supports Python projects, so it’s another good option if you also use R.</p>
 </div>
@@ -555,8 +548,6 @@ Tip
 </div>
 <div class="callout-body-container callout-body">
 <p>For R users, running <code>usethis::use_readme_md()</code> and <code>usethis::use_readme_rmd()</code> will create <code>README.md</code> and <code>README.Rmd</code>, respectively. You only need to pick one of these.</p>
-<!-- TODO: Keep if we use Rye -->
-<p>For Python users, <code>rye init</code> will automatically create a <code>README.md</code> file.</p>
 </div>
 </div>
 <p>For our purposes, a <code>README</code> should include <em>at least</em>:</p>
@@ -574,14 +565,14 @@ Tip
 <h3 data-number="9.8.1" class="anchored" data-anchor-id="use-a-blank-slate"><span class="header-section-number">9.8.1</span> Use a blank slate</h3>
 <p>You should regularly run your code in a <em>blank slate</em>—running everything from scratch.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-6-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-1" role="tab" aria-controls="tabset-6-1" aria-selected="true">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-2" role="tab" aria-controls="tabset-6-2" aria-selected="false">Python</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false">Python</a></li></ul>
 <div class="tab-content">
-<div id="tabset-6-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-6-1-tab">
+<div id="tabset-5-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-5-1-tab">
 <p>By default, R stores and loads the interactive environment you use between R sessions. This is a bad default for reproducibility. Teach R not to do this by running this command once in your terminal:</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_blank_slate</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_blank_slate</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Relatedly, your script should <em>not</em> contain <code>rm(list = ls())</code>. Using a blank slate and restarting your R session is the better approach because it <em>really</em> starts from scratch, whereas <code>rm(list = ls())</code> only clears objects in the global environment. See <a href="https://www.tidyverse.org/blog/2017/12/workflow-vs-script/">Project-Oriented Workflows</a> for a discussion on this.</p>
 </div>
-<div id="tabset-6-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-2-tab">
+<div id="tabset-5-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-2-tab">
 <p>In Python, the primary way that people end up with environments that are out of sync with their code is by not <a href="https://academic.oup.com/gigascience/article/doi/10.1093/gigascience/giad113/7516267?login=false">regularly restarting their Jupyter kernel</a>. Instead, regularly restart the kernel and run all cells to make sure your code still works (and works as you expect).</p>
 <p>Note that this applies only to Jupyter Notebooks. While Quarto uses the Jupyter kernel for running Python code, it always starts a new session when rendering.</p>
 </div>
@@ -628,75 +619,36 @@ Note
 </div>
 <p>Here are the tools we use for managing software versions.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-7-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-1" role="tab" aria-controls="tabset-7-1" aria-selected="true">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-2" role="tab" aria-controls="tabset-7-2" aria-selected="false">Python</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-6-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-1" role="tab" aria-controls="tabset-6-1" aria-selected="true">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-2" role="tab" aria-controls="tabset-6-2" aria-selected="false">Python</a></li></ul>
 <div class="tab-content">
-<div id="tabset-7-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-7-1-tab">
+<div id="tabset-6-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-6-1-tab">
 <p>In R, use the <a href="https://rstudio.github.io/renv/articles/renv.html">renv</a> package to manage R package versions. renv is an interactive tool, so you should use it primarily in the console.</p>
 <p>To initiate a project:</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">init</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">init</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Among other things, this will create <code>renv.lock</code>, which needs to be included in your git repository.</p>
 <p>Check a project’s dependency status with</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">status</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">status</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>And update the packages in your lock file with</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">snapshot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">snapshot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>When you use renv, your project <code>README</code> should explain how to use it, e.g.</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("renv")</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="co"># install the dependencies for the project</span></span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">restore</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("renv")</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="co"># install the dependencies for the project</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">restore</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>One common problem in renv is that it keeps track of but does not manage the R version. If you need to switch between R versions, consider using <a href="https://github.com/r-lib/rig">rig</a>. Rig is not an R package but a separate software that lets you install and switch between R versions. On servers, <a href="https://support.posit.co/hc/en-us/articles/212364537-Using-multiple-versions-of-R-with-RStudio-Workbench-RStudio-Server-Pro">RStudio Workbench will let you change versions</a>, as well, provided that they are installed.</p>
 </div>
-<div id="tabset-7-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-2-tab">
+<div id="tabset-6-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-2-tab">
 <p>Note: The Python ecosystem for managing environments is vast. See <a href="https://alpopkes.com/posts/python/packaging_tools/" class="uri">https://alpopkes.com/posts/python/packaging_tools/</a> for an overview.</p>
-<p><strong>We need to decide which approach to use</strong>.</p>
-<p><em>Managing Python packages</em></p>
-<p><strong>Option 1: <a href="https://docs.python.org/3/library/venv.html">venv</a> + <a href="https://pip.pypa.io/en/stable/">pip</a></strong></p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create a new virtual environment called projectenv</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> venv projectenv</span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="co"># activate the environment projectenv</span></span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> projectenv/bin/activate</span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="co"># add a package to your environment</span></span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install polars</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>Option 2: <a href="https://docs.conda.io/en/latest/">conda</a></strong></p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create a new virtual environment called projectenv</span></span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">--name</span> projectenv</span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="co"># activate the environment projectenv</span></span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate projectenv</span>
-<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="co"># add a package to your environment</span></span>
-<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install polars</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>Option 3: <a href="https://rye-up.com/">rye</a></strong></p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># after `rye init project_name` and `rye pin python_version`, create the virtual environment:</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="ex">rye</span> sync</span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="co"># activate the environment </span></span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="bu">.</span> .venv/bin/activate</span>
-<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="co"># add a package to your environment</span></span>
-<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a><span class="ex">rye</span> add polars</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><em>Managing Python versions</em></p>
-<p><strong>Option 1: <a href="https://github.com/pyenv/pyenv">pyenv</a></strong></p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install python 3.12.1</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pyenv</span> install 3.12.1</span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="co"># use python 3.12.1 for the local project</span></span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="ex">pyenv</span> local 3.12.1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>Option 2: <a href="https://docs.conda.io/en/latest/">conda</a></strong></p>
-<p>Conda treats Python like other packages, so managing it is similar. One helpful thing you can do is specify a Python version while creating an environment.</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create a new virtual environment called projectenv</span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">--name</span> projectenv python=3.12.1</span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="co"># activate the environment projectenv</span></span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate projectenv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>See the <a href="https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-python.html">Conda documentation</a> for other ways of interacting with the Python version.</p>
-<p><strong>Option 3: <a href="https://rye-up.com/">rye</a></strong></p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># use python 3.12.1 for the local project</span></span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="ex">rye</span> pin 3.12.1</span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="co"># install the pinned version, python 3.12.1</span></span>
-<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a><span class="ex">rye</span> fetch</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We currently recommend <a href="https://docs.conda.io/en/latest/">Conda</a> via the <a href="https://docs.anaconda.com/free/miniconda/index.html">miniconda distribution</a>. Conda allows you to install packages from Conda channels, set up virtual environments, and control the version of Python.</p>
+<p>Notably, we recommend a <em>Conda-first</em> approach. If you’re installing a package, use <code>conda install</code> before trying <code>pip install</code>. PyPi and Conda channels build packages differently, so it’s best to stick with one style where possible. However, Conda has a smaller, more refined selection of packages compared to PyPi, so some packages may only be available via <code>pip</code>. See <a href="https://www.anaconda.com/blog/understanding-conda-and-pip">this blog post</a> for more information on the differences between the two.</p>
+<p>Conda treats Python like other packages, so managing it is similar. One helpful thing you can do is specify a Python version while creating an environment. See the <a href="https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-python.html">Conda documentation</a> for other ways of interacting with the Python version.</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create a new virtual environment called projectenv</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">--name</span> projectenv python=3.12.1</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="co"># activate the environment projectenv</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate projectenv</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="co"># add a package to your environment</span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install polars</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -709,22 +661,22 @@ Note
 <p>Pipeline tools are software that manage the execution of code. What’s practical about this for research projects is that pipeline tools track the relationship between components in your project (meaning it knows which order to run things in automatically) and will only run those components when they are out of date (meaning you don’t necessarily need to rerun your entire project because you updated one part of the code).</p>
 <p>Pipeline tools are helpful for projects of any size, but they are particularly suited to complex or computationally intense projects.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-8-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-1" role="tab" aria-controls="tabset-8-1" aria-selected="true">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-8-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-2" role="tab" aria-controls="tabset-8-2" aria-selected="false">Python</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-7-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-1" role="tab" aria-controls="tabset-7-1" aria-selected="true">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-2" role="tab" aria-controls="tabset-7-2" aria-selected="false">Python</a></li></ul>
 <div class="tab-content">
-<div id="tabset-8-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-8-1-tab">
+<div id="tabset-7-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-7-1-tab">
 <p>The best pipeline tool in R is the targets package. targets is a native R tool, making it easy to work with R objects. It works particularly well with Quarto and R Markdown, allowing you to reduce the amount of code in a report while managing it reproducibly.</p>
 <p>targets has <a href="https://books.ropensci.org/targets/">excellent documentation and tutorials</a>, so we point you there for guidance.</p>
 <p>It’s also possible to use tools like Make and Snakemake, among others (see the Python tab), with R, although we recommend targets for projects that are mostly R.</p>
 </div>
-<div id="tabset-8-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-8-2-tab">
-<p><strong>TODO: decide on which to use</strong></p>
+<div id="tabset-7-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-2-tab">
 <p>Python has several pipeline tools that are used in data engineering. For these larger data projects, these tools are sometimes called <em>orchestration</em> tools. That said, many of them are much more complex than is needed for a single research project.</p>
-<p>Here are the tools we should explore:</p>
+<p>We don’t currently have a recommendation. Here are the tools we should explore:</p>
 <ol type="1">
 <li><a href="https://www.gnu.org/software/make/">Make</a>: Make is one of the oldest and most popular pipeline tools, over 40 years old. It shows its age in some ways, but it’s also battle-tested. See <a href="https://third-bit.com/py-rse/automate.html">this tutorial</a> for an example of running an analysis with Make.</li>
 <li><a href="https://snakemake.github.io/">Snakemake</a>: a Python tool influenced by Make, it’s very similar in spirit but more modern. It’s easier to read and customize, and you can write Python code within the Snakefile. It also works nicely with Python and R scripts. One handy thing is that you can access Snakemake inputs and outputs through magic objects for both Python and R. That makes it useful for, e.g., dynamic rules and rules where you want to use inputs for reports. Snakemake has good support for Conda environments in particular.</li>
-<li><a href="https://docs.dagster.io/getting-started/hello-dagster">Dagster</a>. Dagster is a different approach that uses decorators to tag Python functions as “assets,” the apparent equivalent of targets in other tools. It has a nice UI tool for visualizing the nodes and relationships of the project, as well as “materializing” (running) them. Dagster is a company, but the tool has an open-source version.</li>
-<li><a href="https://www.prefect.io/opensource">Prefect</a> Prefect is an increasingly popular tool for orchestration. Like Dagster, it is a company-based open-source tool that uses decorators to tag Python functions. It also has a UI.</li>
+<li><a href="https://docs.dagster.io/getting-started/hello-dagster">Dagster</a>: Dagster is a different approach that uses decorators to tag Python functions as “assets,” the apparent equivalent of targets in other tools. It has a nice UI tool for visualizing the nodes and relationships of the project, as well as “materializing” (running) them. Dagster is a company, but the tool has an open-source version.</li>
+<li><a href="https://www.prefect.io/opensource">Prefect</a>: Prefect is an increasingly popular tool for orchestration. Like Dagster, it is a company-based open-source tool that uses decorators to tag Python functions. It also has a UI.</li>
+<li><a href="https://airflow.apache.org/">AirFlow</a>: AirFlow is an open-source orchestration tool. Notably, Google Cloud supports a UI for creating and running AirFlow called <a href="https://cloud.google.com/composer/docs/composer-2/composer-overview">Cloud Composer</a>. AirFlow also has a recent decorator-based API called <a href="https://airflow.apache.org/docs/apache-airflow/stable/tutorial/taskflow.html">TaskFlow</a>, which is more in line with some of the above tools.</li>
 </ol>
 </div>
 </div>
@@ -735,14 +687,14 @@ Note
 <p>In scientific work, two types of code tests are useful: code expectations and data expectations. Code should <em>behave</em> the way you expect, and data should <em>exist</em> the way you expect. If that is not the case, you either have identified a problem with your code and data or a problem with your expectations.</p>
 <p>Automating such tests in code expectations is helpful because you can run them whenever you have code or data changes. Moreover, you’re probably already probing these expectations informally in some form or another.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-9-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-1" role="tab" aria-controls="tabset-9-1" aria-selected="true">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-9-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-2" role="tab" aria-controls="tabset-9-2" aria-selected="false">Python</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-8-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-1" role="tab" aria-controls="tabset-8-1" aria-selected="true">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-8-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-2" role="tab" aria-controls="tabset-8-2" aria-selected="false">Python</a></li></ul>
 <div class="tab-content">
-<div id="tabset-9-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-9-1-tab">
+<div id="tabset-8-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-8-1-tab">
 <p>You can write code tests using simple tools in base R like <code>stop()</code> and <code>stopifnot()</code>, but the most robust suite for testing code is the testthat package. While <a href="https://testthat.r-lib.org/">testthat</a> is designed for R packages, it’s also useful for testing functions in your analysis code. In addition to the testthat documentation, see the <a href="https://r-pkgs.org/">testing chapter of R Packages</a> for more.</p>
 <p>There are several tools for testing data. Again, you can use simple logical statements with <code>stop()</code> and friends, but the most comprehensive tool in R for data quality checks is <a href="https://rstudio.github.io/pointblank/">pointblank</a>.</p>
 <p>In RStudio, you can automate tests even when you’re not in a package by activating “package mode”. All this means is adding a <a href="https://r-pkgs.org/description.html"><code>DESCRIPTION</code> file</a>. To do this, run <code>usethis::use_description(check_name = FALSE)</code> and restart RStudio. Then, you can run any tests in the <code>test/</code> folder via the Build pane.</p>
 </div>
-<div id="tabset-9-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-9-2-tab">
+<div id="tabset-8-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-8-2-tab">
 <p>You can write code tests using simple tools in Python like <code>assert</code>, but there are also many libraries for formal testing. The most popular is <a href="https://docs.python.org/3/library/unittest.html">unittest</a>.</p>
 <p>There are several tools for testing data. Again, you can use simple logical statements with <code>assert</code> and friends, but the most comprehensive tool in Python for data quality checks is <a href="https://rstudio.github.io/pointblank/">Great Expectations</a>.</p>
 </div>
@@ -756,12 +708,12 @@ Note
 <p>Here’s a Docker tutorial for data analysis: <a href="https://github.com/RamiKrispin/sdsu-docker-workshop" class="uri">https://github.com/RamiKrispin/sdsu-docker-workshop</a>.</p>
 <p>If interest in Docker grows on the team, we’ll also explore creating support for Docker workflows, such as prebuilt images and Dockerfiles the team can lean on.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-10-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-10-1" role="tab" aria-controls="tabset-10-1" aria-selected="true">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-10-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-10-2" role="tab" aria-controls="tabset-10-2" aria-selected="false">Python</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-9-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-1" role="tab" aria-controls="tabset-9-1" aria-selected="true">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-9-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-2" role="tab" aria-controls="tabset-9-2" aria-selected="false">Python</a></li></ul>
 <div class="tab-content">
-<div id="tabset-10-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-10-1-tab">
+<div id="tabset-9-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-9-1-tab">
 <p>Docker doesn’t require a different approach for R, but many existing images save time. Here is an overview of running R code in Docker: <a href="https://raps-with-r.dev/repro_cont.html" class="uri">https://raps-with-r.dev/repro_cont.html</a>.</p>
 </div>
-<div id="tabset-10-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-10-2-tab">
+<div id="tabset-9-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-9-2-tab">
 <p>Docker doesn’t require a different approach for Python, but some Python-specific tools will save time. Here’s a tutorial on setting up and using Docker with Python in VS Code: <a href="https://github.com/RamiKrispin/vscode-python" class="uri">https://github.com/RamiKrispin/vscode-python</a></p>
 </div>
 </div>
