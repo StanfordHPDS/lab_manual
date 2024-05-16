@@ -1,54 +1,53 @@
 # Code Review {#sec-code-review}
-By Malcolm Barrett
 
-## Why code review?
+## Why Code Review?
 
-Code review is a process by which a second person reviews code before it is merged into the main branch of a repository. If that sounds like software engineering to you, you may wonder if code review is suitable for science. Code review is a critical, if modern, part of the scientific process. Code review is a way to ensure that code is reproducible and that it is understandable and maintainable by others. Code review is also a way to share knowledge and learn from others.
+We define code review as a process by which a second person reviews code before it is merged into the main branch of a repository. If that sounds like software engineering to you, you may wonder if code review is suitable for science. Code review is a critical part of the scientific process. It is a way to ensure that code is reproducible and that it is understandable and maintainable by others. Code review is also a way to share knowledge and learn from others.
 
-### Code review makes better science
+### Code Review Makes Better Science
 
-In software engineering, code review emerged as programmers realized it was much easier and cheaper to fix bugs before a product reached the user. In science, code review is a way to catch bugs before your research reaches the public. Bugs, from a scientific point of view, have the same meaning as in software engineering (i.e., a mistake in the code) and a broader meaning (i.e., an error in the analysis). Code review is a way to catch both types of bugs. 
+In software engineering, code review emerged as programmers realized it was much easier and cheaper to fix bugs before a product reached the user. In science, code review is a way to catch bugs before your research reaches the public. Bugs, from a scientific point of view, have the same meaning as in software engineering (i.e., a mistake in the code) and a broader meaning (i.e., an error in the analysis). Code review can help catch both types of bugs. 
 
 Code review is also a way to ensure that code is reproducible. A second person who can run your code is a good reproducibility test: it simulates what would happen when someone else, much further removed from the project, tries to run your code. Working with the reviewer to make the code run for them will produce more robust code.
 
 Finally, code review is a way to ensure that code is understandable and maintainable by others. When you are deep into a project, you often are so in tune with the work that very complex things can seem obvious. A second person can help you identify places where this may not be so. A bit of back and forth between the author and the reviewer is natural, as the author explains their code and the reviewer asks questions. When you treat this exchange as a continuous improvement process, you'll find that your code's ability to stand on its own improves. 
 
-All three of these goals also help your most important collaborator: future you, who has no idea what current you was thinking when you wrote that code. No, really, you will forget.
+All three of these goals help your most important collaborator: future you, who has no idea what current you was thinking when you wrote that code. No, really, you will forget.
 
-### Code review makes better teams
+### Code Review Makes Better Teams
 
 Code review is inherently collaborative. At times, the life of a researcher can feel isolated and lonely. Code review brings someone else into your work and your way of thinking. That relationship is fertile ground for learning and growth. 
 
-Reviewing code is a virtuous cycle of education. More experienced coders can help less experienced ones write more idiomatic code. More experienced scientists can improve the use of specific models and methodology and other types of domain knowledge. Less experienced coders can help more experienced users learn new paradigms in coding. They also serve as a test that code is understandable. Because of this cycle, junior and senior members of the lab should participate as both reviewers and reviewees. 
+Reviewing code is a virtuous cycle of education. More experienced coders can help less experienced ones write more idiomatic code. More experienced scientists can improve the use of specific methodology and other types of domain knowledge. Less experienced coders can help more experienced users learn new paradigms in coding. They also serve as a test that code is understandable. Because of this cycle, junior and senior members of the Lab should participate as both reviewers and reviewees. 
 
 ## Code Review Guidelines
 
-**Note**: These guidelines are adapted from [Google's code review guidelines](https://google.github.io/eng-practices/). This document expands the ideas in Google's process to the research setting. Where possible, we cite Google's original guidelines using block quotes,
+**Note**: These guidelines are adapted from [Google's code review guidelines](https://google.github.io/eng-practices/). This document expands the ideas in Google's process to the research setting. Where possible, we cite Google's original guidelines using block quotes:
 
 > Like this.
 
-Google uses its own tools for managing code and code review, so sometimes you'll see terms that are a little different. A big one is "CL", changelist. A CL is Google's equivalent of a pull request (PR).
+Google uses its own tools for managing code and code review, so sometimes you'll see terms that are a little different. A big one is "CL," changelist. A CL is Google's equivalent of a pull request (PR).
 
-## When to stop for a code review
+## When to Stop for a Code Review
 
-In software engineering, code review is a part of daily life. In science, we don't always write code every day. Some members of the lab may go weeks or months without writing code. Finishing an analysis before stopping for a code review is also tempting. In other words, adapting the code review process to science requires some flexibility. 
+In software engineering, code review is a part of daily life. In science, we don't always write code every day. Some members of the Lab may go weeks or months without writing code. Finishing an analysis before stopping for a code review is also tempting. In other words, adapting the code review process to science requires some flexibility. 
 
 Remember that code review is a continuous improvement process. That means early and often is better. But what does that mean for a research project?
 
-### Code review gates
+### Code Review Gates
 
-At HPDS Lab, we stop at several vital checkpoints or *gates* for code review. For a traditional research project, these gates are:
+In the HPDS Lab, we stop at several vital checkpoints or *gates* for code review. For a traditional research project, these gates are:
 
 * Initial data pull (e.g., a SQL query or API call)
 * Descriptive tables and figures
-* Modeling and related tables
+* Algorithms and related tables
 * Reporting
 
-Your project might not fit this template exactly. For example, if you also have a simulation component to your project, you'll probably want to stop at several points to review the simulation code. Or, you may have no models in the analysis but a more extensive descriptive analysis. In this case, reviewing the descriptive work is probably too large of a code review to be effective. 
+Your project might not fit this template exactly. For example, if you also have a simulation component to your project, you'll probably want to stop at several points to review the simulation code. Or, you may have no algorithms in the analysis but a more extensive descriptive analysis. In this case, reviewing the descriptive work all at once is probably too large of a code review to be effective. 
 
 **The general principle is to decide when you absolutely must stop for a code review. Make as many or as few as feels right between them, but always stop at the gates.**
 
-### That said, prefer smaller changes per review
+### That Said, Prefer Smaller Changes Per Review
 
 Smaller changes are more effective and more satisfying to reviewers and reviewees because they are easier to understand and quicker to review. 
 
@@ -67,7 +66,7 @@ Here are some relevant points from [Google's guidelines](https://google.github.i
 
 There are three good ways to think about the size of your PR: number of lines changed, numbers of files changed, and the scope of the changes.
 
-In software engineering, 100-500 lines of code are often considered the optimal PR size. For research, it depends on the nature of the code. For some types of data cleaning, you may need more lines than this. For some modeling problems, you may want to step well before this number of lines. Each review should be digestible for the reviewer. You'll get a feel for what is too big as you do more code reviews.
+In software engineering, 100-500 lines of code are often considered the optimal PR size. For research, it depends on the nature of the code. For some types of data cleaning, you may need more lines than this. For some algorithmic problems, you may want to step well before this number of lines. Each review should be digestible for the reviewer. You'll get a feel for what is too big as you do more code reviews.
 
 Similarly, you should limit the number of files changed or added where reasonable. Sometimes, a change to your project automatically generates many files, e.g., figures for a report. That's okay. But breaking up the review into smaller pieces is a good idea if you are making changes to many unrelated files.
 
@@ -75,46 +74,46 @@ Finally, keep your changes focused on one area.
 
 > In general, the right size for a CL is one self-contained change.
 
-You should be able to describe what the change is succinctly. It's also okay for such changes to touch different parts of your project. For instance, when it comes time to model, you may need to modify your data cleaning code for the process to work. But if you then decide to make unrelated changes to an earlier figure, handle that in a separate PR and review.
+You should be able to describe what the change is succinctly. It's also okay for such changes to touch different parts of your project. For instance, when it comes time for estimation, you may need to modify your data cleaning code for the process to work. But if you then decide to make unrelated changes to an earlier figure, handle that in a separate PR and review.
 
 As a note, "too small" is rarely a problem in code review. Lean towards smaller reviews.
 
-### Code review is progress, too
+### Code Review Is Progress, Too
 
-Often, it can be challenging to stop and wait on your project. For researchers in particular, where often a single person leads an analysis, you may feel like you are the only one who can do the work. But remember that code review *is part of the work*. It's not a delay in the work. It is the work. 
+Often, it can be challenging to stop and wait on your project. For researchers in particular, where typically a single person leads an analysis, you may feel like you are the only one who can do the work. But remember that code review *is part of the work*. It's not a delay in the work. It is the work. 
 
-Code review *is* progress. Have a cup of tea and enjoy your project moving forward in peace!
+Code review *is* progress. Take a break and enjoy your project moving forward in peace!
 
-## Pre-review checklist
+## Pre-Review Checklist
 
 <!-- TODO: flesh this out with specific guidance after team agreements -->
 
-Your code review should meet lab standards. Before requesting a review, make sure you have done the following:
+Your code review should meet Lab standards. Before requesting a review, make sure you have done the following:
 
 - Prefer making a change as a *pull request*. PRs are more straightforward to review than code on the main branch because they are isolated from other changes. GitHub also has tools to help you review code as a PR.
-- Re-run your code from a black slate environment. This means running your code in an entirely fresh session so that you know your code matches your results.
+- Re-run your code from a blank slate environment. This means running your code in an entirely fresh session so that you know your code matches your results.
 - Follow the code style guide for the language you are using. Prefer an automatic tool to style your code for you.
 - Make sure it is clear how to run the code. This might be related to where to run the code (e.g., GCP) or how to install the project dependencies.
 
-## Requesting a code review
+## Requesting a Code Review
 
-### Identifying reviewers
+### Identifying Reviewers
 
 Google has a process called [readability reviews](https://abseil.io/resources/swe-book/html/ch03.html#what_is_the_readability_processquestion). In short, someone with readability credentials is an expert on how Google uses a particular language. Readability helps maintain a consistent style and propagate idiomatic code for a given language. Google also requires reviews from another person familiar with the project and an "owner" of the code. 
 
 When identifying a reviewer, use this framework. Who can review your code from the perspective of the language you are using? Who can review your code from the perspective of the domain you are working in? Who can review your code from a methodological standpoint? Usually, you are the owner of your research project, but sometimes, you are contributing to someone else's code. In that case, make sure they are part of the review process.
 
-For sensitive data, prefer to have a reviewer who has access to the data so they can run the code. 
+For sensitive data, prefer to have a reviewer who has access to the data so they can run the code. **See @sec-data for details on requirements to access project data. Code reviewers who are not on the associated IRB or cleared for data access cannot run the code directly on the data.**
 
-Note: you are probably the person most familiar with your project. That's okay. The reviewer is there to help you make the code better, so they don't necessarily need to be an expert.
+Note: You are probably the person most familiar with your project. That's okay. The reviewer is there to help you make the code better, so they don't necessarily need to be an expert.
 
 Ideally, you should pick only one or two reviewers because many can slow down the process. The best way to do this is to identify someone who meets as many of the requirements for your review as possible, e.g., who can help improve both your code and the methodology. If you can't find someone who meets your requirements, you can ask more than one person to review your code. 
 
-If you're not sure who to ask, start with Malcolm. 
+If you're not sure who to ask, start with Malcolm. (Typically, Malcolm is on every IRB and can access data directly.)
 
-It may be that someone is not available to do the review promptly. It's better to have someone else review the code, although it's a judgment call. Occasionally, you should wait for a particular person to be available if they serve as a critical reviewer. Talk openly about timelines and expectations with your reviewer. 
+It may be that your first choice reviewer is not available to do the review promptly. It's better to have someone else review the code, although it's a judgment call. Occasionally, you should wait for a particular person to be available if they serve as a critical reviewer. Talk openly about timelines and expectations with your reviewer. 
 
-### Writing a good description
+### Writing a Good Description
 
 The description of your code review should be a summary of what you are trying to accomplish. 
 
@@ -128,21 +127,21 @@ Polish the description before requesting a review and before merging.
 
 > CLs can undergo significant change during review. It can be worthwhile to review a CL description before submitting the CL, to ensure that the description still reflects what the CL does.
 
-### Iterating on code review
+### Iterating on Code Review
 
-#### Responding to reviewer comments
+#### Responding to Reviewer Comments
 
 When you receive comments from a reviewer, you should make a change or respond to them. If you don't understand a comment, ask for clarification. If you disagree with a comment, explain why and discuss it. Occasionally, you may want a third party to help decide on a change.  
 
-Be respectful and expect the same from your reviewer. Our goal is to improve each other's work. Remember that, much like a peer review, the review is about your work, not you. Nevertheless, receiving feedback on a project you've worked hard on can be difficult. If you are frustrated, take a break and return to it later. Assume good intent from your reviewer. 
+Be respectful and expect the same from your reviewer. Our goal is to improve each other's work. Remember that, much like a peer review on a manuscript, the review is about your work, not you. Nevertheless, receiving feedback on a project you've worked hard on can be difficult. If you are frustrated, take a break and return to it later. Assume good intent from your reviewer. 
 
-> Remember, courtesy and respect should always be a first priority
+> Remember, courtesy and respect should always be a first priority.
 
-## Giving a code review
+## Giving a Code Review
 
 The first and most important rule of code review is that you are there to *improve* the code, not perfect it. If the code review ends with the code in a better state than it started, you have succeeded. 
 
-### What to look for in a code review
+### What to Look for in a Code Review
 
 The key things we look for in a code review are *correctness*, *readability*, and *reproducibility*. Keep your eye out for bugs, where the code is hard to understand, and where the code is hard to run.
 
@@ -176,7 +175,7 @@ Points to consider:
 
 Use GitHub's comments and suggestion features to speed up the process and put discussions close to the code.
 
-### What to avoid
+### What to Avoid
 
 A fine line exists between making code more idiomatic and making it your code. Avoid the latter. Just because you would do something differently doesn't mean it's wrong. 
 
@@ -184,7 +183,7 @@ Additionally, you should avoid making changes unrelated to the code review. File
 
 Finally, there is a topic that is usually inappropriate for code review: *design* of the analysis. Not only is a code review a poor fit for such a discussion, but it also hampers the rigor of the study, e.g., adding in ad-hoc analyses that deviate from the research plan. If an analysis has a plan or pre-registration, it is appropriate to discuss if something in the code is done *differently* from the plan.
 
-## Timeline and speed of review
+## Timeline and Speed of Review
 
 Discuss your timeline for review with the author. If you cannot review the code promptly, let the author know. Fast code review is essential to maintain both momentum on a project and satisfaction with the review process.
 
@@ -198,7 +197,7 @@ Google's [entire guide on the speed of reviews](https://google.github.io/eng-pra
 
 The traditional stamp of approval is "LGTM" -- "looks good to me!" However you say it, make a clear statement of approval, even if only through GitHub's approval mechanism. 
 
-### Giving comments and responding to reviewee comments
+### Giving Comments and Responding to Reviewee Comments
 
 Per Google's [How to write code review comments](https://google.github.io/eng-practices/review/reviewer/comments.html): 
 
@@ -223,7 +222,7 @@ By the way, remember to point out things you like!
 
 > If you see something nice in the CL, tell the developer, especially when they addressed one of your comments in a great way. Code reviews often just focus on mistakes, but they should offer encouragement and appreciation for good practices, as well. It's sometimes even more valuable, in terms of mentoring, to tell a developer what they did right than to tell them what they did wrong.
 
-## Appendix: Code review tools on GitHub 
+## Appendix: Code Review Tools on GitHub 
 
 GitHub offers [top-notch tools for code review](https://github.com/features/code-review). Use a [pull request workflow](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) to manage your code changes to take advantage of them. Here are some recommended articles on tools for code review:
 
