@@ -191,8 +191,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#crosscheck" id="toc-crosscheck" class="nav-link active" data-scroll-target="#crosscheck"><span class="header-section-number">10.1</span> Crosscheck</a></li>
   <li><a href="#pre-flight-checklist" id="toc-pre-flight-checklist" class="nav-link" data-scroll-target="#pre-flight-checklist"><span class="header-section-number">10.2</span> Pre-Flight Checklist</a>
   <ul class="collapse">
-  <li><a href="#repository-and-files" id="toc-repository-and-files" class="nav-link" data-scroll-target="#repository-and-files"><span class="header-section-number">10.2.1</span> Repository and files</a></li>
-  <li><a href="#code-and-reproducibility" id="toc-code-and-reproducibility" class="nav-link" data-scroll-target="#code-and-reproducibility"><span class="header-section-number">10.2.2</span> Code and reproducibility</a></li>
+  <li><a href="#repository-and-files" id="toc-repository-and-files" class="nav-link" data-scroll-target="#repository-and-files"><span class="header-section-number">10.2.1</span> Repository and Files</a></li>
+  <li><a href="#code-and-reproducibility" id="toc-code-and-reproducibility" class="nav-link" data-scroll-target="#code-and-reproducibility"><span class="header-section-number">10.2.2</span> Code and Reproducibility</a></li>
   <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission"><span class="header-section-number">10.2.3</span> Submission</a></li>
   <li><a href="#acceptance" id="toc-acceptance" class="nav-link" data-scroll-target="#acceptance"><span class="header-section-number">10.2.4</span> Acceptance</a></li>
   <li><a href="#opt-in-workflows-sec-opt-in" id="toc-opt-in-workflows-sec-opt-in" class="nav-link" data-scroll-target="#opt-in-workflows-sec-opt-in"><span class="header-section-number">10.2.5</span> Opt-in Workflows (<span>Section 9.10</span>)</a></li>
@@ -224,42 +224,40 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="crosscheck" class="level2" data-number="10.1">
 <h2 data-number="10.1" class="anchored" data-anchor-id="crosscheck"><span class="header-section-number">10.1</span> Crosscheck</h2>
-<p>As discussed in <a href="08-code-review.html" class="quarto-xref"><span>Chapter 8</span></a> and <a href="09-code-workflow-agreements.html" class="quarto-xref"><span>Chapter 9</span></a>, your analysis should be regularly checked for correctness and adherence to lab agreements, <em>not</em> just at the end of the project. However, it’s useful to have a final check (by you and at least one other person) before submitting for publication. Regular code review will make this final check quicker and easier, so please do both.</p>
-<p>Note: for pre-prints, run through this checklist for both uploading to the pre-print server as well as for when you formally submit the project to a journal.</p>
+<p>As discussed in <a href="08-code-review.html" class="quarto-xref"><span>Chapter 8</span></a> and <a href="09-code-workflow-agreements.html" class="quarto-xref"><span>Chapter 9</span></a>, your analysis should be regularly checked for correctness and adherence to Lab agreements, <em>not</em> just at the end of the project. However, it’s useful to have a final check (by you and at least one other person) before submitting for publication. Regular code review will make this final check quicker and easier, so please do both.</p>
+<p>Note: For pre-prints, run through this checklist for both uploading to the pre-print server as well as for when you formally submit the project to a journal.</p>
 </section>
 <section id="pre-flight-checklist" class="level2" data-number="10.2">
 <h2 data-number="10.2" class="anchored" data-anchor-id="pre-flight-checklist"><span class="header-section-number">10.2</span> Pre-Flight Checklist</h2>
 <section id="repository-and-files" class="level3" data-number="10.2.1">
-<h3 data-number="10.2.1" class="anchored" data-anchor-id="repository-and-files"><span class="header-section-number">10.2.1</span> Repository and files</h3>
+<h3 data-number="10.2.1" class="anchored" data-anchor-id="repository-and-files"><span class="header-section-number">10.2.1</span> Repository and Files</h3>
 <ul class="task-list">
-<li><label><input type="checkbox">No sensitive data is included in the repository. If such data is identified, remove from repo and git history. Check files, Jupyter caches, etc.</label></li>
-<li><label><input type="checkbox">There is a <code>README</code> file (any of: <code>README.md</code>, <code>README.Rmd</code>, <code>README.qmd</code>)</label></li>
+<li><label><input type="checkbox">Confirm again that no sensitive data is included in the repository. Check files, Jupyter caches, etc.</label></li>
+<li><label><input type="checkbox">There is a <code>README</code> file (any of: <code>README.md</code>, <code>README.Rmd</code>, <code>README.qmd</code>).</label></li>
 <li><label><input type="checkbox"><code>README</code> contains clear instructions on how to run the code. See <a href="09-code-workflow-agreements.html#sec-readme" class="quarto-xref"><span>Section 9.7.2</span></a> for details.</label></li>
-<li><label><input type="checkbox">If repo is private, make it public</label></li>
+<li><label><input type="checkbox">Create a new public repository for the project and archive the private repository.</label></li>
 </ul>
 </section>
 <section id="code-and-reproducibility" class="level3" data-number="10.2.2">
-<h3 data-number="10.2.2" class="anchored" data-anchor-id="code-and-reproducibility"><span class="header-section-number">10.2.2</span> Code and reproducibility</h3>
+<h3 data-number="10.2.2" class="anchored" data-anchor-id="code-and-reproducibility"><span class="header-section-number">10.2.2</span> Code and Reproducibility</h3>
 <ul class="task-list">
 <li><label><input type="checkbox">The code follows the team style guide. See <a href="09-code-workflow-agreements.html#sec-code-style" class="quarto-xref"><span>Section 9.2</span></a> for details.</label></li>
-<li><label><input type="checkbox">Query code from user interfaces, e.g., Redivis or BigQuery, are up to date in version control</label></li>
+<li><label><input type="checkbox">Query code from user interfaces, e.g., Redivis or BigQuery, are up to date in version control.</label></li>
 <li><label><input type="checkbox">The code uses a package environment to lock packages. See <a href="09-code-workflow-agreements.html#sec-pkg-env" class="quarto-xref"><span>Section 9.9</span></a> for details.</label></li>
-<li><label><input type="checkbox">Manuscript is generatable via Quarto. See See <a href="09-code-workflow-agreements.html#sec-quarto" class="quarto-xref"><span>Section 9.5</span></a> for details.</label></li>
+<li><label><input type="checkbox">Manuscript is generatable via Quarto. See <a href="09-code-workflow-agreements.html#sec-quarto" class="quarto-xref"><span>Section 9.5</span></a> for details.</label></li>
 <li><label><input type="checkbox">Run the code one last time in a fresh environment, preferably on a different computer. See <a href="09-code-workflow-agreements.html#sec-running-code" class="quarto-xref"><span>Section 9.8</span></a> for details.</label></li>
 </ul>
 </section>
 <section id="submission" class="level3" data-number="10.2.3">
 <h3 data-number="10.2.3" class="anchored" data-anchor-id="submission"><span class="header-section-number">10.2.3</span> Submission</h3>
 <ul class="task-list">
-<li><label><input type="checkbox">Check any Data Use Agreements for relevant datasets that require review from a third party</label></li>
-<li><label><input type="checkbox">Check if journal has specific code and reproducibility guidelines</label></li>
-<li><label><input type="checkbox">Check figures and tables for correctness</label></li>
-<li><label><input type="checkbox">Check <a href="https://www.zotero.org/styles" class="uri">https://www.zotero.org/styles</a> for a citation style file for the journal of interest, and include the file in your Quarto metadata and in the repository</label></li>
-<li><label><input type="checkbox">For sensitive data, no small cells (&lt;11) are included in tables or figures (future: run x tool on output to make sure)</label></li>
-<li><label><input type="checkbox">Share with co-authors for comments</label></li>
+<li><label><input type="checkbox">Follow Data Use Agreement requirements regarding project review from a third party prior to submission.</label></li>
+<li><label><input type="checkbox">Check if journal has specific code and reproducibility guidelines.</label></li>
+<li><label><input type="checkbox">Check figures and tables for correctness.</label></li>
+<li><label><input type="checkbox">Check <a href="https://www.zotero.org/styles" class="uri">https://www.zotero.org/styles</a> for a citation style file for the journal of interest. Include the file in your Quarto metadata and in the repository.</label></li>
+<li><label><input type="checkbox">For sensitive data, confirm small cell definition for the project. Check that no small cells are included in tables or figures. See for <a href="04-data.html" class="quarto-xref"><span>Chapter 4</span></a> for details.</label></li>
 <li><label><input type="checkbox">Use a GitHub release for the submission version. See <a href="09-code-workflow-agreements.html#sec-gh-release" class="quarto-xref"><span>Section 9.6.1</span></a> for details.</label></li>
-<li><label><input type="checkbox">Submit to archive service like OSF</label></li>
-<li><label><input type="checkbox">If there are any research outputs other than a journal article, such as a dataset, register them for a DOI at a service like OSF or Zenodo</label></li>
+<li><label><input type="checkbox">If there are any research outputs other than a manuscript, such as a (simulated/synthetic) data, register them for a DOI at a service like OSF or Zenodo.</label></li>
 </ul>
 </section>
 <section id="acceptance" class="level3" data-number="10.2.4">
@@ -271,8 +269,8 @@ ul.task-list li input[type="checkbox"] {
 <section id="opt-in-workflows-sec-opt-in" class="level3" data-number="10.2.5">
 <h3 data-number="10.2.5" class="anchored" data-anchor-id="opt-in-workflows-sec-opt-in"><span class="header-section-number">10.2.5</span> Opt-in Workflows (<a href="09-code-workflow-agreements.html#sec-opt-in" class="quarto-xref"><span>Section 9.10</span></a>)</h3>
 <ul class="task-list">
-<li><label><input type="checkbox">Opt-in: if code contains tests, tests pass. See <a href="09-code-workflow-agreements.html#sec-tests" class="quarto-xref"><span>Section 9.10.2</span></a> for details.</label></li>
 <li><label><input type="checkbox">Opt-in: Pipeline code is documented and with clear instructions for running the pipeline. See <a href="09-code-workflow-agreements.html#sec-pipelines" class="quarto-xref"><span>Section 9.10.1</span></a> for details.</label></li>
+<li><label><input type="checkbox">Opt-in: If code contains tests, tests pass. See <a href="09-code-workflow-agreements.html#sec-tests" class="quarto-xref"><span>Section 9.10.2</span></a> for details.</label></li>
 <li><label><input type="checkbox">Opt-in: Dockerfile is included in repository with clear instructions for running the image. See <a href="09-code-workflow-agreements.html#sec-docker" class="quarto-xref"><span>Section 9.10.3</span></a> for details.</label></li>
 </ul>
 
