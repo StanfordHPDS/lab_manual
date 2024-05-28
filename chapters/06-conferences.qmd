@@ -48,6 +48,14 @@ We include below a noncomprehensive list of conferences that may be of interest 
 
 - [SMDM](https://smdm.org/meetings)
 
+#### Statistical Programming {.unnumbered}
+
+- [posit::conf()](https://posit.co/conference/)
+- [SciPy](https://www.scipy2024.scipy.org/)
+- [useR!](https://user2024.r-project.org/)
+- [PyCon](https://us.pycon.org/2024/)
+- [New York R Conference](https://rstats.ai/nyr)
+
 
 ## Stanford Travel Policies
 
