@@ -16,11 +16,11 @@ If you do not need to meet a particular week (e.g., making steady progress and d
 
 If there are repeated meeting cancellations, we should discuss the underlying reasons.
 
-Please also see @sec-meeting-agendas for details on recurring meeting agendas.
+Please also see @sec-meeting-agendas for details on recurring meeting agendas and GitHub repository updates.
 
-## Meeting Agendas {#sec-meeting-agendas}
+## Meeting Agendas & GitHub Repository Updates {#sec-meeting-agendas}
 
-Trainees must prepare an agenda prior to each recurring meeting with Dr. Rose. Create a google doc (invite Dr. Rose as editor) that you’ll add to in reverse chronological order for each meeting with the information below included. Update the google doc by 11AM *one business day* before our meeting. Repeatedly not creating agendas will result in cancelled meetings.
+Trainees must prepare an agenda prior to each recurring meeting with Dr. Rose. Create a google doc (invite Dr. Rose as editor) that you’ll add to in reverse chronological order for each meeting with the information below included. Update the google doc by 11AM *one business day* before our meeting. Push a commit to the project's GitHub repository at the same time, even if you plan to make further changes prior to the meeting. If additional changes are made to the repository ahead of the meeting, push a second commit. Repeatedly not creating agendas will result in cancelled meetings.
 
 **[Meeting Date]**
 
