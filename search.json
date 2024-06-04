@@ -64,7 +64,7 @@
     "href": "chapters/02-policies.html#recurring-meetings",
     "title": "2  General Policies",
     "section": "2.2 Recurring Meetings",
-    "text": "2.2 Recurring Meetings\nLab trainees meet individually with Dr. Rose regularly. This is typically weekly or every other week depending on the needs of the trainee and their projects. Meetings are either 25 minutes or 50 minutes to allow for breaks between meetings. Dr. Rose expects trainees to manage the meeting such that it ends on time.\nIn general, Dr. Rose expects progress to be made between each meeting. Progress can include struggling with the material. Dr. Rose cares that you are engaged and taking initiative to advance the project. We’ll discuss what you learned and where you are still confused. When we identify areas where you have gaps, Dr. Rose does expect you to invest in learning the required material and to follow through to fill those gaps. All trainees must be making satisfactory academic progress in line with the expectations of their graduate degree program.\nIf you do not need to meet a particular week (e.g., making steady progress and don’t have questions), please email Dr. Rose in advance so she can efficiently reallocate the meeting time. Your physical and mental health are important. If you need to cancel a meeting for health or personal reasons, email Dr. Rose. As much notice as is possible is helpful, but it is always better to cancel a meeting short notice than to attend when you are sick!\nIf there are repeated meeting cancellations, we should discuss the underlying reasons.\nPlease also see Section 2.3 for details on recurring meeting agendas.",
+    "text": "2.2 Recurring Meetings\nLab trainees meet individually with Dr. Rose regularly. This is typically weekly or every other week depending on the needs of the trainee and their projects. Meetings are either 25 minutes or 50 minutes to allow for breaks between meetings. Dr. Rose expects trainees to manage the meeting such that it ends on time.\nIn general, Dr. Rose expects progress to be made between each meeting. Progress can include struggling with the material. Dr. Rose cares that you are engaged and taking initiative to advance the project. We’ll discuss what you learned and where you are still confused. When we identify areas where you have gaps, Dr. Rose does expect you to invest in learning the required material and to follow through to fill those gaps. All trainees must be making satisfactory academic progress in line with the expectations of their graduate degree program.\nIf you do not need to meet a particular week (e.g., making steady progress and don’t have questions), please email Dr. Rose in advance so she can efficiently reallocate the meeting time. Your physical and mental health are important. If you need to cancel a meeting for health or personal reasons, email Dr. Rose. As much notice as is possible is helpful, but it is always better to cancel a meeting short notice than to attend when you are sick!\nIf there are repeated meeting cancellations, we should discuss the underlying reasons.\nPlease also see Section 2.3 for details on recurring meeting agendas and GitHub repository updates.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>General Policies</span>"
     ]
@@ -73,8 +73,8 @@
     "objectID": "chapters/02-policies.html#sec-meeting-agendas",
     "href": "chapters/02-policies.html#sec-meeting-agendas",
     "title": "2  General Policies",
-    "section": "2.3 Meeting Agendas",
-    "text": "2.3 Meeting Agendas\nTrainees must prepare an agenda prior to each recurring meeting with Dr. Rose. Create a google doc (invite Dr. Rose as editor) that you’ll add to in reverse chronological order for each meeting with the information below included. Update the google doc by 11AM one business day before our meeting. Repeatedly not creating agendas will result in cancelled meetings.\n[Meeting Date]\n\nWhat has been completed since previous meeting:\nTopics to discuss at the meeting:\nWhat will be completed by the next meeting:",
+    "section": "2.3 Meeting Agendas & GitHub Repository Updates",
+    "text": "2.3 Meeting Agendas & GitHub Repository Updates\nTrainees must prepare an agenda prior to each recurring meeting with Dr. Rose. Create a google doc (invite Dr. Rose as editor) that you’ll add to in reverse chronological order for each meeting with the information below included. Update the google doc by 11AM one business day before our meeting. Push a commit to the project’s GitHub repository at the same time, even if you plan to make further changes prior to the meeting. If additional changes are made to the repository ahead of the meeting, push a second commit. Repeatedly not creating agendas will result in cancelled meetings.\n[Meeting Date]\n\nWhat has been completed since previous meeting:\nTopics to discuss at the meeting:\nWhat will be completed by the next meeting:",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>General Policies</span>"
     ]
@@ -294,7 +294,7 @@
     "href": "chapters/06-conferences.html",
     "title": "6  Conferences",
     "section": "",
-    "text": "6.1 Conferences by Field\nWe include below a noncomprehensive list of conferences that may be of interest to Lab members.",
+    "text": "6.1 Stanford Travel Policies\nFlights for Lab trainees and staff must be purchased through Stanford Travel. They are not reimbursable otherwise. Hotels must be purchased through Stanford Travel unless it is a conference hotel. Please copy Dr. Rose on travel-related emails with administrative staff.\nHealth Policy and Biomedical Data Science Students: If you are presenting at a conference, submit for up to $1,000 of those expenses to be reimbursed through the Biosciences Travel Grant Program. You are eligible for one conference per year.",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Conferences</span>"
     ]
@@ -303,18 +303,8 @@
     "objectID": "chapters/06-conferences.html#sec-conferences-field",
     "href": "chapters/06-conferences.html#sec-conferences-field",
     "title": "6  Conferences",
-    "section": "",
-    "text": "Algorithmic Bias & Fairness\n\nACM FAccT\nAAI/ACM AI, Ethics, & Society\nACM EAAMO\nIEEE SaTML\n\n\n\nMachine Learning for Health\n\nMachine Learning for Health Care\nCHIL\nMachine Learning for Health\n\n\n\nStatistics\n\nInternational Conference on Health Policy Statistics\nENAR\nJoint Statistical Meetings\n\n\n\nEpidemiology\n\nSociety for Epidemiologic Research\n\n\n\nHealth Economics\n\nASHEcon\niHEA\nEconomics of AI\n\n\n\nHealth Policy\n\nAcademyHealth\nISPOR\n\n\n\nDecision Science\n\nSMDM\n\n\n\nStatistical Programming\n\nposit::conf()\nSciPy\nuseR!\nPyCon\nNew York R Conference",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Conferences</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/06-conferences.html#stanford-travel-policies",
-    "href": "chapters/06-conferences.html#stanford-travel-policies",
-    "title": "6  Conferences",
-    "section": "6.2 Stanford Travel Policies",
-    "text": "6.2 Stanford Travel Policies\nFlights for Lab trainees and staff must be purchased through Stanford Travel. They are not reimbursable otherwise.\nHealth Policy and Biomedical Data Science Students: If you are presenting at a conference, submit for up to $1,000 of those expenses to be reimbursed through the Biosciences Travel Grant Program. You are eligible for one conference per year.",
+    "section": "6.2 Conferences by Field",
+    "text": "6.2 Conferences by Field\nWe include below a noncomprehensive list of conferences that may be of interest to Lab members.\n\nAlgorithmic Bias & Fairness\n\nACM FAccT\nAAI/ACM AI, Ethics, & Society\nACM EAAMO\nIEEE SaTML\n\n\n\nMachine Learning for Health\n\nMachine Learning for Health Care\nCHIL\nMachine Learning for Health\n\n\n\nStatistics\n\nInternational Conference on Health Policy Statistics\nENAR\nJoint Statistical Meetings\n\n\n\nEpidemiology\n\nSociety for Epidemiologic Research\n\n\n\nHealth Economics\n\nASHEcon\niHEA\nEconomics of AI\n\n\n\nHealth Policy\n\nAcademyHealth\nISPOR\n\n\n\nDecision Science\n\nSMDM\n\n\n\nStatistical Programming\n\nposit::conf()\nSciPy\nuseR!\nPyCon\nNew York R Conference",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Conferences</span>"
     ]
@@ -364,7 +354,7 @@
     "href": "chapters/07-publications.html#journals",
     "title": "7  Publications",
     "section": "7.5 Journals",
-    "text": "7.5 Journals\nThe journal lists below are not exhaustive and largely focus on outlets where Lab members have previously published their work. Decisions about where to submit manuscripts for publication are made collaboratively to balance the needs and priorities of the team with as much deference as possible to what is best for the trainee author(s). We also publish in peer-reviewed conference proceedings, see Section 6.1.\nLab members can view our internal list of upcoming and recent publications here.\n\nHealth Economics & Policy\nJournal of Health Economics, American Journal of Health Economics, Health Affairs, Health Services Research, Medical Care, Medical Decision Making, JAMA Health Forum\n\n\nEpidemiology & Public Health\nAmerican Journal of Epidemiology, Epidemiology, International Journal of Epidemiology, American Journal of Public Health\n\n\nStatistics\nJournal of the American Statistical Association, Biometrics, Biostatistics (COI: Sherri was Co-Editor-in-Chief), Statistics in Medicine, Statistical Methods in Medical Research\n\n\nClinical\nNEJM, JAMA, JAMA Internal Medicine, JAMA Psychiatry\n\n\nHealth Informatics & Digital Health\nJAMIA, BMJ Health & Care Informatics, Lancet Digital Health",
+    "text": "7.5 Journals\nThe journal lists below are not exhaustive and largely focus on outlets where Lab members have previously published their work. Decisions about where to submit manuscripts for publication are made collaboratively to balance the needs and priorities of the team with as much deference as possible to what is best for the trainee author(s). We also publish in peer-reviewed conference proceedings, see Section 6.2.\nLab members can view our internal list of upcoming and recent publications here.\n\nHealth Economics & Policy\nJournal of Health Economics, American Journal of Health Economics, Health Affairs, Health Services Research, Medical Care, Medical Decision Making, JAMA Health Forum\n\n\nEpidemiology & Public Health\nAmerican Journal of Epidemiology, Epidemiology, International Journal of Epidemiology, American Journal of Public Health\n\n\nStatistics\nJournal of the American Statistical Association, Biometrics, Biostatistics (COI: Sherri was Co-Editor-in-Chief), Statistics in Medicine, Statistical Methods in Medical Research\n\n\nClinical\nNEJM, JAMA, JAMA Internal Medicine, JAMA Psychiatry\n\n\nHealth Informatics & Digital Health\nJAMIA, BMJ Health & Care Informatics, Lancet Digital Health",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Publications</span>"
     ]
