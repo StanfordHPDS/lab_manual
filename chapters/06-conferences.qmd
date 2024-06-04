@@ -6,6 +6,12 @@ If we have discussed a conference and Dr. Rose is funding your trip, please send
 
 Lab members can view our internal list of upcoming conference presentations [here](https://github.com/StanfordHPDS/conferences).
 
+## Stanford Travel Policies
+
+Flights for Lab trainees and staff **must** be purchased through Stanford Travel. They are not reimbursable otherwise. Hotels **must** be purchased through Stanford Travel unless it is a conference hotel. Please copy Dr. Rose on travel-related emails with administrative staff.
+
+**Health Policy and Biomedical Data Science Students**: If you are presenting at a conference, submit for up to $1,000 of those expenses to be reimbursed through the [Biosciences Travel Grant Program](https://oge.stanford.edu/financial/travel-grant-program/). You are eligible for one conference per year.
+
 ## Conferences by Field {#sec-conferences-field}
 
 We include below a noncomprehensive list of conferences that may be of interest to Lab members.
@@ -57,10 +63,5 @@ We include below a noncomprehensive list of conferences that may be of interest 
 - [New York R Conference](https://rstats.ai/nyr)
 
 
-## Stanford Travel Policies
-
-Flights for Lab trainees and staff **must** be purchased through Stanford Travel. They are not reimbursable otherwise. 
-
-**Health Policy and Biomedical Data Science Students**: If you are presenting at a conference, submit for up to $1,000 of those expenses to be reimbursed through the [Biosciences Travel Grant Program](https://oge.stanford.edu/financial/travel-grant-program/). You are eligible for one conference per year.
 
 
