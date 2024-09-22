@@ -212,10 +212,28 @@ You should manage your project with version control and hosted for collaborators
 
 See @sec-code-review for how to manage code changes to your repository.
 
+### Git workflow
+
+1. From the beginning of a project, you should work in a git repository. You can either create one locally in your work environment and push to GitHub or create one [via GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository) and clone it to your work environment. If you create one on GitHub, prefer creating it directly in our [GitHub organization](https://github.com/StanfordHPDS) by changing the Owner to `StanfordHPDS`. 
+1. Make changes on branches. Prefer branch names that describe the intent of the change, e.g. `add-table` over `changes`.
+1. Push the branch to GitHub, e.g. `git push -u origin add-table` for the `add-table` branch.
+1. Open a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
+1. Follow the code review process outlined in @sec-code-review
+1. When your pull request is merged into your new branch, pull the changes in your local copy of the repository, delete the remote branch, and delete the local branch. 
+
 ::: callout-tip
 For R users, there are two helpful functions in usethis to manage your git setup for a project: `usethis::use_git()` will initialize a git repository and activate the git UI in RStudio; `usethis::use_github()` will create and link a GitHub repository, as well as make your first push. Note that `use_github()` has an `organisation` argument where you can specify a GitHub organization to create the repository under, such as `use_github(organisation = "StanfordHPDS")`.
 
 See also the [PR workflow vignette](https://usethis.r-lib.org/articles/pr-functions.html) for making and managing pull requests in R. You might also find [Happy Git and GitHub for the useR](https://happygitwithr.com/) a helpful perspective.
+:::
+
+### Transferring repositories
+
+If a repository for a Lab project exists on your personal account, [transfer it](https://docs.github.com/en/repositories/creating-and-managing-repositories/transferring-a-repository#transferring-a-repository-owned-by-your-personal-account) to the `StanfordHPDS` GitHub organization. 
+
+::: {.callout-tip}
+Repositories that exist in a GitHub organization still contain information about your contributions. You can also [pin organization repositories to your personal GitHub profile](
+https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/pinning-items-to-your-profile).
 :::
 
 ### Release on GitHub {#sec-gh-release}
