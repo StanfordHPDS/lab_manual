@@ -110,8 +110,6 @@ ruff check --watch
 
 ## SQL
 
-## SQL
-
 [SQLFluff](https://docs.sqlfluff.com/en/stable/reference/rules.html) is actually a linter. `sqlfluff fix` automatically addresses formating and other linting rules. When you run it, you might also see other linting rules that are not automatically fixable. You can see the lints without trying to fix them with:
 
 ``` bash
