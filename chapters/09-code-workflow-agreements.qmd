@@ -190,6 +190,10 @@ You can also use Quarto interactively in RStudio and VS Code much as you can wit
 
 The documentation on the Quarto website is excellent, so check that for guidance on the latest features. A handy collection of pages for research is the [Scholarly Writing](https://quarto.org/docs/authoring/front-matter.html) section of the Authoring guide.
 
+For generating PDF documents with Quarto, you'll need a TeX distribution. We recommend installing [TinyTex](https://yihui.org/tinytex/), which is a good general-purpose, lightweight distribution.
+
+See our [trainings repository](https://github.com/StanfordHPDS/training) for past Lab trainings on Quarto.
+
 ::: panel-tabset
 ## R
 
@@ -198,6 +202,12 @@ RStudio comes with an installation of Quarto, so you likely don't need to instal
 If you prefer, you can also use R and [Quarto in VS Code](https://quarto.org/docs/tools/vscode.html).
 
 Prefer Quarto over R Markdown; Quarto supersedes R Markdown and all significant improvements and developments will be there instead of R Markdown.
+
+For rendering PDF documents, you can install TinyTex with the tinytex package:
+
+```r
+tinytex::install_tinytex()
+```
 
 ## Python
 
