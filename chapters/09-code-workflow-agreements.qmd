@@ -212,7 +212,7 @@ You should manage your project with version control and hosted for collaborators
 
 See @sec-code-review for how to manage code changes to your repository.
 
-### Git workflow
+### Git Workflow
 
 1. From the beginning of a project, you should work in a git repository. You can either create one locally in your work environment and push to GitHub or create one [via GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository) and clone it to your work environment. If you create one on GitHub, prefer creating it directly in our [GitHub organization](https://github.com/StanfordHPDS) by changing the Owner to `StanfordHPDS`. 
 1. Make changes on branches. Prefer branch names that describe the intent of the change, e.g. `add-table` over `changes`.
