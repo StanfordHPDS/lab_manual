@@ -208,6 +208,17 @@ df = pd.read_csv("data/data.csv")
 For R users, the [here](https://here.r-lib.org/) package can let you refer to files and folders from the root directory of your project no matter where the code exists. here can be helpful when, for instance, you have a report in a `reports/` folder but want to refer to a data file in the `data/` folder. Instead of backtracking `../data/data.csv`, you can write `here("data", "data.csv")`
 :::
 
+### Be Clear About What Can Only Be Run In Protected Environments
+
+Some projects can only be run in a protected environments, while others can be run without these restrictions, such as on a local laptop. Many lab projects, though, have components of both. For example, a microsimulation project might depend on summary statistics calculated from sensitive data. The calculations themselves likely need to occur in a protected computational environment like Nero GCP (@sec-nero). However, the simulation itself may not need to. If the summary data meets requirements in the data use agreement to be taken out of the protected environment, then the simulation itself may not need to occur there.
+
+For these projects, we suggest:
+
+1. Clearly documenting what requires a computational environment like Nero GCP
+1. Checking qualifying derived data into the git repository. By qualifying, we mean derived products that meet the data use agreement policies for the study.
+
+While you can run such projects entirely in a protected environment, this approach allows you to use your local computer or HPC like Sherlock (@sec-sherlock) for the components that do not use protected data. 
+
 ## Generate Reproducible Documents with Quarto {#sec-quarto}
 
 Prefer using [Quarto](https://quarto.org/) for documents, particularly those that generate a research product like a journal article. Quarto is a scientific publishing framework that weaves [Markdown-based](https://commonmark.org/help/tutorial/) text with computational results from R, Python, Julia, etc. You can also mix languages in a single document.
