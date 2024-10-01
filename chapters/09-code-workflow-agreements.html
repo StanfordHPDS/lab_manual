@@ -233,7 +233,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#sec-quarto" id="toc-sec-quarto" class="nav-link" data-scroll-target="#sec-quarto"><span class="header-section-number">9.5</span> Generate Reproducible Documents with Quarto</a></li>
   <li><a href="#use-git-and-github" id="toc-use-git-and-github" class="nav-link" data-scroll-target="#use-git-and-github"><span class="header-section-number">9.6</span> Use Git and GitHub</a>
   <ul class="collapse">
-  <li><a href="#sec-gh-release" id="toc-sec-gh-release" class="nav-link" data-scroll-target="#sec-gh-release"><span class="header-section-number">9.6.1</span> Release on GitHub</a></li>
+  <li><a href="#git-workflow" id="toc-git-workflow" class="nav-link" data-scroll-target="#git-workflow"><span class="header-section-number">9.6.1</span> Git Workflow</a></li>
+  <li><a href="#transferring-repositories" id="toc-transferring-repositories" class="nav-link" data-scroll-target="#transferring-repositories"><span class="header-section-number">9.6.2</span> Transferring Repositories</a></li>
+  <li><a href="#sec-gh-release" id="toc-sec-gh-release" class="nav-link" data-scroll-target="#sec-gh-release"><span class="header-section-number">9.6.3</span> Release on GitHub</a></li>
   </ul></li>
   <li><a href="#documentation" id="toc-documentation" class="nav-link" data-scroll-target="#documentation"><span class="header-section-number">9.7</span> Documentation</a>
   <ul class="collapse">
@@ -510,6 +512,16 @@ Tip
 <h2 data-number="9.6" class="anchored" data-anchor-id="use-git-and-github"><span class="header-section-number">9.6</span> Use Git and GitHub</h2>
 <p>You should manage your project with version control and hosted for collaborators to access. We use <a href="https://www.atlassian.com/git">Git</a> and <a href="https://docs.github.com/en/get-started/start-your-journey/hello-world">GitHub</a> for managing and hosting version-controlled repositories, respectfully. We also have a <a href="https://github.com/StanfordHPDS">GitHub organization</a> where we keep team projects.</p>
 <p>See <a href="08-code-review.html" class="quarto-xref"><span>Chapter 8</span></a> for how to manage code changes to your repository.</p>
+<section id="git-workflow" class="level3" data-number="9.6.1">
+<h3 data-number="9.6.1" class="anchored" data-anchor-id="git-workflow"><span class="header-section-number">9.6.1</span> Git Workflow</h3>
+<ol type="1">
+<li>From the beginning of a project, you should work in a git repository. You can either create one locally in your work environment and push to GitHub or create one <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository">via GitHub</a> and clone it to your work environment. If you create one on GitHub, prefer creating it directly in our <a href="https://github.com/StanfordHPDS">GitHub organization</a> by changing the Owner to <code>StanfordHPDS</code>.</li>
+<li>Make changes on branches. Prefer branch names that describe the intent of the change, e.g.&nbsp;<code>add-table</code> over <code>changes</code>.</li>
+<li>Push the branch to GitHub, e.g.&nbsp;<code>git push -u origin add-table</code> for the <code>add-table</code> branch.</li>
+<li>Open a <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request">pull request</a>.</li>
+<li>Follow the code review process outlined in <a href="08-code-review.html" class="quarto-xref"><span>Chapter 8</span></a></li>
+<li>When your pull request is merged into your new branch, pull the changes in your local copy of the repository, delete the remote branch, and delete the local branch.</li>
+</ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -524,8 +536,26 @@ Tip
 <p>See also the <a href="https://usethis.r-lib.org/articles/pr-functions.html">PR workflow vignette</a> for making and managing pull requests in R. You might also find <a href="https://happygitwithr.com/">Happy Git and GitHub for the useR</a> a helpful perspective.</p>
 </div>
 </div>
-<section id="sec-gh-release" class="level3" data-number="9.6.1">
-<h3 data-number="9.6.1" class="anchored" data-anchor-id="sec-gh-release"><span class="header-section-number">9.6.1</span> Release on GitHub</h3>
+</section>
+<section id="transferring-repositories" class="level3" data-number="9.6.2">
+<h3 data-number="9.6.2" class="anchored" data-anchor-id="transferring-repositories"><span class="header-section-number">9.6.2</span> Transferring Repositories</h3>
+<p>If a repository for a Lab project exists on your personal account, <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/transferring-a-repository#transferring-a-repository-owned-by-your-personal-account">transfer it</a> to the <code>StanfordHPDS</code> GitHub organization.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Repositories that exist in a GitHub organization still contain information about your contributions. You can also <a href="https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/pinning-items-to-your-profile">pin organization repositories to your personal GitHub profile</a>.</p>
+</div>
+</div>
+</section>
+<section id="sec-gh-release" class="level3" data-number="9.6.3">
+<h3 data-number="9.6.3" class="anchored" data-anchor-id="sec-gh-release"><span class="header-section-number">9.6.3</span> Release on GitHub</h3>
 <p>GitHub has a mechanism for <a href="https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository">making formal releases of repositories</a>. This takes a snapshot of the repository at the time of release and attaches a name.</p>
 <p>Making a “release,” of course, has its origins in software versions. However, it’s also helpful in tracking significant milestones in a project. For instance, make a release upon submission to a journal and another upon publication. That allows you to easily revisit the state of the repository at those two time points. GitHub also makes downloading the repository in releases easy, making it an excellent point to direct people not using Git.</p>
 </section>
