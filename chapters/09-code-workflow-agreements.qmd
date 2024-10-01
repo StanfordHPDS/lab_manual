@@ -227,7 +227,7 @@ For R users, there are two helpful functions in usethis to manage your git setup
 See also the [PR workflow vignette](https://usethis.r-lib.org/articles/pr-functions.html) for making and managing pull requests in R. You might also find [Happy Git and GitHub for the useR](https://happygitwithr.com/) a helpful perspective.
 :::
 
-### Transferring repositories
+### Transferring Repositories
 
 If a repository for a Lab project exists on your personal account, [transfer it](https://docs.github.com/en/repositories/creating-and-managing-repositories/transferring-a-repository#transferring-a-repository-owned-by-your-personal-account) to the `StanfordHPDS` GitHub organization. 
 
