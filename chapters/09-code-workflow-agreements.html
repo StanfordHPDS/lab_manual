@@ -229,6 +229,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#dont-include-sensitive-information-on-git-and-github" id="toc-dont-include-sensitive-information-on-git-and-github" class="nav-link" data-scroll-target="#dont-include-sensitive-information-on-git-and-github"><span class="header-section-number">9.4.1</span> Don’t Include Sensitive Information on Git and GitHub</a></li>
   <li><a href="#dont-include-absolute-directories-that-are-not-accessible-to-others" id="toc-dont-include-absolute-directories-that-are-not-accessible-to-others" class="nav-link" data-scroll-target="#dont-include-absolute-directories-that-are-not-accessible-to-others"><span class="header-section-number">9.4.2</span> Don’t Include Absolute Directories That Are Not Accessible to Others</a></li>
+  <li><a href="#be-clear-about-what-can-only-be-run-in-protected-environments" id="toc-be-clear-about-what-can-only-be-run-in-protected-environments" class="nav-link" data-scroll-target="#be-clear-about-what-can-only-be-run-in-protected-environments"><span class="header-section-number">9.4.3</span> Be Clear About What Can Only Be Run In Protected Environments</a></li>
   </ul></li>
   <li><a href="#sec-quarto" id="toc-sec-quarto" class="nav-link" data-scroll-target="#sec-quarto"><span class="header-section-number">9.5</span> Generate Reproducible Documents with Quarto</a></li>
   <li><a href="#use-git-and-github" id="toc-use-git-and-github" class="nav-link" data-scroll-target="#use-git-and-github"><span class="header-section-number">9.6</span> Use Git and GitHub</a>
@@ -482,6 +483,16 @@ Tip
 <p>For R users, the <a href="https://here.r-lib.org/">here</a> package can let you refer to files and folders from the root directory of your project no matter where the code exists. here can be helpful when, for instance, you have a report in a <code>reports/</code> folder but want to refer to a data file in the <code>data/</code> folder. Instead of backtracking <code>../data/data.csv</code>, you can write <code>here("data", "data.csv")</code></p>
 </div>
 </div>
+</section>
+<section id="be-clear-about-what-can-only-be-run-in-protected-environments" class="level3" data-number="9.4.3">
+<h3 data-number="9.4.3" class="anchored" data-anchor-id="be-clear-about-what-can-only-be-run-in-protected-environments"><span class="header-section-number">9.4.3</span> Be Clear About What Can Only Be Run In Protected Environments</h3>
+<p>Some projects can only be run in a protected environments, while others can be run without these restrictions, such as on a local laptop. Many lab projects, though, have components of both. For example, a microsimulation project might depend on summary statistics calculated from sensitive data. The calculations themselves likely need to occur in a protected computational environment like Nero GCP (<a href="05-computing.html#sec-nero" class="quarto-xref"><span>Section 5.1</span></a>). However, the simulation itself may not need to. If the summary data meets requirements in the data use agreement to be taken out of the protected environment, then the simulation itself may not need to occur there.</p>
+<p>For these projects, we suggest:</p>
+<ol type="1">
+<li>Clearly documenting what requires a computational environment like Nero GCP</li>
+<li>Checking qualifying derived data into the git repository. By qualifying, we mean derived products that meet the data use agreement policies for the study.</li>
+</ol>
+<p>While you can run such projects entirely in a protected environment, this approach allows you to use your local computer or HPC like Sherlock (<a href="05-computing.html#sec-sherlock" class="quarto-xref"><span>Section 5.2</span></a>) for the components that do not use protected data.</p>
 </section>
 </section>
 <section id="sec-quarto" class="level2" data-number="9.5">
