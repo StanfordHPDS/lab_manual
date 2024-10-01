@@ -6,7 +6,7 @@ This chapter documents the code workflow team agreements for our Lab. By team ag
 
 We focus on workflows that allow individual members freedom to code how they prefer while maintaining reproducibility and ease of collaboration. Thus, we don't tell you which language to use or, for the most part, which tools to use within a given language (unless there is a key tool we use to maintain the agreements).
 
-Currently, most of our team uses R, Python, or both. Thus, we offer language-specific guidance for those two languages. We'll add relevant recommendations if other languages become more prominent in the team.
+Currently, most of our team uses R, Python, or both. Thus, we offer language-specific guidance for those two languages. We'll add relevant recommendations if other languages become more prominent in the team. We also offer guidance on code style for SQL.
 
 Throughout this document, we'll organize language-specific guidance in tab sets like this:
 
@@ -59,6 +59,24 @@ ruff format
 ```
 
 *Note: Quarto files are not widely supported yet. See this issue for ruff: <https://github.com/astral-sh/ruff/issues/6140>.*
+
+## SQL
+
+For SQL queries, we use the [SQLFluff](https://docs.sqlfluff.com/en/stable/reference/rules.html). 
+
+SQLFluff is installable through pip:
+
+``` bash
+pip install sqlfluff
+```
+
+Run this command in the terminal to format a given SQL file (here, `query.sql`):
+
+``` bash
+sqlfluff fix query.sql --dialect bigquery
+```
+
+This example uses the Google BigQuery dialect, as many of our lab members use via Nero GCP.
 :::
 
 ::: callout-tip
@@ -88,6 +106,14 @@ You can also automatically fix any suggestions or re-lint on changes.
 ruff check --fix    
 # re-lint when files change
 ruff check --watch 
+```
+
+## SQL
+
+[SQLFluff](https://docs.sqlfluff.com/en/stable/reference/rules.html) is actually a linter. `sqlfluff fix` automatically addresses formating and other linting rules. When you run it, you might also see other linting rules that are not automatically fixable. You can see the lints without trying to fix them with:
+
+``` bash
+sqlfluff lint query.sql --dialect bigquery
 ```
 :::
 :::
