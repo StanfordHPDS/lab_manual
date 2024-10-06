@@ -190,11 +190,11 @@
     ]
   },
   {
-    "objectID": "chapters/03-funding.html#active-lab-funding",
-    "href": "chapters/03-funding.html#active-lab-funding",
+    "objectID": "chapters/03-funding.html#sec-active-funding",
+    "href": "chapters/03-funding.html#sec-active-funding",
     "title": "3  Funding",
     "section": "3.3 Active Lab Funding",
-    "text": "3.3 Active Lab Funding\nThe Health Policy Data Science Lab at Stanford currently has three active research grants where Dr. Rose is the Principal Investigator:\n\nNIH Director’s Pioneer Award\nNLM R01 Grant\nLaura and John Arnold Foundation Grant\n\nDr. Rose is also Co-Principal Investigator on the following two research grants:\n\nStanford Impact Labs Grant\nStanford HAI Hoffman-Yee Grant",
+    "text": "3.3 Active Lab Funding\nThe Health Policy Data Science Lab at Stanford currently has three active research grants where Dr. Rose is the Principal Investigator:\n\nNIH Director’s Pioneer Award DP1LM014278\nNLM R01 Grant R01LM013989\nLaura and John Arnold Foundation Grant\n\nDr. Rose is also Co-Principal Investigator on the following two research grants:\n\nStanford Impact Labs Grant\nStanford HAI Hoffman-Yee Grant",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Funding</span>"
     ]
@@ -324,7 +324,17 @@
     "href": "chapters/07-publications.html",
     "title": "7  Publications",
     "section": "",
-    "text": "7.1 Authorship\nWe aim to discuss authorship early in the research process and have continuing conversations regarding team member roles. Plans can change and contributions may evolve over time. If you have authorship questions during the process of working on a project, we want you to feel empowered to ask these questions!\nIt is an expectation in the Lab that no new authors are invited to join an existing Lab project (i.e., where Dr. Rose is the lead PI) without the prior agreement of, at a minimum, Dr. Rose and the first author(s).\nThe Lab follows the ICMJE recommendations regarding who is included as an author.",
+    "text": "7.1 Authorship\nWe aim to discuss authorship early in the research process and have continuing conversations regarding team member roles. Plans can change and contributions may evolve over time. If you have authorship questions during the process of working on a project, we want you to feel empowered to ask these questions!\nIt is an expectation in the Lab that no new authors are invited to join an existing Lab project (i.e., where Dr. Rose is the lead PI) without the prior agreement of, at a minimum, Dr. Rose and the first author(s).\nThe Lab follows the ICMJE recommendations regarding who is included as an author.\nWhat does first authorship mean in our Lab? Being the first author typically means that you are: (1) an intellectual lead on the project, (2) making major contributions conducting the scientific work (e.g., developing methodology, analyzing data), and (3) a main writer on the manuscript, typically crafting the first draft. For some projects, a first authorship role may also involve project management with collaborators and partners. All of these activities are done under the mentorship of Dr. Rose as the PI with substantial feedback in an apprenticeship model.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Publications</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/07-publications.html#acknowledgments",
+    "href": "chapters/07-publications.html#acknowledgments",
+    "title": "7  Publications",
+    "section": "7.2 Acknowledgments",
+    "text": "7.2 Acknowledgments\nGrants that fund research in the Lab must be recognized in our manuscripts, typically in the Acknowledgments section. If you have questions about which grant funded our work, ask Dr. Rose. See Section 3.3 for grant information, including grant numbers.",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Publications</span>"
     ]
@@ -333,8 +343,8 @@
     "objectID": "chapters/07-publications.html#preprints",
     "href": "chapters/07-publications.html#preprints",
     "title": "7  Publications",
-    "section": "7.2 Preprints",
-    "text": "7.2 Preprints\nWe typically post preprints on arXiv, medRxiv, or as an NBER Working Paper.",
+    "section": "7.3 Preprints",
+    "text": "7.3 Preprints\nWe typically post preprints on arXiv, medRxiv, or as an NBER Working Paper.",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Publications</span>"
     ]
@@ -343,8 +353,8 @@
     "objectID": "chapters/07-publications.html#on-least-publishable-units",
     "href": "chapters/07-publications.html#on-least-publishable-units",
     "title": "7  Publications",
-    "section": "7.3 On Least Publishable Units",
-    "text": "7.3 On Least Publishable Units\nWe aim to write papers with an appropriate scope suitable for the goals of the project. We do not focus on salami slicing or least publishable unit papers. This is not to confuse least publishable units with short, rigorous papers. Short papers can be good and high quality with strong standards.",
+    "section": "7.4 On Least Publishable Units",
+    "text": "7.4 On Least Publishable Units\nWe aim to write papers with an appropriate scope suitable for the goals of the project. We do not focus on salami slicing or least publishable unit papers. This is not to confuse least publishable units with short, rigorous papers. Short papers can be good and high quality with strong standards.",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Publications</span>"
     ]
@@ -353,8 +363,8 @@
     "objectID": "chapters/07-publications.html#types-of-papers",
     "href": "chapters/07-publications.html#types-of-papers",
     "title": "7  Publications",
-    "section": "7.4 Types of Papers",
-    "text": "7.4 Types of Papers\nThe structure and content of a manuscript varies by discipline and audience.\nExample Lab publications by journal type: statistics, medical, health policy, health services research, health economics, epidemiology, computer science conference paper.",
+    "section": "7.5 Types of Papers",
+    "text": "7.5 Types of Papers\nThe structure and content of a manuscript varies by discipline and audience.\nExample Lab publications by journal type: statistics, medical, health policy, health services research, health economics, epidemiology, computer science conference paper.",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Publications</span>"
     ]
@@ -363,8 +373,8 @@
     "objectID": "chapters/07-publications.html#journals",
     "href": "chapters/07-publications.html#journals",
     "title": "7  Publications",
-    "section": "7.5 Journals",
-    "text": "7.5 Journals\nThe journal lists below are not exhaustive and largely focus on outlets where Lab members have previously published their work. Decisions about where to submit manuscripts for publication are made collaboratively to balance the needs and priorities of the team with as much deference as possible to what is best for the trainee author(s). We also publish in peer-reviewed conference proceedings, see Section 6.2.\nLab members can view our internal list of upcoming and recent publications here.\n\nHealth Economics & Policy\nJournal of Health Economics, American Journal of Health Economics, Health Affairs, Health Services Research, Medical Care, Medical Decision Making, JAMA Health Forum\n\n\nEpidemiology & Public Health\nAmerican Journal of Epidemiology, Epidemiology, International Journal of Epidemiology, American Journal of Public Health\n\n\nStatistics\nJournal of the American Statistical Association, Biometrics, Biostatistics (COI: Sherri was Co-Editor-in-Chief), Statistics in Medicine, Statistical Methods in Medical Research\n\n\nClinical\nNEJM, JAMA, JAMA Internal Medicine, JAMA Psychiatry\n\n\nHealth Informatics & Digital Health\nJAMIA, BMJ Health & Care Informatics, Lancet Digital Health",
+    "section": "7.6 Journals",
+    "text": "7.6 Journals\nThe journal lists below are not exhaustive and largely focus on outlets where Lab members have previously published their work. Decisions about where to submit manuscripts for publication are made collaboratively to balance the needs and priorities of the team with as much deference as possible to what is best for the trainee author(s). We also publish in peer-reviewed conference proceedings, see Section 6.2.\nLab members can view our internal list of upcoming and recent publications here.\n\nHealth Economics & Policy\nJournal of Health Economics, American Journal of Health Economics, Health Affairs, Health Services Research, Medical Care, Medical Decision Making, JAMA Health Forum\n\n\nEpidemiology & Public Health\nAmerican Journal of Epidemiology, Epidemiology, International Journal of Epidemiology, American Journal of Public Health\n\n\nStatistics\nJournal of the American Statistical Association, Biometrics, Biostatistics (COI: Sherri was Co-Editor-in-Chief), Statistics in Medicine, Statistical Methods in Medical Research\n\n\nClinical\nNEJM, JAMA, JAMA Internal Medicine, JAMA Psychiatry\n\n\nHealth Informatics & Digital Health\nJAMIA, BMJ Health & Care Informatics, Lancet Digital Health",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Publications</span>"
     ]
