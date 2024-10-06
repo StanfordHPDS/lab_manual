@@ -8,6 +8,11 @@ We aim to discuss authorship early in the research process and have continuing c
 
 The Lab follows the [ICMJE recommendations](http://www.icmje.org/recommendations/browse/roles-and-responsibilities/defining-the-role-of-authors-and-contributors.html) regarding who is included as an author.
 
+What does first authorship mean in our Lab? Being the first author typically means that you are: (1) an intellectual lead on the project, (2) making major contributions conducting the scientific work (e.g., developing methodology, analyzing data), and (3) a main writer on the manuscript, typically crafting the first draft. For some projects, a first authorship role may also involve project management with collaborators and partners. All of these activities are done under the mentorship of Dr. Rose as the PI with substantial feedback in an apprenticeship model.
+
+## Acknowledgments
+
+Grants that fund research in the Lab must be recognized in our manuscripts, typically in the Acknowledgments section. If you have questions about which grant funded our work, ask Dr. Rose. See @sec-active-funding for grant information, including grant numbers.
 
 ## Preprints
 

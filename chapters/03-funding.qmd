@@ -28,12 +28,12 @@ Internal Stanford fellowship funding opportunities include:
 Additional Stanford fellowships can be [found at the Office of Postdoctoral Affairs website](https://postdocs.stanford.edu/fellowships).
 
 
-## Active Lab Funding
+## Active Lab Funding {#sec-active-funding}
 
 The Health Policy Data Science Lab at Stanford currently has three active research grants where Dr. Rose is the Principal Investigator:
 
-- [NIH Director's Pioneer Award](https://reporter.nih.gov/search/R0ax3FyETEay4NSDOfAgcQ/project-details/10695095)
-- [NLM R01 Grant](https://reporter.nih.gov/search/khy78csY1EyUuTahahnzTQ/project-details/10676234)
+- [NIH Director's Pioneer Award](https://reporter.nih.gov/search/R0ax3FyETEay4NSDOfAgcQ/project-details/10695095) DP1LM014278
+- [NLM R01 Grant](https://reporter.nih.gov/search/khy78csY1EyUuTahahnzTQ/project-details/10676234) R01LM013989
 - Laura and John Arnold Foundation Grant
 
 Dr. Rose is also Co-Principal Investigator on the following two research grants:
