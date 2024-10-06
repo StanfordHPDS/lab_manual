@@ -16,7 +16,7 @@ The first step for new Lab members is to send Dr. Rose your GitHub username to b
 
 We are a documentation-based Lab. This means that we write things down early and often. The goal is to solidify ideas as well as bring clarity and formalism (i.e., with notation) to projects. Documentation also helps team members review work asynchronously and record institutional knowledge.
 
-We document meetings with agendas (see @sec-meeting-agendas), manage projects with Git and GitHub (see @sec-git-github), and prefer reproducible documents using Quarto (see @sec-quarto).
+We document meetings with agendas (see @sec-meeting-agendas), manage projects with Git and GitHub (see @sec-git-github), [create research plans](https://github.com/StanfordHPDS/research_plans/), and prefer reproducible documents using Quarto (see @sec-quarto).
 
 ## Recurring Meetings
 

@@ -221,7 +221,7 @@ While you can run such projects entirely in a protected environment, this approa
 
 ## Generate Reproducible Documents with Quarto {#sec-quarto}
 
-Prefer using [Quarto](https://quarto.org/) for documents, particularly those that generate a research product like a journal article. Quarto is a scientific publishing framework that weaves [Markdown-based](https://commonmark.org/help/tutorial/) text with computational results from R, Python, Julia, etc. You can also mix languages in a single document.
+Prefer using [Quarto](https://quarto.org/) for documents, particularly those that generate a research product like a research plan or journal article. Quarto is a scientific publishing framework that weaves [Markdown-based](https://commonmark.org/help/tutorial/) text with computational results from R, Python, Julia, etc. You can also mix languages in a single document.
 
 You can also use Quarto interactively in RStudio and VS Code much as you can with R Markdown or Jupyter notebooks.
 
