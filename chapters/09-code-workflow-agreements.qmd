@@ -253,7 +253,7 @@ Prefer Quarto `.qmd` files over Jupyter files; Quarto can run interactively like
 The best way to use Quarto for Python projects is [VS Code](https://quarto.org/docs/tools/vscode.html) using the Quarto extension. This extension allows you to render files easily while also running code interactively. RStudio also supports Python projects, so it's another good option if you also use R.
 :::
 
-## Use Git and GitHub
+## Use Git and GitHub {#sec-git-github}
 
 You should manage your project with version control and hosted for collaborators to access. We use [Git](https://www.atlassian.com/git) and [GitHub](https://docs.github.com/en/get-started/start-your-journey/hello-world) for managing and hosting version-controlled repositories, respectfully. We also have a [GitHub organization](https://github.com/StanfordHPDS) where we keep team projects.
 
