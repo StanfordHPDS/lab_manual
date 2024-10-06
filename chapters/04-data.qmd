@@ -25,7 +25,7 @@ Institutional Review Board (IRB) approvals are required for many of the studies 
 This section includes an abbreviated overview of the data sets stored at Stanford that inform our active research projects in the Lab. 
 
 ### STARR Data
-The [STAnford Research Repository (STARR)](https://med.stanford.edu/starr-tools.html) contains data from Stanford Health Care. Lab experts on the STARR data include Marika Cusick.
+The [STAnford Research Repository (STARR)](https://med.stanford.edu/starr-tools.html) contains data from Stanford Health Care. 
 
 ### Center for Population Health Sciences
 
@@ -33,11 +33,11 @@ The Data Core at the Stanford  [Center for Population Health Sciences (PHS)](htt
 
 #### Medicare Data {.unnumbered}
 
-Lab experts on Medicare data include Marissa Reitsma and Oana Enache.
+We are currently working with Medicare data for our risk adjustment projects.
 
 #### American Family Cohort Registry {.unnumbered}
 
-The American Family Cohort (AFC) Registry of primary care data was created and is updated by the American Board of Family Medicine (ABFM). Lab experts on the ABFM AFC Cohort Registry data include Agata Foryciarz, Gabriela Basel, and Marika Cusick.
+The American Family Cohort (AFC) Registry of primary care data was created and is updated by the American Board of Family Medicine (ABFM). We are currently working with the ABFM AFC data for projects on chronic kidney disease and hypertension.
 
 ## Bringing Data to Stanford
 
@@ -67,8 +67,6 @@ The key steps in bringing a new external data set to Stanford include submitting
     -   How do you plan to store the data?
     -   Will Stanford data be used or shared?
     -   Will data be shared back with the third party?
-
-Lab experts on the DRA process include Marika Cusick.
 
 ## Data Sharing
 
