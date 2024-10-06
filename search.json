@@ -50,21 +50,31 @@
     ]
   },
   {
-    "objectID": "chapters/01-culture.html#professional-growth",
-    "href": "chapters/01-culture.html#professional-growth",
-    "title": "1  Lab Culture",
-    "section": "1.5 Professional Growth",
-    "text": "1.5 Professional Growth\nThe Lab offer several internal opportunities for professional growth, including trainings, book clubs, and journal clubs.",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lab Culture</span>"
-    ]
-  },
-  {
     "objectID": "chapters/02-policies.html",
     "href": "chapters/02-policies.html",
     "title": "2  General Policies",
     "section": "",
-    "text": "2.1 Joining the Lab\nDr. Rose keeps a page updated on her website regarding whether she is taking new students, hiring postdocs, or available for dissertation committees. At Stanford, we’ve had students from many different graduate programs join the Lab, including health policy, biomedical data science, computer science, and chemical engineering programs.",
+    "text": "2.1 Joining the Lab\nDr. Rose keeps a page updated on her website regarding whether she is taking new students, hiring postdocs, or available for dissertation committees. At Stanford, we’ve had students from many different graduate programs join the Lab, including health policy, computer science, biomedical data science, and chemical engineering programs.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>General Policies</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-policies.html#onboarding",
+    "href": "chapters/02-policies.html#onboarding",
+    "title": "2  General Policies",
+    "section": "2.2 Onboarding",
+    "text": "2.2 Onboarding\nThe first step for new Lab members is to send Dr. Rose your GitHub username to be added to the Lab’s GitHub organization account. Then, review our internal onboarding documentation for new Lab members.\nRotation students do not need to complete these steps.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>General Policies</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-policies.html#documentation",
+    "href": "chapters/02-policies.html#documentation",
+    "title": "2  General Policies",
+    "section": "2.3 Documentation",
+    "text": "2.3 Documentation\nWe are a documentation-based Lab. This means that we write things down early and often. The goal is to solidify ideas as well as bring clarity and formalism (i.e., with notation) to projects. Documentation also helps team members review work asynchronously and record institutional knowledge.\nWe document meetings with agendas (see Section 2.5), manage projects with Git and GitHub (see Section 9.6), and prefer reproducible documents using Quarto (see Section 9.5).",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>General Policies</span>"
     ]
@@ -73,8 +83,8 @@
     "objectID": "chapters/02-policies.html#recurring-meetings",
     "href": "chapters/02-policies.html#recurring-meetings",
     "title": "2  General Policies",
-    "section": "2.2 Recurring Meetings",
-    "text": "2.2 Recurring Meetings\nLab trainees meet individually with Dr. Rose regularly. This is typically weekly or every other week depending on the needs of the trainee and their projects. Meetings are either 25 minutes or 50 minutes to allow for breaks between meetings. Dr. Rose expects trainees to manage the meeting such that it ends on time.\nIn general, Dr. Rose expects progress to be made between each meeting. Progress can include struggling with the material. Dr. Rose cares that you are engaged and taking initiative to advance the project. We’ll discuss what you learned and where you are still confused. When we identify areas where you have gaps, Dr. Rose does expect you to invest in learning the required material and to follow through to fill those gaps. All trainees must be making satisfactory academic progress in line with the expectations of their graduate degree program.\nIf you do not need to meet a particular week (e.g., making steady progress and don’t have questions), please email Dr. Rose in advance so she can efficiently reallocate the meeting time. Your physical and mental health are important. If you need to cancel a meeting for health or personal reasons, email Dr. Rose. As much notice as is possible is helpful, but it is always better to cancel a meeting short notice than to attend when you are sick!\nIf there are repeated meeting cancellations, we should discuss the underlying reasons.\nPlease also see Section 2.3 for details on recurring meeting agendas and GitHub repository updates.",
+    "section": "2.4 Recurring Meetings",
+    "text": "2.4 Recurring Meetings\nLab trainees meet individually with Dr. Rose regularly. This is typically weekly or every other week depending on the needs of the trainee and their projects. Meetings are either 25 minutes or 50 minutes to allow for breaks between meetings. Dr. Rose expects trainees to manage the meeting such that it ends on time.\nIn general, Dr. Rose expects progress to be made between each meeting. Progress can include struggling with the material. Dr. Rose cares that you are engaged and taking initiative to advance the project. We’ll discuss what you learned and where you are still confused. When we identify areas where you have gaps, Dr. Rose does expect you to invest in learning the required material and to follow through to fill those gaps. All trainees must be making satisfactory academic progress in line with the expectations of their graduate degree program.\nIf you do not need to meet a particular week (e.g., making steady progress and don’t have questions), please email Dr. Rose in advance so she can efficiently reallocate the meeting time. Your physical and mental health are important. If you need to cancel a meeting for health or personal reasons, email Dr. Rose. As much notice as is possible is helpful, but it is always better to cancel a meeting short notice than to attend when you are sick!\nIf there are repeated meeting cancellations, we should discuss the underlying reasons.\nPlease also see Section 2.5 for details on recurring meeting agendas and GitHub repository updates.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>General Policies</span>"
     ]
@@ -83,8 +93,8 @@
     "objectID": "chapters/02-policies.html#sec-meeting-agendas",
     "href": "chapters/02-policies.html#sec-meeting-agendas",
     "title": "2  General Policies",
-    "section": "2.3 Meeting Agendas & GitHub Repository Updates",
-    "text": "2.3 Meeting Agendas & GitHub Repository Updates\nTrainees must prepare an agenda prior to each recurring meeting with Dr. Rose. Create a google doc (invite Dr. Rose as editor) that you’ll add to in reverse chronological order for each meeting with the information below included. Update the google doc by 11AM one business day before our meeting. Push a commit to the project’s GitHub repository at the same time, even if you plan to make further changes prior to the meeting. If additional changes are made to the repository ahead of the meeting, push a second commit. Repeatedly not creating agendas will result in cancelled meetings.\n[Meeting Date]\n\nWhat has been completed since previous meeting:\nTopics to discuss at the meeting:\nWhat will be completed by the next meeting:",
+    "section": "2.5 Meeting Agendas & GitHub Repository Updates",
+    "text": "2.5 Meeting Agendas & GitHub Repository Updates\nTrainees must prepare an agenda prior to each recurring meeting with Dr. Rose. Create a google doc (invite Dr. Rose as editor) that you’ll add to in reverse chronological order for each meeting with the information below included. Update the google doc by 11AM one business day before our meeting. Push a commit to the project’s GitHub repository at the same time, even if you plan to make further changes prior to the meeting. If additional changes are made to the repository ahead of the meeting, push a second commit. Repeatedly not creating agendas will result in cancelled meetings.\n[Meeting Date]\n\nWhat has been completed since previous meeting:\nTopics to discuss at the meeting:\nWhat will be completed by the next meeting:",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>General Policies</span>"
     ]
@@ -93,8 +103,8 @@
     "objectID": "chapters/02-policies.html#individual-development-plans",
     "href": "chapters/02-policies.html#individual-development-plans",
     "title": "2  General Policies",
-    "section": "2.4 Individual Development Plans",
-    "text": "2.4 Individual Development Plans\nIf Dr. Rose is your primary advisor, students and postdoctoral scholars should complete the Stanford Individual Development Plan (IDP) when joining the Lab and then annually thereafter (student forms, initial form for postdocs, annual form for postdocs). This applies regardless of home department. Trainees should plan to check in on progress made toward IDP goals once a quarter. Dr. Rose expects that trainees will be responsible for scheduling the annual IDP meetings and adding the IDP check-ins once a quarter to the agenda for an existing recurring meeting.",
+    "section": "2.6 Individual Development Plans",
+    "text": "2.6 Individual Development Plans\nIf Dr. Rose is your primary advisor, students and postdoctoral scholars should complete the Stanford Individual Development Plan (IDP) when joining the Lab and then annually thereafter (student forms, initial form for postdocs, annual form for postdocs). This applies regardless of home department. Trainees should plan to check in on progress made toward IDP goals once a quarter. Dr. Rose expects that trainees will be responsible for scheduling the annual IDP meetings and adding the IDP check-ins once a quarter to the agenda for an existing recurring meeting.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>General Policies</span>"
     ]
@@ -103,8 +113,8 @@
     "objectID": "chapters/02-policies.html#academic-progress-in-graduate-degree-programs",
     "href": "chapters/02-policies.html#academic-progress-in-graduate-degree-programs",
     "title": "2  General Policies",
-    "section": "2.5 Academic Progress in Graduate Degree Programs",
-    "text": "2.5 Academic Progress in Graduate Degree Programs\nIf you are a graduate student and Dr. Rose is your primary advisor, please create and regularly update a shared document that includes major degree requirements (e.g., coursework, teaching, qualifying exams, etc) and completion status (e.g., completed, planned completion date). Include links at the top to the graduate degree handbook from your home department as well as key contacts in your home department who should be kept apprised of your academic progress. This document will be discussed quarterly along with the IDP check-ins, and students should add it to the agenda for an existing recurring meeting.",
+    "section": "2.7 Academic Progress in Graduate Degree Programs",
+    "text": "2.7 Academic Progress in Graduate Degree Programs\nIf you are a graduate student and Dr. Rose is your primary advisor, please create and regularly update a shared document that includes major degree requirements (e.g., coursework, teaching, qualifying exams, etc) and completion status (e.g., completed, planned completion date). Include links at the top to the graduate degree handbook from your home department as well as key contacts in your home department who should be kept apprised of your academic progress. This document will be discussed quarterly along with the IDP check-ins, and students should add it to the agenda for an existing recurring meeting.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>General Policies</span>"
     ]
@@ -113,8 +123,8 @@
     "objectID": "chapters/02-policies.html#registering-for-units",
     "href": "chapters/02-policies.html#registering-for-units",
     "title": "2  General Policies",
-    "section": "2.6 Registering for Units",
-    "text": "2.6 Registering for Units\nGraduate students should discuss their plans to register for research units with Dr. Rose each term (often BIOMEDIN 299 or HRP 399). Units should be taken credit/no credit and not for a letter grade. Permission codes are currently required to register for research units.",
+    "section": "2.8 Registering for Units",
+    "text": "2.8 Registering for Units\nGraduate students should discuss their plans to register for research units with Dr. Rose each term (often BIOMEDIN 299 or HRP 399). Units should be taken credit/no credit and not for a letter grade. Permission codes are currently required to register for research units.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>General Policies</span>"
     ]
@@ -123,18 +133,28 @@
     "objectID": "chapters/02-policies.html#deadlines",
     "href": "chapters/02-policies.html#deadlines",
     "title": "2  General Policies",
-    "section": "2.7 Deadlines",
-    "text": "2.7 Deadlines\nWe aim to set ambitious yet feasible target deadlines for work product in a collaborative process. It is often the case that research takes longer than we expect, and an internal agreed-upon deadline is no longer possible. If you anticipate missing a deadline, contact Dr. Rose. It is an expectation in the Lab that all members are proactive about discussing revised deadlines rather than waiting until after the deadline has passed. If a trainee is repeatedly missing deadlines, we should discuss the underlying reasons.",
+    "section": "2.9 Deadlines",
+    "text": "2.9 Deadlines\nWe aim to set ambitious yet feasible target deadlines for work product in a collaborative process. It is often the case that research takes longer than we expect, and an internal agreed-upon deadline is no longer possible. If you anticipate missing a deadline, contact Dr. Rose. It is an expectation in the Lab that all members are proactive about discussing revised deadlines rather than waiting until after the deadline has passed. If a trainee is repeatedly missing deadlines, we should discuss the underlying reasons.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>General Policies</span>"
     ]
   },
   {
-    "objectID": "chapters/02-policies.html#lab-meetings-events",
-    "href": "chapters/02-policies.html#lab-meetings-events",
+    "objectID": "chapters/02-policies.html#lab-meetings",
+    "href": "chapters/02-policies.html#lab-meetings",
     "title": "2  General Policies",
-    "section": "2.8 Lab Meetings & Events",
-    "text": "2.8 Lab Meetings & Events\nThe Lab holds Lab Meetings and various types of events throughout the year, including lunches, data jamborees, coffee chats, and journal clubs. If you have ideas for events, suggestions are always welcome.\nFood at Lab events is funded by the Lab and free to Lab attendees. We expect that trainees who RSVP and submit food orders will show up to the event, barring illness or personal situation. If you need to change your RSVP, please contact Dr. Rose to help us avoid food waste.",
+    "section": "2.10 Lab Meetings",
+    "text": "2.10 Lab Meetings\nWe hold Lab Meetings approximately weekly to increase visibility across Lab projects, brainstorm ideas, and discuss research-related topics.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>General Policies</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-policies.html#professional-development-events",
+    "href": "chapters/02-policies.html#professional-development-events",
+    "title": "2  General Policies",
+    "section": "2.11 Professional Development & Events",
+    "text": "2.11 Professional Development & Events\nThe Lab offers several internal opportunities for professional growth, including trainings, book clubs, and journal clubs. We also host informal lunches and coffee chats. If you have ideas for events, suggestions are always welcome.\nFood at Lab events is funded by the Lab and free to Lab attendees. We expect that trainees who RSVP and submit food orders will show up to the event, barring illness or personal situation. If you need to change your RSVP, please contact Dr. Rose to help us avoid food waste.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>General Policies</span>"
     ]
@@ -143,8 +163,8 @@
     "objectID": "chapters/02-policies.html#recommendation-letters",
     "href": "chapters/02-policies.html#recommendation-letters",
     "title": "2  General Policies",
-    "section": "2.9 Recommendation Letters",
-    "text": "2.9 Recommendation Letters\nDr. Rose receives a variety of requests for letters from current and former trainees, including for graduate school, job applications, fellowships, and awards. Please know she treats your letter requests with the seriousness they deserve and recognizes their importance. Dr. Rose asks that you respect the time it takes her to write, revise, and send letters by giving plenty of notice and being organized with your requests.\nIt essential that you ask Dr. Rose if she can write you a recommendation letter before submitting her name as a recommender. It may be the case that a letter from someone else will be more beneficial for you or that the deadline is too soon for her to accommodate your request.\nIn general, please give Dr. Rose at least 4 weeks notice when requesting a letter, and more time than that when possible. If the deadline is sooner than 4 weeks, she may not be able to write the letter, particularly during times of the year when she receives a high volume of letter requests.",
+    "section": "2.12 Recommendation Letters",
+    "text": "2.12 Recommendation Letters\nDr. Rose receives a variety of requests for letters from current and former trainees, including for graduate school, job applications, fellowships, and awards. Please know she treats your letter requests with the seriousness they deserve and recognizes their importance. Dr. Rose asks that you respect the time it takes her to write, revise, and send letters by giving plenty of notice and being organized with your requests.\nIt essential that you ask Dr. Rose if she can write you a recommendation letter before submitting her name as a recommender. It may be the case that a letter from someone else will be more beneficial for you or that the deadline is too soon for her to accommodate your request.\nIn general, please give Dr. Rose at least 4 weeks notice when requesting a letter, and more time than that when possible. If the deadline is sooner than 4 weeks, she may not be able to write the letter, particularly during times of the year when she receives a high volume of letter requests.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>General Policies</span>"
     ]
@@ -153,8 +173,8 @@
     "objectID": "chapters/02-policies.html#communication",
     "href": "chapters/02-policies.html#communication",
     "title": "2  General Policies",
-    "section": "2.10 Communication",
-    "text": "2.10 Communication\nWe have a Lab slack. Lab members can search for “HPDS Lab” in the Workspaces at Stanford and request to join.\nPlease keep in mind our Lab philosophy on working hours in Section 1.3. Do not assume that because you have sent a slack message or email that you should get an instant reply.",
+    "section": "2.13 Communication",
+    "text": "2.13 Communication\nWe have a Lab slack. Lab members can search for “HPDS Lab” in the Workspaces at Stanford and request to join.\nPlease keep in mind our Lab philosophy on working hours in Section 1.3. Do not assume that because you have sent a slack message or email that you should get an instant reply.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>General Policies</span>"
     ]
@@ -324,7 +344,7 @@
     "href": "chapters/07-publications.html",
     "title": "7  Publications",
     "section": "",
-    "text": "7.1 Authorship\nWe aim to discuss authorship early in the research process and have continuing conversations regarding team member roles. Plans can change and contributions may evolve over time. If you have authorship questions during the process of working on a project, we want you to feel empowered to ask these questions!\nIt is an expectation in the Lab that no new authors are invited to join an existing Lab project (i.e., where Dr. Rose is the lead PI) without the prior agreement of, at a minimum, Dr. Rose and the first author(s).\nThe Lab follows the ICMJE recommendations regarding who is included as an author.\nWhat does first authorship mean in our Lab? Being the first author typically means that you are: (1) an intellectual lead on the project, (2) making major contributions conducting the scientific work (e.g., developing methodology, analyzing data), and (3) a main writer on the manuscript, typically crafting the first draft. For some projects, a first authorship role may also involve project management with collaborators and partners. All of these activities are done under the mentorship of Dr. Rose as the PI with substantial feedback in an apprenticeship model.",
+    "text": "7.1 Authorship\nWe aim to discuss authorship early in the research process and have continuing conversations regarding team member roles. Plans can change and contributions may evolve over time. If you have authorship questions during the process of working on a project, we want you to feel empowered to ask these questions!\nIt is an expectation in the Lab that no new authors are invited to join an existing Lab project (i.e., where Dr. Rose is the lead PI) without the prior agreement of, at a minimum, Dr. Rose and the first author(s).\nThe Lab follows the ICMJE recommendations regarding who is included as an author.\nWhat does first authorship mean in our Lab? Being the first author typically means that you are: (1) an intellectual lead on the project, (2) making major contributions conducting the scientific work (e.g., developing methodology, analyzing data), and (3) a main writer on the manuscript, usually crafting the first draft. For some projects, a first authorship role may also involve project management with collaborators and partners. All of these activities are done under the mentorship of Dr. Rose as the PI with substantial feedback in an apprenticeship model.",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Publications</span>"
     ]
@@ -530,8 +550,8 @@
     ]
   },
   {
-    "objectID": "chapters/09-code-workflow-agreements.html#use-git-and-github",
-    "href": "chapters/09-code-workflow-agreements.html#use-git-and-github",
+    "objectID": "chapters/09-code-workflow-agreements.html#sec-git-github",
+    "href": "chapters/09-code-workflow-agreements.html#sec-git-github",
     "title": "9  Code Workflow Team Agreements",
     "section": "9.6 Use Git and GitHub",
     "text": "9.6 Use Git and GitHub\nYou should manage your project with version control and hosted for collaborators to access. We use Git and GitHub for managing and hosting version-controlled repositories, respectfully. We also have a GitHub organization where we keep team projects.\nSee Chapter 8 for how to manage code changes to your repository.\n\n9.6.1 Git Workflow\n\nFrom the beginning of a project, you should work in a git repository. You can either create one locally in your work environment and push to GitHub or create one via GitHub and clone it to your work environment. If you create one on GitHub, prefer creating it directly in our GitHub organization by changing the Owner to StanfordHPDS.\nMake changes on branches. Prefer branch names that describe the intent of the change, e.g. add-table over changes.\nPush the branch to GitHub, e.g. git push -u origin add-table for the add-table branch.\nOpen a pull request.\nFollow the code review process outlined in Chapter 8\nWhen your pull request is merged into your new branch, pull the changes in your local copy of the repository, delete the remote branch, and delete the local branch.\n\n\n\n\n\n\n\nTip\n\n\n\nFor R users, there are two helpful functions in usethis to manage your git setup for a project: usethis::use_git() will initialize a git repository and activate the git UI in RStudio; usethis::use_github() will create and link a GitHub repository, as well as make your first push. Note that use_github() has an organisation argument where you can specify a GitHub organization to create the repository under, such as use_github(organisation = \"StanfordHPDS\").\nSee also the PR workflow vignette for making and managing pull requests in R. You might also find Happy Git and GitHub for the useR a helpful perspective.\n\n\n\n\n9.6.2 Transferring Repositories\nIf a repository for a Lab project exists on your personal account, transfer it to the StanfordHPDS GitHub organization.\n\n\n\n\n\n\nTip\n\n\n\nRepositories that exist in a GitHub organization still contain information about your contributions. You can also pin organization repositories to your personal GitHub profile.\n\n\n\n\n9.6.3 Release on GitHub\nGitHub has a mechanism for making formal releases of repositories. This takes a snapshot of the repository at the time of release and attaches a name.\nMaking a “release,” of course, has its origins in software versions. However, it’s also helpful in tracking significant milestones in a project. For instance, make a release upon submission to a journal and another upon publication. That allows you to easily revisit the state of the repository at those two time points. GitHub also makes downloading the repository in releases easy, making it an excellent point to direct people not using Git.",
