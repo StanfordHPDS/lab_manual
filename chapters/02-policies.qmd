@@ -32,7 +32,7 @@ Please also see @sec-meeting-agendas for details on recurring meeting agendas an
 
 ## Meeting Agendas & GitHub Repository Updates {#sec-meeting-agendas}
 
-Trainees must prepare an agenda prior to each recurring meeting with Dr. Rose. Create a google doc (invite Dr. Rose as editor) that you’ll add to in reverse chronological order for each meeting with the information below included. Update the google doc by 11AM *one business day* before our meeting. Push a commit to the project's GitHub repository at the same time, even if you plan to make further changes prior to the meeting. If additional changes are made to the repository ahead of the meeting, push a second commit. Repeatedly not creating agendas will result in cancelled meetings.
+Trainees must prepare an agenda prior to each recurring meeting with Dr. Rose. Create a google doc (invite Dr. Rose as editor) that you’ll add to in reverse chronological order for each meeting with the information below included. Update the google doc by 11AM *one business day* before our meeting. Push a commit to the project's GitHub repository at the same time, even if you plan to make further changes prior to the meeting. If additional changes are made to the repository ahead of the meeting, push a second commit. If you do not create an agenda, Dr. Rose may decide to cancel the meeting.
 
 **\[Meeting Date\]**
 
@@ -62,7 +62,7 @@ We hold Lab Meetings approximately weekly to increase visibility across Lab proj
 
 ## Professional Development & Events
 
-The Lab offers several internal opportunities for professional growth, including [trainings](https://github.com/StanfordHPDS/training), [book clubs](https://github.com/StanfordHPDS/hpds_book_club), and [journal clubs](https://github.com/StanfordHPDS/hpds_journal_club). We also host informal lunches and coffee chats. If you have ideas for events, suggestions are always welcome.
+The Lab offers several internal opportunities for professional growth, including data jamborees, [trainings](https://github.com/StanfordHPDS/training), [book clubs](https://github.com/StanfordHPDS/hpds_book_club), and journal clubs. We also host informal lunches and coffee chats. If you have ideas for events, suggestions are always welcome.
 
 Food at Lab events is funded by the Lab and free to Lab attendees. We expect that trainees who RSVP and submit food orders will show up to the event, barring illness or personal situation. If you need to change your RSVP, please contact Dr. Rose to help us avoid food waste.
 
@@ -73,6 +73,8 @@ Dr. Rose receives a variety of requests for letters from current and former trai
 It essential that you ask Dr. Rose if she can write you a recommendation letter before submitting her name as a recommender. It may be the case that a letter from someone else will be more beneficial for you or that the deadline is too soon for her to accommodate your request.
 
 In general, please give Dr. Rose at least 4 weeks notice when requesting a letter, and more time than that when possible. If the deadline is sooner than 4 weeks, she may not be able to write the letter, particularly during times of the year when she receives a high volume of letter requests.
+
+Job candidates should request access to the Lab [job tracking template](docs.google.com/spreadsheets/d/1EB3ozh96kzLu2QrHafjwadsYlWjmF0NX6iM8BjLwzE4), make a copy, fill in details specific to your search, and invite Dr. Rose to the document. 
 
 ## Communication
 
