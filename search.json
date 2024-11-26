@@ -14,7 +14,7 @@
     "href": "chapters/01-culture.html",
     "title": "1  Lab Culture",
     "section": "",
-    "text": "1.1 Mutual Respect in the Lab\nWe strive for a culture of mutual respect in all of our communications, meetings, and policies. Please demonstrate respect for all Lab members by, for example, practicing active listening, speaking only for yourself and not others, and not dominating conversations. Mutual respect for each other’s time includes being prepared (including drafting agendas), planning ahead, and starting/ending meetings at the scheduled time.",
+    "text": "1.1 Mutual Respect in the Lab\nThe culture of the Health Policy Data Science Lab is inquisitive, collaborative, kind, and inclusive so that scholars can do their best work. Our group has high standards for rigor, quality, and ethics and helps each other learn to reach these objectives. Every team member is a human first, and their career goals will be centered and supported. We are committed to an environment that is free from discrimination and harassment.\nWe strive for a culture of mutual respect in all of our communications, meetings, and policies. Please demonstrate respect for all Lab members by, for example, practicing active listening, speaking only for yourself and not others, and not dominating conversations. Mutual respect for each other’s time includes being prepared (including drafting agendas), planning ahead, and starting/ending meetings at the scheduled time.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lab Culture</span>"
     ]
@@ -54,7 +54,7 @@
     "href": "chapters/02-policies.html",
     "title": "2  General Policies",
     "section": "",
-    "text": "2.1 Joining the Lab\nDr. Rose keeps a page updated on her website regarding whether she is taking new students, hiring postdocs, or available for dissertation committees. At Stanford, we’ve had students from many different graduate programs join the Lab, including health policy, computer science, biomedical data science, and chemical engineering programs.",
+    "text": "2.1 Joining the Lab\nIt is important that each trainee and Dr. Rose have a shared understanding of expectations regarding research in the Lab and academic progress in the trainee’s degree or postdoctoral program. The policies in this chapter aim to aid in this goal.\nDr. Rose keeps a page updated on her website regarding whether she is taking new students, hiring postdocs, or available for dissertation committees. At Stanford, we’ve had students from many different graduate programs join the Lab, including health policy, computer science, biomedical data science, and chemical engineering programs.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>General Policies</span>"
     ]
@@ -94,7 +94,7 @@
     "href": "chapters/02-policies.html#sec-meeting-agendas",
     "title": "2  General Policies",
     "section": "2.5 Meeting Agendas & GitHub Repository Updates",
-    "text": "2.5 Meeting Agendas & GitHub Repository Updates\nTrainees must prepare an agenda prior to each recurring meeting with Dr. Rose. Create a google doc (invite Dr. Rose as editor) that you’ll add to in reverse chronological order for each meeting with the information below included. Update the google doc by 11AM one business day before our meeting. Push a commit to the project’s GitHub repository at the same time, even if you plan to make further changes prior to the meeting. If additional changes are made to the repository ahead of the meeting, push a second commit. Repeatedly not creating agendas will result in cancelled meetings.\n[Meeting Date]\n\nWhat has been completed since previous meeting:\nTopics to discuss at the meeting:\nWhat will be completed by the next meeting:",
+    "text": "2.5 Meeting Agendas & GitHub Repository Updates\nTrainees must prepare an agenda prior to each recurring meeting with Dr. Rose. Create a google doc (invite Dr. Rose as editor) that you’ll add to in reverse chronological order for each meeting with the information below included. Update the google doc by 11AM one business day before our meeting. Push a commit to the project’s GitHub repository at the same time, even if you plan to make further changes prior to the meeting. If additional changes are made to the repository ahead of the meeting, push a second commit. If you do not create an agenda, Dr. Rose may decide to cancel the meeting.\n[Meeting Date]\n\nWhat has been completed since previous meeting:\nTopics to discuss at the meeting:\nWhat will be completed by the next meeting:",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>General Policies</span>"
     ]
@@ -154,7 +154,7 @@
     "href": "chapters/02-policies.html#professional-development-events",
     "title": "2  General Policies",
     "section": "2.11 Professional Development & Events",
-    "text": "2.11 Professional Development & Events\nThe Lab offers several internal opportunities for professional growth, including trainings, book clubs, and journal clubs. We also host informal lunches and coffee chats. If you have ideas for events, suggestions are always welcome.\nFood at Lab events is funded by the Lab and free to Lab attendees. We expect that trainees who RSVP and submit food orders will show up to the event, barring illness or personal situation. If you need to change your RSVP, please contact Dr. Rose to help us avoid food waste.",
+    "text": "2.11 Professional Development & Events\nThe Lab offers several internal opportunities for professional growth, including data jamborees, trainings, book clubs, and journal clubs. We also host informal lunches and coffee chats. If you have ideas for events, suggestions are always welcome.\nFood at Lab events is funded by the Lab and free to Lab attendees. We expect that trainees who RSVP and submit food orders will show up to the event, barring illness or personal situation. If you need to change your RSVP, please contact Dr. Rose to help us avoid food waste.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>General Policies</span>"
     ]
@@ -164,7 +164,7 @@
     "href": "chapters/02-policies.html#recommendation-letters",
     "title": "2  General Policies",
     "section": "2.12 Recommendation Letters",
-    "text": "2.12 Recommendation Letters\nDr. Rose receives a variety of requests for letters from current and former trainees, including for graduate school, job applications, fellowships, and awards. Please know she treats your letter requests with the seriousness they deserve and recognizes their importance. Dr. Rose asks that you respect the time it takes her to write, revise, and send letters by giving plenty of notice and being organized with your requests.\nIt essential that you ask Dr. Rose if she can write you a recommendation letter before submitting her name as a recommender. It may be the case that a letter from someone else will be more beneficial for you or that the deadline is too soon for her to accommodate your request.\nIn general, please give Dr. Rose at least 4 weeks notice when requesting a letter, and more time than that when possible. If the deadline is sooner than 4 weeks, she may not be able to write the letter, particularly during times of the year when she receives a high volume of letter requests.",
+    "text": "2.12 Recommendation Letters\nDr. Rose receives a variety of requests for letters from current and former trainees, including for graduate school, job applications, fellowships, and awards. Please know she treats your letter requests with the seriousness they deserve and recognizes their importance. Dr. Rose asks that you respect the time it takes her to write, revise, and send letters by giving plenty of notice and being organized with your requests.\nIt essential that you ask Dr. Rose if she can write you a recommendation letter before submitting her name as a recommender. It may be the case that a letter from someone else will be more beneficial for you or that the deadline is too soon for her to accommodate your request.\nIn general, please give Dr. Rose at least 4 weeks notice when requesting a letter, and more time than that when possible. If the deadline is sooner than 4 weeks, she may not be able to write the letter, particularly during times of the year when she receives a high volume of letter requests.\nJob candidates should request access to the Lab job tracking template, make a copy, fill in details specific to your search, and invite Dr. Rose to the document.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>General Policies</span>"
     ]
@@ -184,7 +184,7 @@
     "href": "chapters/03-funding.html",
     "title": "3  Funding",
     "section": "",
-    "text": "3.1 For Graduate Students\nGraduate students may be funded by training grants, research grants, individual fellowships, and other sources.\nInternal Stanford fellowship funding opportunities include:",
+    "text": "3.1 For Graduate Students\nFunding sources for team members in the Lab vary and Dr. Rose is happy to discuss funding-related questions.\nGraduate students may be funded by training grants, research grants, individual fellowships, and other sources.\nInternal Stanford fellowship funding opportunities include:",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Funding</span>"
     ]
@@ -224,7 +224,7 @@
     "href": "chapters/04-data.html",
     "title": "4  Data",
     "section": "",
-    "text": "4.1 Human Subjects Training\nEach team member must complete required trainings on the protection of human subjects when working with study data. Additional trainings may be required depending on the study.",
+    "text": "4.1 Human Subjects Training\nWorking with data as part of research studies must be grounded in respect for the people and communities whose information is represented in the data, as stressed in Section 1.2.\nWe must follow precise and strict rules to maintain data privacy and protection. A key tenet is that if you are not sure whether you can take an action with a data set or output produced from analyzing a data set, stop and ask. Always.\nIn particular, we must never download any data to your personal computer (even though the computer is encrypted) or export results, tables, or figures that have cell sizes or categories with fewer than 11 observations. Make certain you understand all additional or superseding project-specific policies related to where data and results can be stored.\nKey information regarding working with data is included here, but this information is not comprehensive. Always confirm with Dr. Rose that all necessary steps have been completed before accessing any data.\nEach team member must complete required trainings on the protection of human subjects when working with study data. Additional trainings may be required depending on the study.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data</span>"
     ]
@@ -324,7 +324,7 @@
     "href": "chapters/06-conferences.html",
     "title": "6  Conferences",
     "section": "",
-    "text": "6.1 Stanford Travel Policies\nFlights for Lab trainees and staff must be purchased through Stanford Travel. They are not reimbursable otherwise. Hotels must be purchased through Stanford Travel unless it is a conference hotel. Please copy Dr. Rose on travel-related emails with administrative staff.\nHealth Policy and Biomedical Data Science Students: If you are presenting at a conference, submit for up to $1,000 of those expenses to be reimbursed through the Biosciences Travel Grant Program. You are eligible for one conference per year.",
+    "text": "6.1 Stanford Travel Policies\nConferences provide an opportunity to learn about new research, get feedback on your own research, practice presentation skills, take a short course, network, and more. Dr. Rose is happy to discuss conferences relevant to your research and career goals in our meetings.\nIf we have discussed a conference and Dr. Rose is funding your trip, please send Dr. Rose a projected budget for the trip before purchasing plane tickets, registrations, or reserving hotels.\nLab members can view our internal list of upcoming conference presentations here.\nFlights for Lab trainees and staff must be purchased through Stanford Travel. They are not reimbursable otherwise. Hotels must be purchased through Stanford Travel unless it is a conference hotel. Please copy Dr. Rose on travel-related emails with administrative staff.\nHealth Policy and Biomedical Data Science Students: If you are presenting at a conference, submit for up to $1,000 of those expenses to be reimbursed through the Biosciences Travel Grant Program. You are eligible for one conference per year.",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Conferences</span>"
     ]
