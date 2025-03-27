@@ -294,7 +294,7 @@
     "href": "chapters/05-computing.html",
     "title": "5  Computing Resources",
     "section": "",
-    "text": "5.1 Nero GCP\nStanford’s Nero Google Cloud Platform (GCP) is the environment often most suitable or required for the analysis of data sources discussed in Chapter 4. There are costs associated with Nero GCP and we must keep careful track of these.\nIf you have questions about which environment you should use for your data analyses, please ask so we can be certain to follow all data security and privacy requirements.",
+    "text": "5.1 Nero GCP\nStanford’s Nero Google Cloud Platform (GCP) is the environment often most suitable or required for the analysis of data sources discussed in Chapter 4. There are costs associated with Nero GCP and we must keep careful track of these.\nIf you have questions about which environment you should use for your data analyses, please ask so we can be certain to follow all data security and privacy requirements.\nTo set up and manage a compute instance on Nero GCP, follow the lab guide for custom instances (note that this is a private repository).",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Computing Resources</span>"
     ]
