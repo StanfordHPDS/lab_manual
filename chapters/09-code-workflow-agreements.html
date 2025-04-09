@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.42">
+<meta name="generator" content="quarto-1.6.43">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -71,7 +71,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-d4d76bf8491c20bad77d141916dc28e1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-a34d670291f06f286357e447776a572a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -695,27 +695,43 @@ Note
 </div>
 <div id="tabset-6-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-2-tab">
 <p>Note: The Python ecosystem for managing environments is vast. See <a href="https://alpopkes.com/posts/python/packaging_tools/" class="uri">https://alpopkes.com/posts/python/packaging_tools/</a> for an overview.</p>
-<p>We currently recommend <a href="https://docs.conda.io/en/latest/">Conda</a> via the <a href="https://docs.anaconda.com/free/miniconda/index.html">miniconda distribution</a>. Conda allows you to install packages from Conda channels, set up virtual environments, and control the version of Python.</p>
-<p>Notably, we recommend a <em>Conda-first</em> approach. If you’re installing a package, use <code>conda install</code> before trying <code>pip install</code>. PyPi and Conda channels build packages differently, so it’s best to stick with one style where possible. However, Conda has a smaller, more refined selection of packages compared to PyPi, so some packages may only be available via <code>pip</code>. See <a href="https://www.anaconda.com/blog/understanding-conda-and-pip">this blog post</a> for more information on the differences between the two.</p>
-<p>Conda treats Python like other packages, so managing it is similar. One helpful thing you can do is specify a Python version while creating an environment. See the <a href="https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-python.html">Conda documentation</a> for other ways of interacting with the Python version.</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create a new virtual environment called projectenv</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">--name</span> projectenv python=3.12.1</span>
+<p>We recommend <a href="https://docs.astral.sh/uv/getting-started/installation/">uv</a>. uv allows you to install packages, set up virtual environments, and control the version of Python. uv manages most of this for you and works well across operating systems. It’s also very fast.</p>
+<p><code>uv init</code> will set up a uv environment for you, creating several files: <code>pyproject.toml</code>, <code>.python-version</code>, and <code>main.py</code>, as well as a few other files if they don’t already exist, such as a <code>README</code> and <code>.gitignore</code> file. Once you start adding packages to the project, uv will also generate a lock file with the resolved package dependencies (<code>uv.lock</code>) and a virtual environment with <a href="https://docs.python.org/3/library/venv.html">venv</a> in the <code>.venv/</code> directory.</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create a new project called my_new_project</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> init my_new_project</span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="co"># activate the environment projectenv</span></span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate projectenv</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="co"># or, from within an existing project, just run init</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> init</span>
 <span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="co"># add a package to your environment</span></span>
-<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install polars</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="co"># manually sync the virtual environment</span></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a><span class="co"># mostly uv will handle this for you but it can be handy</span></span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> sync</span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a><span class="co"># add a package to your environment</span></span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a><span class="co"># don't use pip! This will install from pip but manage the environment for you</span></span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> add polars</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>To run scripts, use <code>uv run</code>. This is a drop-in replacement for <code>python script.py</code>; <code>uv run</code> always runs the script in the virtual environment for the project, so it is a good practice.</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># run a script in the virtual environment</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>uv run my_script.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>To manage Python versions, use <code>uv python</code></p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install Python 3.12</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>uv python install <span class="fl">3.12</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="co"># and set it as the Python version for the project</span></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>uv python pin <span class="fl">3.12</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>To run development tools like <code>ruff</code>, use <code>uvx</code>, which allows you to use such tools without adding them as dependencies to your project.</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>uvx ruff <span class="bu">format</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
+<p>See the <a href="https://docs.astral.sh/uv/getting-started/features/">documentation</a> for other commands, particularly those under the Python versions, projects, and tools headings.</p>
 </section>
 <section id="sec-opt-in" class="level2" data-number="9.10">
 <h2 data-number="9.10" class="anchored" data-anchor-id="sec-opt-in"><span class="header-section-number">9.10</span> Opt-in Workflows</h2>
 <p>Opt-in workflows are things we do not require for a project but for which we offer guidance. Such workflows also allow the team to experiment with new things and see what works for projects and when.</p>
 <section id="sec-pipelines" class="level3" data-number="9.10.1">
 <h3 data-number="9.10.1" class="anchored" data-anchor-id="sec-pipelines"><span class="header-section-number">9.10.1</span> Pipelines</h3>
-<p>Pipeline tools are software that manage the execution of code. What’s practical about this for research projects is that pipeline tools track the relationship between components in your project (meaning it knows which order to run things in automatically) and will only run those components when they are out of date (meaning you don’t necessarily need to rerun your entire project because you updated one part of the code).</p>
+<p>Pipeline tools are software that manage the execution of code. What’s practical about this for research projects is that pipeline tools track the relationship between components in your project (meaning it knows which order to run things in automatically) and will only run those components when they are out of date (meaning you don’t necessarily need to rerun your entire project because you updated one part of the code). They are also very handy for reproducing code, because they only require a command or two to run the entire pipeline.</p>
 <p>Pipeline tools are helpful for projects of any size, but they are particularly suited to complex or computationally intense projects.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-7-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-1" role="tab" aria-controls="tabset-7-1" aria-selected="true">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-2" role="tab" aria-controls="tabset-7-2" aria-selected="false">Python</a></li></ul>
@@ -723,18 +739,11 @@ Note
 <div id="tabset-7-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-7-1-tab">
 <p>The best pipeline tool in R is the targets package. targets is a native R tool, making it easy to work with R objects. It works particularly well with Quarto and R Markdown, allowing you to reduce the amount of code in a report while managing it reproducibly.</p>
 <p>targets has <a href="https://books.ropensci.org/targets/">excellent documentation and tutorials</a>, so we point you there for guidance.</p>
-<p>It’s also possible to use tools like Make and Snakemake, among others (see the Python tab), with R, although we recommend targets for projects that are mostly R.</p>
+<p>It’s also possible to use tools like Make (see the Python tab) among others , with R, although we recommend targets for projects that are mostly R. For projects that are a mix of languages, Make may be a better fit.</p>
 </div>
 <div id="tabset-7-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-2-tab">
 <p>Python has several pipeline tools that are used in data engineering. For these larger data projects, these tools are sometimes called <em>orchestration</em> tools. That said, many of them are much more complex than is needed for a single research project.</p>
-<p>We don’t currently have a recommendation. Here are the tools we should explore:</p>
-<ol type="1">
-<li><a href="https://www.gnu.org/software/make/">Make</a>: Make is one of the oldest and most popular pipeline tools–over 40 years old. It shows its age in some ways, but it’s also battle-tested. See <a href="https://third-bit.com/py-rse/automate.html">this tutorial</a> for an example of running an analysis with Make.</li>
-<li><a href="https://snakemake.github.io/">Snakemake</a>: A Python tool influenced by Make, it’s very similar in spirit but more modern. It’s easier to read and customize, and you can write Python code within the Snakefile. It also works nicely with Python and R scripts. One handy thing is that you can access Snakemake inputs and outputs through magic objects for both Python and R. That makes it useful for, e.g., dynamic rules and rules where you want to use inputs for reports. Snakemake has good support for Conda environments in particular.</li>
-<li><a href="https://docs.dagster.io/getting-started/hello-dagster">Dagster</a>: Dagster is a different approach that uses decorators to tag Python functions as “assets,” the apparent equivalent of targets in other tools. It has a nice UI tool for visualizing the nodes and relationships of the project, as well as “materializing” (running) them. Dagster is a company, but the tool has an open-source version.</li>
-<li><a href="https://www.prefect.io/opensource">Prefect</a>: Prefect is an increasingly popular tool for orchestration. Like Dagster, it is a company-based open-source tool that uses decorators to tag Python functions. It also has a UI.</li>
-<li><a href="https://airflow.apache.org/">AirFlow</a>: AirFlow is an open-source orchestration tool. Notably, Google Cloud supports a UI for creating and running AirFlow called <a href="https://cloud.google.com/composer/docs/composer-2/composer-overview">Cloud Composer</a>. AirFlow also has a recent decorator-based API called <a href="https://airflow.apache.org/docs/apache-airflow/stable/tutorial/taskflow.html">TaskFlow</a>, which is more in line with some of the above tools.</li>
-</ol>
+<p>For research projects, we recommend <a href="https://www.gnu.org/software/make/">GNU Make</a>. Make is one of the oldest and most popular pipeline tools–over 40 years old. It shows its age in some ways, but it’s also battle-tested. See <a href="https://third-bit.com/py-rse/automate.html">this tutorial</a> for an example of running an analysis with Make.</p>
 </div>
 </div>
 </div>
