@@ -420,23 +420,52 @@ One common problem in renv is that it keeps track of but does not manage the R v
 
 Note: The Python ecosystem for managing environments is vast. See <https://alpopkes.com/posts/python/packaging_tools/> for an overview.
 
-We currently recommend [Conda](https://docs.conda.io/en/latest/) via the [miniconda distribution](https://docs.anaconda.com/free/miniconda/index.html). Conda allows you to install packages from Conda channels, set up virtual environments, and control the version of Python.
+We recommend [uv](https://docs.astral.sh/uv/getting-started/installation/). uv allows you to install packages, set up virtual environments, and control the version of Python. uv manages most of this for you and works well across operating systems. It's also very fast. 
 
-Notably, we recommend a *Conda-first* approach. If you're installing a package, use `conda install` before trying `pip install`. PyPi and Conda channels build packages differently, so it's best to stick with one style where possible. However, Conda has a smaller, more refined selection of packages compared to PyPi, so some packages may only be available via `pip`. See [this blog post](https://www.anaconda.com/blog/understanding-conda-and-pip) for more information on the differences between the two.
-
-Conda treats Python like other packages, so managing it is similar. One helpful thing you can do is specify a Python version while creating an environment. See the [Conda documentation](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-python.html) for other ways of interacting with the Python version.
+`uv init` will set up a uv environment for you, creating several files: `pyproject.toml`, `.python-version`, and `main.py`, as well as a few other files if they don't already exist, such as a `README` and `.gitignore` file. Once you start adding packages to the project, uv will also generate a lock file with the resolved package dependencies (`uv.lock`) and a virtual environment with [venv](https://docs.python.org/3/library/venv.html) in the `.venv/` directory.
 
 ``` bash
-# create a new virtual environment called projectenv
-conda create --name projectenv python=3.12.1
+# create a new project called my_new_project
+uv init my_new_project
 
-# activate the environment projectenv
-conda activate projectenv
+# or, from within an existing project, just run init
+uv init
+
+# manually sync the virtual environment
+# mostly uv will handle this for you but it can be handy
+uv sync
 
 # add a package to your environment
-conda install polars
+# don't use pip! This will install from pip but manage the environment for you
+uv add polars
+```
+
+
+To run scripts, use `uv run`. This is a drop-in replacement for `python script.py`; `uv run` always runs the script in the virtual environment for the project, so it is a good practice.
+
+```python
+# run a script in the virtual environment
+uv run my_script.py
+```
+
+To manage Python versions, use `uv python`
+
+```python
+# install Python 3.12
+uv python install 3.12
+
+# and set it as the Python version for the project
+uv python pin 3.12
+```
+
+To run development tools like `ruff`, use `uvx`, which allows you to use such tools without adding them as dependencies to your project.
+
+```python
+uvx ruff format
 ```
 :::
+
+See the [documentation](https://docs.astral.sh/uv/getting-started/features/) for other commands, particularly those under the Python versions, projects, and tools headings.
 
 ## Opt-in Workflows {#sec-opt-in}
 
@@ -444,7 +473,7 @@ Opt-in workflows are things we do not require for a project but for which we off
 
 ### Pipelines {#sec-pipelines}
 
-Pipeline tools are software that manage the execution of code. What's practical about this for research projects is that pipeline tools track the relationship between components in your project (meaning it knows which order to run things in automatically) and will only run those components when they are out of date (meaning you don't necessarily need to rerun your entire project because you updated one part of the code).
+Pipeline tools are software that manage the execution of code. What's practical about this for research projects is that pipeline tools track the relationship between components in your project (meaning it knows which order to run things in automatically) and will only run those components when they are out of date (meaning you don't necessarily need to rerun your entire project because you updated one part of the code). They are also very handy for reproducing code, because they only require a command or two to run the entire pipeline.
 
 Pipeline tools are helpful for projects of any size, but they are particularly suited to complex or computationally intense projects.
 
@@ -455,19 +484,13 @@ The best pipeline tool in R is the targets package. targets is a native R tool, 
 
 targets has [excellent documentation and tutorials](https://books.ropensci.org/targets/), so we point you there for guidance.
 
-It's also possible to use tools like Make and Snakemake, among others (see the Python tab), with R, although we recommend targets for projects that are mostly R.
+It's also possible to use tools like Make (see the Python tab) among others , with R, although we recommend targets for projects that are mostly R. For projects that are a mix of languages, Make may be a better fit.
 
 ## Python
 
-Python has several pipeline tools that are used in data engineering. For these larger data projects, these tools are sometimes called *orchestration* tools. That said, many of them are much more complex than is needed for a single research project.
+Python has several pipeline tools that are used in data engineering. For these larger data projects, these tools are sometimes called *orchestration* tools. That said, many of them are much more complex than is needed for a single research project. 
 
-We don't currently have a recommendation. Here are the tools we should explore:
-
-1.  [Make](https://www.gnu.org/software/make/): Make is one of the oldest and most popular pipeline tools--over 40 years old. It shows its age in some ways, but it's also battle-tested. See [this tutorial](https://third-bit.com/py-rse/automate.html) for an example of running an analysis with Make.
-2.  [Snakemake](https://snakemake.github.io/): A Python tool influenced by Make, it's very similar in spirit but more modern. It's easier to read and customize, and you can write Python code within the Snakefile. It also works nicely with Python and R scripts. One handy thing is that you can access Snakemake inputs and outputs through magic objects for both Python and R. That makes it useful for, e.g., dynamic rules and rules where you want to use inputs for reports. Snakemake has good support for Conda environments in particular.
-3.  [Dagster](https://docs.dagster.io/getting-started/hello-dagster): Dagster is a different approach that uses decorators to tag Python functions as "assets," the apparent equivalent of targets in other tools. It has a nice UI tool for visualizing the nodes and relationships of the project, as well as "materializing" (running) them. Dagster is a company, but the tool has an open-source version.
-4.  [Prefect](https://www.prefect.io/opensource): Prefect is an increasingly popular tool for orchestration. Like Dagster, it is a company-based open-source tool that uses decorators to tag Python functions. It also has a UI.
-5.  [AirFlow](https://airflow.apache.org/): AirFlow is an open-source orchestration tool. Notably, Google Cloud supports a UI for creating and running AirFlow called [Cloud Composer](https://cloud.google.com/composer/docs/composer-2/composer-overview). AirFlow also has a recent decorator-based API called [TaskFlow](https://airflow.apache.org/docs/apache-airflow/stable/tutorial/taskflow.html), which is more in line with some of the above tools.
+For research projects, we recommend [GNU Make](https://www.gnu.org/software/make/). Make is one of the oldest and most popular pipeline tools--over 40 years old. It shows its age in some ways, but it's also battle-tested. See [this tutorial](https://third-bit.com/py-rse/automate.html) for an example of running an analysis with Make. 
 :::
 
 ### Testing {#sec-tests}
