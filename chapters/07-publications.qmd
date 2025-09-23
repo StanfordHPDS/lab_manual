@@ -35,7 +35,7 @@ Creating effective data visualizations for publication is a skill that takes pra
 - [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/) by Claus O. Wilke (free online book; created in R but does not include code in the text)
 - [Data Visualization: A Practical Introduction](https://socviz.co/) by Kieran Healy (partially free online; includes code in R)
 
-We also encourage you to seek feedback on your figures from lab members and Dr. Rose, either individually or in a group setting.
+We also encourage you to seek feedback on your figures from Lab members and Dr. Rose, either individually or in a group setting.
 
 ## Journals
 
