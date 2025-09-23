@@ -23,7 +23,7 @@ There are several good resources for creating effective scientific presentations
 
 One issue to consider when presenting results from a paper is whether to use the same figures and tables as in the paper or create new ones. Often, the details in a paper figure or table may not be necessary for a presentation. Consider simplifying figures and tables to focus on the key message you want to convey. See the ["Telling a story and making a point" chapter of Fundamentals of Data Visualization](https://clauswilke.com/dataviz/telling-a-story.html) for more guidance.
 
-Lab meetings are also good opportunity to practice your presentation skills and get feedback from lab members.
+Lab meetings are also good opportunity to practice your presentation skills and get feedback from Lab members.
 
 ## Posters
 
