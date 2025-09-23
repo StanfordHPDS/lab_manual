@@ -2,13 +2,17 @@
 
 ## Authorship
 
-We aim to discuss authorship early in the research process and have continuing conversations regarding team member roles. Plans can change and contributions may evolve over time. If you have authorship questions during the process of working on a project, we want you to feel empowered to ask these questions! 
+We aim to discuss authorship early in the research process and have continuing conversations regarding team member roles. Plans can change and contributions may evolve over time. If you have authorship questions during the process of working on a project, we want you to feel empowered to ask these questions!
 
-**It is an expectation in the Lab that no new authors are invited to join an existing Lab project (i.e., where Dr. Rose is the lead PI) without the prior agreement of, at a minimum, Dr. Rose and the first author(s).** 
+**It is an expectation in the Lab that no new authors are invited to join an existing Lab project (i.e., where Dr. Rose is the lead PI) without the prior agreement of, at a minimum, Dr. Rose and the first author(s).**
 
 The Lab follows the [ICMJE recommendations](http://www.icmje.org/recommendations/browse/roles-and-responsibilities/defining-the-role-of-authors-and-contributors.html) regarding who is included as an author.
 
 What does first authorship mean in our Lab? Being the first author typically means that you are: (1) an intellectual lead on the project, (2) making major contributions conducting the scientific work (e.g., developing methodology, analyzing data), and (3) a main writer on the manuscript, usually crafting the first draft. For some projects, a first authorship role may also involve project management with collaborators and partners. All of these activities are done under the mentorship of Dr. Rose as the PI with substantial feedback in an apprenticeship model.
+
+### Does code review merit authorship?
+
+Code review is an important part of the scientific process and we require Lab members to have their code reviewed (@sec-code-review). However, code review alone does not merit authorship. Authorship requires substantial contributions to the scientific work, as described above. That said, code review can organically lead to deeper involvement in the project that may merit authorship.
 
 ## Acknowledgments
 
