@@ -12,7 +12,7 @@ What does first authorship mean in our Lab? Being the first author typically mea
 
 ### Does code review merit authorship?
 
-Code review is an important part of the scientific process and we require Lab members to have their code reviewed (@sec-code-review). However, code review alone does not merit authorship. Authorship requires substantial contributions to the scientific work, as described above. That said, code review can organically lead to deeper involvement in the project that may merit authorship.
+Code review is an important part of the scientific process, and we require Lab members to have their code reviewed (@sec-code-review). However, code review alone does not necessarily merit authorship. Authorship requires substantial contributions to the scientific work, as described above. That said, code review can organically lead to deeper involvement in the project that may merit authorship.
 
 ## Acknowledgments
 
