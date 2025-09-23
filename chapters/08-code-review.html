@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.43">
+<meta name="generator" content="quarto-1.8.24">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -32,15 +32,17 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="../">
 <link href="../chapters/09-code-workflow-agreements.html" rel="next">
 <link href="../chapters/07-publications.html" rel="prev">
-<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-d4d76bf8491c20bad77d141916dc28e1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-a34d670291f06f286357e447776a572a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-d58359eb3ecc31d3bec1ed479c2cbb3a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -72,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar floating quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -94,7 +96,9 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="../">Stanford Health Policy Data Science</a> 
     </div>
@@ -194,30 +198,33 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#code-review-makes-better-teams" id="toc-code-review-makes-better-teams" class="nav-link" data-scroll-target="#code-review-makes-better-teams"><span class="header-section-number">8.1.2</span> Code Review Makes Better Teams</a></li>
   </ul></li>
   <li><a href="#code-review-guidelines" id="toc-code-review-guidelines" class="nav-link" data-scroll-target="#code-review-guidelines"><span class="header-section-number">8.2</span> Code Review Guidelines</a></li>
-  <li><a href="#when-to-stop-for-a-code-review" id="toc-when-to-stop-for-a-code-review" class="nav-link" data-scroll-target="#when-to-stop-for-a-code-review"><span class="header-section-number">8.3</span> When to Stop for a Code Review</a>
+  <li><a href="#overview-of-the-code-review-workflow" id="toc-overview-of-the-code-review-workflow" class="nav-link" data-scroll-target="#overview-of-the-code-review-workflow"><span class="header-section-number">8.3</span> Overview of the Code Review Workflow</a></li>
+  <li><a href="#when-to-stop-for-a-code-review" id="toc-when-to-stop-for-a-code-review" class="nav-link" data-scroll-target="#when-to-stop-for-a-code-review"><span class="header-section-number">8.4</span> When to Stop for a Code Review</a>
   <ul class="collapse">
-  <li><a href="#code-review-gates" id="toc-code-review-gates" class="nav-link" data-scroll-target="#code-review-gates"><span class="header-section-number">8.3.1</span> Code Review Gates</a></li>
-  <li><a href="#that-said-prefer-smaller-changes-per-review" id="toc-that-said-prefer-smaller-changes-per-review" class="nav-link" data-scroll-target="#that-said-prefer-smaller-changes-per-review"><span class="header-section-number">8.3.2</span> That Said, Prefer Smaller Changes Per Review</a></li>
-  <li><a href="#code-review-is-progress-too" id="toc-code-review-is-progress-too" class="nav-link" data-scroll-target="#code-review-is-progress-too"><span class="header-section-number">8.3.3</span> Code Review Is Progress, Too</a></li>
+  <li><a href="#code-review-gates" id="toc-code-review-gates" class="nav-link" data-scroll-target="#code-review-gates"><span class="header-section-number">8.4.1</span> Code Review Gates</a></li>
+  <li><a href="#that-said-prefer-smaller-changes-per-review" id="toc-that-said-prefer-smaller-changes-per-review" class="nav-link" data-scroll-target="#that-said-prefer-smaller-changes-per-review"><span class="header-section-number">8.4.2</span> That Said, Prefer Smaller Changes Per Review</a></li>
+  <li><a href="#code-review-is-progress-too" id="toc-code-review-is-progress-too" class="nav-link" data-scroll-target="#code-review-is-progress-too"><span class="header-section-number">8.4.3</span> Code Review Is Progress, Too</a></li>
   </ul></li>
-  <li><a href="#pre-review-checklist" id="toc-pre-review-checklist" class="nav-link" data-scroll-target="#pre-review-checklist"><span class="header-section-number">8.4</span> Pre-Review Checklist</a></li>
-  <li><a href="#requesting-a-code-review" id="toc-requesting-a-code-review" class="nav-link" data-scroll-target="#requesting-a-code-review"><span class="header-section-number">8.5</span> Requesting a Code Review</a>
+  <li><a href="#pre-review-checklist" id="toc-pre-review-checklist" class="nav-link" data-scroll-target="#pre-review-checklist"><span class="header-section-number">8.5</span> Pre-Review Checklist</a></li>
+  <li><a href="#requesting-a-code-review" id="toc-requesting-a-code-review" class="nav-link" data-scroll-target="#requesting-a-code-review"><span class="header-section-number">8.6</span> Requesting a Code Review</a>
   <ul class="collapse">
-  <li><a href="#identifying-reviewers" id="toc-identifying-reviewers" class="nav-link" data-scroll-target="#identifying-reviewers"><span class="header-section-number">8.5.1</span> Identifying Reviewers</a></li>
-  <li><a href="#writing-a-good-description" id="toc-writing-a-good-description" class="nav-link" data-scroll-target="#writing-a-good-description"><span class="header-section-number">8.5.2</span> Writing a Good Description</a></li>
-  <li><a href="#iterating-on-code-review" id="toc-iterating-on-code-review" class="nav-link" data-scroll-target="#iterating-on-code-review"><span class="header-section-number">8.5.3</span> Iterating on Code Review</a></li>
+  <li><a href="#identifying-reviewers" id="toc-identifying-reviewers" class="nav-link" data-scroll-target="#identifying-reviewers"><span class="header-section-number">8.6.1</span> Identifying Reviewers</a></li>
+  <li><a href="#writing-a-good-description" id="toc-writing-a-good-description" class="nav-link" data-scroll-target="#writing-a-good-description"><span class="header-section-number">8.6.2</span> Writing a Good Description</a></li>
+  <li><a href="#iterating-on-code-review" id="toc-iterating-on-code-review" class="nav-link" data-scroll-target="#iterating-on-code-review"><span class="header-section-number">8.6.3</span> Iterating on Code Review</a></li>
   </ul></li>
-  <li><a href="#giving-a-code-review" id="toc-giving-a-code-review" class="nav-link" data-scroll-target="#giving-a-code-review"><span class="header-section-number">8.6</span> Giving a Code Review</a>
+  <li><a href="#giving-a-code-review" id="toc-giving-a-code-review" class="nav-link" data-scroll-target="#giving-a-code-review"><span class="header-section-number">8.7</span> Giving a Code Review</a>
   <ul class="collapse">
-  <li><a href="#what-to-look-for-in-a-code-review" id="toc-what-to-look-for-in-a-code-review" class="nav-link" data-scroll-target="#what-to-look-for-in-a-code-review"><span class="header-section-number">8.6.1</span> What to Look for in a Code Review</a></li>
-  <li><a href="#what-to-avoid" id="toc-what-to-avoid" class="nav-link" data-scroll-target="#what-to-avoid"><span class="header-section-number">8.6.2</span> What to Avoid</a></li>
+  <li><a href="#what-to-look-for-in-a-code-review" id="toc-what-to-look-for-in-a-code-review" class="nav-link" data-scroll-target="#what-to-look-for-in-a-code-review"><span class="header-section-number">8.7.1</span> What to Look for in a Code Review</a></li>
+  <li><a href="#what-to-avoid" id="toc-what-to-avoid" class="nav-link" data-scroll-target="#what-to-avoid"><span class="header-section-number">8.7.2</span> What to Avoid</a></li>
   </ul></li>
-  <li><a href="#timeline-and-speed-of-review" id="toc-timeline-and-speed-of-review" class="nav-link" data-scroll-target="#timeline-and-speed-of-review"><span class="header-section-number">8.7</span> Timeline and Speed of Review</a>
+  <li><a href="#timeline-and-speed-of-review" id="toc-timeline-and-speed-of-review" class="nav-link" data-scroll-target="#timeline-and-speed-of-review"><span class="header-section-number">8.8</span> Timeline and Speed of Review</a>
   <ul class="collapse">
-  <li><a href="#lgtm" id="toc-lgtm" class="nav-link" data-scroll-target="#lgtm"><span class="header-section-number">8.7.1</span> LGTM</a></li>
-  <li><a href="#giving-comments-and-responding-to-reviewee-comments" id="toc-giving-comments-and-responding-to-reviewee-comments" class="nav-link" data-scroll-target="#giving-comments-and-responding-to-reviewee-comments"><span class="header-section-number">8.7.2</span> Giving Comments and Responding to Reviewee Comments</a></li>
+  <li><a href="#approval-vs.-request-changes" id="toc-approval-vs.-request-changes" class="nav-link" data-scroll-target="#approval-vs.-request-changes"><span class="header-section-number">8.8.1</span> Approval vs.&nbsp;Request Changes</a></li>
+  <li><a href="#lgtm" id="toc-lgtm" class="nav-link" data-scroll-target="#lgtm"><span class="header-section-number">8.8.2</span> LGTM</a></li>
+  <li><a href="#merging" id="toc-merging" class="nav-link" data-scroll-target="#merging"><span class="header-section-number">8.8.3</span> Merging</a></li>
+  <li><a href="#giving-comments-and-responding-to-reviewee-comments" id="toc-giving-comments-and-responding-to-reviewee-comments" class="nav-link" data-scroll-target="#giving-comments-and-responding-to-reviewee-comments"><span class="header-section-number">8.8.4</span> Giving Comments and Responding to Reviewee Comments</a></li>
   </ul></li>
-  <li><a href="#appendix-code-review-tools-on-github" id="toc-appendix-code-review-tools-on-github" class="nav-link" data-scroll-target="#appendix-code-review-tools-on-github"><span class="header-section-number">8.8</span> Appendix: Code Review Tools on GitHub</a></li>
+  <li><a href="#appendix-code-review-tools-on-github" id="toc-appendix-code-review-tools-on-github" class="nav-link" data-scroll-target="#appendix-code-review-tools-on-github"><span class="header-section-number">8.9</span> Appendix: Code Review Tools on GitHub</a></li>
   </ul>
 </nav>
     </div>
@@ -267,12 +274,26 @@ ul.task-list li input[type="checkbox"] {
 </blockquote>
 <p>Google uses its own tools for managing code and code review, so sometimes you’ll see terms that are a little different. A big one is “CL,” changelist. A CL is Google’s equivalent of a pull request (PR).</p>
 </section>
-<section id="when-to-stop-for-a-code-review" class="level2" data-number="8.3">
-<h2 data-number="8.3" class="anchored" data-anchor-id="when-to-stop-for-a-code-review"><span class="header-section-number">8.3</span> When to Stop for a Code Review</h2>
+<section id="overview-of-the-code-review-workflow" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="overview-of-the-code-review-workflow"><span class="header-section-number">8.3</span> Overview of the Code Review Workflow</h2>
+<p>Our code reviews happen on GitHub using pull requests. The general workflow is:</p>
+<ul>
+<li>Create a new branch from the main branch.</li>
+<li>Make a change to your code in the new branch. This change should be self-contained and focused on one area.</li>
+<li>Open a pull request (PR) to merge your changes into the main branch.</li>
+<li>Request a code review from one or more people.</li>
+<li>The reviewer(s) review your code and leave comments and suggestions. You and the reviewer(s) iterate as needed.</li>
+<li>When the reviewer(s) approve your code, you merge the PR into the main branch.</li>
+<li>Celebrate your improved code!</li>
+</ul>
+<p>GitHub has excellent tools for managing code review. See the <a href="#appendix-code-review-tools-on-github">Appendix</a> for more details.</p>
+</section>
+<section id="when-to-stop-for-a-code-review" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="when-to-stop-for-a-code-review"><span class="header-section-number">8.4</span> When to Stop for a Code Review</h2>
 <p>In software engineering, code review is a part of daily life. In science, we don’t always write code every day. Some members of the Lab may go weeks or months without writing code. Finishing an analysis before stopping for a code review is also tempting. In other words, adapting the code review process to science requires some flexibility.</p>
 <p>Remember that code review is a continuous improvement process. That means early and often is better. But what does that mean for a research project?</p>
-<section id="code-review-gates" class="level3" data-number="8.3.1">
-<h3 data-number="8.3.1" class="anchored" data-anchor-id="code-review-gates"><span class="header-section-number">8.3.1</span> Code Review Gates</h3>
+<section id="code-review-gates" class="level3" data-number="8.4.1">
+<h3 data-number="8.4.1" class="anchored" data-anchor-id="code-review-gates"><span class="header-section-number">8.4.1</span> Code Review Gates</h3>
 <p>In the HPDS Lab, we stop at several vital checkpoints or <em>gates</em> for code review. For a traditional research project, these gates are:</p>
 <ul>
 <li>Initial data pull (e.g., a SQL query or API call)</li>
@@ -283,8 +304,8 @@ ul.task-list li input[type="checkbox"] {
 <p>Your project might not fit this template exactly. For example, if you also have a simulation component to your project, you’ll probably want to stop at several points to review the simulation code. Or, you may have no algorithms in the analysis but a more extensive descriptive analysis. In this case, reviewing the descriptive work all at once is probably too large of a code review to be effective.</p>
 <p><strong>The general principle is to decide when you absolutely must stop for a code review. Make as many or as few as feels right between them, but always stop at the gates.</strong></p>
 </section>
-<section id="that-said-prefer-smaller-changes-per-review" class="level3" data-number="8.3.2">
-<h3 data-number="8.3.2" class="anchored" data-anchor-id="that-said-prefer-smaller-changes-per-review"><span class="header-section-number">8.3.2</span> That Said, Prefer Smaller Changes Per Review</h3>
+<section id="that-said-prefer-smaller-changes-per-review" class="level3" data-number="8.4.2">
+<h3 data-number="8.4.2" class="anchored" data-anchor-id="that-said-prefer-smaller-changes-per-review"><span class="header-section-number">8.4.2</span> That Said, Prefer Smaller Changes Per Review</h3>
 <p>Smaller changes are more effective and more satisfying to reviewers and reviewees because they are easier to understand and quicker to review.</p>
 <p>Here are some relevant points from <a href="https://google.github.io/eng-practices/review/developer/small-cls.html">Google’s guidelines</a>:</p>
 <blockquote class="blockquote">
@@ -308,14 +329,14 @@ ul.task-list li input[type="checkbox"] {
 <p>You should be able to describe what the change is succinctly. It’s also okay for such changes to touch different parts of your project. For instance, when it comes time for estimation, you may need to modify your data cleaning code for the process to work. But if you then decide to make unrelated changes to an earlier figure, handle that in a separate PR and review.</p>
 <p>As a note, “too small” is rarely a problem in code review. Lean towards smaller reviews.</p>
 </section>
-<section id="code-review-is-progress-too" class="level3" data-number="8.3.3">
-<h3 data-number="8.3.3" class="anchored" data-anchor-id="code-review-is-progress-too"><span class="header-section-number">8.3.3</span> Code Review Is Progress, Too</h3>
+<section id="code-review-is-progress-too" class="level3" data-number="8.4.3">
+<h3 data-number="8.4.3" class="anchored" data-anchor-id="code-review-is-progress-too"><span class="header-section-number">8.4.3</span> Code Review Is Progress, Too</h3>
 <p>Often, it can be challenging to stop and wait on your project. For researchers in particular, where typically a single person leads an analysis, you may feel like you are the only one who can do the work. But remember that code review <em>is part of the work</em>. It’s not a delay in the work. It is the work.</p>
 <p>Code review <em>is</em> progress. Take a break and enjoy your project moving forward in peace!</p>
 </section>
 </section>
-<section id="pre-review-checklist" class="level2" data-number="8.4">
-<h2 data-number="8.4" class="anchored" data-anchor-id="pre-review-checklist"><span class="header-section-number">8.4</span> Pre-Review Checklist</h2>
+<section id="pre-review-checklist" class="level2" data-number="8.5">
+<h2 data-number="8.5" class="anchored" data-anchor-id="pre-review-checklist"><span class="header-section-number">8.5</span> Pre-Review Checklist</h2>
 <!-- TODO: flesh this out with specific guidance after team agreements -->
 <p>Your code review should meet Lab standards. Before requesting a review, make sure you have done the following:</p>
 <ul>
@@ -325,10 +346,10 @@ ul.task-list li input[type="checkbox"] {
 <li>Make sure it is clear how to run the code. This might be related to where to run the code (e.g., GCP) or how to install the project dependencies.</li>
 </ul>
 </section>
-<section id="requesting-a-code-review" class="level2" data-number="8.5">
-<h2 data-number="8.5" class="anchored" data-anchor-id="requesting-a-code-review"><span class="header-section-number">8.5</span> Requesting a Code Review</h2>
-<section id="identifying-reviewers" class="level3" data-number="8.5.1">
-<h3 data-number="8.5.1" class="anchored" data-anchor-id="identifying-reviewers"><span class="header-section-number">8.5.1</span> Identifying Reviewers</h3>
+<section id="requesting-a-code-review" class="level2" data-number="8.6">
+<h2 data-number="8.6" class="anchored" data-anchor-id="requesting-a-code-review"><span class="header-section-number">8.6</span> Requesting a Code Review</h2>
+<section id="identifying-reviewers" class="level3" data-number="8.6.1">
+<h3 data-number="8.6.1" class="anchored" data-anchor-id="identifying-reviewers"><span class="header-section-number">8.6.1</span> Identifying Reviewers</h3>
 <p>Google has a process called <a href="https://abseil.io/resources/swe-book/html/ch03.html#what_is_the_readability_processquestion">readability reviews</a>. In short, someone with readability credentials is an expert on how Google uses a particular language. Readability helps maintain a consistent style and propagate idiomatic code for a given language. Google also requires reviews from another person familiar with the project and an “owner” of the code.</p>
 <p>When identifying a reviewer, use this framework. Who can review your code from the perspective of the language you are using? Who can review your code from the perspective of the domain you are working in? Who can review your code from a methodological standpoint? Usually, you are the owner of your research project, but sometimes, you are contributing to someone else’s code. In that case, make sure they are part of the review process.</p>
 <p>For sensitive data, prefer to have a reviewer who has access to the data so they can run the code. <strong>See <a href="04-data.html" class="quarto-xref"><span>Chapter 4</span></a> for details on requirements to access project data. Code reviewers who are not on the associated IRB or cleared for data access cannot run the code directly on the data.</strong></p>
@@ -337,8 +358,8 @@ ul.task-list li input[type="checkbox"] {
 <p>If you’re not sure who to ask, start with Malcolm. (Typically, Malcolm is on every IRB and can access data directly.)</p>
 <p>It may be that your first choice reviewer is not available to do the review promptly. It’s better to have someone else review the code, although it’s a judgment call. Occasionally, you should wait for a particular person to be available if they serve as a critical reviewer. Talk openly about timelines and expectations with your reviewer.</p>
 </section>
-<section id="writing-a-good-description" class="level3" data-number="8.5.2">
-<h3 data-number="8.5.2" class="anchored" data-anchor-id="writing-a-good-description"><span class="header-section-number">8.5.2</span> Writing a Good Description</h3>
+<section id="writing-a-good-description" class="level3" data-number="8.6.2">
+<h3 data-number="8.6.2" class="anchored" data-anchor-id="writing-a-good-description"><span class="header-section-number">8.6.2</span> Writing a Good Description</h3>
 <p>The description of your code review should be a summary of what you are trying to accomplish.</p>
 <blockquote class="blockquote">
 <p>The first line should be a short, focused summary, while the rest of the description should fill in the details and include any supplemental information a reader needs to understand the changelist holistically. It might include a brief description of the problem that’s being solved and why this is the best approach. If there are any shortcomings to the approach, they should be mentioned. If relevant, include background information such as bug numbers, benchmark results, and links to design documents.</p>
@@ -350,10 +371,10 @@ ul.task-list li input[type="checkbox"] {
 <p>CLs can undergo significant change during review. It can be worthwhile to review a CL description before submitting the CL, to ensure that the description still reflects what the CL does.</p>
 </blockquote>
 </section>
-<section id="iterating-on-code-review" class="level3" data-number="8.5.3">
-<h3 data-number="8.5.3" class="anchored" data-anchor-id="iterating-on-code-review"><span class="header-section-number">8.5.3</span> Iterating on Code Review</h3>
-<section id="responding-to-reviewer-comments" class="level4" data-number="8.5.3.1">
-<h4 data-number="8.5.3.1" class="anchored" data-anchor-id="responding-to-reviewer-comments"><span class="header-section-number">8.5.3.1</span> Responding to Reviewer Comments</h4>
+<section id="iterating-on-code-review" class="level3" data-number="8.6.3">
+<h3 data-number="8.6.3" class="anchored" data-anchor-id="iterating-on-code-review"><span class="header-section-number">8.6.3</span> Iterating on Code Review</h3>
+<section id="responding-to-reviewer-comments" class="level4" data-number="8.6.3.1">
+<h4 data-number="8.6.3.1" class="anchored" data-anchor-id="responding-to-reviewer-comments"><span class="header-section-number">8.6.3.1</span> Responding to Reviewer Comments</h4>
 <p>When you receive comments from a reviewer, you should make a change or respond to them. If you don’t understand a comment, ask for clarification. If you disagree with a comment, explain why and discuss it. Occasionally, you may want a third party to help decide on a change.</p>
 <p>Be respectful and expect the same from your reviewer. Our goal is to improve each other’s work. Remember that, much like a peer review on a manuscript, the review is about your work, not you. Nevertheless, receiving feedback on a project you’ve worked hard on can be difficult. If you are frustrated, take a break and return to it later. Assume good intent from your reviewer.</p>
 <blockquote class="blockquote">
@@ -362,11 +383,11 @@ ul.task-list li input[type="checkbox"] {
 </section>
 </section>
 </section>
-<section id="giving-a-code-review" class="level2" data-number="8.6">
-<h2 data-number="8.6" class="anchored" data-anchor-id="giving-a-code-review"><span class="header-section-number">8.6</span> Giving a Code Review</h2>
+<section id="giving-a-code-review" class="level2" data-number="8.7">
+<h2 data-number="8.7" class="anchored" data-anchor-id="giving-a-code-review"><span class="header-section-number">8.7</span> Giving a Code Review</h2>
 <p>The first and most important rule of code review is that you are there to <em>improve</em> the code, not perfect it. If the code review ends with the code in a better state than it started, you have succeeded.</p>
-<section id="what-to-look-for-in-a-code-review" class="level3" data-number="8.6.1">
-<h3 data-number="8.6.1" class="anchored" data-anchor-id="what-to-look-for-in-a-code-review"><span class="header-section-number">8.6.1</span> What to Look for in a Code Review</h3>
+<section id="what-to-look-for-in-a-code-review" class="level3" data-number="8.7.1">
+<h3 data-number="8.7.1" class="anchored" data-anchor-id="what-to-look-for-in-a-code-review"><span class="header-section-number">8.7.1</span> What to Look for in a Code Review</h3>
 <p>The key things we look for in a code review are <em>correctness</em>, <em>readability</em>, and <em>reproducibility</em>. Keep your eye out for bugs, where the code is hard to understand, and where the code is hard to run.</p>
 <p>Some other relevant points from the Google documentation are below.</p>
 <p><a href="https://google.github.io/eng-practices/review/reviewer/navigate.html">Approaching a code review</a>:</p>
@@ -399,27 +420,37 @@ ul.task-list li input[type="checkbox"] {
 </blockquote>
 <p>Use GitHub’s comments and suggestion features to speed up the process and put discussions close to the code.</p>
 </section>
-<section id="what-to-avoid" class="level3" data-number="8.6.2">
-<h3 data-number="8.6.2" class="anchored" data-anchor-id="what-to-avoid"><span class="header-section-number">8.6.2</span> What to Avoid</h3>
+<section id="what-to-avoid" class="level3" data-number="8.7.2">
+<h3 data-number="8.7.2" class="anchored" data-anchor-id="what-to-avoid"><span class="header-section-number">8.7.2</span> What to Avoid</h3>
 <p>A fine line exists between making code more idiomatic and making it your code. Avoid the latter. Just because you would do something differently doesn’t mean it’s wrong.</p>
 <p>Additionally, you should avoid making changes unrelated to the code review. File a new issue to address in a separate change.</p>
 <p>Finally, there is a topic that is usually inappropriate for code review: <em>design</em> of the analysis. Not only is a code review a poor fit for such a discussion, but it also hampers the rigor of the study, e.g., adding in ad-hoc analyses that deviate from the research plan. If an analysis has a plan or pre-registration, it is appropriate to discuss if something in the code is done <em>differently</em> from the plan.</p>
 </section>
 </section>
-<section id="timeline-and-speed-of-review" class="level2" data-number="8.7">
-<h2 data-number="8.7" class="anchored" data-anchor-id="timeline-and-speed-of-review"><span class="header-section-number">8.7</span> Timeline and Speed of Review</h2>
+<section id="timeline-and-speed-of-review" class="level2" data-number="8.8">
+<h2 data-number="8.8" class="anchored" data-anchor-id="timeline-and-speed-of-review"><span class="header-section-number">8.8</span> Timeline and Speed of Review</h2>
 <p>Discuss your timeline for review with the author. If you cannot review the code promptly, let the author know. Fast code review is essential to maintain both momentum on a project and satisfaction with the review process.</p>
 <p>Google’s <a href="https://google.github.io/eng-practices/review/reviewer/speed.html">entire guide on the speed of reviews</a> is excellent. Here are some important points:</p>
 <ul>
 <li>Prioritize reviews but not at the expense of your own focus time. Try to get to it when you have a break in your focused work.</li>
 <li>Google recommends a single business day as a turnaround time. This goal is good, but it’s not always possible in a research setting with competing priorities. Nevertheless, make code review an important part of your workday. Discuss the timeline for review with the author. Your pending review should not be blocking their progress.</li>
 </ul>
-<section id="lgtm" class="level3" data-number="8.7.1">
-<h3 data-number="8.7.1" class="anchored" data-anchor-id="lgtm"><span class="header-section-number">8.7.1</span> LGTM</h3>
+<section id="approval-vs.-request-changes" class="level3" data-number="8.8.1">
+<h3 data-number="8.8.1" class="anchored" data-anchor-id="approval-vs.-request-changes"><span class="header-section-number">8.8.1</span> Approval vs.&nbsp;Request Changes</h3>
+<p>When you review code, you can either approve it or request changes. Approve the code when it is in good shape and ready to merge. Request changes when there are issues that need to be addressed before merging.</p>
+<p>If you have minor suggestions that are not critical, you can still approve the code but leave comments for the author to consider. If you have significant issues, request changes.</p>
+<p>If you receive a code review with requested changes, address the comments and then request another review. You can ask the same reviewer or a different one. Iterate through this process until the pull request is approved.</p>
+</section>
+<section id="lgtm" class="level3" data-number="8.8.2">
+<h3 data-number="8.8.2" class="anchored" data-anchor-id="lgtm"><span class="header-section-number">8.8.2</span> LGTM</h3>
 <p>The traditional stamp of approval is “LGTM” – “looks good to me!” However you say it, make a clear statement of approval, even if only through GitHub’s approval mechanism.</p>
 </section>
-<section id="giving-comments-and-responding-to-reviewee-comments" class="level3" data-number="8.7.2">
-<h3 data-number="8.7.2" class="anchored" data-anchor-id="giving-comments-and-responding-to-reviewee-comments"><span class="header-section-number">8.7.2</span> Giving Comments and Responding to Reviewee Comments</h3>
+<section id="merging" class="level3" data-number="8.8.3">
+<h3 data-number="8.8.3" class="anchored" data-anchor-id="merging"><span class="header-section-number">8.8.3</span> Merging</h3>
+<p>In many lab projects, the bulk of code changes will come from the project lead with someone else reviewing. In this case, the author should merge the code once it is approved. If you are making suggested changes to a project that is not yours, generally the project lead should review and merge your changes. Other patterns might be appropriate for your project, which you can discuss with collaborators.</p>
+</section>
+<section id="giving-comments-and-responding-to-reviewee-comments" class="level3" data-number="8.8.4">
+<h3 data-number="8.8.4" class="anchored" data-anchor-id="giving-comments-and-responding-to-reviewee-comments"><span class="header-section-number">8.8.4</span> Giving Comments and Responding to Reviewee Comments</h3>
 <p>Per Google’s <a href="https://google.github.io/eng-practices/review/reviewer/comments.html">How to write code review comments</a>:</p>
 <blockquote class="blockquote">
 <ul>
@@ -445,8 +476,8 @@ ul.task-list li input[type="checkbox"] {
 </blockquote>
 </section>
 </section>
-<section id="appendix-code-review-tools-on-github" class="level2" data-number="8.8">
-<h2 data-number="8.8" class="anchored" data-anchor-id="appendix-code-review-tools-on-github"><span class="header-section-number">8.8</span> Appendix: Code Review Tools on GitHub</h2>
+<section id="appendix-code-review-tools-on-github" class="level2" data-number="8.9">
+<h2 data-number="8.9" class="anchored" data-anchor-id="appendix-code-review-tools-on-github"><span class="header-section-number">8.9</span> Appendix: Code Review Tools on GitHub</h2>
 <p>GitHub offers <a href="https://github.com/features/code-review">top-notch tools for code review</a>. Use a <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests">pull request workflow</a> to manage your code changes to take advantage of them. Here are some recommended articles on tools for code review:</p>
 <ul>
 <li><a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request">Reviewing pull requests</a></li>
@@ -461,236 +492,243 @@ ul.task-list li input[type="checkbox"] {
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
-    const mode = bsSheetEl.getAttribute("data-mode");
-    const bodyEl = window.document.querySelector("body");
-    if (mode === "dark") {
-      bodyEl.classList.add("quarto-dark");
-      bodyEl.classList.remove("quarto-light");
-    } else {
-      bodyEl.classList.add("quarto-light");
-      bodyEl.classList.remove("quarto-dark");
-    }
-  }
-  const toggleBodyColorPrimary = () => {
-    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-    if (bsSheetEl) {
-      toggleBodyColorMode(bsSheetEl);
-    }
-  }
-  toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
       }
+      return false;
     }
-    return false;
-  }
-  const onCopySuccess = function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
       }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
       for (const childEl of codeEl.children) {
         if (isCodeAnnotation(childEl)) {
           childEl.remove();
         }
       }
       return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
-  });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
     });
-    clipboardModal.on('success', onCopySuccess);
-  }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
     }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
-    }
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-    const config = {
-      allowHTML: true,
-      maxWidth: 500,
-      delay: 100,
-      arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
-      interactive: true,
-      interactiveBorder: 10,
-      theme: 'quarto',
-      placement: 'bottom-start',
-    };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
-    window.tippy(el, config); 
-  }
-  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
-    const ref = noterefs[i];
-    tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
-        }
-      }
-    }
-    stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
           }
         }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
         }
-        return container.innerHTML
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
       } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
         if (window.Quarto?.typesetMath) {
           window.Quarto.typesetMath(note);
         }
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
       }
     }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
           }
         } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
           .then(res => res.text())
           .then(html => {
             const parser = new DOMParser();
             const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
+            const note = htmlDoc.querySelector('main.content');
             if (note !== null) {
-              const html = processXRef(id, note);
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
               instance.setContent(html);
             } 
           }).finally(() => {
@@ -698,185 +736,161 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
-    });
-  }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            div.style.left = 0;
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
-      }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
-      }
-    } else {
-      return undefined;
-    }
-  };
-  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
-    const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
-          }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
+      }, function(instance) {
       });
     }
-  }
-});
-</script>
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../chapters/07-publications.html" class="pagination-link" aria-label="Publications">
