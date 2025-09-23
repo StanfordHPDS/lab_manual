@@ -2,9 +2,9 @@
 
 ## Authorship
 
-We aim to discuss authorship early in the research process and have continuing conversations regarding team member roles. Plans can change and contributions may evolve over time. If you have authorship questions during the process of working on a project, we want you to feel empowered to ask these questions! 
+We aim to discuss authorship early in the research process and have continuing conversations regarding team member roles. Plans can change and contributions may evolve over time. If you have authorship questions during the process of working on a project, we want you to feel empowered to ask these questions!
 
-**It is an expectation in the Lab that no new authors are invited to join an existing Lab project (i.e., where Dr. Rose is the lead PI) without the prior agreement of, at a minimum, Dr. Rose and the first author(s).** 
+**It is an expectation in the Lab that no new authors are invited to join an existing Lab project (i.e., where Dr. Rose is the lead PI) without the prior agreement of, at a minimum, Dr. Rose and the first author(s).**
 
 The Lab follows the [ICMJE recommendations](http://www.icmje.org/recommendations/browse/roles-and-responsibilities/defining-the-role-of-authors-and-contributors.html) regarding who is included as an author.
 
@@ -27,6 +27,15 @@ We aim to write papers with an appropriate scope suitable for the goals of the p
 The structure and content of a manuscript varies by discipline and audience.
 
 Example Lab publications by journal type: [statistics](https://onlinelibrary.wiley.com/doi/10.1111/biom.13863), [medical](https://jamanetwork.com/journals/jamapsychiatry/fullarticle/2765490?guestAccessKey=8e0d777c-ac53-47e9-9387-722b788058a2&utm_campaign=author_alert-jamanetwork&utm_content=author-author_engagement&utm_medium=email&utm_source=jps&utm_term=1m), [health policy](https://www.healthaffairs.org/doi/full/10.1377/hlthaff.2015.1026), [health services research](https://onlinelibrary.wiley.com/doi/10.1111/1475-6773.13046), [health economics](https://www.journals.uchicago.edu/doi/10.1086/716199), [epidemiology](https://academic.oup.com/aje/article/185/1/65/2662306), [computer science conference paper](https://proceedings.mlr.press/v180/chapfuwa22a.html).
+
+## Publication-Ready Data Visualization
+
+Creating effective data visualizations for publication is a skill that takes practice. We recommend the following resources to help you create publication-ready figures:
+
+- [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/) by Claus O. Wilke (free online book; created in R but does not include code in the text)
+- [Data Visualization: A Practical Introduction](https://socviz.co/) by Kieran Healy (partially free online; includes code in R)
+
+We also encourage you to seek feedback on your figures from Lab members and Dr. Rose, either individually or in a group setting.
 
 ## Journals
 
