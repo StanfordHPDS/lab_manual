@@ -62,7 +62,7 @@ ruff format
 
 ## SQL
 
-For SQL queries, we use the [SQLFluff](https://docs.sqlfluff.com/en/stable/reference/rules.html). 
+For SQL queries, we use the [SQLFluff](https://docs.sqlfluff.com/en/stable/reference/rules.html).
 
 SQLFluff is installable through pip:
 
@@ -96,16 +96,16 @@ lintr::lint_dir()
 In Python, use [Ruff's linter](https://docs.astral.sh/ruff/linter/).
 
 ``` python
-ruff check 
+ruff check
 ```
 
 You can also automatically fix any suggestions or re-lint on changes.
 
 ``` python
 # lint and fix
-ruff check --fix    
+ruff check --fix
 # re-lint when files change
-ruff check --watch 
+ruff check --watch
 ```
 
 ## SQL
@@ -138,7 +138,7 @@ We try to be flexible about project organization, as being too prescriptive ofte
 
 For instance, an R project might look like this:
 
-```         
+```
 R/
 figures/
 reports/
@@ -147,7 +147,7 @@ my_project.Rproj
 
 or like this:
 
-```         
+```
 sql/
 functions/
 run.R
@@ -178,7 +178,7 @@ usethis also has a function called `use_git_ignore()` for adding files and folde
 
 A project that has sensitive data and uses Jupyter might have a `.gitignore` file in the root directory that looks like this:
 
-```         
+```
 data/
 .ipynb_checkpoints
 */__pycache__
@@ -217,7 +217,7 @@ For these projects, we suggest:
 1. Clearly documenting what requires a computational environment like Nero GCP
 1. Checking qualifying derived data into the git repository. By qualifying, we mean derived products that meet the data use agreement policies for the study.
 
-While you can run such projects entirely in a protected environment, this approach allows you to use your local computer or HPC like Sherlock (@sec-sherlock) for the components that do not use protected data. 
+While you can run such projects entirely in a protected environment, this approach allows you to use your local computer or HPC like Sherlock (@sec-sherlock) for the components that do not use protected data.
 
 ## Generate Reproducible Documents with Quarto {#sec-quarto}
 
@@ -261,12 +261,12 @@ See @sec-code-review for how to manage code changes to your repository.
 
 ### Git Workflow
 
-1. From the beginning of a project, you should work in a git repository. You can either create one locally in your work environment and push to GitHub or create one [via GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository) and clone it to your work environment. If you create one on GitHub, prefer creating it directly in our [GitHub organization](https://github.com/StanfordHPDS) by changing the Owner to `StanfordHPDS`. 
+1. From the beginning of a project, you should work in a git repository. You can either create one locally in your work environment and push to GitHub or create one [via GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository) and clone it to your work environment. If you create one on GitHub, prefer creating it directly in our [GitHub organization](https://github.com/StanfordHPDS) by changing the Owner to `StanfordHPDS`.
 1. Make changes on branches. Prefer branch names that describe the intent of the change, e.g. `add-table` over `changes`.
 1. Push the branch to GitHub, e.g. `git push -u origin add-table` for the `add-table` branch.
 1. Open a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
 1. Follow the code review process outlined in @sec-code-review
-1. When your pull request is merged into your new branch, pull the changes in your local copy of the repository, delete the remote branch, and delete the local branch. 
+1. When your pull request is merged into your new branch, pull the changes in your local copy of the repository, delete the remote branch, and delete the local branch.
 
 ::: callout-tip
 For R users, there are two helpful functions in usethis to manage your git setup for a project: `usethis::use_git()` will initialize a git repository and activate the git UI in RStudio; `usethis::use_github()` will create and link a GitHub repository, as well as make your first push. Note that `use_github()` has an `organisation` argument where you can specify a GitHub organization to create the repository under, such as `use_github(organisation = "StanfordHPDS")`.
@@ -276,7 +276,7 @@ See also the [PR workflow vignette](https://usethis.r-lib.org/articles/pr-functi
 
 ### Transferring Repositories
 
-If a repository for a Lab project exists on your personal account, [transfer it](https://docs.github.com/en/repositories/creating-and-managing-repositories/transferring-a-repository#transferring-a-repository-owned-by-your-personal-account) to the `StanfordHPDS` GitHub organization. 
+If a repository for a Lab project exists on your personal account, [transfer it](https://docs.github.com/en/repositories/creating-and-managing-repositories/transferring-a-repository#transferring-a-repository-owned-by-your-personal-account) to the `StanfordHPDS` GitHub organization.
 
 ::: {.callout-tip}
 Repositories that exist in a GitHub organization still contain information about your contributions. You can also [pin organization repositories to your personal GitHub profile](
@@ -299,7 +299,7 @@ Comments exist in virtually every programming language because programming langu
 
 That said, many comments are of two less helpful varieties: [what comments](https://www.reddit.com/r/ProgrammerHumor/comments/8w54mx/code_comments_be_like/) and deodorant comments. "What" comments explain what the code is doing, usually redundantly. This type of comment is unnecessary because it's clear from the code what is happening:
 
-```         
+```
 # add 1 and 2 together
 1 + 2
 ```
@@ -330,6 +330,8 @@ For our purposes, a `README` should include *at least*:
 -   A brief explanation of the file structure of the repository
 -   Details on how to run the code (@sec-running-code) in the project, such as installing dependencies, versions of R or Python for the project, etc.
 -   Any other necessary information to understand or use the project
+
+You can see examples of `README` files in our lab [GitHub organization](https://github.com/StanfordHPDS).
 
 ## Running Code {#sec-running-code}
 
@@ -420,7 +422,7 @@ One common problem in renv is that it keeps track of but does not manage the R v
 
 Note: The Python ecosystem for managing environments is vast. See <https://alpopkes.com/posts/python/packaging_tools/> for an overview.
 
-We recommend [uv](https://docs.astral.sh/uv/getting-started/installation/). uv allows you to install packages, set up virtual environments, and control the version of Python. uv manages most of this for you and works well across operating systems. It's also very fast. 
+We recommend [uv](https://docs.astral.sh/uv/getting-started/installation/). uv allows you to install packages, set up virtual environments, and control the version of Python. uv manages most of this for you and works well across operating systems. It's also very fast.
 
 `uv init` will set up a uv environment for you, creating several files: `pyproject.toml`, `.python-version`, and `main.py`, as well as a few other files if they don't already exist, such as a `README` and `.gitignore` file. Once you start adding packages to the project, uv will also generate a lock file with the resolved package dependencies (`uv.lock`) and a virtual environment with [venv](https://docs.python.org/3/library/venv.html) in the `.venv/` directory.
 
@@ -488,9 +490,9 @@ It's also possible to use tools like Make (see the Python tab) among others , wi
 
 ## Python
 
-Python has several pipeline tools that are used in data engineering. For these larger data projects, these tools are sometimes called *orchestration* tools. That said, many of them are much more complex than is needed for a single research project. 
+Python has several pipeline tools that are used in data engineering. For these larger data projects, these tools are sometimes called *orchestration* tools. That said, many of them are much more complex than is needed for a single research project.
 
-For research projects, we recommend [GNU Make](https://www.gnu.org/software/make/). Make is one of the oldest and most popular pipeline tools--over 40 years old. It shows its age in some ways, but it's also battle-tested. See [this tutorial](https://third-bit.com/py-rse/automate.html) for an example of running an analysis with Make. 
+For research projects, we recommend [GNU Make](https://www.gnu.org/software/make/). Make is one of the oldest and most popular pipeline tools--over 40 years old. It shows its age in some ways, but it's also battle-tested. See [this tutorial](https://third-bit.com/py-rse/automate.html) for an example of running an analysis with Make.
 :::
 
 ### Testing {#sec-tests}
