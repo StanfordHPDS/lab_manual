@@ -29,7 +29,7 @@ Lab meetings are also good opportunity to practice your presentation skills and 
 
 We have an experimental Lab poster template for Quarto located in our [GitHub repository](https://github.com/StanfordHPDS/hpds-poster). This template uses [Typst](https://quarto.org/docs/output-formats/typst.html). The poster template is not required, but it may be a useful starting point.
 
-A poster printing service local to Stanford is [Biotech Productions](https://www.biotech-productions.com/), which lab members have used in the past with good experiences.
+A poster printing service local to Stanford is [Biotech Productions](https://www.biotech-productions.com/), which Lab members have used in the past with good experiences.
 
 ## Conferences by Field {#sec-conferences-field}
 
