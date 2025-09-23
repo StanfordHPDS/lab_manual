@@ -21,6 +21,10 @@ There are several good resources for creating effective scientific presentations
 - [Better Presentations](https://cup.columbia.edu/book/better-presentations/9780231175210/) by Jonathan Schwabish
 - [The Motivated Speaker](https://www.articulationinc.com/the-motivated-speaker-book/) by Ruth Milligan, Acacia Duncan, and Blythe Coons
 
+One issue to consider when presenting results from a paper is whether to use the same figures and tables as in the paper or create new ones. Often, the details in a paper figure or table may not be necessary for a presentation. Consider simplifying figures and tables to focus on the key message you want to convey. See the ["Telling a story and making a point" chapter of Fundamentals of Data Visualization](https://clauswilke.com/dataviz/telling-a-story.html) for more guidance.
+
+Lab meetings are also good opportunity to practice your presentation skills and get feedback from lab members.
+
 ## Posters
 
 We have an experimental lab poster template for Quarto located in our [GitHub repository](https://github.com/StanfordHPDS/hpds-poster). This template uses [Typst](https://quarto.org/docs/output-formats/typst.html). This poster template is not required, but it may be a useful starting point.
