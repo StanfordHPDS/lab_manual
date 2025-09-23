@@ -14,7 +14,7 @@ Flights for Lab trainees and staff **must** be purchased through Stanford Travel
 
 ## Slides
 
-We have an experimental lab slide template for Quarto located in our [GitHub repository](https://github.com/StanfordHPDS/hpds-slides-theme). This template uses [reveal.js](https://quarto.org/docs/presentations/revealjs.html). This slide template is not required for lab presentations, but it may be a useful starting point.
+We have an experimental Lab slide template for Quarto located in our [GitHub repository](https://github.com/StanfordHPDS/hpds-slides-theme). This template uses [reveal.js](https://quarto.org/docs/presentations/revealjs.html). The slide template is not required for lab presentations, but it may be a useful starting point.
 
 There are several good resources for creating effective scientific presentations. Here are a couple:
 
