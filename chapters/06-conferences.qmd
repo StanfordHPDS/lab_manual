@@ -12,6 +12,15 @@ Flights for Lab trainees and staff **must** be purchased through Stanford Travel
 
 **Health Policy and Biomedical Data Science Students**: If you are presenting at a conference, submit for up to $1,000 of those expenses to be reimbursed through the [Biosciences Travel Grant Program](https://oge.stanford.edu/financial/travel-grant-program/). You are eligible for one conference per year.
 
+## Slides
+
+We have an experimental lab slide template for Quarto located in our [GitHub repository](https://github.com/StanfordHPDS/hpds-slides-theme). This template uses [reveal.js](https://quarto.org/docs/presentations/revealjs.html). This slide template is not required for lab presentations, but it may be a useful starting point.
+
+There are several good resources for creating effective scientific presentations. Here are a couple:
+
+- [Better Presentations](https://cup.columbia.edu/book/better-presentations/9780231175210/) by Jonathan Schwabish
+- [The Motivated Speaker](https://www.articulationinc.com/the-motivated-speaker-book/) by Ruth Milligan, Acacia Duncan, and Blythe Coons
+
 ## Posters
 
 We have an experimental lab poster template for Quarto located in our [GitHub repository](https://github.com/StanfordHPDS/hpds-poster). This template uses [Typst](https://quarto.org/docs/output-formats/typst.html). This poster template is not required, but it may be a useful starting point.
