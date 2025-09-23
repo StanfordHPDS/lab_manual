@@ -331,6 +331,8 @@ For our purposes, a `README` should include *at least*:
 -   Details on how to run the code (@sec-running-code) in the project, such as installing dependencies, versions of R or Python for the project, etc.
 -   Any other necessary information to understand or use the project
 
+You can see examples of `README` files in our lab [GitHub organization](https://github.com/StanfordHPDS).
+
 ## Running Code {#sec-running-code}
 
 ### Use a Blank Slate
