@@ -28,7 +28,7 @@ The structure and content of a manuscript varies by discipline and audience.
 
 Example Lab publications by journal type: [statistics](https://onlinelibrary.wiley.com/doi/10.1111/biom.13863), [medical](https://jamanetwork.com/journals/jamapsychiatry/fullarticle/2765490?guestAccessKey=8e0d777c-ac53-47e9-9387-722b788058a2&utm_campaign=author_alert-jamanetwork&utm_content=author-author_engagement&utm_medium=email&utm_source=jps&utm_term=1m), [health policy](https://www.healthaffairs.org/doi/full/10.1377/hlthaff.2015.1026), [health services research](https://onlinelibrary.wiley.com/doi/10.1111/1475-6773.13046), [health economics](https://www.journals.uchicago.edu/doi/10.1086/716199), [epidemiology](https://academic.oup.com/aje/article/185/1/65/2662306), [computer science conference paper](https://proceedings.mlr.press/v180/chapfuwa22a.html).
 
-## Publication-ready data visualization
+## Publication-Ready Data Visualization
 
 Creating effective data visualizations for publication is a skill that takes practice. We recommend the following resources to help you create publication-ready figures:
 
