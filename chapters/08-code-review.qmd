@@ -206,6 +206,20 @@ Google's [entire guide on the speed of reviews](https://google.github.io/eng-pra
 * Prioritize reviews but not at the expense of your own focus time. Try to get to it when you have a break in your focused work.
 * Google recommends a single business day as a turnaround time. This goal is good, but it's not always possible in a research setting with competing priorities. Nevertheless, make code review an important part of your workday. Discuss the timeline for review with the author. Your pending review should not be blocking their progress.
 
+### Long-living branches
+
+Generally, you should avoid long-living branches. The longer a branch lives, the more likely it is to diverge from the main branch and cause conflicts. It is also a clue that too much work is happening on the branch, resulting in a difficult code review. However, sometimes the work done on a branch is complex and requires more time. If you are certain you need a long-living branch, do the following to mitigate the inherent problems involved with working on such a branch:
+
+- Merge the main branch into your branch frequently to keep it up to date (or [rebase](https://stackoverflow.com/a/41045625)). You can also use this strategy to propagate changes across multiple branches if you have more than one stream of work happening in parallel.
+
+    ```git
+    git checkout main
+    git pull
+    git checkout your-branch
+    git merge main
+    ```
+- Open the branch as a [draft PR](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/changing-the-stage-of-a-pull-request#converting-a-pull-request-to-a-draft). This makes it clear that the branch is not ready for review but also that it exists and is under active development.
+
 ### Approval vs. Request Changes
 
 When you review code, you can either approve it or request changes. Approve the code when it is in good shape and ready to merge. Request changes when there are issues that need to be addressed before merging.
