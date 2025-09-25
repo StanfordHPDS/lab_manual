@@ -15,13 +15,9 @@ book:
     - chapters/08-code-review.qmd
     - chapters/09-code-workflow-agreements.qmd
     - chapters/10-pre-flight-checklist.qmd
-    - chapters/99-references.qmd
 
 bibliography: references.bib
 
 format:
   html:
     theme: cosmo
-
-
-

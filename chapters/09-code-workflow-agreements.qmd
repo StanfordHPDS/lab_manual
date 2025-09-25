@@ -361,9 +361,31 @@ Note that this applies only to Jupyter Notebooks. While Quarto uses the Jupyter 
 Rendering a Quarto document always runs code from scratch by default.
 :::
 
+### Pipelines {#sec-pipelines}
+
+Pipeline tools are software that manage the execution of code. What's practical about this for research projects is that pipeline tools track the relationship between components in your project (meaning it knows which order to run things in automatically) and will only run those components when they are out of date (meaning you don't necessarily need to rerun your entire project because you updated one part of the code). They are also very handy for reproducing code, because they only require a command or two to run the entire pipeline.
+
+Pipeline tools are helpful for projects of any size, but they are particularly suited to complex or computationally intense projects.
+
+::: panel-tabset
+## R
+
+The best pipeline tool in R is the targets package. targets is a native R tool, making it easy to work with R objects. It works particularly well with Quarto and R Markdown, allowing you to reduce the amount of code in a report while managing it reproducibly.
+
+targets has [excellent documentation and tutorials](https://books.ropensci.org/targets/), so we point you there for guidance.
+
+It's also possible to use tools like Make (see the Python tab) among others, with R, although we recommend targets for projects that are mostly R. For projects that are a mix of languages, Make may be a better fit.
+
+## Python
+
+Python has several pipeline tools that are used in data engineering. For these larger data projects, these tools are sometimes called *orchestration* tools. That said, many of them are much more complex than is needed for a single research project.
+
+For research projects, we recommend [GNU Make](https://www.gnu.org/software/make/). Make is one of the oldest and most popular pipeline tools--over 40 years old. It shows its age in some ways, but it's also battle-tested. See [this tutorial](https://third-bit.com/py-rse/automate.html) for an example of running an analysis with Make.
+:::
+
 ### Provide Guidance on How to Run Your Code
 
-Your `README` should include guidance on how to run your code. For instance, if there is a command to run the entire project, include information about that process (this is usually related to pipeline-managed code as discussed in the optional @sec-pipelines). If you intend the user to run scripts in a particular order, describe how.
+Your `README` should include guidance on how to run your code. For instance, if there is a command to run the entire project, include information about that process (this is usually related to pipeline-managed code as discussed in @sec-pipelines). If you intend the user to run scripts in a particular order, describe how, but prefer using a pipeline tool to manage this instead.
 
 ## Lock your Package Versions {#sec-pkg-env}
 
@@ -472,28 +494,6 @@ See the [documentation](https://docs.astral.sh/uv/getting-started/features/) for
 ## Opt-in Workflows {#sec-opt-in}
 
 Opt-in workflows are things we do not require for a project but for which we offer guidance. Such workflows also allow the team to experiment with new things and see what works for projects and when.
-
-### Pipelines {#sec-pipelines}
-
-Pipeline tools are software that manage the execution of code. What's practical about this for research projects is that pipeline tools track the relationship between components in your project (meaning it knows which order to run things in automatically) and will only run those components when they are out of date (meaning you don't necessarily need to rerun your entire project because you updated one part of the code). They are also very handy for reproducing code, because they only require a command or two to run the entire pipeline.
-
-Pipeline tools are helpful for projects of any size, but they are particularly suited to complex or computationally intense projects.
-
-::: panel-tabset
-## R
-
-The best pipeline tool in R is the targets package. targets is a native R tool, making it easy to work with R objects. It works particularly well with Quarto and R Markdown, allowing you to reduce the amount of code in a report while managing it reproducibly.
-
-targets has [excellent documentation and tutorials](https://books.ropensci.org/targets/), so we point you there for guidance.
-
-It's also possible to use tools like Make (see the Python tab) among others , with R, although we recommend targets for projects that are mostly R. For projects that are a mix of languages, Make may be a better fit.
-
-## Python
-
-Python has several pipeline tools that are used in data engineering. For these larger data projects, these tools are sometimes called *orchestration* tools. That said, many of them are much more complex than is needed for a single research project.
-
-For research projects, we recommend [GNU Make](https://www.gnu.org/software/make/). Make is one of the oldest and most popular pipeline tools--over 40 years old. It shows its age in some ways, but it's also battle-tested. See [this tutorial](https://third-bit.com/py-rse/automate.html) for an example of running an analysis with Make.
-:::
 
 ### Testing {#sec-tests}
 
