@@ -219,10 +219,11 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#timeline-and-speed-of-review" id="toc-timeline-and-speed-of-review" class="nav-link" data-scroll-target="#timeline-and-speed-of-review"><span class="header-section-number">8.8</span> Timeline and Speed of Review</a>
   <ul class="collapse">
-  <li><a href="#approval-vs.-request-changes" id="toc-approval-vs.-request-changes" class="nav-link" data-scroll-target="#approval-vs.-request-changes"><span class="header-section-number">8.8.1</span> Approval vs.&nbsp;Request Changes</a></li>
-  <li><a href="#lgtm" id="toc-lgtm" class="nav-link" data-scroll-target="#lgtm"><span class="header-section-number">8.8.2</span> LGTM</a></li>
-  <li><a href="#merging" id="toc-merging" class="nav-link" data-scroll-target="#merging"><span class="header-section-number">8.8.3</span> Merging</a></li>
-  <li><a href="#giving-comments-and-responding-to-reviewee-comments" id="toc-giving-comments-and-responding-to-reviewee-comments" class="nav-link" data-scroll-target="#giving-comments-and-responding-to-reviewee-comments"><span class="header-section-number">8.8.4</span> Giving Comments and Responding to Reviewee Comments</a></li>
+  <li><a href="#long-living-branches" id="toc-long-living-branches" class="nav-link" data-scroll-target="#long-living-branches"><span class="header-section-number">8.8.1</span> Long-Living Branches</a></li>
+  <li><a href="#approval-vs.-request-changes" id="toc-approval-vs.-request-changes" class="nav-link" data-scroll-target="#approval-vs.-request-changes"><span class="header-section-number">8.8.2</span> Approval vs.&nbsp;Request Changes</a></li>
+  <li><a href="#lgtm" id="toc-lgtm" class="nav-link" data-scroll-target="#lgtm"><span class="header-section-number">8.8.3</span> LGTM</a></li>
+  <li><a href="#merging" id="toc-merging" class="nav-link" data-scroll-target="#merging"><span class="header-section-number">8.8.4</span> Merging</a></li>
+  <li><a href="#giving-comments-and-responding-to-reviewee-comments" id="toc-giving-comments-and-responding-to-reviewee-comments" class="nav-link" data-scroll-target="#giving-comments-and-responding-to-reviewee-comments"><span class="header-section-number">8.8.5</span> Giving Comments and Responding to Reviewee Comments</a></li>
   </ul></li>
   <li><a href="#appendix-code-review-tools-on-github" id="toc-appendix-code-review-tools-on-github" class="nav-link" data-scroll-target="#appendix-code-review-tools-on-github"><span class="header-section-number">8.9</span> Appendix: Code Review Tools on GitHub</a></li>
   </ul>
@@ -435,22 +436,34 @@ ul.task-list li input[type="checkbox"] {
 <li>Prioritize reviews but not at the expense of your own focus time. Try to get to it when you have a break in your focused work.</li>
 <li>Google recommends a single business day as a turnaround time. This goal is good, but it’s not always possible in a research setting with competing priorities. Nevertheless, make code review an important part of your workday. Discuss the timeline for review with the author. Your pending review should not be blocking their progress.</li>
 </ul>
-<section id="approval-vs.-request-changes" class="level3" data-number="8.8.1">
-<h3 data-number="8.8.1" class="anchored" data-anchor-id="approval-vs.-request-changes"><span class="header-section-number">8.8.1</span> Approval vs.&nbsp;Request Changes</h3>
+<section id="long-living-branches" class="level3" data-number="8.8.1">
+<h3 data-number="8.8.1" class="anchored" data-anchor-id="long-living-branches"><span class="header-section-number">8.8.1</span> Long-Living Branches</h3>
+<p>Generally, you should avoid long-living branches. The longer a branch lives, the more likely it is to diverge from the main branch and cause conflicts. It is also a clue that too much work is happening on the branch, resulting in a difficult code review. However, sometimes the work done on a branch is complex and requires more time. If you are certain you need a long-living branch, do the following to mitigate the inherent problems involved with working on such a branch:</p>
+<ul>
+<li><p>Merge the main branch into your branch frequently to keep it up to date (or <a href="https://stackoverflow.com/a/41045625">rebase</a>). You can also use this strategy to propagate changes across multiple branches if you have more than one stream of work happening in parallel.</p>
+<pre class="git"><code>git checkout main
+git pull
+git checkout your-branch
+git merge main</code></pre></li>
+<li><p>Open the branch as a <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/changing-the-stage-of-a-pull-request#converting-a-pull-request-to-a-draft">draft PR</a>. This makes it clear that the branch is not ready for review but also that it exists and is under active development.</p></li>
+</ul>
+</section>
+<section id="approval-vs.-request-changes" class="level3" data-number="8.8.2">
+<h3 data-number="8.8.2" class="anchored" data-anchor-id="approval-vs.-request-changes"><span class="header-section-number">8.8.2</span> Approval vs.&nbsp;Request Changes</h3>
 <p>When you review code, you can either approve it or request changes. Approve the code when it is in good shape and ready to merge. Request changes when there are issues that need to be addressed before merging.</p>
 <p>If you have minor suggestions that are not critical, you can still approve the code but leave comments for the author to consider. If you have significant issues, request changes.</p>
 <p>If you receive a code review with requested changes, address the comments and then request another review. You can ask the same reviewer or a different one. Iterate through this process until the pull request is approved.</p>
 </section>
-<section id="lgtm" class="level3" data-number="8.8.2">
-<h3 data-number="8.8.2" class="anchored" data-anchor-id="lgtm"><span class="header-section-number">8.8.2</span> LGTM</h3>
+<section id="lgtm" class="level3" data-number="8.8.3">
+<h3 data-number="8.8.3" class="anchored" data-anchor-id="lgtm"><span class="header-section-number">8.8.3</span> LGTM</h3>
 <p>The traditional stamp of approval is “LGTM” – “looks good to me!” However you say it, make a clear statement of approval, even if only through GitHub’s approval mechanism.</p>
 </section>
-<section id="merging" class="level3" data-number="8.8.3">
-<h3 data-number="8.8.3" class="anchored" data-anchor-id="merging"><span class="header-section-number">8.8.3</span> Merging</h3>
+<section id="merging" class="level3" data-number="8.8.4">
+<h3 data-number="8.8.4" class="anchored" data-anchor-id="merging"><span class="header-section-number">8.8.4</span> Merging</h3>
 <p>In many lab projects, the bulk of code changes will come from the project lead with someone else reviewing. In this case, the author should merge the code once it is approved. If you are making suggested changes to a project that is not yours, generally the project lead should review and merge your changes. Other patterns might be appropriate for your project, which you can discuss with collaborators.</p>
 </section>
-<section id="giving-comments-and-responding-to-reviewee-comments" class="level3" data-number="8.8.4">
-<h3 data-number="8.8.4" class="anchored" data-anchor-id="giving-comments-and-responding-to-reviewee-comments"><span class="header-section-number">8.8.4</span> Giving Comments and Responding to Reviewee Comments</h3>
+<section id="giving-comments-and-responding-to-reviewee-comments" class="level3" data-number="8.8.5">
+<h3 data-number="8.8.5" class="anchored" data-anchor-id="giving-comments-and-responding-to-reviewee-comments"><span class="header-section-number">8.8.5</span> Giving Comments and Responding to Reviewee Comments</h3>
 <p>Per Google’s <a href="https://google.github.io/eng-practices/review/reviewer/comments.html">How to write code review comments</a>:</p>
 <blockquote class="blockquote">
 <ul>
