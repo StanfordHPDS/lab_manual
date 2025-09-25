@@ -19,6 +19,7 @@ Note: For pre-prints, run through this checklist for both uploading to the pre-p
 
 - [ ] The code follows the team style guide. See @sec-code-style for details.
 - [ ] Query code from user interfaces, e.g., Redivis or BigQuery, are up to date in version control.
+- [ ] For any random processes such as simulation, a seed is set for reproducibility.
 - [ ] The code uses a package environment to lock packages. See @sec-pkg-env for details.
 - [ ] Manuscript is generatable via Quarto. See @sec-quarto for details.
 - [ ] Run the code one last time in a fresh environment, preferably on a different computer. See @sec-running-code for details.
