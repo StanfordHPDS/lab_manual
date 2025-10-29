@@ -519,12 +519,12 @@ There are several tools for testing data. Again, you can use simple logical stat
 
 ### Docker {#sec-docker}
 
-[Docker](https://docs.docker.com/get-started/overview/) is a tool for reproducing not just the software and packages used in an analysis but the entire computational environment. As it's got more of a learning curve, we do not currently require it for projects. However, consider it for projects where reproducibility is crucial or where you want to feel more confident that the code will be runable for many years. Docker can also be very helpful when you are working across computation environments or operating systems.
+[Docker](https://docs.docker.com/get-started/overview/) is a tool for reproducing not just the software and packages used in an analysis but the entire computational environment. As it's got more of a learning curve, we do not currently require it for projects. However, consider it for projects where reproducibility is crucial or where you want to feel more confident that the code will be runable for many years. Docker can also be very helpful when you are working across computational environments or operating systems.
 
 See our [training on containers](https://github.com/StanfordHPDS/training/tree/main/containers) for an introduction to Docker.
 
-Docker is a general tool that works with R, Python, and just about anything else you like to use. We have numerous images available specific to our workflows: https://hub.docker.com/u/stanfordhpds. See the GitHub repository that hosts these source files for these images for descriptions of the different flavors: https://github.com/StanfordHPDS/docker. Broadly:
-- `stanfordhpds/base` is the image all the others are based on. It comes with rig, uv, Quarto, git and gh, as well as a few other essential tools. Note that it does *not* have R or Python installed. Instead, you should use uv or rig to install Python or R, respectively, in the `Dockerfile`.
+Docker is a general tool that works with R, Python, and just about anything else you like to use. We have numerous images available specific to our workflows: https://hub.docker.com/u/stanfordhpds. See the GitHub repository that hosts the source files for these images for descriptions of the different flavors: https://github.com/StanfordHPDS/docker. Broadly:
+- `stanfordhpds/base` is the image all the others are based on. It comes with rig, uv, Quarto, git and gh, as well as a few additional essential tools. Note that it does *not* have R or Python installed. Instead, you should use uv or rig to install Python or R, respectively, in the `Dockerfile`.
 - `stanfordhpds/python-uv` and friends automatically detect the Python version and the virtual environment from a project's uv files
 - `stanfordhpds/r-renv` and friends automatically detect the R version and the virtual environment from a project's renv files
 - The `stanfordhpds/*-rstudio` flavors come with RStudio, which you can open in your browser
@@ -535,10 +535,10 @@ Docker is a general tool that works with R, Python, and just about anything else
 
 Docker is actually two things: the open-source tools we use to run containers and Docker, Inc., a company. Docker and docker-engine are open-source tools under an open-source license. These work natively on Linux, and so, for instance, when we use Docker on Nero, we are solely using the open-source, open-licensed tool.
 
-On Mac and Windows, however, Docker, Inc. offers Docker Desktop. Docker Desktop make it easy to use the open-source tools on Mac and Windows, among other things, but it also comes with a different set of [Terms of Service](https://www.docker.com/legal/docker-subscription-service-agreement/) that are more complex.
+On Mac and Windows, however, Docker, Inc. offers Docker Desktop. Docker Desktop makes it easy to use the open-source tools on Mac and Windows, among other things, but it also comes with a different set of [Terms of Service](https://www.docker.com/legal/docker-subscription-service-agreement/) that are more complex.
 
 If you would like to avoid agreeing to Docker Desktop's Terms of Service, you have two main options:
 
-1. Use [podman](https://podman.io/) (recommended). podman is entirely open-source and comes with a tool similar to Docker Desktop to run containers on Mac and Windows. podman is largely a drop-in replacement for docker and, in fact, you can add `alias docker=podman` to your shell profile to make podman run instead of docker for a given docker command. 
+1. Use [podman](https://podman.io/) (recommended). podman is entirely open source and comes with a tool similar to Docker Desktop to run containers on Mac and Windows. podman is largely a drop-in replacement for docker and, in fact, you can add `alias docker=podman` to your shell profile to make podman run instead of docker for a given docker command. 
 2. Run docker via a Linux virtual machine. See for instance [this set of options](https://unix.stackexchange.com/questions/667940/how-to-install-docker-engine-in-macos-without-docker-desktop). This option is more technically complex.
 :::
