@@ -769,19 +769,26 @@ Note
 </section>
 <section id="sec-docker" class="level3" data-number="9.10.2">
 <h3 data-number="9.10.2" class="anchored" data-anchor-id="sec-docker"><span class="header-section-number">9.10.2</span> Docker</h3>
-<p><a href="https://docs.docker.com/get-started/overview/">Docker</a> is a tool for reproducing not just the software and packages used in an analysis but the entire computational environment. As it’s got more of a learning curve, we do not currently require it for projects. However, consider it for projects where reproducibility is crucial or where you want to feel more confident that the code will be runable for many years.</p>
-<p>Docker is a general tool that works with R, Python, and just about anything else you like to use.</p>
-<p>Here’s a Docker tutorial for data analysis: <a href="https://github.com/RamiKrispin/sdsu-docker-workshop" class="uri">https://github.com/RamiKrispin/sdsu-docker-workshop</a>.</p>
-<p>If interest in Docker grows on the team, we’ll also explore creating support for Docker workflows, such as prebuilt images and Dockerfiles the team can use.</p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-9-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-1" role="tab" aria-controls="tabset-9-1" aria-selected="true" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-9-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-2" role="tab" aria-controls="tabset-9-2" aria-selected="false" href="">Python</a></li></ul>
-<div class="tab-content">
-<div id="tabset-9-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-9-1-tab">
-<p>Docker doesn’t require a different approach for R, but many existing images save time. Here is an overview of running R code in Docker: <a href="https://raps-with-r.dev/repro_cont.html" class="uri">https://raps-with-r.dev/repro_cont.html</a>.</p>
+<p><a href="https://docs.docker.com/get-started/overview/">Docker</a> is a tool for reproducing not just the software and packages used in an analysis but the entire computational environment. As it’s got more of a learning curve, we do not currently require it for projects. However, consider it for projects where reproducibility is crucial or where you want to feel more confident that the code will be runable for many years. Docker can also be very helpful when you are working across computational environments or operating systems.</p>
+<p>See our <a href="https://github.com/StanfordHPDS/training/tree/main/containers">training on containers</a> for an introduction to Docker.</p>
+<p>Docker is a general tool that works with R, Python, and just about anything else you like to use. We have numerous images available specific to our workflows: https://hub.docker.com/u/stanfordhpds. See the GitHub repository that hosts the source files for these images for descriptions of the different flavors: https://github.com/StanfordHPDS/docker. Broadly: - <code>stanfordhpds/base</code> is the image all the others are based on. It comes with rig, uv, Quarto, git and gh, as well as a few additional essential tools. Note that it does <em>not</em> have R or Python installed. Instead, you should use uv or rig to install Python or R, respectively, in the <code>Dockerfile</code>. - <code>stanfordhpds/python-uv</code> and friends automatically detect the Python version and the virtual environment from a project’s uv files - <code>stanfordhpds/r-renv</code> and friends automatically detect the R version and the virtual environment from a project’s renv files - The <code>stanfordhpds/*-rstudio</code> flavors come with RStudio, which you can open in your browser - The <code>stanfordhpds/*-ssh</code> flavors come with ssh active, which you can open remotely in VS Code or Positron</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<div id="tabset-9-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-9-2-tab">
-<p>Docker doesn’t require a different approach for Python, but some Python-specific tools will save time. Here’s a tutorial on setting up and using Docker with Python in VS Code: <a href="https://github.com/RamiKrispin/vscode-python" class="uri">https://github.com/RamiKrispin/vscode-python</a></p>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Alternatives to Docker Desktop
 </div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Docker is actually two things: the open-source tools we use to run containers and Docker, Inc., a company. Docker and docker-engine are open-source tools under an open-source license. These work natively on Linux, and so, for instance, when we use Docker on Nero, we are solely using the open-source, open-licensed tool.</p>
+<p>On Mac and Windows, however, Docker, Inc.&nbsp;offers Docker Desktop. Docker Desktop makes it easy to use the open-source tools on Mac and Windows, among other things, but it also comes with a different set of <a href="https://www.docker.com/legal/docker-subscription-service-agreement/">Terms of Service</a> that are more complex.</p>
+<p>If you would like to avoid agreeing to Docker Desktop’s Terms of Service, you have two main options:</p>
+<ol type="1">
+<li>Use <a href="https://podman.io/">podman</a> (recommended). podman is entirely open source and comes with a tool similar to Docker Desktop to run containers on Mac and Windows. podman is largely a drop-in replacement for docker and, in fact, you can add <code>alias docker=podman</code> to your shell profile to make podman run instead of docker for a given docker command.</li>
+<li>Run docker via a Linux virtual machine. See for instance <a href="https://unix.stackexchange.com/questions/667940/how-to-install-docker-engine-in-macos-without-docker-desktop">this set of options</a>. This option is more technically complex.</li>
+</ol>
 </div>
 </div>
 
