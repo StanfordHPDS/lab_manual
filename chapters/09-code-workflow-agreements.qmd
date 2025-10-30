@@ -524,6 +524,7 @@ There are several tools for testing data. Again, you can use simple logical stat
 See our [training on containers](https://github.com/StanfordHPDS/training/tree/main/containers) for an introduction to Docker.
 
 Docker is a general tool that works with R, Python, and just about anything else you like to use. We have numerous images available specific to our workflows: https://hub.docker.com/u/stanfordhpds. See the GitHub repository that hosts the source files for these images for descriptions of the different flavors: https://github.com/StanfordHPDS/docker. Broadly:
+
 - `stanfordhpds/base` is the image all the others are based on. It comes with rig, uv, Quarto, git and gh, as well as a few additional essential tools. Note that it does *not* have R or Python installed. Instead, you should use uv or rig to install Python or R, respectively, in the `Dockerfile`.
 - `stanfordhpds/python-uv` and friends automatically detect the Python version and the virtual environment from a project's uv files
 - `stanfordhpds/r-renv` and friends automatically detect the R version and the virtual environment from a project's renv files
