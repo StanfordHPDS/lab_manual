@@ -438,7 +438,7 @@ When you use renv, your project `README` should explain how to use it, e.g.
 renv::restore()
 ```
 
-One common problem in renv is that it keeps track of but does not manage the R version. If you need to switch between R versions, consider using [rig](https://github.com/r-lib/rig). Rig is not an R package but a separate software that lets you install and switch between R versions. On servers, [RStudio Workbench will let you change versions](https://support.posit.co/hc/en-us/articles/212364537-Using-multiple-versions-of-R-with-RStudio-Workbench-RStudio-Server-Pro), as well, provided that they are installed.
+One common problem in renv is that it keeps track of but does not manage the R version. If you need to switch between R versions, consider using [rig](https://github.com/r-lib/rig). Rig is not an R package but a separate software that lets you install and switch between R versions. On servers, [RStudio Workbench will let you change versions](https://docs.posit.co/ide/server-pro/user/rstudio-pro/guide/multiple-r-versions.html), as well, provided that they are installed.
 
 ## Python
 
@@ -540,6 +540,6 @@ On Mac and Windows, however, Docker, Inc. offers Docker Desktop. Docker Desktop 
 
 If you would like to avoid agreeing to Docker Desktop's Terms of Service, you have two main options:
 
-1. Use [podman](https://podman.io/) (recommended). podman is entirely open source and comes with a tool similar to Docker Desktop to run containers on Mac and Windows. podman is largely a drop-in replacement for docker and, in fact, you can add `alias docker=podman` to your shell profile to make podman run instead of docker for a given docker command. 
+1. Use [podman](https://podman.io/) (recommended). podman is entirely open source and comes with a tool similar to Docker Desktop to run containers on Mac and Windows. podman is largely a drop-in replacement for docker and, in fact, you can add `alias docker=podman` to your shell profile to make podman run instead of docker for a given docker command.
 2. Run docker via a Linux virtual machine. See for instance [this set of options](https://unix.stackexchange.com/questions/667940/how-to-install-docker-engine-in-macos-without-docker-desktop). This option is more technically complex.
 :::
