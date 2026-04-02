@@ -20,7 +20,11 @@ Grants that fund research in the Lab must be recognized in our manuscripts, typi
 
 ## Preprints
 
-We typically post preprints on [arXiv](https://arxiv.org/), [medRxiv](https://www.medrxiv.org/), or as an [NBER](https://www.nber.org/) Working Paper.
+We typically post preprints on [arXiv](https://arxiv.org/), [medRxiv](https://www.medrxiv.org/), or, occasionally, as an [NBER](https://www.nber.org/) Working Paper if with an economics collaborator.
+
+If you do not have an account on arXiv, Dr. Rose will need to [endorse you](https://info.arxiv.org/help/endorsement.html) before you can submit the preprint. On arxiv, we prefer the "arXiv.org perpetual, non-exclusive license." The arXiv categories we submit papers under have included: stat.ME, stat.AP, stat.ML, cs.CY, cs.LG, and econ.EM. Discuss with Dr. Rose the most appropriate categories for your paper prior to submission.
+
+
 
 ## On Least Publishable Units
 
