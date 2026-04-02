@@ -122,7 +122,7 @@ sqlfluff lint query.sql --dialect bigquery
 
 Naming things is an aspect of code style, but it merits a little extra attention because it is important to readability. In general, strive to make your code *self-documenting*, e.g., someone else should be able to read your code and understand what it's doing without talking to you about it. Self-documenting is easier said than done, so code clearness is an essential type of feedback in code review.
 
-Use descriptive names for objects in code, e.g., `model_results` rather than `out` or `kangaroo_data` rather than `k`.
+Use descriptive names for objects in code, e.g., `model_results` rather than `out` or `kangaroo_data` rather than `k`. However, do note prefer overly long names (e.g., three words is better than four or five).
 
 ::: callout-tip
 It's OK to use terse names where the meaning is generally understood, like `n` for counts or `i` and `j` for loop counters.
@@ -130,7 +130,7 @@ It's OK to use terse names where the meaning is generally understood, like `n` f
 
 Similarly, for functions, describe what the function is doing, preferably in verb format, e.g., `simulate_data()` is better than `f()` or `data_simulator()`
 
-For both R and Python, prefer `snake_case` over `camelCase` and other naming style conventions unless otherwise appropriate, e.g., the name of a class for object-oriented programming in Python.
+For both R and Python, prefer `snake_case` over `camelCase` and other naming style conventions unless otherwise appropriate, e.g., the name of a class for object-oriented programming in Python. 
 
 ## Project Organization
 

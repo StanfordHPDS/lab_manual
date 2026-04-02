@@ -16,7 +16,7 @@ The first step for new Lab members is to send Dr. Rose your GitHub username to b
 
 We are a documentation-based Lab. This means that we write things down early and often. The goal is to solidify ideas as well as bring clarity and formalism (i.e., with notation) to projects. Documentation also helps team members review work asynchronously and record institutional knowledge.
 
-We document meetings with agendas (see @sec-meeting-agendas), manage projects with Git and GitHub (see @sec-git-github), [create research plans](https://github.com/StanfordHPDS/research_plans/), and prefer reproducible documents using Quarto (see @sec-quarto).
+We document meetings with agendas (see @sec-meeting-agendas) and manage projects with Git and GitHub (see @sec-git-github). Trainees create a GitHub repository for each project in our [Lab GitHub organization](https://github.com/StanfordHPDS) with naming following conventions described in @sec-naming. The first step in the project repository is often to begin writing a [research plan](https://github.com/StanfordHPDS/research_plans/). We prefer reproducible documents using Quarto (see @sec-quarto) for our projects
 
 ## Recurring Meetings
 
@@ -32,13 +32,15 @@ Please also see @sec-meeting-agendas for details on recurring meeting agendas an
 
 ## Meeting Agendas & GitHub Repository Updates {#sec-meeting-agendas}
 
-Trainees must prepare an agenda prior to each recurring meeting with Dr. Rose. Create a google doc (invite Dr. Rose as editor) that you’ll add to in reverse chronological order for each meeting with the information below included. Update the google doc by 11AM *one business day* before our meeting. Push a commit to the project's GitHub repository at the same time, even if you plan to make further changes prior to the meeting. If additional changes are made to the repository ahead of the meeting, push a second commit. If you do not create an agenda, Dr. Rose may decide to cancel the meeting.
+Trainees must prepare an agenda prior to each recurring meeting with Dr. Rose. Create a google doc (invite Dr. Rose as editor) that you’ll add to in reverse chronological order for each meeting with the information below included. Update the google doc by 11AM *one business day* before our meeting. If you do not create an agenda, Dr. Rose may decide to cancel the meeting.
 
 **\[Meeting Date\]**
 
 -   What has been completed since previous meeting:
 -   Topics to discuss at the meeting:
 -   What will be completed by the next meeting:
+
+Push a commit to the project's GitHub repository at the same time you update your agenda document, even if you plan to make further changes prior to the meeting. If additional changes are made to the repository ahead of the meeting, push a second commit. 
 
 ## Individual Development Plans
 
