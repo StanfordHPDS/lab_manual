@@ -10,13 +10,13 @@ Dr. Rose keeps a page updated [on her website](http://drsherrirose.org/new-stude
 
 The first step for new Lab members is to send Dr. Rose your GitHub username to be added to the Lab’s GitHub organization account. Then, review our [internal onboarding documentation](https://github.com/StanfordHPDS/onboarding) for new Lab members.
 
-*Rotation students do not need to complete these steps.*
+*Rotation students do not need to complete all of these steps.*
 
 ## Documentation
 
 We are a documentation-based Lab. This means that we write things down early and often. The goal is to solidify ideas as well as bring clarity and formalism (i.e., with notation) to projects. Documentation also helps team members review work asynchronously and record institutional knowledge.
 
-We document meetings with agendas (see @sec-meeting-agendas) and manage projects with Git and GitHub (see @sec-git-github). Trainees create a GitHub repository for each project in our [Lab GitHub organization](https://github.com/StanfordHPDS) with naming following conventions described in @sec-naming. The first step in the project repository is often to begin writing a [research plan](https://github.com/StanfordHPDS/research_plans/). We prefer reproducible documents using Quarto (see @sec-quarto) for our projects
+We document meetings with agendas (see @sec-meeting-agendas) and manage projects with Git and GitHub (see @sec-git-github). Trainees create a GitHub repository for each project in our [Lab GitHub organization](https://github.com/StanfordHPDS) with naming following conventions described in @sec-naming. The first step in the project repository is often to begin writing a [research plan](https://github.com/StanfordHPDS/research_plans/). We prefer reproducible documents using Quarto (see @sec-quarto) for our projects.
 
 ## Recurring Meetings
 

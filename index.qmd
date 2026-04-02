@@ -2,6 +2,6 @@
 
 The [Health Policy Data Science Lab](http://healthpolicydatascience.org/) at Stanford is a group of interdisciplinary researchers who develop and apply quantitative methods to solve problems in health policy, leveraging techniques from statistics, computer science, economics, epidemiology, and decision science. The faculty PI at Stanford is [Professor Sherri Rose](https://drsherrirose.org/).
 
-This manual will evolve over time to incorporate additional contributions from Lab members and collaborators. Contributors include [Malcolm Barrett](https://malco.io/), [Marika Cusick](https://marikacusick.com/), and [Sherri Rose](https://drsherrirose.org/). 
+This manual evolves over time to incorporate additional contributions from Lab members. Contributors include [Malcolm Barrett](https://malco.io/), [Marika Cusick](https://marikacusick.com/), and [Sherri Rose](https://drsherrirose.org/). 
 
 This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
