@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Stanford Health Policy Data Science",
     "section": "",
-    "text": "Lab Manual\nThe Health Policy Data Science Lab at Stanford is a group of interdisciplinary researchers who develop and apply quantitative methods to solve problems in health policy, leveraging techniques from statistics, computer science, economics, epidemiology, and decision science. The faculty PI at Stanford is Professor Sherri Rose.\nThis manual will evolve over time to incorporate additional contributions from Lab members and collaborators. Contributors include Malcolm Barrett, Marika Cusick, and Sherri Rose.\nThis work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.",
+    "text": "Lab Manual\nThe Health Policy Data Science Lab at Stanford is a group of interdisciplinary researchers who develop and apply quantitative methods to solve problems in health policy, leveraging techniques from statistics, computer science, economics, epidemiology, and decision science. The faculty PI at Stanford is Professor Sherri Rose.\nThis manual evolves over time to incorporate additional contributions from Lab members. Contributors include Malcolm Barrett, Marika Cusick, and Sherri Rose.\nThis work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.",
     "crumbs": [
       "Lab Manual"
     ]
@@ -64,7 +64,7 @@
     "href": "chapters/02-policies.html#onboarding",
     "title": "2  General Policies",
     "section": "2.2 Onboarding",
-    "text": "2.2 Onboarding\nThe first step for new Lab members is to send Dr. Rose your GitHub username to be added to the Lab’s GitHub organization account. Then, review our internal onboarding documentation for new Lab members.\nRotation students do not need to complete these steps.",
+    "text": "2.2 Onboarding\nThe first step for new Lab members is to send Dr. Rose your GitHub username to be added to the Lab’s GitHub organization account. Then, review our internal onboarding documentation for new Lab members.\nRotation students do not need to complete all of these steps.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>General Policies</span>"
     ]
@@ -74,7 +74,7 @@
     "href": "chapters/02-policies.html#documentation",
     "title": "2  General Policies",
     "section": "2.3 Documentation",
-    "text": "2.3 Documentation\nWe are a documentation-based Lab. This means that we write things down early and often. The goal is to solidify ideas as well as bring clarity and formalism (i.e., with notation) to projects. Documentation also helps team members review work asynchronously and record institutional knowledge.\nWe document meetings with agendas (see Section 2.5) and manage projects with Git and GitHub (see Section 9.6). Trainees create a GitHub repository for each project in our Lab GitHub organization with naming following conventions described in Section 9.3. The first step in the project repository is often to begin writing a research plan. We prefer reproducible documents using Quarto (see Section 9.5) for our projects",
+    "text": "2.3 Documentation\nWe are a documentation-based Lab. This means that we write things down early and often. The goal is to solidify ideas as well as bring clarity and formalism (i.e., with notation) to projects. Documentation also helps team members review work asynchronously and record institutional knowledge.\nWe document meetings with agendas (see Section 2.5) and manage projects with Git and GitHub (see Section 9.6). Trainees create a GitHub repository for each project in our Lab GitHub organization with naming following conventions described in Section 9.3. The first step in the project repository is often to begin writing a research plan. We prefer reproducible documents using Quarto (see Section 9.5) for our projects.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>General Policies</span>"
     ]
