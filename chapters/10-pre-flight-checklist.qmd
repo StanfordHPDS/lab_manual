@@ -26,7 +26,7 @@ Note: For pre-prints, run through this checklist for both uploading to the pre-p
 
 ### Submission
 
-- [ ] Follow Data Use Agreement requirements regarding project review from a third party prior to submission.
+- [ ] Follow Data Use Agreement requirements regarding project review from a third party prior to submission. Currently, all manuscripts using PHS data must be emailed to support@stanfordphs.freshdesk.com for review before posted as a preprint or submission to a conference/journal.
 - [ ] Check if journal has specific code and reproducibility guidelines.
 - [ ] Check figures and tables for correctness.
 - [ ] Check <https://www.zotero.org/styles> for a citation style file for the journal of interest. Include the file in your Quarto metadata and in the repository.
