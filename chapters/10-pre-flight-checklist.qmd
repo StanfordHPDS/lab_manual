@@ -33,6 +33,7 @@ Note: For pre-prints, run through this checklist for both uploading to the pre-p
 - [ ] For sensitive data, confirm small cell definition for the project. Check that no small cells are included in tables or figures.  See for @sec-data for details.
 - [ ] Use a GitHub release for the submission version. See @sec-gh-release for details.
 - [ ] If there are any research outputs other than a manuscript, such as a (simulated/synthetic) data, register them for a DOI at a service like OSF or Zenodo.
+- [ ] Check that the appropriate funding sources have been acknowledged in the publication. Ask Dr. Rose to confirm this section is correct.
 
 ### Acceptance
 
