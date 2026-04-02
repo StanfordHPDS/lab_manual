@@ -31,6 +31,10 @@ We have an experimental Lab poster template for Quarto located in our [GitHub re
 
 A poster printing service local to Stanford is [Biotech Productions](https://www.biotech-productions.com/), which Lab members have used in the past with good experiences.
 
+## Funding
+
+Make certain that the appropriate funding sources have been acknowledged in your talk slides or poster. Ask Dr. Rose to confirm this information is correct. 
+
 ## Conferences by Field {#sec-conferences-field}
 
 We include below a noncomprehensive list of conferences that may be of interest to Lab members.

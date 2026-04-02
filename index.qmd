@@ -4,6 +4,4 @@ The [Health Policy Data Science Lab](http://healthpolicydatascience.org/) at Sta
 
 This manual will evolve over time to incorporate additional contributions from Lab members and collaborators. Contributors include [Malcolm Barrett](https://malco.io/), [Marika Cusick](https://marikacusick.com/), and [Sherri Rose](https://drsherrirose.org/). 
 
-Feel free to draw from this manual (and please cite it if you do)! We drew inspiration from the lab manuals of our colleagues, including [Jade Benjamin-Chung](https://jadebc.github.io/lab-manual/index.html) and [Russ Poldrack](https://poldracklab.org/labguide/).
-
 This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
