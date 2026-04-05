@@ -1,0 +1,33 @@
+# Tables and Figures {#sec-tables-figures}
+
+## Style Guide
+
+### Figures
+
+### Tables
+
+## Examples
+
+### Figures
+
+#### Slope Charts
+
+#### Small Multiples
+
+Lines
+
+points
+
+#### Forest plots
+
+### Tables
+
+#### Descriptive analysis
+
+#### Comparison of methods 1
+
+#### Comparison of methods 2
+
+## A note on plotting in Python
+
+
