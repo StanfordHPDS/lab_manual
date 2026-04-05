@@ -1,33 +1,1437 @@
 # Tables and Figures {#sec-tables-figures}
 
+```{r}
+#| include: false
+reticulate::use_virtualenv(here::here(".venv"))
+```
+
+Tables and figures are crucial elements of scientific communication, whether in a published journal article, presentation slides, or an internal report. In this section, we offer guidance on style, common plots and tables found in the Lab, and suggestions for further reading.
+
+Where appropriate, we also include code in several frameworks. We do not currently require to lab analyses use any particular software for plotting or tables, but we include some common ones. For figures, we include guidance on four plotting packages: [ggplot2](https://ggplot2.tidyverse.org/), [seaborn](https://seaborn.pydata.org/), [plotnine](https://plotnine.org/), and [matplotlib](https://matplotlib.org/). R users who prefer Base R graphics may also be interested in [tinyplot](https://grantmcdermott.com/tinyplot/) for publication-quality figures, although we do not include code here. For tables, we include guidance on [gt](https://gt.rstudio.com/) and [Great Tables](https://github.com/posit-dev/great-tables). R users may also be interested in [tinytable](https://vincentarelbundock.github.io/tinytable/) or [flextable](https://davidgohel.github.io/flextable/). See also [gtsummary](https://www.danieldsjoberg.com/gtsummary/) and [modelsummary](https://modelsummary.com/) for creating common types of analytic tables. Pandas users may be interested in its [native table creation](https://pandas.pydata.org/docs/user_guide/style.html) API.
+
 ## Style Guide
 
-### Figures
+Below we present the Lab style guide for figures and tables, including an implementation guide and followed by some examples inspired by Lab research. The style guides are intentionally minimal; they represent only the basic requirements for presenting results, whether internally or externally. For internal results, it is sometimes reasonable that the figures or tables are not polished or are incomplete in some way; however, they should still follow these minimal rules for understandability and consistency.
+
 
 ### Tables
 
-## Examples
+- The title of tables should be editable within the Quarto document via `tbl-cap`; the title should *not* be included via the table making API directly.
+- Tables must contain all information to be understandable without manuscript text.
+- Avoid many gridlines; prefer no exterior lines except top and bottom, a horizontal line under column labels, and few to no vertical lines. When in doubt, consider how the lines help the reader understand the table.
+- Column labels should be clear, compact, and non-repetitious; this may involve multi-column formatting, such as a spanner label.
+- Define abbreviations even if already defined in the text.
+- Use sensible and consistent significant digits.
+- What a number is (e.g., mean, percent) needs to be defined, but not repetitiously; the same applies to ranges (e.g., confidence interval).
+- "Note" text should appear under table (e.g., with abbreviation definitions and other essential information), although this may depend on journal styling requirements.
+- Tables of key results should be designed, generally, such that they can fit on a single page in a standard size font. If the table has too many columns or rows, it likely needs to be truncated to communicate essential information with additional results moved to the appendix.
+- Do not prefer small tables, although there may be some exceptions. If there are only 2-10 numbers, this may not need to be a table; the numbers should simply be cited in-text.
+- Generally, do not prefer tables in introduction, data, or discussion sections of papers. Typically, tables in technical original research papers are found in results sections. Summary statistics _are_ results and do not belong in descriptions of the data.
+
+#### Implementing the table style guide
+
+::: panel-tabset
+## gt (R)
+
+**Titles.** Set table titles via the `tbl-cap` chunk option rather than `tab_header()`. This keeps titles in the Quarto source and renders them as proper table captions.
+
+**Borders and gridlines.** Quarto's Bootstrap theme applies its own border styles to HTML tables, which can override gt's styling. To prevent this, add `#| html-table-processing: none` to the chunk options. With that in place, use `tab_options()` to control borders explicitly. gt's defaults already include a top rule, bottom rule, and line under column headers. To match the style guide (no vertical lines, no horizontal lines between data rows, a line under column labels), set these options:
+
+- `table_body.hlines.width = px(0)`: removes horizontal lines between data rows
+- `table_body.vlines.width = px(0)`: removes vertical lines between data columns
+- `column_labels.vlines.width = px(0)`: removes vertical lines in the header row
+- `column_labels.border.bottom.width = px(1)`: adds a line under the column labels
+- `stub.border.width = px(0)`: removes the vertical line to the right of row labels
+
+Use `px(0)` rather than `style = "hidden"`, because CSS `hidden` takes precedence in collapsed borders and can suppress adjacent borders you want to keep. This preserves the spanner borders, the top and bottom rules, and the line under column labels. For further control, `tab_style()` with `cell_borders()` can add or remove lines at specific locations such as `cells_column_spanners()`, `cells_column_labels()`, or `cells_body()`.
+
+**Column labels.** Use `cols_label()` to replace column names with human-readable labels. Use `tab_spanner()` to group related columns under a shared header; this reduces repetition. For example, you can label two columns as "Length (mm)" and "Depth (mm)" and group them under a "Bill" spanner, rather than using "Bill length (mm)" and "Bill depth (mm)" as column labels. For measurement units, `cols_units()` can automatically format superscripts and subscripts (e.g., "m/s²").
+
+**Footnotes and source notes.** Use `tab_source_note()` to place information below the table. This is where abbreviation definitions belong (e.g., "N = number of observations"), along with descriptions of what numbers represent (e.g., "Values are means") and other essential context. Use `tab_footnote()` with a `locations` argument to attach a footnote marker to a specific column label, spanner, or cell.
+
+**Significant digits and formatting.** Use `fmt_number(decimals = ...)` to format columns, grouping columns that share the same precision into a single call. For example, `fmt_number(columns = c(bill_length, bill_depth, flipper_length), decimals = 1)` formats all millimeter columns at once, while a separate call handles grams with `decimals = 0`. Use different decimal places for different measurement types. `fmt_integer()` formats whole numbers. Other formatters help communicate what a number represents: `fmt_percent()` for proportions, `fmt_currency()` for monetary values, and `fmt_scientific()` for very large or small numbers. See the [full list of formatters](https://gt.rstudio.com/reference/index.html#formatting-column-data) for more options.
+
+```{r}
+#| tbl-cap: Mean penguin measurements by species
+#| html-table-processing: none
+library(gt)
+
+penguins <- palmerpenguins::penguins |>
+  tidyr::drop_na()
+
+penguins |>
+  dplyr::summarize(
+    .by = species,
+    bill_length = mean(bill_length_mm),
+    bill_depth = mean(bill_depth_mm),
+    flipper_length = mean(flipper_length_mm),
+    body_mass = mean(body_mass_g),
+    n = dplyr::n()
+  ) |>
+  gt(rowname_col = "species") |>
+  # Human-readable column labels
+  cols_label(
+    bill_length = "Length (mm)",
+    bill_depth = "Depth (mm)",
+    flipper_length = "Length (mm)",
+    body_mass = "Mass (g)",
+    n = "N"
+  ) |>
+  # Group related columns under shared headers
+  tab_spanner(label = "Bill", columns = c(bill_length, bill_depth)) |>
+  tab_spanner(label = "Flipper", columns = flipper_length) |>
+  tab_spanner(label = "Body", columns = body_mass) |>
+  # Group columns with the same precision; use different decimals per type
+  fmt_number(
+    columns = c(bill_length, bill_depth, flipper_length),
+    decimals = 1
+  ) |>
+  fmt_number(columns = body_mass, decimals = 0) |>
+  # Define abbreviations and what the numbers represent
+  tab_source_note("Values are means. N = number of observations.") |>
+  # Remove body gridlines and vertical lines
+  tab_options(
+    table_body.hlines.width = px(0),
+    table_body.vlines.width = px(0),
+    column_labels.vlines.width = px(0),
+    column_labels.border.bottom.width = px(1),
+    stub.border.width = px(0)
+  )
+```
+
+## Great Tables (Python)
+
+**Titles.** Use the `tbl-cap` chunk option, not `.tab_header()`.
+
+**Borders.** As with gt, add `#| html-table-processing: none` to the chunk options to prevent Quarto's Bootstrap theme from overriding table borders. Great Tables renders tables with minimal default borders. For explicit control over lines, use `.tab_options()`. To match the style guide (no vertical lines, no horizontal lines between data rows, a line under column labels), set these options:
+
+- `table_body_hlines_width="0px"`: removes horizontal lines between data rows
+- `table_body_vlines_width="0px"`: removes vertical lines between data columns
+- `column_labels_vlines_width="0px"`: removes vertical lines in the header row
+- `column_labels_border_bottom_width="1px"`: adds a line under the column labels
+- `stub_border_width="0px"`: removes the vertical line to the right of row labels
+
+**Column labels.** Use `.cols_label()` to replace column names with human-readable labels. Use `.tab_spanner()` to group related columns under a shared header. As with gt, this reduces repetition by letting you use short column labels (e.g., "Length (mm)") under descriptive spanners (e.g., "Bill", "Flipper").
+
+**Footnotes.** Use `.tab_source_note()` to place abbreviation definitions, descriptions of what numbers represent, and other essential context below the table. Use `.tab_footnote()` with a `locations` argument to attach footnote markers to specific cells or headers.
+
+**Significant digits and formatting.** Use `.fmt_number(decimals=...)` to format columns, grouping columns that share the same precision into a single call. For example, `.fmt_number(columns=["bill_length", "bill_depth", "flipper_length"], decimals=1)` formats all millimeter columns at once, while a separate call handles grams with `decimals=0`. Use different decimal places for different measurement types. `.fmt_integer()` is a convenience for whole numbers. Other formatters help communicate what a number represents: `.fmt_percent()` for proportions, `.fmt_currency()` for monetary values, and `.fmt_scientific()` for very large or small numbers. See the [full list of formatters](https://posit-dev.github.io/great-tables/reference/#formatting-column-data) for more options.
+
+```{python}
+# | tbl-cap: Mean penguin measurements by species
+# | html-table-processing: none
+import polars as pl
+from great_tables import GT
+from palmerpenguins import load_penguins
+
+penguins = load_penguins().dropna()
+penguins_pl = pl.from_pandas(penguins)
+
+penguin_summary = (
+    penguins_pl.group_by("species")
+    .agg(
+        pl.col("bill_length_mm").mean().alias("bill_length"),
+        pl.col("bill_depth_mm").mean().alias("bill_depth"),
+        pl.col("flipper_length_mm").mean().alias("flipper_length"),
+        pl.col("body_mass_g").mean().alias("body_mass"),
+        pl.len().alias("n"),
+    )
+    .sort("species")
+)
+
+(
+    GT(penguin_summary, rowname_col="species")
+    # Human-readable column labels
+    .cols_label(
+        bill_length="Length (mm)",
+        bill_depth="Depth (mm)",
+        flipper_length="Length (mm)",
+        body_mass="Mass (g)",
+        n="N",
+    )
+    # Group related columns under shared headers
+    .tab_spanner(label="Bill", columns=["bill_length", "bill_depth"])
+    .tab_spanner(label="Flipper", columns=["flipper_length"])
+    .tab_spanner(label="Body", columns=["body_mass"])
+    # Group columns with the same precision; use different decimals per type
+    .fmt_number(columns=["bill_length", "bill_depth", "flipper_length"], decimals=1)
+    .fmt_number(columns="body_mass", decimals=0)
+    # Define abbreviations and what the numbers represent
+    .tab_source_note("Values are means. N = number of observations.")
+    # Remove body gridlines and vertical lines; add line under column labels
+    .tab_options(
+        table_body_hlines_width="0px",
+        table_body_vlines_width="0px",
+        column_labels_vlines_width="0px",
+        column_labels_border_bottom_width="1px",
+        stub_border_width="0px",
+    )
+)
+```
+:::
+
 
 ### Figures
 
-#### Slope Charts
+- The title of figures should be editable within the Quarto document via `fig-cap`; the title should *not* be included via the plotting API directly on the plot.
+- Use consistent sentence or title case for titles, axes, and labels, not a mixture.
+- Figures should be understandable without the text.
+- Use minimal abbreviations; abbreviations need to be defined even if already defined in the text, either in the figure caption or in other annotations on the plot.
+- Axis label size should be large enough to read in an article format. When in doubt, view the figure in the rendered document rather than in your IDE.
+- Axes should use words, not variable names, e.g., "Systlolic blood pressure" and not `sbp_1`
+- Axes should have units defined, e.g. "Systlolic blood pressure (mmHG)"
+- Multi-panel figures do not typically need duplicate legends in more than one panel; prefer a single legend.
+- Prefer minimal use of gridlines; sometimes, no grid lines or gridlines in only one dimension (e.g. horizontal) is the most appropriate choice. When in doubt, think about whether the lines help your reader understand the plot.
+- Use sensible and consistent significant digits.
 
-#### Small Multiples
+#### Implementing the figure style guide
 
-Lines
+::: panel-tabset
+## ggplot2 (R)
 
-points
+**Titles.** Set figure titles via the `fig-cap` chunk option rather than `labs(title = ...)`. This keeps titles editable in the Quarto source and renders them as proper figure captions.
 
-#### Forest plots
+**Themes and base size.** Starting from a minimal theme gives you defaults close to the style guide. Increasing `base_size` (e.g., `base_size = 14`) ensures axis labels and legends are large enough to read in article format. Good starting points are the following themes:
+
+- `theme_minimal(base_size = 14)` with `theme(panel.grid.minor = element_blank())`: no panel border, light gridlines, major gridlines only
+- `theme_bw(base_size = 14)` with `theme(panel.grid.minor = element_blank())`: panel border, major gridlines only
+- `theme_classic(base_size = 14)`: no gridlines, axis lines only
+
+**Labels.** Use `labs()` to set human-readable axis labels with units in parentheses, e.g., `labs(x = "Flipper length (mm)", y = "Body mass (g)")`. Use consistent sentence case, and do not leave the default variable names as labels if they are not in accordance with these guidelines.
+
+**Gridlines.** Control gridlines via `theme()`. The key elements are `panel.grid.minor`, `panel.grid.major`, `panel.grid.major.x`, and `panel.grid.major.y`; set any of these to `element_blank()` to remove them. For a more academic style, you can change gridline color and weight with `element_line()`, e.g., `theme(panel.grid.major = element_line(color = "black", linewidth = 0.2))`.
+
+**Multi-panel figures.** `facet_wrap()` and `facet_grid()` produce a single shared legend by default, avoiding duplicate legends across panels. When producing custom multiple plots with patchwork, use `plot_layout(guides = 'collect')`. See the [documentation on controlling guides](https://patchwork.data-imaginist.com/articles/guides/layout.html#controlling-guides).
+
+**Significant digits.** Use `scale_x_continuous()` or `scale_y_continuous()` with `labels` from the scales package, e.g., `scales::label_comma()` or `scales::label_number(accuracy = 0.1)`.
+
+**Custom colors.** Use `scale_color_manual(values = ...)` or `scale_fill_manual(values = ...)` with a named vector of hex colors.
+
+```{r}
+#| fig-cap: Relationship between flipper length and body mass in penguins
+library(ggplot2)
+species_colors <- c(Adelie = "#1b9e77", Chinstrap = "#d95f02", Gentoo = "#7570b3")
+
+ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +
+  geom_point() +
+  # Map species to specific hex colors
+  scale_color_manual(values = species_colors) +
+  # Format axis labels with commas for readability
+  scale_y_continuous(labels = scales::label_comma()) +
+  # Human-readable labels with units
+  labs(x = "Flipper length (mm)", y = "Body mass (g)", color = "Species") +
+  # base_size = 14 for article-readable text; remove minor gridlines
+  theme_minimal(base_size = 14) +
+  theme(panel.grid.minor = element_blank())
+```
+
+## seaborn (Python)
+
+**Titles.** Set figure titles via the `fig-cap` chunk option rather than `ax.set_title()`. This keeps titles editable in the Quarto source and renders them as proper figure captions.
+
+**Theme and font size.** `sns.set_theme(style=..., font_scale=...)` sets global defaults. Use `style="ticks"` for a minimal look with tick marks and no background grid, or `style="whitegrid"` for light gridlines on a white background. Increase `font_scale` (e.g., `1.2`) for readability. The `"ticks"` style pairs well with `ax.grid(True, linewidth=0.3, alpha=0.5)` for subtle gridlines.
+
+**Labels.** Always set axis labels explicitly with `ax.set(xlabel=..., ylabel=...)`, since seaborn defaults to the column name.
+
+**Gridlines and spines.** `sns.despine()` removes the top and right spines. For finer control, use `ax.grid(axis=..., linewidth=...)` and `ax.spines[...].set_visible(False)`. For a more academic style with black gridlines, use `ax.grid(True, color="black", linewidth=0.2, alpha=0.5)`.
+
+**Multi-panel figures.** Use `sns.FacetGrid()` with `hue` for color and `g.add_legend()` for a single shared legend.
+
+**Significant digits.** If needed, use `matplotlib.ticker.FormatStrFormatter` or `FuncFormatter` on `ax.xaxis` or `ax.yaxis`.
+
+**Custom colors.** Pass a dictionary mapping category names to hex codes via `palette=`.
+
+```{python}
+#| fig-cap: Relationship between flipper length and body mass in penguins
+import seaborn as sns
+import matplotlib.pyplot as plt
+palette = {"Adelie": "#1b9e77", "Chinstrap": "#d95f02", "Gentoo": "#7570b3"}
+
+# "ticks" style for minimal look; font_scale for readability
+sns.set_theme(style="ticks", font_scale=1.2)
+fig, ax = plt.subplots(layout="constrained")
+sns.scatterplot(data=penguins, x="flipper_length_mm", y="body_mass_g", hue="species", palette=palette, ax=ax)
+# Always set labels explicitly; seaborn defaults to column names
+ax.set(xlabel="Flipper length (mm)", ylabel="Body mass (g)")
+# Subtle gridlines; despine removes top and right spines
+ax.grid(True, linewidth=0.3, alpha=0.5)
+sns.despine()
+plt.show()
+```
+
+## plotnine (Python)
+
+**Titles.** Set figure titles via the `fig-cap` chunk option rather than `labs(title=...)`. This keeps titles editable in the Quarto source and renders them as proper figure captions.
+
+**Themes and base size.** plotnine provides several complete themes, all of which accept a `base_size` parameter. Increasing `base_size` ensures text is readable in article format. Good starting points:
+
+- `theme_minimal(base_size=14)`: no panel border, light gridlines
+- `theme_bw(base_size=14)` with `theme(panel_grid_minor=element_blank())`: panel border, major gridlines only
+- `theme_classic(base_size=14)`: no gridlines, axis lines only
+
+You can set a default for all plots with `theme_set(theme_minimal(base_size=14))`.
+
+**Labels.** Use `labs()` to set human-readable axis labels with units, e.g., `labs(x="Flipper length (mm)", y="Body mass (g)")`. Use consistent sentence case. Column references in `aes()` are strings: `aes(x="flipper_length_mm")`.
+
+**Gridlines.** Control gridlines via `theme()`. The key elements are `panel_grid_minor`, `panel_grid_major`, `panel_grid_major_x`, and `panel_grid_major_y`; set any of these to `element_blank()` to remove them. Color values in `element_line()` must be hex codes or named CSS colors (e.g., `"#999999"`, not `"grey60"`). For a more academic style with black gridlines, use `theme(panel_grid_major=element_line(color="black", size=0.2))`.
+
+**Multi-panel figures.** `facet_wrap("~var")` and `facet_grid("row_var ~ col_var")` produce a single shared legend by default. Use `scales="free"`, `"free_x"`, or `"free_y"` to allow axes to vary across panels.
+
+**Significant digits.** Use `scale_y_continuous(labels=...)` with a callable that formats tick values, e.g., `labels=lambda l: [f"{v:,.0f}" for v in l]`.
+
+**Custom colors.** Use `scale_color_manual(values=...)` with a dictionary mapping category names to hex codes.
+
+**Figure size.** When using the knitr engine, Quarto's `fig-width` and `fig-height` chunk options are not passed to plotnine. Set the figure size directly in `theme()` with `figure_size=(width, height)` in inches. Quarto's default is 7 by 5 inches, so `theme(figure_size=(7, 5))` matches the default output size. Quarto's settings are passed directly to plotnine when using the Jupyter engine.
+
+**Display.** Call `.show()` at the end of a plotnine expression for Quarto to capture the output.
+
+```{python}
+#| fig-cap: Relationship between flipper length and body mass in penguins
+from plotnine import *
+
+(
+    ggplot(penguins, aes(x="flipper_length_mm", y="body_mass_g", color="species"))
+    + geom_point()
+    # Map species to specific hex colors
+    + scale_color_manual(values=palette)
+    # Format y-axis labels with commas
+    + scale_y_continuous(labels=lambda l: [f"{v:,.0f}" for v in l])
+    # Human-readable labels with units
+    + labs(x="Flipper length (mm)", y="Body mass (g)", color="Species")
+    # base_size=14 for readability; remove minor gridlines
+    + theme_minimal(base_size=14)
+    + theme(panel_grid_minor=element_blank())
+).show()
+```
+
+## matplotlib (Python)
+
+**Titles.** Set figure titles via the `fig-cap` chunk option rather than `ax.set_title()`. This keeps titles editable in the Quarto source and renders them as proper figure captions.
+
+**The figure, axes interface.** Always use `fig, ax = plt.subplots(layout="constrained")` and call methods on `ax`. The `layout="constrained"` parameter prevents labels, legends, and colorbars from overlapping. Use `ax.set()` to batch-set labels, titles, and limits in one call: `ax.set(xlabel="X", ylabel="Y")`.
+
+**Font sizes.** Set a global default with `mpl.rcParams["font.size"] = 14` at the top of your script, or use `mpl.rc_context({"font.size": 14})` as a context manager for temporary overrides. Use `ax.tick_params(labelsize=...)` for tick labels specifically.
+
+**Labels.** `ax.set(xlabel=..., ylabel=...)` sets both axis labels at once. matplotlib has no default axis labels, so you must always set them explicitly.
+
+**Gridlines and spines.** Use `ax.grid(True, ...)` to add gridlines and `ax.spines[["top", "right"]].set_visible(False)` to remove spines. For no gridlines, omit the `ax.grid()` call entirely. For a more academic style with black gridlines, use `ax.grid(True, color="black", linewidth=0.2, alpha=0.5)`.
+
+**Multi-panel figures.** Use `fig, axes = plt.subplots(1, n, layout="constrained")`. For a shared legend, collect handles from one subplot and call `fig.legend()` at the figure level rather than `ax.legend()` on each subplot. The `loc` parameter controls placement, e.g., `fig.legend(loc="outside right upper")`.
+
+**Significant digits.** For explicit control, use a string format on the axis: `ax.yaxis.set_major_formatter("{x:.1f}")`.
+
+**Custom colors.** Loop over categories and pass colors explicitly; matplotlib does not have a built-in palette mapping like seaborn.
+
+```{python}
+#| fig-cap: Relationship between flipper length and body mass in penguins
+import matplotlib as mpl
+
+# constrained layout prevents label/legend overlap
+fig, ax = plt.subplots(layout="constrained")
+# Loop over categories with explicit colors
+for species, color in palette.items():
+    data = penguins[penguins["species"] == species]
+    ax.scatter(data["flipper_length_mm"], data["body_mass_g"], c=color, label=species)
+# Human-readable labels with units
+ax.set(xlabel="Flipper length (mm)", ylabel="Body mass (g)")
+ax.tick_params(labelsize=12)
+ax.legend(title="Species", fontsize=12, title_fontsize=12)
+# Subtle gridlines; remove top and right spines
+ax.grid(True, linewidth=0.5, alpha=0.5)
+ax.spines[["top", "right"]].set_visible(False)
+plt.show()
+```
+:::
+
+## Examples
+
+In this section, we include replications of tables and figures from or inspired by research in the Lab. They represent both more realistic applications of the style guides as well as common patterns we use to communicate in our research.
 
 ### Tables
 
 #### Descriptive analysis
 
+This example is a descriptive table (Table 1 from @Bergquist_2022), reproduced in gt and Great Tables. Notice a few things about the implementation of the style guide in the table:
+
+* Information about the numbers are defined in the row names, e.g. "Age (mean)" and "Race/Ethnicity (%)".
+* The numbers are formated with either 1 decimal point or none (for N). The N is also formated with commas.
+* The categories for the row variables are organized under the variable name with an indentation to show the relationship
+
+::: panel-tabset
+## gt (R)
+
+```{r}
+#| label: tbl-cohort-gt
+#| tbl-cap: "Cohort summary statistics."
+#| html-table-processing: none
+#| code-fold: true
+
+cohort_df <- data.frame(
+  Characteristic = c(
+    "N",
+    "Age (mean)",
+    "Documented Sex Female (%)",
+    "Race/Ethnicity (%)",
+    "White",
+    "Black",
+    "Hispanic",
+    "Other",
+    "Region (%)",
+    "Northeast",
+    "Midwest",
+    "West",
+    "South",
+    "Stage at Diagnosis (%)",
+    "I/II",
+    "III",
+    "IV"
+  ),
+  dev_cohort = c(
+    14760, 72.1, 45.4,
+    NA, 82.7, 8.8, 4.2, 4.2,
+    NA, 20.3, 13.6, 34.2, 31.9,
+    NA, 15.1, 34.0, 50.8
+  ),
+  val_cohort = c(
+    14620, 71.9, 46.8,
+    NA, 81.4, 8.9, 4.4, 5.3,
+    NA, 20.2, 13.2, 34.5, 32.2,
+    NA, 14.8, 33.1, 52.0
+  )
+)
+
+category_rows <- which(is.na(cohort_df$dev_cohort))
+indent_rows <- setdiff(
+  unlist(lapply(category_rows, function(i) (i + 1):min(i + 4, nrow(cohort_df)))),
+  category_rows
+)
+
+gt(cohort_df, rowname_col = "Characteristic") |>
+  cols_label(
+    dev_cohort = md("*Development Cohort*<br>2010–2011 Diagnosis"),
+    val_cohort = md("*Validation Cohort*<br>2012–2013 Diagnosis")
+  ) |>
+  fmt_number(columns = c(dev_cohort, val_cohort), decimals = 1) |>
+  fmt_integer(columns = c(dev_cohort, val_cohort), rows = 1, use_seps = TRUE) |>
+  sub_missing(columns = c(dev_cohort, val_cohort), missing_text = "") |>
+  tab_stub_indent(rows = indent_rows, indent = 3) |>
+  cols_align(align = "right", columns = c(dev_cohort, val_cohort)) |>
+  cols_width(
+    Characteristic ~ px(200),
+    dev_cohort ~ px(160),
+    val_cohort ~ px(160)
+  ) |>
+  tab_style(
+    style = cell_text(weight = "bold"),
+    locations = cells_stub(rows = category_rows)
+  ) |>
+  tab_options(
+    column_labels.font.weight = "bold",
+    table_body.hlines.width = px(0),
+    table_body.vlines.width = px(0),
+    column_labels.vlines.width = px(0),
+    column_labels.border.bottom.width = px(1),
+    stub.border.width = px(0)
+  )
+```
+
+## Great Tables (Python)
+
+```{python}
+#| label: tbl-cohort-gt-py
+#| tbl-cap: "Cohort summary statistics."
+#| html-table-processing: none
+#| code-fold: true
+#| warning: false
+
+
+import numpy as np
+import pandas as pd
+from great_tables import md, html, style, loc
+
+cohort_df = pd.DataFrame({
+    "Characteristic": [
+        "N",
+        "Age (mean)",
+        "Documented Sex Female (%)",
+        "Race/Ethnicity (%)",
+        "\u2003White",
+        "\u2003Black",
+        "\u2003Hispanic",
+        "\u2003Other",
+        "Region (%)",
+        "\u2003Northeast",
+        "\u2003Midwest",
+        "\u2003West",
+        "\u2003South",
+        "Stage at Diagnosis (%)",
+        "\u2003I/II",
+        "\u2003III",
+        "\u2003IV",
+    ],
+    "dev_cohort": [
+        14760, 72.1, 45.4,
+        np.nan, 82.7, 8.8, 4.2, 4.2,
+        np.nan, 20.3, 13.6, 34.2, 31.9,
+        np.nan, 15.1, 34.0, 50.8,
+    ],
+    "val_cohort": [
+        14620, 71.9, 46.8,
+        np.nan, 81.4, 8.9, 4.4, 5.3,
+        np.nan, 20.2, 13.2, 34.5, 32.2,
+        np.nan, 14.8, 33.1, 52.0,
+    ],
+})
+
+category_rows = cohort_df[cohort_df["dev_cohort"].isna()].index.tolist()
+
+(
+    GT(cohort_df)
+    .cols_label(
+        dev_cohort=md("*Development Cohort*<br>2010–2011 Diagnosis"),
+        val_cohort=md("*Validation Cohort*<br>2012–2013 Diagnosis"),
+    )
+    .fmt_number(columns=["dev_cohort", "val_cohort"], decimals=1)
+    .fmt_integer(columns=["dev_cohort", "val_cohort"], rows=[0], use_seps=True)
+    .sub_missing(columns=["dev_cohort", "val_cohort"], missing_text="")
+    .cols_align(align="left", columns="Characteristic")
+    .cols_align(align="right", columns=["dev_cohort", "val_cohort"])
+    .cols_width({"Characteristic": "200px", "dev_cohort": "160px", "val_cohort": "160px"})
+    .tab_style(
+        style=style.text(weight="bold"),
+        locations=loc.body(columns="Characteristic", rows=category_rows),
+    )
+    .tab_options(
+        column_labels_font_weight="bold",
+        table_body_hlines_width="0px",
+        table_body_vlines_width="0px",
+        column_labels_vlines_width="0px",
+        column_labels_border_bottom_width="1px",
+        stub_border_width="0px",
+    )
+)
+```
+
+:::
+
 #### Comparison of methods 1
+
+Tables in the lab often compare results from multiple scenarios, e.g., different estimators or different parameters. Table 2 from @nakamoto2026penalizedfairregressionmultiple, for instance, compares results from different technqiues across different parameterizations. A few things to notice about this table:
+
+* The last four columns are organized under the "Unfairness" spanner to organize and annotate them
+* All cells use two decimal points
+* The row labels have complex formatting to align the parameter values when spread across more than one line
+* There is enough information in the note section to understand the table, including abbreviated terms, on its own
+
+::: panel-tabset
+## gt (R)
+
+```{r}
+#| label: tbl-performance-gt
+#| tbl-cap: "**Performance for Baseline Unpenalized Regression, Novel Penalized Regressions, and Fair Reductions Methods.**"
+#| html-table-processing: none
+#| code-fold: true
+
+align_indent <- function(prefix, values) {
+  # Align continuation values under the prefix using invisible text
+  hidden <- paste0(
+    '<span style="visibility:hidden" aria-hidden="true">', prefix, "</span>"
+  )
+  paste0(prefix, values[1], "<br>", hidden, values[2])
+}
+
+long_method_html <- paste0(
+  align_indent("Group \u03b1 = ", c("0.4, 0.5, 0.6, 0.7,", "0.8, 0.9, 0.99")),
+  "<br>",
+  align_indent("Pop \u03b1 = ", c("0.3, 0.4, 0.5, 0.6,", "0.7, 0.8, 0.9, 0.99"))
+)
+
+perf_df <- data.frame(
+  Method = c(
+    "Baseline",
+    "Group \u03b1 = 0.1<br>Pop \u03b1 = 0.1, 0.2",
+    "Max \u03b1 = 0.1",
+    "Group \u03b1 = 0.2, 0.3",
+    "Max \u03b1 = 0.2, 0.3, 0.4, 0.5, 0.6",
+    "PLACEHOLDER_LONG",
+    "Max \u03b1 = 0.7, 0.8, 0.9, 0.99",
+    "ExpGrad, Ep = 0.1",
+    "ExpGrad, Ep = 0.01",
+    "Grid, CW = 0.25",
+    "Grid, CW = 0.5",
+    "Grid, CW = 0.75"
+  ),
+  Accuracy = c(0.95, 0.95, 0.95, 0.93, 0.94, 0.92, 0.91, 0.96, 0.93, 0.32, 0.11, 0.11),
+  Sensitivity = c(0.36, 0.37, 0.29, 0.38, 0.31, 0.39, 0.33, 0.15, 0.13, 0.90, 0.95, 0.95),
+  Mean = c(0.09, 0.02, 0.08, 0.03, 0.08, 0.02, 0.08, 0.04, 0.02, 0.01, 0.01, 0.01),
+  Black = c(0.06, 0.00, 0.06, 0.00, 0.07, 0.00, 0.08, 0.03, 0.01, 0.00, 0.02, 0.02),
+  Asian = c(0.24, 0.19, 0.17, 0.23, 0.11, 0.17, 0.00, 0.12, 0.10, 0.12, 0.00, 0.00),
+  HNW = c(0.07, 0.00, 0.07, 0.00, 0.08, 0.00, 0.13, 0.02, 0.00, 0.00, 0.00, 0.00)
+)
+
+gt(perf_df) |>
+  fmt_markdown(columns = Method) |>
+  # Replace placeholder with raw HTML containing alignment spans
+  text_transform(
+    locations = cells_body(columns = Method, rows = 6),
+    fn = function(x) long_method_html
+  ) |>
+  fmt_number(columns = c(Accuracy, Sensitivity, Mean, Black, Asian, HNW), decimals = 2) |>
+  tab_spanner(label = "Unfairness", columns = c(Mean, Black, Asian, HNW)) |>
+  cols_align(align = "left", columns = Method) |>
+  cols_align(align = "center", columns = c(Accuracy, Sensitivity, Mean, Black, Asian, HNW)) |>
+  cols_width(Method ~ px(280)) |>
+  tab_source_note(
+    md(paste0(
+      "*Note:* Novel fair penalized regressions were defined based on the ",
+      "multi-group unfairness synthesis mechanism: population-weighted average ",
+      "(Pop), group-weighted average (Group), and maximum (Max) as well as ",
+      "fairness score weight (&alpha;). Fair reductions comparisons were ",
+      "exponentiated gradient (ExpGrad) or grid search (Grid) methods, varying ",
+      "constraint flexibility (Ep) or constraint weight (CW), respectively. ",
+      "'HNW' is Hispanic non-white."
+    ))
+  ) |>
+  tab_options(
+    column_labels.font.weight = "bold",
+    table_body.hlines.width = px(0),
+    table_body.vlines.width = px(0),
+    column_labels.vlines.width = px(0),
+    column_labels.border.bottom.width = px(1),
+    stub.border.width = px(0)
+  )
+```
+
+## Great Tables (Python)
+
+```{python}
+#| label: tbl-performance-gt-py
+#| tbl-cap: "**Performance for Baseline Unpenalized Regression, Novel Penalized Regressions, and Fair Reductions Methods.**"
+#| html-table-processing: none
+#| code-fold: true
+#| warning: false
+
+def align_indent(prefix, values):
+    """Align continuation values under the prefix using invisible text."""
+    hidden = f'<span style="visibility:hidden" aria-hidden="true">{prefix}</span>'
+    return f"{prefix}{values[0]}<br>{hidden}{values[1]}"
+
+long_method = (
+    align_indent("Group \u03b1 = ", ["0.4, 0.5, 0.6, 0.7,", "0.8, 0.9, 0.99"])
+    + "<br>"
+    + align_indent("Pop \u03b1 = ", ["0.3, 0.4, 0.5, 0.6,", "0.7, 0.8, 0.9, 0.99"])
+)
+
+perf_df = pl.DataFrame({
+    "Method": [
+        "Baseline",
+        "Group \u03b1 = 0.1<br>Pop \u03b1 = 0.1, 0.2",
+        "Max \u03b1 = 0.1",
+        "Group \u03b1 = 0.2, 0.3",
+        "Max \u03b1 = 0.2, 0.3, 0.4, 0.5, 0.6",
+        long_method,
+        "Max \u03b1 = 0.7, 0.8, 0.9, 0.99",
+        "ExpGrad, Ep = 0.1",
+        "ExpGrad, Ep = 0.01",
+        "Grid, CW = 0.25",
+        "Grid, CW = 0.5",
+        "Grid, CW = 0.75",
+    ],
+    "Accuracy": [0.95, 0.95, 0.95, 0.93, 0.94, 0.92, 0.91, 0.96, 0.93, 0.32, 0.11, 0.11],
+    "Sensitivity": [0.36, 0.37, 0.29, 0.38, 0.31, 0.39, 0.33, 0.15, 0.13, 0.90, 0.95, 0.95],
+    "Mean": [0.09, 0.02, 0.08, 0.03, 0.08, 0.02, 0.08, 0.04, 0.02, 0.01, 0.01, 0.01],
+    "Black": [0.06, 0.00, 0.06, 0.00, 0.07, 0.00, 0.08, 0.03, 0.01, 0.00, 0.02, 0.02],
+    "Asian": [0.24, 0.19, 0.17, 0.23, 0.11, 0.17, 0.00, 0.12, 0.10, 0.12, 0.00, 0.00],
+    "HNW": [0.07, 0.00, 0.07, 0.00, 0.08, 0.00, 0.13, 0.02, 0.00, 0.00, 0.00, 0.00],
+})
+
+(
+    GT(perf_df)
+    .fmt_markdown(columns="Method")
+    .fmt_number(columns=["Accuracy", "Sensitivity", "Mean", "Black", "Asian", "HNW"], decimals=2)
+    .tab_spanner(label="Unfairness", columns=["Mean", "Black", "Asian", "HNW"])
+    .cols_align(align="left", columns="Method")
+    .cols_align(align="center", columns=["Accuracy", "Sensitivity", "Mean", "Black", "Asian", "HNW"])
+    .cols_width({"Method": "280px"})
+    .tab_source_note(
+        md(
+            "*Note:* Novel fair penalized regressions were defined based on the "
+            "multi-group unfairness synthesis mechanism: population-weighted average "
+            "(Pop), group-weighted average (Group), and maximum (Max) as well as "
+            "fairness score weight (&alpha;). Fair reductions comparisons were "
+            "exponentiated gradient (ExpGrad) or grid search (Grid) methods, varying "
+            "constraint flexibility (Ep) or constraint weight (CW), respectively. "
+            "'HNW' is Hispanic non-white."
+        )
+    )
+    .tab_options(
+        column_labels_font_weight="bold",
+        table_body_hlines_width="0px",
+        table_body_vlines_width="0px",
+        column_labels_vlines_width="0px",
+        column_labels_border_bottom_width="1px",
+        stub_border_width="0px",
+    )
+)
+```
+:::
 
 #### Comparison of methods 2
 
+In addition to the properties and techniques in the previous tables, Table 1 from @Zink_2020 has a few interesting details:
+
+* It uses symbols as footnotes, defined in the notes section
+* The first row defines the units, e.g. "12.4%" and "-$46", but subsequent rows omit the symbol to avoid repititous visual clutter
+
+::: panel-tabset
+## gt (R)
+
+```{r}
+#| label: tbl-regression-gt
+#| tbl-cap: "Performance of Constrained and Penalized Regression Methods"
+#| html-table-processing: none
+#| code-fold: true
+
+reg_df <- data.frame(
+  Method = c(
+    "Average",
+    "Covariance",
+    "Net Compensation<sup>&dagger;</sup>",
+    "Weighted Average<sup>&Dagger;</sup>",
+    "Mean Residual<br>Difference<sup>&oplus;</sup>",
+    "OLS"
+  ),
+  r2 = c(12.4, 12.4, 12.5, 12.6, 12.8, 12.9),
+  ratio_g = c(0.996, 0.996, 0.980, 0.964, 0.895, 0.837),
+  ratio_gc = c(1.001, 1.001, 1.006, 1.011, 1.032, 1.050),
+  comp_g = c(-46, -46, -232, -411, -1208, -1872),
+  comp_gc = c(4, 4, 34, 62, 188, 293),
+  mrd = c(-50, -50, -266, -473, -1396, -2165),
+  fair_cov = c(6, 6, 31, 56, 164, 256)
+)
+
+gt(reg_df) |>
+  fmt_markdown(columns = Method) |>
+  fmt_percent(columns = r2, decimals = 1, scale_values = FALSE, rows = 1) |>
+  fmt_number(columns = r2, decimals = 1, rows = 2:6) |>
+  fmt_number(columns = c(ratio_g, ratio_gc), decimals = 3) |>
+  fmt_currency(columns = c(comp_g, comp_gc, mrd), rows = 1, decimals = 0) |>
+  fmt_integer(columns = c(comp_g, comp_gc, mrd), rows = 2:6) |>
+  fmt_integer(columns = fair_cov) |>
+  cols_label(
+    Method = "Method",
+    r2 = html("R<sup>2</sup>"),
+    ratio_g = html("<em>g</em>"),
+    ratio_gc = html("<em>g</em><sup>c</sup>"),
+    comp_g = html("<em>g</em>"),
+    comp_gc = html("<em>g</em><sup>c</sup>"),
+    mrd = html("Mean<br>Residual<br>Difference"),
+    fair_cov = html("Fair<br>Covariance")
+  ) |>
+  tab_spanner(label = html("Predictive<br>Ratio"), columns = c(ratio_g, ratio_gc)) |>
+  tab_spanner(label = html("Net<br>Compensation"), columns = c(comp_g, comp_gc)) |>
+  cols_align(align = "center", columns = c(r2, ratio_g, ratio_gc, comp_g, comp_gc, mrd, fair_cov)) |>
+  cols_align(align = "right", columns = Method) |>
+  tab_source_note(
+    html(paste0(
+      "&dagger; &lambda; = 10000, &Dagger; &alpha; = 0.2, &oplus; &lambda; = 30000<br>",
+      "<em>Note:</em> Measures calculated based on cross-validated predicted values and ",
+      "sorted on net compensation. Best performing hyperparameters for each ",
+      "estimator (with respect to fairness measures) are displayed. Performance ",
+      "for covariance method was the same for all <em>m</em>. <em>g</em><sup>c</sup> is the complement of <em>g</em>."
+    ))
+  ) |>
+  tab_options(
+    column_labels.font.weight = "bold",
+    table_body.hlines.width = px(0),
+    table_body.vlines.width = px(0),
+    column_labels.vlines.width = px(0),
+    column_labels.border.bottom.width = px(1),
+    stub.border.width = px(0)
+  )
+```
+
+## Great Tables (Python)
+
+```{python}
+#| label: tbl-regression-gt-py
+#| tbl-cap: "Performance of Constrained and Penalized Regression Methods"
+#| html-table-processing: none
+#| code-fold: true
+#| warning: false
+
+reg_df = pd.DataFrame({
+    "Method": [
+        "Average",
+        "Covariance",
+        "Net Compensation<sup>&dagger;</sup>",
+        "Weighted Average<sup>&Dagger;</sup>",
+        "Mean Residual<br>Difference<sup>&oplus;</sup>",
+        "OLS",
+    ],
+    "r2": [12.4, 12.4, 12.5, 12.6, 12.8, 12.9],
+    "ratio_g": [0.996, 0.996, 0.980, 0.964, 0.895, 0.837],
+    "ratio_gc": [1.001, 1.001, 1.006, 1.011, 1.032, 1.050],
+    "comp_g": [-46, -46, -232, -411, -1208, -1872],
+    "comp_gc": [4, 4, 34, 62, 188, 293],
+    "mrd": [-50, -50, -266, -473, -1396, -2165],
+    "fair_cov": [6, 6, 31, 56, 164, 256],
+})
+
+(
+    GT(reg_df)
+    .fmt_markdown(columns="Method")
+    .fmt_percent(columns="r2", decimals=1, scale_values=False, rows=[0])
+    .fmt_number(columns="r2", decimals=1, rows=[1, 2, 3, 4, 5])
+    .fmt_number(columns=["ratio_g", "ratio_gc"], decimals=3)
+    .fmt_currency(columns=["comp_g", "comp_gc", "mrd"], rows=[0], decimals=0)
+    .fmt_integer(columns=["comp_g", "comp_gc", "mrd"], rows=[1, 2, 3, 4, 5])
+    .fmt_integer(columns="fair_cov")
+    .cols_label(
+        Method="Method",
+        r2=html("R<sup>2</sup>"),
+        ratio_g=html("<em>g</em>"),
+        ratio_gc=html("<em>g</em><sup>c</sup>"),
+        comp_g=html("<em>g</em>"),
+        comp_gc=html("<em>g</em><sup>c</sup>"),
+        mrd=html("Mean<br>Residual<br>Difference"),
+        fair_cov=html("Fair<br>Covariance"),
+    )
+    .tab_spanner(label=html("Predictive<br>Ratio"), columns=["ratio_g", "ratio_gc"])
+    .tab_spanner(label=html("Net<br>Compensation"), columns=["comp_g", "comp_gc"])
+    .cols_align(align="center", columns=["r2", "ratio_g", "ratio_gc", "comp_g", "comp_gc", "mrd", "fair_cov"])
+    .cols_align(align="right", columns="Method")
+    .tab_source_note(
+        html(
+            "&dagger; &lambda; = 10000, &Dagger; &alpha; = 0.2, &oplus; &lambda; = 30000<br>"
+            "<em>Note:</em> Measures calculated based on cross-validated predicted values and "
+            "sorted on net compensation. Best performing hyperparameters for each "
+            "estimator (with respect to fairness measures) are displayed. Performance "
+            "for covariance method was the same for all <em>m</em>. <em>g</em><sup>c</sup> is the complement of <em>g</em>."
+        )
+    )
+    .tab_options(
+        column_labels_font_weight="bold",
+        table_body_hlines_width="0px",
+        table_body_vlines_width="0px",
+        column_labels_vlines_width="0px",
+        column_labels_border_bottom_width="1px",
+        stub_border_width="0px",
+    )
+)
+```
+:::
+
+### Figures
+
+The examples below use simulated data inspired by previous lab research. They do not represent research results, but we reference the papers that motivated them for each figure. Like the above tables, they are common realistic patterns we use to express results that are in line with the style guide. The data are generated in R and Python setup chunks below.
+
+```{r}
+#| label: fig-example-setup
+#| code-fold: true
+set.seed(42)
+
+cb_palette <- c(
+  orange = "#E69F00", sky = "#56B4E9", green = "#009E73",
+  yellow = "#F0E442", blue = "#0072B2", vermillion = "#D55E00",
+  purple = "#CC79A7", grey = "#999999", black = "#000000"
+)
+
+# Slope chart data
+items <- paste("Lorem", LETTERS[1:8])
+
+make_slope_row <- function(item) {
+  base <- runif(1, 5, 40)
+  val_a <- base + rnorm(1, 0, 4)
+  val_b <- base + rnorm(1, 0, 8)
+  direction <- ifelse(val_a >= val_b, "Ipsum higher", "Dolor higher")
+  tibble::tibble(
+    item = item,
+    approach = c("Ipsum", "Dolor"),
+    value = c(val_a, val_b),
+    direction = direction
+  )
+}
+
+slope_df <- items |>
+  purrr::map(make_slope_row) |>
+  purrr::list_rbind() |>
+  dplyr::mutate(approach = factor(approach, levels = c("Ipsum", "Dolor")))
+
+# Faceted line data
+groups <- c("Sit Amet", "Consectetur", "Adipiscing",
+            "Tempor", "Incididunt", "Labore")
+
+make_facet_rows <- function(grp) {
+  base <- runif(1, -400, 100)
+  slope_val <- runif(1, 50, 200)
+  tibble::tibble(
+    group = grp,
+    category = 1:5,
+    outcome = base + slope_val * (0:4) + rnorm(5, 0, 30)
+  )
+}
+
+facet_df <- groups |>
+  purrr::map(make_facet_rows) |>
+  purrr::list_rbind()
+
+# Forest plot data
+conditions <- paste("Magna", LETTERS[1:8])
+method_names <- c("Aliqua", "Veniam", "Nostrud", "Exercit")
+
+make_treat_row <- function(cond, meth, base) {
+  if (meth %in% c("Nostrud", "Exercit")) {
+    y <- 0.12 + rnorm(1, 0, 0.01)
+    hw <- runif(1, 0.04, 0.08)
+  } else {
+    y <- base + rnorm(1, 0, 0.015)
+    hw <- runif(1, 0.02, 0.05)
+  }
+  tibble::tibble(
+    condition = cond,
+    method = meth,
+    mean = y,
+    ci_lo = y - hw,
+    ci_hi = y + hw
+  )
+}
+
+make_condition_rows <- function(cond) {
+  base <- runif(1, 0.06, 0.20)
+  method_names |>
+    purrr::map(\(meth) make_treat_row(cond, meth, base)) |>
+    purrr::list_rbind()
+}
+
+treat_df <- conditions |>
+  purrr::map(make_condition_rows) |>
+  purrr::list_rbind() |>
+  dplyr::mutate(method = factor(method, levels = method_names))
+```
+
+```{python}
+#| label: fig-example-setup-py
+#| code-fold: true
+import numpy as np
+import polars as pl
+import matplotlib.pyplot as plt
+import seaborn as sns
+from plotnine import *
+
+np.random.seed(42)
+
+CB = {
+    "orange": "#E69F00", "sky": "#56B4E9", "green": "#009E73",
+    "yellow": "#F0E442", "blue": "#0072B2", "vermillion": "#D55E00",
+    "purple": "#CC79A7", "grey": "#999999", "black": "#000000",
+}
+
+# Slope chart data
+items = [f"Lorem {c}" for c in "ABCDEFGH"]
+rows = []
+for item in items:
+    base = np.random.uniform(5, 40)
+    val_a = base + np.random.normal(0, 4)
+    val_b = base + np.random.normal(0, 8)
+    d = "Ipsum higher" if val_a >= val_b else "Dolor higher"
+    for approach, value in [("Ipsum", val_a), ("Dolor", val_b)]:
+        rows.append(dict(item=item, approach=approach, value=value, direction=d))
+slope_df = pl.DataFrame(rows).with_columns(
+    pl.col("approach").cast(pl.Enum(["Ipsum", "Dolor"]))
+)
+
+# Faceted line data
+groups = ["Sit Amet", "Consectetur", "Adipiscing",
+          "Tempor", "Incididunt", "Labore"]
+rows = []
+for grp in groups:
+    base, slope = np.random.uniform(-400, 100), np.random.uniform(50, 200)
+    for q in range(1, 6):
+        rows.append(dict(group=grp, category=q,
+                         outcome=base + slope * (q - 1) + np.random.normal(0, 30)))
+facet_df = pl.DataFrame(rows)
+
+# Forest plot data
+conditions = [f"Magna {c}" for c in "ABCDEFGH"]
+method_names = ["Aliqua", "Veniam", "Nostrud", "Exercit"]
+rows = []
+for cond in conditions:
+    base = np.random.uniform(0.06, 0.20)
+    for meth in method_names:
+        if meth in ("Nostrud", "Exercit"):
+            y = 0.12 + np.random.normal(0, 0.01)
+            hw = np.random.uniform(0.04, 0.08)
+        else:
+            y = base + np.random.normal(0, 0.015)
+            hw = np.random.uniform(0.02, 0.05)
+        rows.append(dict(condition=cond, method=meth, mean=y, ci_lo=y - hw, ci_hi=y + hw))
+treat_df = pl.DataFrame(rows)
+```
+
+```{python}
+#| include: false
+plt.ioff()
+```
+
+#### Slope Charts
+
+Figure 4 in @rose_robust_2018 uses a slope chart to demonstrate changes in coefficients. These sorts of plots are also useful for communicating changes over time or rankings. In this plot, we:
+
+* Use a minimal, academic style with only subtle horizontal gridlines. In this case, using vertical gridlines is not useful because the two categories already divide the plot in an interpretable way.
+
+While not in the style guide, it also encodes information via multiple channels (shape, color, annotation, etc).
+
+::: panel-tabset
+## ggplot2 (R)
+
+```{r}
+#| fig-cap: Lorem ipsum dolor sit amet slope chart
+#| code-fold: true
+#| fig-width: 5
+library(ggrepel)
+
+ggplot(slope_df, aes(x = approach, y = value, group = item)) +
+  geom_line(aes(color = direction, linetype = direction), linewidth = 1) +
+  geom_point(aes(color = direction, shape = direction), size = 3) +
+  geom_text_repel(
+    data = slope_df[slope_df$approach == "Dolor", ],
+    aes(label = item, color = direction),
+    nudge_x = 0.1, direction = "y", hjust = 0, size = 3, show.legend = FALSE
+  ) +
+  scale_color_manual(values = c("Ipsum higher" = unname(cb_palette["blue"]),
+                                 "Dolor higher" = unname(cb_palette["vermillion"]))) +
+  scale_linetype_manual(values = c("Ipsum higher" = "solid",
+                                    "Dolor higher" = "dashed")) +
+  scale_shape_manual(values = c("Ipsum higher" = 16, "Dolor higher" = 17)) +
+  scale_x_discrete(expand = expansion(mult = c(0.15, 0.4))) +
+  labs(x = NULL, y = "Amet sit (units)", color = NULL, linetype = NULL, shape = NULL) +
+  theme_classic(base_size = 16) +
+  theme(panel.grid.major.y = element_line(color = "grey93", linewidth = 0.3))
+```
+
+## seaborn (Python)
+
+```{python}
+#| fig-cap: Lorem ipsum dolor sit amet slope chart
+#| code-fold: true
+from matplotlib.lines import Line2D
+
+sns.set_theme(style="ticks", font_scale=1.4);
+
+pal = {"Ipsum higher": CB["blue"], "Dolor higher": CB["vermillion"]}
+
+fig, ax = plt.subplots(figsize=(5, 5), layout="constrained")
+
+sns.lineplot(data=slope_df, x="approach", y="value", units="item",
+             hue="direction", style="direction", estimator=None, sort=False,
+             palette=pal, dashes={"Ipsum higher": "", "Dolor higher": (4, 2)},
+             linewidth=1.5, ax=ax, legend=False)
+
+sns.scatterplot(data=slope_df, x="approach", y="value", hue="direction",
+                style="direction", palette=pal, s=60, edgecolor="none",
+                markers={"Ipsum higher": "o", "Dolor higher": "^"},
+                ax=ax, legend=False, zorder=4)
+
+for proc in slope_df["item"].unique().to_list():
+    sub = slope_df.filter(pl.col("item") == proc)
+    unpen_val = sub.filter(pl.col("approach") == "Dolor")["value"][0]
+    d = sub["direction"][0]
+    ax.text(1.05, unpen_val, proc, ha="left", va="center", fontsize=8.5,
+            color=pal[d])
+
+handles = [
+    Line2D([], [], color=CB["blue"], lw=1.5, marker="o", ms=5,
+           markerfacecolor=CB["blue"], label="Ipsum higher"),
+    Line2D([], [], color=CB["vermillion"], lw=1.5, ls="--", marker="^", ms=5,
+           markerfacecolor=CB["vermillion"], label="Dolor higher"),
+]
+fig.legend(handles=handles, loc="outside right center",
+           fontsize=11, frameon=False, markerscale=1.5)
+
+ax.set(ylabel="Amet sit (units)", xlabel="")
+ax.margins(x=0.15)
+ax.tick_params(axis="x", length=0)
+ax.grid(axis="y", linewidth=0.3, alpha=0.5)
+ax.grid(axis="x", visible=False)
+sns.despine()
+plt.show()
+```
+
+## plotnine (Python)
+
+```{python}
+#| fig-cap: Lorem ipsum dolor sit amet slope chart
+#| code-fold: true
+label_df = slope_df.filter(pl.col("approach") == "Dolor")
+
+pn_pal = {"Ipsum higher": CB["blue"], "Dolor higher": CB["vermillion"]}
+
+(
+    ggplot(slope_df, aes("approach", "value", group="item",
+                          color="direction", linetype="direction"))
+    + geom_line(size=1)
+    + geom_point(aes(shape="direction"), size=3)
+    + geom_text(aes(label="item"), data=label_df,
+                nudge_x=0.07, ha="left", size=9, show_legend=False)
+    + scale_color_manual(values=pn_pal)
+    + scale_linetype_manual(values={"Ipsum higher": "solid",
+                                     "Dolor higher": "dashed"})
+    + scale_shape_manual(values={"Ipsum higher": "o", "Dolor higher": "^"})
+    + scale_x_discrete(expand=(0.15, 0, 0.4, 0))
+    + labs(x="", y="Amet sit (units)", color="", linetype="", shape="")
+    + theme_classic(base_size=16)
+    + theme(panel_grid_major_y=element_line(color="#e5e5e5", size=0.3),
+            figure_size=(5, 5))
+).show()
+```
+
+## matplotlib (Python)
+
+```{python}
+#| fig-cap: Lorem ipsum dolor sit amet slope chart
+#| code-fold: true
+from matplotlib.lines import Line2D
+
+mpl_pal = {"Ipsum higher": CB["blue"], "Dolor higher": CB["vermillion"]}
+mpl_markers = {"Ipsum higher": "o", "Dolor higher": "^"}
+mpl_ls = {"Ipsum higher": "-", "Dolor higher": "--"}
+
+fig, ax = plt.subplots(figsize=(5, 5), layout="constrained")
+
+for proc in slope_df["item"].unique().to_list():
+    sub = slope_df.filter(pl.col("item") == proc)
+    d = sub["direction"][0]
+    x = [0, 1]
+    y = [sub.filter(pl.col("approach") == "Ipsum")["value"][0],
+         sub.filter(pl.col("approach") == "Dolor")["value"][0]]
+    ax.plot(x, y, color=mpl_pal[d], ls=mpl_ls[d], lw=1.5)
+    ax.scatter(x, y, color=mpl_pal[d], marker=mpl_markers[d], s=50, zorder=4)
+    ax.text(1.05, y[1], proc, ha="left", va="center", fontsize=8.5,
+            color=mpl_pal[d])
+
+ax.set_xticks([0, 1])
+ax.set_xticklabels(["Ipsum", "Dolor"])
+ax.set(ylabel="Amet sit (units)", xlabel="")
+ax.margins(x=0.15)
+ax.tick_params(axis="x", length=0)
+ax.grid(axis="y", linewidth=0.3, alpha=0.5)
+ax.spines[["top", "right"]].set_visible(False)
+
+handles = [
+    Line2D([], [], color=CB["blue"], lw=1.5, marker="o", ms=5, label="Ipsum higher"),
+    Line2D([], [], color=CB["vermillion"], lw=1.5, ls="--", marker="^", ms=5, label="Dolor higher"),
+]
+fig.legend(handles=handles, loc="outside right center",
+           fontsize=11, frameon=False, markerscale=1.5)
+plt.show()
+```
+:::
+
+#### Small Multiples
+
+Figure 2 in @reitsma_algorithms_2025 uses multiple panels for subgroups. In the simulated version, we also include a "data shadow", gray lines representing the other subgroups to make it easier to compare lines. In this plot, notice:
+
+* Not only are there not more than one legends, there is actually *no* legend. Using labelled facets is a technique to remove the legend and reduce the mental work a reader needs to do to map the values to their meanings.
+* In this plot, we use a minimal style with no outer gridlines and no strong gridlines. Like the above plot, only the horizontal gridlines are useful for guiding the reader.
+
+::: panel-tabset
+## ggplot2 (R)
+
+```{r}
+#| fig-cap: Lorem ipsum dolor sit amet faceted line chart
+#| code-fold: true
+ggplot(facet_df, aes(x = category, y = outcome)) +
+  geom_hline(yintercept = 0, linetype = "dashed", color = "#999999", linewidth = 0.4) +
+  geom_line(data = \(d) dplyr::rename(d, bg = group),
+            aes(group = bg), color = "grey90", linewidth = 0.9) +
+  geom_point(data = \(d) dplyr::rename(d, bg = group),
+             color = "grey90", size = 1.2) +
+  geom_line(color = cb_palette["green"], linewidth = 1) +
+  geom_point(color = cb_palette["green"], size = 2) +
+  facet_wrap(~group, ncol = 3) +
+  scale_x_continuous(breaks = 1:5) +
+  labs(x = "Category", y = "Consectetur (units)") +
+  theme_minimal(base_size = 14) +
+  theme(panel.grid.minor = element_blank(), panel.grid.major.x = element_blank())
+```
+
+## seaborn (Python)
+
+```{python}
+#| fig-cap: Lorem ipsum dolor sit amet faceted line chart
+#| code-fold: true
+#| fig-show: hold
+sns.set_theme(style="ticks", font_scale=1.0)
+
+g = sns.FacetGrid(facet_df, col="group", col_wrap=3,
+                   height=2.2, aspect=1.1, sharey=True);
+# Data shadows: draw all groups in gray behind each panel
+for ax_obj in g.axes.flat:
+    for grp in groups:
+        sub = facet_df.filter(pl.col("group") == grp);
+        ax_obj.plot(sub["category"], sub["outcome"], color="#e5e5e5", linewidth=1.2, zorder=1);
+        ax_obj.scatter(sub["category"], sub["outcome"], color="#e5e5e5", s=12, zorder=1);
+g.map_dataframe(sns.lineplot, x="category", y="outcome",
+                 color=CB["green"], linewidth=1.5, zorder=3);
+g.map_dataframe(sns.scatterplot, x="category", y="outcome",
+                 color=CB["green"], s=35, edgecolor="none", zorder=4);
+g.refline(y=0, color="#999999", linewidth=0.5, linestyle="--");
+g.set_titles("{col_name}", fontsize=10);
+g.set_axis_labels("Category", "Consectetur (units)", fontsize=10);
+for ax_obj in g.axes.flat:
+    ax_obj.set_xticks([1, 2, 3, 4, 5]);
+    ax_obj.set_xlim(0.5, 5.5);
+    ax_obj.grid(axis="y", linewidth=0.5, alpha=0.7);
+    ax_obj.grid(axis="x", visible=False);
+    for spine in ax_obj.spines.values():
+        spine.set_visible(False);
+    ax_obj.tick_params(length=0);
+g.figure.subplots_adjust(hspace=0.45, wspace=0.3);
+
+plt.show()
+```
+
+## plotnine (Python)
+
+```{python}
+#| fig-cap: Lorem ipsum dolor sit amet faceted line chart
+#| code-fold: true
+shadow_df = facet_df.rename({"group": "bg"})
+
+(
+    ggplot(facet_df, aes("category", "outcome"))
+    + geom_hline(yintercept=0, linetype="dashed", color="#999999", size=0.4)
+    + geom_line(aes(group="bg"), data=shadow_df, color="#e5e5e5", size=0.9)
+    + geom_point(data=shadow_df, color="#e5e5e5", size=1.2)
+    + geom_line(color=CB["green"], size=1)
+    + geom_point(color=CB["green"], size=2)
+    + facet_wrap("~group", ncol=3)
+    + scale_x_continuous(breaks=[1, 2, 3, 4, 5])
+    + labs(x="Category", y="Consectetur (units)")
+    + theme_minimal(base_size=14)
+    + theme(panel_grid_minor=element_blank(), panel_grid_major_x=element_blank(),
+            figure_size=(6.5, 4.3))
+).show()
+```
+
+## matplotlib (Python)
+
+```{python}
+#| fig-cap: Lorem ipsum dolor sit amet faceted line chart
+#| code-fold: true
+
+fig, axes = plt.subplots(2, 3, figsize=(8, 5), layout="constrained", sharey=True)
+
+for ax, grp in zip(axes.flat, groups):
+    # Data shadows
+    for bg_grp in groups:
+        bg = facet_df.filter(pl.col("group") == bg_grp);
+        ax.plot(bg["category"], bg["outcome"], color="#e5e5e5", linewidth=1.2, zorder=1);
+        ax.scatter(bg["category"], bg["outcome"], color="#e5e5e5", s=12, zorder=1);
+    sub = facet_df.filter(pl.col("group") == grp);
+    ax.axhline(0, color="#999999", linewidth=0.5, linestyle="--");
+    ax.plot(sub["category"], sub["outcome"], color=CB["green"], linewidth=1.5, zorder=3);
+    ax.scatter(sub["category"], sub["outcome"], color=CB["green"], s=35, zorder=4);
+    ax.set_title(grp, fontsize=10);
+    ax.set_xticks([1, 2, 3, 4, 5]);
+    ax.set_xlim(0.5, 5.5);
+    ax.grid(axis="y", linewidth=0.5, alpha=0.7);
+    for spine in ax.spines.values():
+        spine.set_visible(False);
+    ax.tick_params(length=0);
+
+fig.supxlabel("Category");
+fig.supylabel("Consectetur (units)");
+plt.show()
+```
+:::
+
+#### Forest plots
+
+Figure 2 in @rose_double_2019 uses a dodged forest plot to show differences by effect estimators across results. Like in the previous two figures, only the horizontal gridline improves readability.
+
+::: panel-tabset
+## ggplot2 (R)
+
+```{r}
+#| fig-cap: Lorem ipsum dolor sit amet forest plot
+#| code-fold: true
+#| fig-width: 10
+#| fig-height: 4
+ggplot(treat_df, aes(x = condition, y = mean, ymin = ci_lo, ymax = ci_hi,
+                      color = method, shape = method)) +
+  geom_hline(yintercept = 0.12, linetype = "dashed", color = "#999999", linewidth = 0.4) +
+  geom_pointrange(
+                   position = position_dodge(width = 0.65)) +
+  scale_color_manual(values = c(
+    "Aliqua" = unname(cb_palette["blue"]), "Veniam" = unname(cb_palette["orange"]),
+    "Nostrud" = unname(cb_palette["green"]), "Exercit" = unname(cb_palette["vermillion"])
+  )) +
+  scale_shape_manual(values = c("Aliqua" = 16, "Veniam" = 15, "Nostrud" = 17, "Exercit" = 18)) +
+  labs(x = NULL, y = "Dolor amet (units)",
+       color = "Elit", shape = "Elit") +
+  theme_classic(base_size = 18) +
+  theme(
+    panel.grid.major.y = element_line(color = "grey93", linewidth = 0.3),
+    legend.position = "top",
+    legend.direction = "horizontal"
+  )
+```
+
+## seaborn (Python)
+
+```{python}
+#| fig-cap: Lorem ipsum dolor sit amet forest plot
+#| code-fold: true
+sns.set_theme(style="ticks", font_scale=1.4);
+
+est_order = ["Aliqua", "Veniam", "Nostrud", "Exercit"]
+pal = [CB["blue"], CB["orange"], CB["green"], CB["vermillion"]]
+
+# Expand CIs into long format for pointplot
+treat_exp = pl.concat([
+    treat_df.select("condition", "method", pl.col("ci_lo").alias("rate")),
+    treat_df.select("condition", "method", pl.col("mean").alias("rate")),
+    treat_df.select("condition", "method", pl.col("ci_hi").alias("rate")),
+])
+
+fig, ax = plt.subplots(figsize=(10, 4), layout="constrained")
+sns.pointplot(
+    data=treat_exp, x="condition", y="rate", hue="method",
+    hue_order=est_order, dodge=0.45,
+    estimator="median", errorbar=("pi", 100),
+    markers=["o", "s", "^", "D"], linestyles="none",
+    palette=pal, capsize=0, markersize=6,
+    err_kws={"linewidth": 1.5}, ax=ax,
+)
+ax.axhline(0.12, color="#999999", linewidth=0.5, linestyle="--", zorder=0)
+ax.set(ylabel="Dolor amet (units)", xlabel="")
+ax.yaxis.set_major_formatter("{x:.2f}")
+ax.get_legend().remove()
+fig.legend(loc="outside upper center",
+           fontsize=14, ncol=4, frameon=False)
+ax.grid(axis="y", linewidth=0.3, alpha=0.5)
+ax.grid(axis="x", visible=False)
+sns.despine()
+plt.show()
+```
+
+## plotnine (Python)
+
+```{python}
+#| fig-cap: Lorem ipsum dolor sit amet forest plot
+#| code-fold: true
+(
+    ggplot(treat_df, aes("condition", "mean", ymin="ci_lo", ymax="ci_hi",
+                          color="method", shape="method"))
+    + geom_hline(yintercept=0.12, linetype="dashed", color="#999999", size=0.4)
+    + geom_pointrange(size=1.0, fatten=3,
+                       position=position_dodge(width=0.6))
+    + scale_color_manual(values={
+        "Aliqua": CB["blue"], "Veniam": CB["orange"],
+        "Nostrud": CB["green"], "Exercit": CB["vermillion"]})
+    + scale_shape_manual(values={
+        "Aliqua": "o", "Veniam": "s", "Nostrud": "^", "Exercit": "D"})
+    + labs(x="", y="Dolor amet (units)",
+           color="Elit", shape="Elit")
+    + theme_classic(base_size=18)
+    + theme(panel_grid_major_y=element_line(color="#e5e5e5", size=0.3),
+            legend_position="top",
+            legend_direction="horizontal",
+            figure_size=(10, 4))
+).show()
+```
+
+## matplotlib (Python)
+
+```{python}
+#| fig-cap: Lorem ipsum dolor sit amet forest plot
+#| code-fold: true
+est_colors = {"Aliqua": CB["blue"], "Veniam": CB["orange"],
+              "Nostrud": CB["green"], "Exercit": CB["vermillion"]}
+est_markers = {"Aliqua": "o", "Veniam": "s", "Nostrud": "^", "Exercit": "D"}
+cond_list = treat_df["condition"].unique().to_list()
+n_est = len(method_names)
+dodge = 0.12
+
+fig, ax = plt.subplots(figsize=(10, 4), layout="constrained")
+ax.axhline(0.12, color="#999999", linewidth=0.5, linestyle="--", zorder=0)
+
+for i, est in enumerate(method_names):
+    sub = treat_df.filter(pl.col("method") == est)
+    x = np.arange(len(cond_list)) + (i - (n_est - 1) / 2) * dodge
+    ax.errorbar(x, sub["mean"], yerr=[sub["mean"] - sub["ci_lo"], sub["ci_hi"] - sub["mean"]],
+                fmt="none", ecolor=est_colors[est], elinewidth=1.5, capsize=0)
+    ax.scatter(x, sub["mean"], color=est_colors[est], marker=est_markers[est],
+               s=35, label=est, zorder=4)
+
+ax.set_xticks(range(len(cond_list)))
+ax.set_xticklabels(cond_list, fontsize=14)
+ax.set(ylabel="Dolor amet (units)", xlabel="")
+ax.yaxis.label.set_size(16)
+ax.tick_params(axis="y", labelsize=14)
+ax.yaxis.set_major_formatter("{x:.2f}")
+fig.legend(loc="outside upper center",
+           fontsize=14, ncol=4, frameon=False)
+ax.grid(axis="y", linewidth=0.3, alpha=0.5)
+ax.spines[["top", "right"]].set_visible(False)
+plt.show()
+```
+:::
+
+## Figure output in Quarto
+
+There are a few YAML options that are helpful to know for configuring Quarto output. `fig-width` and `fig-height` control the physical dimensions of the figure file. Often you need to tweak these to make figures look good in rendered documents. `fig-asp` controls the relationship between the width and the height---the aspect ratio---when neither or only one is set. `fig-dpi` controls the dots per inch, a measure of resolution. The higher the DPI, the more dense the resolution. Setting DPI high is useful to a point but has diminishing returns compared to the resulting file size. See the [Quarto reference](https://quarto.org/docs/reference/formats/html.html#figures) for more options.
+
+Good starting defaults are:
+
+```yaml
+---
+fig-width: 6
+fig-asp: 0.618
+fig-dpi: 320
+---
+```
+
+This allows you to primarily focus on `fig-width` for modifications, although you can also change `fig-height` as needed.
+
+If you are using the [knitr engine](https://quarto.org/docs/reference/cells/cells-knitr.html#figures), there are a few other helpful settings.
+
+```yaml
+---
+knitr:
+  opts_chunk:
+    # set the container for the figure file
+    out-width: "80%"
+    # set where
+    fig.path: "folder/prefix-"
+---
+```
+
+Setting `dev: "ragg_png"` to use the [ragg package](https://ragg.r-lib.org/) for rendering can be helpful for projects with slow figure rendering or complex typographic needs, e.g. custom fonts.
+
 ## A note on plotting in Python
 
+Many of the issues in the style guide can be mitigated by using a plotting framework. Users of Python often write in matplotlib, which powers many of the data visualization tools in Python. However, matplotlib is a lower-level plotting tool that requires extra work to meet the standards we have laid out. It's not that matplotlib is bad. On the contrary, it is extremely powerful. However, for many scientists, a higher-level framework like [Seaborn](https://seaborn.pydata.org/) or [Plotnine](https://plotnine.org/) will be a more appropriate choice for consistent, publication-ready figures. Both are built on top of matplotlib and the tools you may know from it can be very helpful for custom extensions of the higher-level frameworks. That said, if you prefer matplotlib, you can absolutely meet the standards of the style guide and other needs for figures, as demonstrated in the above examples.
 
+## Colorblind friendly palettes
+
+Using colorblind friendly palettes is useful for both accessibility to people with color vision deficiencies as well as the transition from a digital figure to a print figure, which may need to be in black and white.
+
+For categorical variables, the Okabe-Ito palette is a good choice. For continuous variables, viridis is a good choice. Both are widely available in R and Python tools.
+
+## Resources
+
+There are many great resources on designing data visualizations. A good one that is free online is [*Fundamentals of Data Visualization
+* by Claus O. Wilke](https://clauswilke.com/dataviz/). See in particular ["Telling a story and making a point"](https://clauswilke.com/dataviz/telling-a-story.html).
+
+Here are a few collections of examples made with some of the tools used in this document:
+
+* [Seaborn gallery](https://seaborn.pydata.org/examples/index.html)
+* [matplotlib gallery](https://matplotlib.org/stable/gallery/index.html)
+* [plotnine gallery](https://plotnine.org/gallery/)
+* [Great Tables gallery](https://posit-dev.github.io/great-tables/examples/)
+
+
+## References
