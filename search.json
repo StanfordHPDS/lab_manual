@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Stanford Health Policy Data Science",
     "section": "",
-    "text": "Lab Manual\nThe Health Policy Data Science Lab at Stanford is a group of interdisciplinary researchers who develop and apply quantitative methods to solve problems in health policy, leveraging techniques from statistics, computer science, economics, epidemiology, and decision science. The faculty PI at Stanford is Professor Sherri Rose.\nThis manual evolves over time to incorporate additional contributions from Lab members. Contributors include Malcolm Barrett, Marika Cusick, and Sherri Rose.\nThis work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.",
+    "text": "Lab Manual\nThe Health Policy Data Science Lab at Stanford is a group of interdisciplinary researchers who develop and apply quantitative methods to solve problems in health policy, leveraging techniques from statistics, computer science, economics, epidemiology, and decision science. The faculty PI at Stanford is Professor Sherri Rose.\nThis manual evolves over time to incorporate additional contributions from Lab members. Contributors include Malcolm Barrett, Marika Cusick, and Sherri Rose.\nAre you a prospective or new student? We suggest starting with 1  Lab Culture so you can learn more about our Lab culture. Many of the later sections provide technical guidance that are especially useful once you begin a research project and have participated in Lab trainings.\nThis work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.",
     "crumbs": [
       "Lab Manual"
     ]
@@ -40,11 +40,21 @@
     ]
   },
   {
-    "objectID": "chapters/01-culture.html#trainee-support-access-and-accomodations",
-    "href": "chapters/01-culture.html#trainee-support-access-and-accomodations",
+    "objectID": "chapters/01-culture.html#sec-support",
+    "href": "chapters/01-culture.html#sec-support",
     "title": "1  Lab Culture",
-    "section": "1.4 Trainee Support, Access, and Accomodations",
-    "text": "1.4 Trainee Support, Access, and Accomodations\nYour physical and mental health are incredibly important. Please familiarize yourself with the mental health and crisis assistance resources available for students at Stanford as well as mental health resources for postdoctoral scholars.\nStanford is committed to providing equal educational opportunities for disabled students. Disabled students are a valued and essential part of the Stanford community. If you experience disability, please register with the Office of Accessible Education (OAE). Professional staff at OAE will evaluate your needs, support appropriate and reasonable accommodations, and prepare an Academic Accommodation Letter for faculty. If you already have an Academic Accommodation Letter, Stanford invites you to share your letter with your advisor. Academic Accommodation Letters should be shared at the earliest possible opportunity so we may partner with you and OAE to identify any barriers to access and inclusion that might be encountered in your experience.",
+    "section": "1.4 Trainee Mentorship and Support",
+    "text": "1.4 Trainee Mentorship and Support\nDr. Rose’s mentorship of trainees involves support through 1:1 meetings (see Section 2.4) as well as Lab group activities. We hold Lab Meetings approximately weekly to increase visibility across Lab projects, brainstorm ideas, and discuss research-related topics. The Lab also offers several internal opportunities for skill building and professional growth, including data jamborees, trainings, book clubs, and journal clubs.\nWhile most trainees joining the Lab has some prior experience in programming (typically R or Python), we do not have any expectations that new trainees are expert coders or have any previous experience in the coding and reproducibility workflows described in this Lab manual. Trainees develop these skills throughout their time in the Lab with substantial support via our data jamboree and training activities, as well as individual support from Lab research software engineer Malcolm Barrett.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lab Culture</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01-culture.html#trainee-resources-access-and-accomodations",
+    "href": "chapters/01-culture.html#trainee-resources-access-and-accomodations",
+    "title": "1  Lab Culture",
+    "section": "1.5 Trainee Resources, Access, and Accomodations",
+    "text": "1.5 Trainee Resources, Access, and Accomodations\nYour physical and mental health are incredibly important. Please familiarize yourself with the mental health and crisis assistance resources available for students at Stanford as well as mental health resources for postdoctoral scholars.\nStanford is committed to providing equal educational opportunities for disabled students. Disabled students are a valued and essential part of the Stanford community. If you experience disability, please register with the Office of Accessible Education (OAE). Professional staff at OAE will evaluate your needs, support appropriate and reasonable accommodations, and prepare an Academic Accommodation Letter for faculty. If you already have an Academic Accommodation Letter, Stanford invites you to share your letter with your advisor. Academic Accommodation Letters should be shared at the earliest possible opportunity so we may partner with you and OAE to identify any barriers to access and inclusion that might be encountered in your experience.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lab Culture</span>"
     ]
@@ -64,7 +74,7 @@
     "href": "chapters/02-policies.html#onboarding",
     "title": "2  General Policies",
     "section": "2.2 Onboarding",
-    "text": "2.2 Onboarding\nThe first step for new Lab members is to send Dr. Rose your GitHub username to be added to the Lab’s GitHub organization account. Then, review our internal onboarding documentation for new Lab members.\nRotation students do not need to complete all of these steps.",
+    "text": "2.2 Onboarding\nThe first step for new Lab members is to send Dr. Rose your GitHub username to be added to the Lab’s GitHub organization account. Then, review our internal onboarding documentation for new Lab members. Please also see Section 1.4 for a summary of trainee support systems for your development as a scientist in the Lab.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>General Policies</span>"
     ]
@@ -80,8 +90,8 @@
     ]
   },
   {
-    "objectID": "chapters/02-policies.html#recurring-meetings",
-    "href": "chapters/02-policies.html#recurring-meetings",
+    "objectID": "chapters/02-policies.html#sec-meetings",
+    "href": "chapters/02-policies.html#sec-meetings",
     "title": "2  General Policies",
     "section": "2.4 Recurring Meetings",
     "text": "2.4 Recurring Meetings\nLab trainees meet individually with Dr. Rose regularly. This is typically weekly or every other week depending on the needs of the trainee and their projects. Meetings are either 25 minutes or 50 minutes to allow for breaks between meetings. Dr. Rose expects trainees to manage the meeting such that it ends on time.\nIn general, Dr. Rose expects progress to be made between each meeting. Progress can include struggling with the material. Dr. Rose cares that you are engaged and taking initiative to advance the project. We’ll discuss what you learned and where you are still confused. When we identify areas where you have gaps, Dr. Rose does expect you to invest in learning the required material and to follow through to fill those gaps. All trainees must be making satisfactory academic progress in line with the expectations of their graduate degree program.\nIf you do not need to meet a particular week (e.g., making steady progress and don’t have questions), please email Dr. Rose in advance so she can efficiently reallocate the meeting time. Your physical and mental health are important. If you need to cancel a meeting for health or personal reasons, email Dr. Rose. As much notice as is possible is helpful, but it is always better to cancel a meeting short notice than to attend when you are sick!\nIf there are repeated meeting cancellations, we should discuss the underlying reasons.\nPlease also see Section 2.5 for details on recurring meeting agendas and GitHub repository updates.",
@@ -140,31 +150,11 @@
     ]
   },
   {
-    "objectID": "chapters/02-policies.html#lab-meetings",
-    "href": "chapters/02-policies.html#lab-meetings",
-    "title": "2  General Policies",
-    "section": "2.10 Lab Meetings",
-    "text": "2.10 Lab Meetings\nWe hold Lab Meetings approximately weekly to increase visibility across Lab projects, brainstorm ideas, and discuss research-related topics.",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>General Policies</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/02-policies.html#professional-development-events",
-    "href": "chapters/02-policies.html#professional-development-events",
-    "title": "2  General Policies",
-    "section": "2.11 Professional Development & Events",
-    "text": "2.11 Professional Development & Events\nThe Lab offers several internal opportunities for professional growth, including data jamborees, trainings, book clubs, and journal clubs. We also host informal lunches and coffee chats. If you have ideas for events, suggestions are always welcome.\nFood at Lab events is funded by the Lab and free to Lab attendees. We expect that trainees who RSVP and submit food orders will show up to the event, barring illness or personal situation. If you need to change your RSVP, please contact Dr. Rose to help us avoid food waste.",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>General Policies</span>"
-    ]
-  },
-  {
     "objectID": "chapters/02-policies.html#recommendation-letters",
     "href": "chapters/02-policies.html#recommendation-letters",
     "title": "2  General Policies",
-    "section": "2.12 Recommendation Letters",
-    "text": "2.12 Recommendation Letters\nDr. Rose receives a variety of requests for letters from current and former trainees, including for graduate school, job applications, fellowships, and awards. Please know she treats your letter requests with the seriousness they deserve and recognizes their importance. Dr. Rose asks that you respect the time it takes her to write, revise, and send letters by giving plenty of notice and being organized with your requests.\nIt essential that you ask Dr. Rose if she can write you a recommendation letter before submitting her name as a recommender. It may be the case that a letter from someone else will be more beneficial for you or that the deadline is too soon for her to accommodate your request.\nIn general, please give Dr. Rose at least 4 weeks notice when requesting a letter, and more time than that when possible. If the deadline is sooner than 4 weeks, she may not be able to write the letter, particularly during times of the year when she receives a high volume of letter requests.\nJob candidates should request access to the Lab job tracking template, make a copy, fill in details specific to your search, and invite Dr. Rose to the document.",
+    "section": "2.10 Recommendation Letters",
+    "text": "2.10 Recommendation Letters\nDr. Rose receives a variety of requests for letters from current and former trainees, including for graduate school, job applications, fellowships, and awards. Please know she treats your letter requests with the seriousness they deserve and recognizes their importance. Dr. Rose asks that you respect the time it takes her to write, revise, and send letters by giving plenty of notice and being organized with your requests.\nIt essential that you ask Dr. Rose if she can write you a recommendation letter before submitting her name as a recommender. It may be the case that a letter from someone else will be more beneficial for you or that the deadline is too soon for her to accommodate your request.\nIn general, please give Dr. Rose at least 4 weeks notice when requesting a letter, and more time than that when possible. If the deadline is sooner than 4 weeks, she may not be able to write the letter, particularly during times of the year when she receives a high volume of letter requests.\nJob candidates should request access to the Lab job tracking template, make a copy, fill in details specific to your search, and invite Dr. Rose to the document.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>General Policies</span>"
     ]
@@ -173,8 +163,8 @@
     "objectID": "chapters/02-policies.html#communication",
     "href": "chapters/02-policies.html#communication",
     "title": "2  General Policies",
-    "section": "2.13 Communication",
-    "text": "2.13 Communication\nWe have a Lab slack. Lab members can search for “HPDS Lab” in the Workspaces at Stanford and request to join.\nPlease keep in mind our Lab philosophy on working hours in Section 1.3. Do not assume that because you have sent a slack message or email that you should get an instant reply.",
+    "section": "2.11 Communication",
+    "text": "2.11 Communication\nWe have a Lab slack. Lab members can search for “HPDS Lab” in the Workspaces at Stanford and request to join.\nPlease keep in mind our Lab philosophy on working hours in Section 1.3. Do not assume that because you have sent a slack message or email that you should get an instant reply.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>General Policies</span>"
     ]
