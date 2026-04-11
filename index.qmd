@@ -4,6 +4,6 @@ The [Health Policy Data Science Lab](http://healthpolicydatascience.org/) at Sta
 
 This manual evolves over time to incorporate additional contributions from Lab members. Contributors include [Malcolm Barrett](https://malco.io/), [Marika Cusick](https://marikacusick.com/), and [Sherri Rose](https://drsherrirose.org/). 
 
-*Are you a prospective or new student?* We suggest starting with @sec-culture so you can learn more about our Lab culture. Many of the later sections provide technical guidance that are especially useful once you begin a research project and have participated in Lab trainings.
+*Are you a prospective or new student?* We suggest starting with the first chapter so you can learn more about our Lab culture. Many of the later sections provide technical guidance that are especially useful once you begin a research project and have participated in Lab trainings.
 
 This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
