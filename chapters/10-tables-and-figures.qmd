@@ -35,7 +35,7 @@ Below we present the Lab style guide for figures and tables, including an implem
 
 **Titles.** Set table titles via the `tbl-cap` chunk option rather than `tab_header()`. This keeps titles in the Quarto source and renders them as proper table captions.
 
-**Borders and gridlines.** Quarto's Bootstrap theme applies its own border styles to HTML tables, which can override gt's styling. To prevent this, add `#| html-table-processing: none` to the chunk options. With that in place, use `tab_options()` to control borders explicitly. gt's defaults already include a top rule, bottom rule, and line under column headers. To match the style guide (no vertical lines, no horizontal lines between data rows, a line under column labels), set these options:
+**Borders and gridlines.** Use `tab_options()` to control borders explicitly. gt's defaults already include a top rule, bottom rule, and line under column headers. To match the style guide (no vertical lines, no horizontal lines between data rows, a line under column labels), set these options:
 
 - `table_body.hlines.width = px(0)`: removes horizontal lines between data rows
 - `table_body.vlines.width = px(0)`: removes vertical lines between data columns
@@ -44,6 +44,8 @@ Below we present the Lab style guide for figures and tables, including an implem
 - `stub.border.width = px(0)`: removes the vertical line to the right of row labels
 
 Use `px(0)` rather than `style = "hidden"`, because CSS `hidden` takes precedence in collapsed borders and can suppress adjacent borders you want to keep. This preserves the spanner borders, the top and bottom rules, and the line under column labels. For further control, `tab_style()` with `cell_borders()` can add or remove lines at specific locations such as `cells_column_spanners()`, `cells_column_labels()`, or `cells_body()`.
+
+Note that, in the `html` format, Quarto's Bootstrap theme applies its own border styles to HTML tables, which can override gt's styling. To prevent this, add `#| html-table-processing: none` to the chunk options.
 
 **Column labels.** Use `cols_label()` to replace column names with human-readable labels. Use `tab_spanner()` to group related columns under a shared header; this reduces repetition. For example, you can label two columns as "Length (mm)" and "Depth (mm)" and group them under a "Bill" spanner, rather than using "Bill length (mm)" and "Bill depth (mm)" as column labels. For measurement units, `cols_units()` can automatically format superscripts and subscripts (e.g., "m/s²").
 
@@ -103,13 +105,15 @@ penguins |>
 
 **Titles.** Use the `tbl-cap` chunk option, not `.tab_header()`.
 
-**Borders.** As with gt, add `#| html-table-processing: none` to the chunk options to prevent Quarto's Bootstrap theme from overriding table borders. Great Tables renders tables with minimal default borders. For explicit control over lines, use `.tab_options()`. To match the style guide (no vertical lines, no horizontal lines between data rows, a line under column labels), set these options:
+**Borders.** Great Tables renders tables with minimal default borders. For explicit control over lines, use `.tab_options()`. To match the style guide (no vertical lines, no horizontal lines between data rows, a line under column labels), set these options:
 
 - `table_body_hlines_width="0px"`: removes horizontal lines between data rows
 - `table_body_vlines_width="0px"`: removes vertical lines between data columns
 - `column_labels_vlines_width="0px"`: removes vertical lines in the header row
 - `column_labels_border_bottom_width="1px"`: adds a line under the column labels
 - `stub_border_width="0px"`: removes the vertical line to the right of row labels
+
+As with gt, add `#| html-table-processing: none` to the chunk options to prevent Quarto's Bootstrap theme from overriding table borders.
 
 **Column labels.** Use `.cols_label()` to replace column names with human-readable labels. Use `.tab_spanner()` to group related columns under a shared header. As with gt, this reduces repetition by letting you use short column labels (e.g., "Length (mm)") under descriptive spanners (e.g., "Bill", "Flipper").
 
@@ -201,7 +205,7 @@ penguin_summary = (
 
 **Gridlines.** Control gridlines via `theme()`. The key elements are `panel.grid.minor`, `panel.grid.major`, `panel.grid.major.x`, and `panel.grid.major.y`; set any of these to `element_blank()` to remove them. For a more academic style, you can change gridline color and weight with `element_line()`, e.g., `theme(panel.grid.major = element_line(color = "black", linewidth = 0.2))`.
 
-**Multi-panel figures.** `facet_wrap()` and `facet_grid()` produce a single shared legend by default, avoiding duplicate legends across panels. When producing custom multiple plots with patchwork, use `plot_layout(guides = 'collect')`. See the [documentation on controlling guides](https://patchwork.data-imaginist.com/articles/guides/layout.html#controlling-guides).
+**Multi-panel figures.** `facet_wrap()` and `facet_grid()` produce a single shared legend by default, avoiding duplicate legends across panels. For composing independent plots, see @sec-composing.
 
 **Significant digits.** Use `scale_x_continuous()` or `scale_y_continuous()` with `labels` from the scales package, e.g., `scales::label_comma()` or `scales::label_number(accuracy = 0.1)`.
 
@@ -210,9 +214,16 @@ penguin_summary = (
 ```{r}
 #| fig-cap: Relationship between flipper length and body mass in penguins
 library(ggplot2)
-species_colors <- c(Adelie = "#1b9e77", Chinstrap = "#d95f02", Gentoo = "#7570b3")
+species_colors <- c(
+  Adelie = "#1b9e77",
+  Chinstrap = "#d95f02",
+  Gentoo = "#7570b3"
+)
 
-ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +
+ggplot(
+  penguins,
+  aes(x = flipper_length_mm, y = body_mass_g, color = species)
+) +
   geom_point() +
   # Map species to specific hex colors
   scale_color_manual(values = species_colors) +
@@ -235,7 +246,7 @@ ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +
 
 **Gridlines and spines.** `sns.despine()` removes the top and right spines. For finer control, use `ax.grid(axis=..., linewidth=...)` and `ax.spines[...].set_visible(False)`. For a more academic style with black gridlines, use `ax.grid(True, color="black", linewidth=0.2, alpha=0.5)`.
 
-**Multi-panel figures.** Use `sns.FacetGrid()` with `hue` for color and `g.add_legend()` for a single shared legend.
+**Multi-panel figures.** Use `sns.FacetGrid()` with `hue` for color and `g.add_legend()` for a single shared legend. For composing independent plots, see @sec-composing.
 
 **Significant digits.** If needed, use `matplotlib.ticker.FormatStrFormatter` or `FuncFormatter` on `ax.xaxis` or `ax.yaxis`.
 
@@ -245,12 +256,23 @@ ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +
 #| fig-cap: Relationship between flipper length and body mass in penguins
 import seaborn as sns
 import matplotlib.pyplot as plt
-palette = {"Adelie": "#1b9e77", "Chinstrap": "#d95f02", "Gentoo": "#7570b3"}
+palette = {
+  "Adelie": "#1b9e77",
+  "Chinstrap": "#d95f02",
+  "Gentoo": "#7570b3"
+}
 
 # "ticks" style for minimal look; font_scale for readability
 sns.set_theme(style="ticks", font_scale=1.2)
 fig, ax = plt.subplots(layout="constrained")
-sns.scatterplot(data=penguins, x="flipper_length_mm", y="body_mass_g", hue="species", palette=palette, ax=ax)
+sns.scatterplot(
+  data=penguins,
+  x="flipper_length_mm",
+  y="body_mass_g",
+  hue="species",
+  palette=palette,
+  ax=ax
+)
 # Always set labels explicitly; seaborn defaults to column names
 ax.set(xlabel="Flipper length (mm)", ylabel="Body mass (g)")
 # Subtle gridlines; despine removes top and right spines
@@ -275,7 +297,7 @@ You can set a default for all plots with `theme_set(theme_minimal(base_size=14))
 
 **Gridlines.** Control gridlines via `theme()`. The key elements are `panel_grid_minor`, `panel_grid_major`, `panel_grid_major_x`, and `panel_grid_major_y`; set any of these to `element_blank()` to remove them. Color values in `element_line()` must be hex codes or named CSS colors (e.g., `"#999999"`, not `"grey60"`). For a more academic style with black gridlines, use `theme(panel_grid_major=element_line(color="black", size=0.2))`.
 
-**Multi-panel figures.** `facet_wrap("~var")` and `facet_grid("row_var ~ col_var")` produce a single shared legend by default. Use `scales="free"`, `"free_x"`, or `"free_y"` to allow axes to vary across panels.
+**Multi-panel figures.** `facet_wrap("~var")` and `facet_grid("row_var ~ col_var")` produce a single shared legend by default. Use `scales="free"`, `"free_x"`, or `"free_y"` to allow axes to vary across panels. For composing independent plots, see @sec-composing.
 
 **Significant digits.** Use `scale_y_continuous(labels=...)` with a callable that formats tick values, e.g., `labels=lambda l: [f"{v:,.0f}" for v in l]`.
 
@@ -290,7 +312,10 @@ You can set a default for all plots with `theme_set(theme_minimal(base_size=14))
 from plotnine import *
 
 (
-    ggplot(penguins, aes(x="flipper_length_mm", y="body_mass_g", color="species"))
+    ggplot(
+      penguins,
+      aes(x="flipper_length_mm", y="body_mass_g", color="species")
+    )
     + geom_point()
     # Map species to specific hex colors
     + scale_color_manual(values=palette)
@@ -316,7 +341,7 @@ from plotnine import *
 
 **Gridlines and spines.** Use `ax.grid(True, ...)` to add gridlines and `ax.spines[["top", "right"]].set_visible(False)` to remove spines. For no gridlines, omit the `ax.grid()` call entirely. For a more academic style with black gridlines, use `ax.grid(True, color="black", linewidth=0.2, alpha=0.5)`.
 
-**Multi-panel figures.** Use `fig, axes = plt.subplots(1, n, layout="constrained")`. For a shared legend, collect handles from one subplot and call `fig.legend()` at the figure level rather than `ax.legend()` on each subplot. The `loc` parameter controls placement, e.g., `fig.legend(loc="outside right upper")`.
+**Multi-panel figures.** Use `fig, axes = plt.subplots(1, n, layout="constrained")` or `plt.subplot_mosaic()` for named layouts. For composing independent plots, see @sec-composing.
 
 **Significant digits.** For explicit control, use a string format on the axis: `ax.yaxis.set_major_formatter("{x:.1f}")`.
 
@@ -331,7 +356,12 @@ fig, ax = plt.subplots(layout="constrained")
 # Loop over categories with explicit colors
 for species, color in palette.items():
     data = penguins[penguins["species"] == species]
-    ax.scatter(data["flipper_length_mm"], data["body_mass_g"], c=color, label=species)
+    ax.scatter(
+      data["flipper_length_mm"],
+      data["body_mass_g"],
+      c=color,
+      label=species
+    )
 # Human-readable labels with units
 ax.set(xlabel="Flipper length (mm)", ylabel="Body mass (g)")
 ax.tick_params(labelsize=12)
@@ -339,6 +369,193 @@ ax.legend(title="Species", fontsize=12, title_fontsize=12)
 # Subtle gridlines; remove top and right spines
 ax.grid(True, linewidth=0.5, alpha=0.5)
 ax.spines[["top", "right"]].set_visible(False)
+plt.show()
+```
+:::
+
+#### Composing plots {#sec-composing}
+
+When you need to combine independent plots into a multi-panel figure, rather than faceting a single plot, use a composition tool. This is common when panels show different variables, different plot types, or results from different estimators.
+
+::: panel-tabset
+## ggplot2 (R)
+
+The [patchwork](https://patchwork.data-imaginist.com/) package composes ggplot2 plots with intuitive operators:
+
+- `|` places plots side by side
+- `/` stacks plots vertically
+- Nest with parentheses: `(p1 | p2) / p3`
+- `plot_layout(guides = "collect")` merges duplicate legends into one
+- `plot_annotation(tag_levels = "A")` adds panel tags (A, B, C, ...)
+
+**Shared legends.** Use `plot_layout(guides = "collect")` to deduplicate legends across panels into a single shared legend. For more control over legend placement, use [`guide_area()`](https://patchwork.data-imaginist.com/reference/guide_area.html) to reserve a panel-sized region for the collected legend, e.g., `(p1 | p2 | guide_area()) + plot_layout(guides = "collect")`.
+
+```{r}
+#| fig-cap: Composing ggplot2 plots with patchwork
+#| code-fold: true
+#| fig-width: 8
+#| fig-height: 4
+library(patchwork)
+
+p_box <- ggplot(penguins, aes(species, body_mass_g, fill = species)) +
+  geom_boxplot(show.legend = FALSE) +
+  scale_fill_manual(values = species_colors) +
+  labs(x = NULL, y = "Body mass (g)") +
+  theme_minimal(base_size = 12) +
+  theme(panel.grid.minor = element_blank())
+
+p_scatter <- ggplot(penguins, aes(flipper_length_mm, body_mass_g, color = species)) +
+  geom_point() +
+  scale_color_manual(values = species_colors) +
+  labs(x = "Flipper length (mm)", y = NULL, color = "Species") +
+  theme_minimal(base_size = 12) +
+  theme(panel.grid.minor = element_blank(),
+        axis.text.y = element_blank())
+
+p_box + p_scatter + guide_area() +
+  plot_layout(guides = "collect", widths = c(1, 2, 1)) +
+  plot_annotation(tag_levels = "A")
+```
+
+## seaborn (Python)
+
+Seaborn does not have its own composition API. To combine independent seaborn plots, use matplotlib's `plt.subplot_mosaic()` (or `plt.subplots()`) and pass the `ax` parameter to each seaborn call. This gives you full control over layout while keeping seaborn's high-level plotting interface.
+
+**Shared legends.** To avoid duplicate legends across panels, pass `legend=False` to all but one seaborn call. For a single figure-level legend, remove per-axes legends with `ax.get_legend().remove()` and call `fig.legend(loc="outside right upper")` once.
+
+```{python}
+#| fig-cap: Composing seaborn plots with subplot_mosaic
+#| code-fold: true
+sns.set_theme(style="ticks", font_scale=1.0)
+
+fig, axd = plt.subplot_mosaic(
+    [["box", "scatter"]],
+    figsize=(8, 4), layout="constrained",
+    width_ratios=[1, 2]
+)
+
+sns.boxplot(
+    data=penguins, x="species", y="body_mass_g",
+    hue="species", palette=palette, legend=False, ax=axd["box"]
+)
+axd["box"].set(xlabel="", ylabel="Body mass (g)")
+axd["box"].grid(axis="y", linewidth=0.3, alpha=0.5)
+
+sns.scatterplot(
+    data=penguins, x="flipper_length_mm", y="body_mass_g",
+    hue="species", palette=palette, ax=axd["scatter"]
+)
+axd["scatter"].set(xlabel="Flipper length (mm)", ylabel="")
+axd["scatter"].tick_params(left=False, labelleft=False)
+axd["scatter"].grid(True, linewidth=0.3, alpha=0.5)
+
+for tag, key in zip("AB", axd):
+    axd[key].set_title(tag, loc="left", fontweight="bold")
+sns.despine()
+plt.show()
+```
+
+## plotnine (Python)
+
+::: {.callout-note}
+As of this writing, `plot_layout()` is only available in the development version of plotnine. To install it:
+
+```bash
+uv add "plotnine @ git+https://github.com/has2k1/plotnine"
+```
+:::
+
+plotnine supports patchwork-style [composition](https://plotnine.org/reference/Compose.html#plotnine.composition.Compose) with the same operators:
+
+- `|` places plots side by side (`Beside`)
+- `/` stacks plots vertically (`Stack`)
+- `&` applies a theme or layer to all plots in the composition
+- `*` applies a layer to only the top-most nesting level
+- `+` adds to the last plot in the composition
+
+Use `labs(tag="A")` on individual plots for panel tags. Use `plot_spacer()` to insert blank space. Use `plot_layout(widths=[...])` to control relative column widths and `plot_layout(heights=[...])` for row heights.
+
+**Shared legends.** To avoid duplicate legends, set `show_legend=False` on plots that repeat the same mapping and keep the legend on one plot. Alternatively, use `guides(color="none")` or `theme(legend_position="none")` on individual plots to suppress specific legends.
+
+```{python}
+#| fig-cap: Composing plotnine plots
+#| code-fold: true
+#| # TODO: remove warning suppression when plotnine fixes the boxplot
+#| # stat_boxplot regression: geom_boxplot() with a categorical x and
+#| # continuous y produces a spurious warning about dropped ['y'] aesthetic
+#| # in the dev version (not present in 0.15.3). We need the dev version
+#| # for plot_layout(). see https://github.com/has2k1/plotnine/issues/1049
+#| warning: false
+
+from plotnine.composition import plot_layout
+
+p_box = (
+    ggplot(penguins, aes("species", "body_mass_g", fill="species"))
+    + geom_boxplot(show_legend=False)
+    + scale_fill_manual(values=palette)
+    + labs(x="", y="Body mass (g)", tag="A")
+)
+
+p_scatter = (
+    ggplot(penguins, aes("flipper_length_mm", "body_mass_g", color="species"))
+    + geom_point()
+    + scale_color_manual(values=palette)
+    + labs(x="Flipper length (mm)", y="", color="Species", tag="B")
+    + theme(axis_text_y=element_blank())
+)
+
+(
+    (p_box | p_scatter)
+    + plot_layout(widths=[1, 2])
+    & theme_minimal(base_size=12)
+    & theme(panel_grid_minor=element_blank())
+).show()
+```
+
+## matplotlib (Python)
+
+`plt.subplot_mosaic()` creates named axes from a grid layout, making it easy to build complex multi-panel figures:
+
+- Pass a list of lists (or a multi-line string) to define the grid
+- Use `"."` for empty cells
+- `width_ratios` and `height_ratios` control relative sizes
+- Access axes by name from the returned dictionary
+
+**Shared legends.** Plot the legend on only one axes, or collect handles and call `fig.legend(loc="outside right upper")` for a single figure-level legend. Remove per-axes legends with `ax.legend_.remove()` or by not passing `label=` on duplicate panels.
+
+```{python}
+#| fig-cap: Composing matplotlib plots with subplot_mosaic
+#| code-fold: true
+fig, axd = plt.subplot_mosaic(
+    [["box", "scatter"]],
+    figsize=(8, 4), layout="constrained",
+    width_ratios=[1, 2]
+)
+
+species_list = list(palette.keys())
+box_data = [penguins[penguins["species"] == s]["body_mass_g"].dropna() for s in species_list]
+bp = axd["box"].boxplot(box_data, patch_artist=True, tick_labels=species_list)
+for patch, color in zip(bp["boxes"], palette.values()):
+    patch.set_facecolor(color)
+    patch.set_alpha(0.7)
+axd["box"].set(ylabel="Body mass (g)")
+axd["box"].grid(axis="y", linewidth=0.3, alpha=0.5)
+axd["box"].spines[["top", "right"]].set_visible(False)
+
+for species, color in palette.items():
+    data = penguins[penguins["species"] == species]
+    axd["scatter"].scatter(
+        data["flipper_length_mm"], data["body_mass_g"],
+        c=color, label=species, s=20
+    )
+axd["scatter"].set(xlabel="Flipper length (mm)", ylabel="")
+axd["scatter"].tick_params(left=False, labelleft=False)
+axd["scatter"].legend(title="Species", fontsize=10, title_fontsize=10)
+axd["scatter"].grid(True, linewidth=0.3, alpha=0.5)
+axd["scatter"].spines[["top", "right"]].set_visible(False)
+
+for tag, key in zip("AB", axd):
+    axd[key].set_title(tag, loc="left", fontweight="bold")
 plt.show()
 ```
 :::
@@ -535,7 +752,9 @@ Tables in the lab often compare results from multiple scenarios, e.g., different
 align_indent <- function(prefix, values) {
   # Align continuation values under the prefix using invisible text
   hidden <- paste0(
-    '<span style="visibility:hidden" aria-hidden="true">', prefix, "</span>"
+    '<span style="visibility:hidden" aria-hidden="true">',
+    prefix,
+    "</span>"
   )
   paste0(prefix, values[1], "<br>", hidden, values[2])
 }
@@ -561,12 +780,90 @@ perf_df <- data.frame(
     "Grid, CW = 0.5",
     "Grid, CW = 0.75"
   ),
-  Accuracy = c(0.95, 0.95, 0.95, 0.93, 0.94, 0.92, 0.91, 0.96, 0.93, 0.32, 0.11, 0.11),
-  Sensitivity = c(0.36, 0.37, 0.29, 0.38, 0.31, 0.39, 0.33, 0.15, 0.13, 0.90, 0.95, 0.95),
-  Mean = c(0.09, 0.02, 0.08, 0.03, 0.08, 0.02, 0.08, 0.04, 0.02, 0.01, 0.01, 0.01),
-  Black = c(0.06, 0.00, 0.06, 0.00, 0.07, 0.00, 0.08, 0.03, 0.01, 0.00, 0.02, 0.02),
-  Asian = c(0.24, 0.19, 0.17, 0.23, 0.11, 0.17, 0.00, 0.12, 0.10, 0.12, 0.00, 0.00),
-  HNW = c(0.07, 0.00, 0.07, 0.00, 0.08, 0.00, 0.13, 0.02, 0.00, 0.00, 0.00, 0.00)
+  Accuracy = c(
+    0.95,
+    0.95,
+    0.95,
+    0.93,
+    0.94,
+    0.92,
+    0.91,
+    0.96,
+    0.93,
+    0.32,
+    0.11,
+    0.11
+  ),
+  Sensitivity = c(
+    0.36,
+    0.37,
+    0.29,
+    0.38,
+    0.31,
+    0.39,
+    0.33,
+    0.15,
+    0.13,
+    0.90,
+    0.95,
+    0.95
+  ),
+  Mean = c(
+    0.09,
+    0.02,
+    0.08,
+    0.03,
+    0.08,
+    0.02,
+    0.08,
+    0.04,
+    0.02,
+    0.01,
+    0.01,
+    0.01
+  ),
+  Black = c(
+    0.06,
+    0.00,
+    0.06,
+    0.00,
+    0.07,
+    0.00,
+    0.08,
+    0.03,
+    0.01,
+    0.00,
+    0.02,
+    0.02
+  ),
+  Asian = c(
+    0.24,
+    0.19,
+    0.17,
+    0.23,
+    0.11,
+    0.17,
+    0.00,
+    0.12,
+    0.10,
+    0.12,
+    0.00,
+    0.00
+  ),
+  HNW = c(
+    0.07,
+    0.00,
+    0.07,
+    0.00,
+    0.08,
+    0.00,
+    0.13,
+    0.02,
+    0.00,
+    0.00,
+    0.00,
+    0.00
+  )
 )
 
 gt(perf_df) |>
@@ -576,10 +873,16 @@ gt(perf_df) |>
     locations = cells_body(columns = Method, rows = 6),
     fn = function(x) long_method_html
   ) |>
-  fmt_number(columns = c(Accuracy, Sensitivity, Mean, Black, Asian, HNW), decimals = 2) |>
+  fmt_number(
+    columns = c(Accuracy, Sensitivity, Mean, Black, Asian, HNW),
+    decimals = 2
+  ) |>
   tab_spanner(label = "Unfairness", columns = c(Mean, Black, Asian, HNW)) |>
   cols_align(align = "left", columns = Method) |>
-  cols_align(align = "center", columns = c(Accuracy, Sensitivity, Mean, Black, Asian, HNW)) |>
+  cols_align(
+    align = "center",
+    columns = c(Accuracy, Sensitivity, Mean, Black, Asian, HNW)
+  ) |>
   cols_width(Method ~ px(280)) |>
   tab_source_note(
     md(paste0(
@@ -599,6 +902,10 @@ gt(perf_df) |>
     column_labels.vlines.width = px(0),
     column_labels.border.bottom.width = px(1),
     stub.border.width = px(0)
+  ) |>
+  tab_style(
+    style = cell_text(align = "left"),
+    locations = cells_source_notes()
   )
 ```
 
@@ -728,9 +1035,18 @@ gt(reg_df) |>
     mrd = html("Mean<br>Residual<br>Difference"),
     fair_cov = html("Fair<br>Covariance")
   ) |>
-  tab_spanner(label = html("Predictive<br>Ratio"), columns = c(ratio_g, ratio_gc)) |>
-  tab_spanner(label = html("Net<br>Compensation"), columns = c(comp_g, comp_gc)) |>
-  cols_align(align = "center", columns = c(r2, ratio_g, ratio_gc, comp_g, comp_gc, mrd, fair_cov)) |>
+  tab_spanner(
+    label = html("Predictive<br>Ratio"),
+    columns = c(ratio_g, ratio_gc)
+  ) |>
+  tab_spanner(
+    label = html("Net<br>Compensation"),
+    columns = c(comp_g, comp_gc)
+  ) |>
+  cols_align(
+    align = "center",
+    columns = c(r2, ratio_g, ratio_gc, comp_g, comp_gc, mrd, fair_cov)
+  ) |>
   cols_align(align = "right", columns = Method) |>
   tab_source_note(
     html(paste0(
@@ -748,6 +1064,10 @@ gt(reg_df) |>
     column_labels.vlines.width = px(0),
     column_labels.border.bottom.width = px(1),
     stub.border.width = px(0)
+  ) |>
+  tab_style(
+    style = cell_text(align = "left"),
+    locations = cells_source_notes()
   )
 ```
 
@@ -1221,9 +1541,12 @@ shadow_df = facet_df.rename({"group": "bg"})
 #| fig-cap: Lorem ipsum dolor sit amet faceted line chart
 #| code-fold: true
 
-fig, axes = plt.subplots(2, 3, figsize=(8, 5), layout="constrained", sharey=True)
+fig, axd = plt.subplot_mosaic(
+    [groups[:3], groups[3:]],
+    figsize=(8, 5), layout="constrained", sharey=True
+)
 
-for ax, grp in zip(axes.flat, groups):
+for grp, ax in axd.items():
     # Data shadows
     for bg_grp in groups:
         bg = facet_df.filter(pl.col("group") == bg_grp);
@@ -1411,6 +1734,17 @@ knitr:
 
 Setting `dev: "ragg_png"` to use the [ragg package](https://ragg.r-lib.org/) for rendering can be helpful for projects with slow figure rendering or complex typographic needs, e.g. custom fonts.
 
+When you need to include images directly (instead of as the output of a code cell), you should use a [figure div](https://quarto.org/docs/authoring/figures.html#figure-divs) to label and caption the figure:
+
+```{verbatim}
+::: {#fig-label-name}
+
+![alt text](path/to/image.file)
+
+Figure caption
+:::
+```
+
 ## A note on plotting in Python
 
 Many of the issues in the style guide can be mitigated by using a plotting framework. Users of Python often write in matplotlib, which powers many of the data visualization tools in Python. However, matplotlib is a lower-level plotting tool that requires extra work to meet the standards we have laid out. It's not that matplotlib is bad. On the contrary, it is extremely powerful. However, for many scientists, a higher-level framework like [Seaborn](https://seaborn.pydata.org/) or [Plotnine](https://plotnine.org/) will be a more appropriate choice for consistent, publication-ready figures. Both are built on top of matplotlib and the tools you may know from it can be very helpful for custom extensions of the higher-level frameworks. That said, if you prefer matplotlib, you can absolutely meet the standards of the style guide and other needs for figures, as demonstrated in the above examples.
@@ -1423,15 +1757,25 @@ For categorical variables, the Okabe-Ito palette is a good choice. For continuou
 
 ## Resources
 
+### Further reading
+
 There are many great resources on designing data visualizations. A good one that is free online is [*Fundamentals of Data Visualization
 * by Claus O. Wilke](https://clauswilke.com/dataviz/). See in particular ["Telling a story and making a point"](https://clauswilke.com/dataviz/telling-a-story.html).
 
-Here are a few collections of examples made with some of the tools used in this document:
+### More examples
 
 * [Seaborn gallery](https://seaborn.pydata.org/examples/index.html)
 * [matplotlib gallery](https://matplotlib.org/stable/gallery/index.html)
 * [plotnine gallery](https://plotnine.org/gallery/)
 * [Great Tables gallery](https://posit-dev.github.io/great-tables/examples/)
 
+### Useful extensions
+
+**ggplot2**:
+
+* [ggrepel](https://ggrepel.slowkow.com/): automatic repulsion of text annotations
+* [legendry](https://teunbrand.github.io/legendry/): additional guide functionality
+* [geomtextpath](https://allancameron.github.io/geomtextpath/): automatic line annotation
+* [marquee](https://marquee.r-lib.org/): expanded text styling and font rendering
 
 ## References

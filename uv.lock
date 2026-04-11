@@ -921,7 +921,7 @@ requires-dist = [
     { name = "matplotlib", specifier = ">=3.10.8" },
     { name = "numpy", specifier = ">=2.4.4" },
     { name = "palmerpenguins", specifier = ">=0.1.6" },
-    { name = "plotnine", specifier = ">=0.15.3" },
+    { name = "plotnine", git = "https://github.com/has2k1/plotnine" },
     { name = "polars", specifier = ">=1.39.3" },
     { name = "pyarrow", specifier = ">=23.0.1" },
     { name = "seaborn", specifier = ">=0.13.2" },
@@ -1293,8 +1293,8 @@ wheels = [
 
 [[package]]
 name = "plotnine"
-version = "0.15.3"
-source = { registry = "https://pypi.org/simple" }
+version = "0.16.0a7.post9+gf844850dd"
+source = { git = "https://github.com/has2k1/plotnine#f844850ddd4a3d91a2ad7441887a351c5cc4fcbd" }
 dependencies = [
     { name = "matplotlib" },
     { name = "mizani" },
@@ -1302,10 +1302,6 @@ dependencies = [
     { name = "pandas" },
     { name = "scipy" },
     { name = "statsmodels" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/63/d5/4eeed62b101aa879b87e9bbc9d0650700b5ebd1ffa743902286b039135a2/plotnine-0.15.3.tar.gz", hash = "sha256:2e8130db4673e0daccb1fd1dfc9f2a6cd2e7843b14f861f4ab861dde1639045f", size = 6788365, upload-time = "2026-01-28T16:35:34.708Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/d8/79/eb59d10e13b151a514a8af3b1dcefb5e998b6c8c26bf0cf82d2b98f02c23/plotnine-0.15.3-py3-none-any.whl", hash = "sha256:39fd2ab8b6465275c8a283ce20d4b743dd865e94c74ae7d7d6f21a7eb31f62c1", size = 1332831, upload-time = "2026-01-28T16:35:32.241Z" },
 ]
 
 [[package]]
