@@ -38,7 +38,7 @@ Trainees must prepare an agenda prior to each recurring meeting with Dr. Rose. C
 -   Topics to discuss at the meeting:
 -   What will be completed by the next meeting:
 
-Push a commit to the project's GitHub repository at the same time you update your agenda document, even if you plan to make further changes prior to the meeting. If additional changes are made to the repository ahead of the meeting, push a second commit. 
+Once a project's GitHub repository has been created, push a commit at the same time you update your agenda document each week, even if you plan to make further changes prior to the meeting. If additional changes are made to the repository ahead of the meeting, push a second commit. 
 
 ## Individual Development Plans
 
