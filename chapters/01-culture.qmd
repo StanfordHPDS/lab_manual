@@ -1,4 +1,4 @@
-# Lab Culture
+# Lab Culture {#sec-culture}
 
 The culture of the Health Policy Data Science Lab is inquisitive, collaborative, kind, and inclusive so that scholars can do their best work. Our group has high standards for rigor, quality, and ethics and helps each other learn to reach these objectives. Every team member is a human first, and their career goals will be centered and supported.  We are committed to an environment that is free from discrimination and harassment.
 
@@ -20,7 +20,13 @@ Dr. Rose does not expect you to be working in the evenings or on weekends and as
 
 We embrace time off, breaks from meetings, and vacations!
 
-## Trainee Support, Access, and Accomodations
+## Trainee Mentorship and Support {#sec-support}
+
+Dr. Rose's mentorship of trainees involves support through 1:1 meetings (see @sec-meetings) as well as Lab group activities. We hold Lab Meetings approximately weekly to increase visibility across Lab projects, brainstorm ideas, and discuss research-related topics. The Lab also offers several internal opportunities for skill building and professional growth, including data jamborees, [trainings](https://github.com/StanfordHPDS/training), [book clubs](https://github.com/StanfordHPDS/hpds_book_club), and journal clubs. 
+
+While most trainees joining the Lab has some prior experience in programming (typically R or Python), we do not have any expectations that new trainees are expert coders or have any previous experience in the coding and reproducibility workflows described in this Lab manual. Trainees develop these skills throughout their time in the Lab with substantial support via our data jamboree and training activities, as well as individual support from Lab research software engineer Malcolm Barrett.
+
+## Trainee Resources, Access, and Accomodations
 
 Your physical and mental health are incredibly important. Please familiarize yourself with the [mental health](https://studentaffairs.stanford.edu/mental-health-resources-stanford) and [crisis assistance](https://glo.stanford.edu/glo-services/crisis-assistance) resources available for students at Stanford as well as mental [health resources](https://postdocbenefits.stanford.edu/my-benefits/medical-coverage/mental-health-resources) for postdoctoral scholars.
 
