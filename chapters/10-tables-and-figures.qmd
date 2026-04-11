@@ -178,8 +178,8 @@ penguin_summary = (
 - Figures should be understandable without the text.
 - Use minimal abbreviations; abbreviations need to be defined even if already defined in the text, either in the figure caption or in other annotations on the plot.
 - Axis label size should be large enough to read in an article format. When in doubt, view the figure in the rendered document rather than in your IDE.
-- Axes should use words, not variable names, e.g., "Systlolic blood pressure" and not `sbp_1`
-- Axes should have units defined, e.g. "Systlolic blood pressure (mmHG)"
+- Axes should use words, not variable names, e.g., "Systolic blood pressure" and not `sbp_1`
+- Axes should have units defined, e.g. "Systolic blood pressure (mmHG)"
 - Multi-panel figures do not typically need duplicate legends in more than one panel; prefer a single legend.
 - Prefer minimal use of gridlines; sometimes, no grid lines or gridlines in only one dimension (e.g. horizontal) is the most appropriate choice. When in doubt, think about whether the lines help your reader understand the plot.
 - Use sensible and consistent significant digits.
