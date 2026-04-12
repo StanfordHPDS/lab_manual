@@ -130,7 +130,7 @@ It's OK to use terse names where the meaning is generally understood, like `n` f
 
 Similarly, for functions, describe what the function is doing, preferably in verb format, e.g., `simulate_data()` is better than `f()` or `data_simulator()`
 
-For both R and Python, prefer `snake_case` over `camelCase` and other naming style conventions unless otherwise appropriate, e.g., the name of a class for object-oriented programming in Python. 
+For both R and Python, prefer `snake_case` over `camelCase` and other naming style conventions unless otherwise appropriate, e.g., the name of a class for object-oriented programming in Python.
 
 ## Project Organization
 
@@ -273,6 +273,20 @@ For R users, there are two helpful functions in usethis to manage your git setup
 
 See also the [PR workflow vignette](https://usethis.r-lib.org/articles/pr-functions.html) for making and managing pull requests in R. You might also find [Happy Git and GitHub for the useR](https://happygitwithr.com/) a helpful perspective.
 :::
+
+### Accessing the Stanford GitHub Organization
+
+Our GitHub organization is housed in the larger [Stanford-managed GitHub enterprise account](https://uit.stanford.edu/service/github). This means you will need to authenticate via your Stanford account, such as through your login or your [Cardinal Key](https://uit.stanford.edu/service/cardinalkey). You will also need to authenticate for private GitHub repos.
+
+For most purposes, the simplest way to authenticate is with the [gh command line tool](https://cli.github.com/), running this in the terminal:
+
+```bash
+gh auth login
+```
+
+Our Nero instances come with gh pre-installed. Sherlock also has gh but you must load it as a module (`ml gh`) first. You may also need to use an SSH key rather than https when you login.
+
+For SSH keys, you need to [allow the key to authenticate via your Stanford account](https://docs.github.com/en/enterprise-cloud@latest/authentication/authenticating-with-single-sign-on/authorizing-an-ssh-key-for-use-with-single-sign-on).
 
 ### Transferring Repositories
 
