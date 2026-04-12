@@ -234,8 +234,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#sec-git-github" id="toc-sec-git-github" class="nav-link" data-scroll-target="#sec-git-github"><span class="header-section-number">9.6</span> Use Git and GitHub</a>
   <ul class="collapse">
   <li><a href="#git-workflow" id="toc-git-workflow" class="nav-link" data-scroll-target="#git-workflow"><span class="header-section-number">9.6.1</span> Git Workflow</a></li>
-  <li><a href="#transferring-repositories" id="toc-transferring-repositories" class="nav-link" data-scroll-target="#transferring-repositories"><span class="header-section-number">9.6.2</span> Transferring Repositories</a></li>
-  <li><a href="#sec-gh-release" id="toc-sec-gh-release" class="nav-link" data-scroll-target="#sec-gh-release"><span class="header-section-number">9.6.3</span> Release on GitHub</a></li>
+  <li><a href="#accessing-the-stanford-github-organization" id="toc-accessing-the-stanford-github-organization" class="nav-link" data-scroll-target="#accessing-the-stanford-github-organization"><span class="header-section-number">9.6.2</span> Accessing the Stanford GitHub Organization</a></li>
+  <li><a href="#transferring-repositories" id="toc-transferring-repositories" class="nav-link" data-scroll-target="#transferring-repositories"><span class="header-section-number">9.6.3</span> Transferring Repositories</a></li>
+  <li><a href="#sec-gh-release" id="toc-sec-gh-release" class="nav-link" data-scroll-target="#sec-gh-release"><span class="header-section-number">9.6.4</span> Release on GitHub</a></li>
   </ul></li>
   <li><a href="#documentation" id="toc-documentation" class="nav-link" data-scroll-target="#documentation"><span class="header-section-number">9.7</span> Documentation</a>
   <ul class="collapse">
@@ -547,8 +548,16 @@ Tip
 </div>
 </div>
 </section>
-<section id="transferring-repositories" class="level3" data-number="9.6.2">
-<h3 data-number="9.6.2" class="anchored" data-anchor-id="transferring-repositories"><span class="header-section-number">9.6.2</span> Transferring Repositories</h3>
+<section id="accessing-the-stanford-github-organization" class="level3" data-number="9.6.2">
+<h3 data-number="9.6.2" class="anchored" data-anchor-id="accessing-the-stanford-github-organization"><span class="header-section-number">9.6.2</span> Accessing the Stanford GitHub Organization</h3>
+<p>Our GitHub organization is housed in the larger <a href="https://uit.stanford.edu/service/github">Stanford-managed GitHub enterprise account</a>. This means you will need to authenticate via your Stanford account, such as through your login or your <a href="https://uit.stanford.edu/service/cardinalkey">Cardinal Key</a>. You will also need to authenticate for private GitHub repos.</p>
+<p>For most purposes, the simplest way to authenticate is with the <a href="https://cli.github.com/">gh command line tool</a>, running this in the terminal:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gh</span> auth login</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Our Nero instances come with gh pre-installed. Sherlock also has gh but you must load it as a module (<code>ml gh</code>) first. You may also need to use an SSH key rather than https when you login.</p>
+<p>For SSH keys, you need to <a href="https://docs.github.com/en/enterprise-cloud@latest/authentication/authenticating-with-single-sign-on/authorizing-an-ssh-key-for-use-with-single-sign-on">allow the key to authenticate via your Stanford account</a>.</p>
+</section>
+<section id="transferring-repositories" class="level3" data-number="9.6.3">
+<h3 data-number="9.6.3" class="anchored" data-anchor-id="transferring-repositories"><span class="header-section-number">9.6.3</span> Transferring Repositories</h3>
 <p>If a repository for a Lab project exists on your personal account, <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/transferring-a-repository#transferring-a-repository-owned-by-your-personal-account">transfer it</a> to the <code>StanfordHPDS</code> GitHub organization.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -564,8 +573,8 @@ Tip
 </div>
 </div>
 </section>
-<section id="sec-gh-release" class="level3" data-number="9.6.3">
-<h3 data-number="9.6.3" class="anchored" data-anchor-id="sec-gh-release"><span class="header-section-number">9.6.3</span> Release on GitHub</h3>
+<section id="sec-gh-release" class="level3" data-number="9.6.4">
+<h3 data-number="9.6.4" class="anchored" data-anchor-id="sec-gh-release"><span class="header-section-number">9.6.4</span> Release on GitHub</h3>
 <p>GitHub has a mechanism for <a href="https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository">making formal releases of repositories</a>. This takes a snapshot of the repository at the time of release and attaches a name.</p>
 <p>Making a “release,” of course, has its origins in software versions. However, it’s also helpful in tracking significant milestones in a project. For instance, make a release upon submission to a journal and another upon publication. That allows you to easily revisit the state of the repository at those two time points. GitHub also makes downloading the repository in releases easy, making it an excellent point to direct people not using Git.</p>
 </section>
@@ -626,7 +635,7 @@ Tip
 <div class="tab-content">
 <div id="tabset-5-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-5-1-tab">
 <p>By default, R stores and loads the interactive environment you use between R sessions. This is a bad default for reproducibility. Teach R not to do this by running this command once in your terminal:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_blank_slate</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_blank_slate</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Relatedly, your script should <em>not</em> contain <code>rm(list = ls())</code>. Using a blank slate and restarting your R session is the better approach because it <em>really</em> starts from scratch, whereas <code>rm(list = ls())</code> only clears objects in the global environment. See <a href="https://www.tidyverse.org/blog/2017/12/workflow-vs-script/">Project-Oriented Workflows</a> for a discussion on this.</p>
 </div>
 <div id="tabset-5-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-2-tab">
@@ -700,46 +709,46 @@ Note
 <div id="tabset-7-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-7-1-tab">
 <p>In R, use the <a href="https://rstudio.github.io/renv/articles/renv.html">renv</a> package to manage R package versions. renv is an interactive tool, so you should use it primarily in the console.</p>
 <p>To initiate a project:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">init</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">init</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Among other things, this will create <code>renv.lock</code>, which needs to be included in your git repository.</p>
 <p>Check a project’s dependency status with</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">status</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">status</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>And update the packages in your lock file with</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">snapshot</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">snapshot</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>When you use renv, your project <code>README</code> should explain how to use it, e.g.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("renv")</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="co"># install the dependencies for the project</span></span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">restore</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("renv")</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="co"># install the dependencies for the project</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">restore</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>One common problem in renv is that it keeps track of but does not manage the R version. If you need to switch between R versions, consider using <a href="https://github.com/r-lib/rig">rig</a>. Rig is not an R package but a separate software that lets you install and switch between R versions. On servers, <a href="https://docs.posit.co/ide/server-pro/user/rstudio-pro/guide/multiple-r-versions.html">RStudio Workbench will let you change versions</a>, as well, provided that they are installed.</p>
 </div>
 <div id="tabset-7-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-2-tab">
 <p>Note: The Python ecosystem for managing environments is vast. See <a href="https://alpopkes.com/posts/python/packaging_tools/" class="uri">https://alpopkes.com/posts/python/packaging_tools/</a> for an overview.</p>
 <p>We recommend <a href="https://docs.astral.sh/uv/getting-started/installation/">uv</a>. uv allows you to install packages, set up virtual environments, and control the version of Python. uv manages most of this for you and works well across operating systems. It’s also very fast.</p>
 <p><code>uv init</code> will set up a uv environment for you, creating several files: <code>pyproject.toml</code>, <code>.python-version</code>, and <code>main.py</code>, as well as a few other files if they don’t already exist, such as a <code>README</code> and <code>.gitignore</code> file. Once you start adding packages to the project, uv will also generate a lock file with the resolved package dependencies (<code>uv.lock</code>) and a virtual environment with <a href="https://docs.python.org/3/library/venv.html">venv</a> in the <code>.venv/</code> directory.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create a new project called my_new_project</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> init my_new_project</span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="co"># or, from within an existing project, just run init</span></span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> init</span>
-<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="co"># manually sync the virtual environment</span></span>
-<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a><span class="co"># mostly uv will handle this for you but it can be handy</span></span>
-<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> sync</span>
-<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a><span class="co"># add a package to your environment</span></span>
-<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a><span class="co"># don't use pip! This will install from pip but manage the environment for you</span></span>
-<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> add polars</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create a new project called my_new_project</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> init my_new_project</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="co"># or, from within an existing project, just run init</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> init</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="co"># manually sync the virtual environment</span></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a><span class="co"># mostly uv will handle this for you but it can be handy</span></span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> sync</span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a><span class="co"># add a package to your environment</span></span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a><span class="co"># don't use pip! This will install from pip but manage the environment for you</span></span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> add polars</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>To run scripts, use <code>uv run</code>. This is a drop-in replacement for <code>python script.py</code>; <code>uv run</code> always runs the script in the virtual environment for the project, so it is a good practice.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># run a script in the virtual environment</span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>uv run my_script.py</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># run a script in the virtual environment</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>uv run my_script.py</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>To manage Python versions, use <code>uv python</code></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install Python 3.12</span></span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>uv python install <span class="fl">3.12</span></span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="co"># and set it as the Python version for the project</span></span>
-<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>uv python pin <span class="fl">3.12</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install Python 3.12</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>uv python install <span class="fl">3.12</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="co"># and set it as the Python version for the project</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>uv python pin <span class="fl">3.12</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>To run development tools like <code>ruff</code>, use <code>uvx</code>, which allows you to use such tools without adding them as dependencies to your project.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>uvx ruff <span class="bu">format</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>uvx ruff <span class="bu">format</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
