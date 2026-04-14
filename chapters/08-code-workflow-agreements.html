@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>9&nbsp; Code Workflow Team Agreements – Stanford Health Policy Data Science</title>
+<title>8&nbsp; Code Workflow Team Agreements – Stanford Health Policy Data Science</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -68,8 +68,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../chapters/10-pre-flight-checklist.html" rel="next">
-<link href="../chapters/08-code-review.html" rel="prev">
+<link href="../chapters/09-code-review.html" rel="next">
+<link href="../chapters/07-publications.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -120,7 +120,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/09-code-workflow-agreements.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Code Workflow Team Agreements</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/08-code-workflow-agreements.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Code Workflow Team Agreements</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -195,14 +195,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/08-code-review.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Code Review</span></span></a>
+  <a href="../chapters/08-code-workflow-agreements.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Code Workflow Team Agreements</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/09-code-workflow-agreements.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Code Workflow Team Agreements</span></span></a>
+  <a href="../chapters/09-code-review.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Code Review</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -221,39 +221,41 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#team-agreements" id="toc-team-agreements" class="nav-link active" data-scroll-target="#team-agreements"><span class="header-section-number">9.1</span> Team Agreements</a></li>
-  <li><a href="#sec-code-style" id="toc-sec-code-style" class="nav-link" data-scroll-target="#sec-code-style"><span class="header-section-number">9.2</span> Code Style</a></li>
-  <li><a href="#sec-naming" id="toc-sec-naming" class="nav-link" data-scroll-target="#sec-naming"><span class="header-section-number">9.3</span> Naming Things</a></li>
-  <li><a href="#project-organization" id="toc-project-organization" class="nav-link" data-scroll-target="#project-organization"><span class="header-section-number">9.4</span> Project Organization</a>
+  <li><a href="#team-agreements" id="toc-team-agreements" class="nav-link active" data-scroll-target="#team-agreements"><span class="header-section-number">8.1</span> Team Agreements</a></li>
+  <li><a href="#sec-code-style" id="toc-sec-code-style" class="nav-link" data-scroll-target="#sec-code-style"><span class="header-section-number">8.2</span> Code Style</a></li>
+  <li><a href="#sec-naming" id="toc-sec-naming" class="nav-link" data-scroll-target="#sec-naming"><span class="header-section-number">8.3</span> Naming Things</a></li>
+  <li><a href="#project-organization" id="toc-project-organization" class="nav-link" data-scroll-target="#project-organization"><span class="header-section-number">8.4</span> Project Organization</a>
   <ul class="collapse">
-  <li><a href="#dont-include-sensitive-information-on-git-and-github" id="toc-dont-include-sensitive-information-on-git-and-github" class="nav-link" data-scroll-target="#dont-include-sensitive-information-on-git-and-github"><span class="header-section-number">9.4.1</span> Don’t Include Sensitive Information on Git and GitHub</a></li>
-  <li><a href="#dont-include-absolute-directories-that-are-not-accessible-to-others" id="toc-dont-include-absolute-directories-that-are-not-accessible-to-others" class="nav-link" data-scroll-target="#dont-include-absolute-directories-that-are-not-accessible-to-others"><span class="header-section-number">9.4.2</span> Don’t Include Absolute Directories That Are Not Accessible to Others</a></li>
-  <li><a href="#be-clear-about-what-can-only-be-run-in-protected-environments" id="toc-be-clear-about-what-can-only-be-run-in-protected-environments" class="nav-link" data-scroll-target="#be-clear-about-what-can-only-be-run-in-protected-environments"><span class="header-section-number">9.4.3</span> Be Clear About What Can Only Be Run In Protected Environments</a></li>
+  <li><a href="#dont-include-sensitive-information-on-git-and-github" id="toc-dont-include-sensitive-information-on-git-and-github" class="nav-link" data-scroll-target="#dont-include-sensitive-information-on-git-and-github"><span class="header-section-number">8.4.1</span> Don’t Include Sensitive Information on Git and GitHub</a></li>
+  <li><a href="#dont-include-absolute-directories-that-are-not-accessible-to-others" id="toc-dont-include-absolute-directories-that-are-not-accessible-to-others" class="nav-link" data-scroll-target="#dont-include-absolute-directories-that-are-not-accessible-to-others"><span class="header-section-number">8.4.2</span> Don’t Include Absolute Directories That Are Not Accessible to Others</a></li>
+  <li><a href="#be-clear-about-what-can-only-be-run-in-protected-environments" id="toc-be-clear-about-what-can-only-be-run-in-protected-environments" class="nav-link" data-scroll-target="#be-clear-about-what-can-only-be-run-in-protected-environments"><span class="header-section-number">8.4.3</span> Be Clear About What Can Only Be Run In Protected Environments</a></li>
   </ul></li>
-  <li><a href="#sec-quarto" id="toc-sec-quarto" class="nav-link" data-scroll-target="#sec-quarto"><span class="header-section-number">9.5</span> Generate Reproducible Documents with Quarto</a></li>
-  <li><a href="#sec-git-github" id="toc-sec-git-github" class="nav-link" data-scroll-target="#sec-git-github"><span class="header-section-number">9.6</span> Use Git and GitHub</a>
+  <li><a href="#sec-quarto" id="toc-sec-quarto" class="nav-link" data-scroll-target="#sec-quarto"><span class="header-section-number">8.5</span> Generate Reproducible Documents with Quarto</a></li>
+  <li><a href="#sec-git-github" id="toc-sec-git-github" class="nav-link" data-scroll-target="#sec-git-github"><span class="header-section-number">8.6</span> Use Git and GitHub</a>
   <ul class="collapse">
-  <li><a href="#git-workflow" id="toc-git-workflow" class="nav-link" data-scroll-target="#git-workflow"><span class="header-section-number">9.6.1</span> Git Workflow</a></li>
-  <li><a href="#accessing-the-stanford-github-organization" id="toc-accessing-the-stanford-github-organization" class="nav-link" data-scroll-target="#accessing-the-stanford-github-organization"><span class="header-section-number">9.6.2</span> Accessing the Stanford GitHub Organization</a></li>
-  <li><a href="#transferring-repositories" id="toc-transferring-repositories" class="nav-link" data-scroll-target="#transferring-repositories"><span class="header-section-number">9.6.3</span> Transferring Repositories</a></li>
-  <li><a href="#sec-gh-release" id="toc-sec-gh-release" class="nav-link" data-scroll-target="#sec-gh-release"><span class="header-section-number">9.6.4</span> Release on GitHub</a></li>
+  <li><a href="#git-workflow" id="toc-git-workflow" class="nav-link" data-scroll-target="#git-workflow"><span class="header-section-number">8.6.1</span> Git Workflow</a></li>
+  <li><a href="#gh" id="toc-gh" class="nav-link" data-scroll-target="#gh"><span class="header-section-number">8.6.2</span> gh</a></li>
+  <li><a href="#accessing-the-stanford-github-organization" id="toc-accessing-the-stanford-github-organization" class="nav-link" data-scroll-target="#accessing-the-stanford-github-organization"><span class="header-section-number">8.6.3</span> Accessing the Stanford GitHub Organization</a></li>
+  <li><a href="#transferring-repositories" id="toc-transferring-repositories" class="nav-link" data-scroll-target="#transferring-repositories"><span class="header-section-number">8.6.4</span> Transferring Repositories</a></li>
+  <li><a href="#sec-gh-release" id="toc-sec-gh-release" class="nav-link" data-scroll-target="#sec-gh-release"><span class="header-section-number">8.6.5</span> Release on GitHub</a></li>
+  <li><a href="#sec-gh-public-archive" id="toc-sec-gh-public-archive" class="nav-link" data-scroll-target="#sec-gh-public-archive"><span class="header-section-number">8.6.6</span> Creating a Public Repository and Archiving a Private Repository</a></li>
   </ul></li>
-  <li><a href="#documentation" id="toc-documentation" class="nav-link" data-scroll-target="#documentation"><span class="header-section-number">9.7</span> Documentation</a>
+  <li><a href="#documentation" id="toc-documentation" class="nav-link" data-scroll-target="#documentation"><span class="header-section-number">8.7</span> Documentation</a>
   <ul class="collapse">
-  <li><a href="#a-note-about-comments" id="toc-a-note-about-comments" class="nav-link" data-scroll-target="#a-note-about-comments"><span class="header-section-number">9.7.1</span> A Note about Comments</a></li>
-  <li><a href="#sec-readme" id="toc-sec-readme" class="nav-link" data-scroll-target="#sec-readme"><span class="header-section-number">9.7.2</span> <code>README</code></a></li>
+  <li><a href="#a-note-about-comments" id="toc-a-note-about-comments" class="nav-link" data-scroll-target="#a-note-about-comments"><span class="header-section-number">8.7.1</span> A Note about Comments</a></li>
+  <li><a href="#sec-readme" id="toc-sec-readme" class="nav-link" data-scroll-target="#sec-readme"><span class="header-section-number">8.7.2</span> <code>README</code></a></li>
   </ul></li>
-  <li><a href="#sec-running-code" id="toc-sec-running-code" class="nav-link" data-scroll-target="#sec-running-code"><span class="header-section-number">9.8</span> Running Code</a>
+  <li><a href="#sec-running-code" id="toc-sec-running-code" class="nav-link" data-scroll-target="#sec-running-code"><span class="header-section-number">8.8</span> Running Code</a>
   <ul class="collapse">
-  <li><a href="#use-a-blank-slate" id="toc-use-a-blank-slate" class="nav-link" data-scroll-target="#use-a-blank-slate"><span class="header-section-number">9.8.1</span> Use a Blank Slate</a></li>
-  <li><a href="#sec-pipelines" id="toc-sec-pipelines" class="nav-link" data-scroll-target="#sec-pipelines"><span class="header-section-number">9.8.2</span> Pipelines</a></li>
-  <li><a href="#provide-guidance-on-how-to-run-your-code" id="toc-provide-guidance-on-how-to-run-your-code" class="nav-link" data-scroll-target="#provide-guidance-on-how-to-run-your-code"><span class="header-section-number">9.8.3</span> Provide Guidance on How to Run Your Code</a></li>
+  <li><a href="#use-a-blank-slate" id="toc-use-a-blank-slate" class="nav-link" data-scroll-target="#use-a-blank-slate"><span class="header-section-number">8.8.1</span> Use a Blank Slate</a></li>
+  <li><a href="#sec-pipelines" id="toc-sec-pipelines" class="nav-link" data-scroll-target="#sec-pipelines"><span class="header-section-number">8.8.2</span> Pipelines</a></li>
+  <li><a href="#provide-guidance-on-how-to-run-your-code" id="toc-provide-guidance-on-how-to-run-your-code" class="nav-link" data-scroll-target="#provide-guidance-on-how-to-run-your-code"><span class="header-section-number">8.8.3</span> Provide Guidance on How to Run Your Code</a></li>
   </ul></li>
-  <li><a href="#sec-pkg-env" id="toc-sec-pkg-env" class="nav-link" data-scroll-target="#sec-pkg-env"><span class="header-section-number">9.9</span> Lock your Package Versions</a></li>
-  <li><a href="#sec-opt-in" id="toc-sec-opt-in" class="nav-link" data-scroll-target="#sec-opt-in"><span class="header-section-number">9.10</span> Opt-in Workflows</a>
+  <li><a href="#sec-pkg-env" id="toc-sec-pkg-env" class="nav-link" data-scroll-target="#sec-pkg-env"><span class="header-section-number">8.9</span> Lock your Package Versions</a></li>
+  <li><a href="#sec-opt-in" id="toc-sec-opt-in" class="nav-link" data-scroll-target="#sec-opt-in"><span class="header-section-number">8.10</span> Opt-in Workflows</a>
   <ul class="collapse">
-  <li><a href="#sec-tests" id="toc-sec-tests" class="nav-link" data-scroll-target="#sec-tests"><span class="header-section-number">9.10.1</span> Testing</a></li>
-  <li><a href="#sec-docker" id="toc-sec-docker" class="nav-link" data-scroll-target="#sec-docker"><span class="header-section-number">9.10.2</span> Docker</a></li>
+  <li><a href="#sec-tests" id="toc-sec-tests" class="nav-link" data-scroll-target="#sec-tests"><span class="header-section-number">8.10.1</span> Testing</a></li>
+  <li><a href="#sec-docker" id="toc-sec-docker" class="nav-link" data-scroll-target="#sec-docker"><span class="header-section-number">8.10.2</span> Docker</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -263,7 +265,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-agreements" class="quarto-section-identifier"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Code Workflow Team Agreements</span></span></h1>
+<h1 class="title"><span id="sec-agreements" class="quarto-section-identifier"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Code Workflow Team Agreements</span></span></h1>
 </div>
 
 
@@ -280,8 +282,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="team-agreements" class="level2" data-number="9.1">
-<h2 data-number="9.1" class="anchored" data-anchor-id="team-agreements"><span class="header-section-number">9.1</span> Team Agreements</h2>
+<section id="team-agreements" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="team-agreements"><span class="header-section-number">8.1</span> Team Agreements</h2>
 <p>This chapter documents the code workflow team agreements for our Lab. By team agreements, we mean a set of coding principles and workflows we have all agreed to adhere to. This is a living document: we can update as the team and coding ecosystems also change over time. If you have concerns or suggestions about our workflows, feel free to propose alternatives for the team to consider collectively.</p>
 <p>We focus on workflows that allow individual members freedom to code how they prefer while maintaining reproducibility and ease of collaboration. Thus, we don’t tell you which language to use or, for the most part, which tools to use within a given language (unless there is a key tool we use to maintain the agreements).</p>
 <p>Currently, most of our team uses R, Python, or both. Thus, we offer language-specific guidance for those two languages. We’ll add relevant recommendations if other languages become more prominent in the team. We also offer guidance on code style for SQL.</p>
@@ -311,8 +313,8 @@ Tip
 </div>
 </div>
 </section>
-<section id="sec-code-style" class="level2" data-number="9.2">
-<h2 data-number="9.2" class="anchored" data-anchor-id="sec-code-style"><span class="header-section-number">9.2</span> Code Style</h2>
+<section id="sec-code-style" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="sec-code-style"><span class="header-section-number">8.2</span> Code Style</h2>
 <p>Consistency of code style is essential for collaboration. It speeds up the reading of code and reduces debates on what code should look like. We prefer automated styling tools such that you can write however you like and quickly follow the team style guide by running the tool.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Python</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">SQL</a></li></ul>
@@ -378,8 +380,8 @@ Tip
 </div>
 </div>
 </section>
-<section id="sec-naming" class="level2" data-number="9.3">
-<h2 data-number="9.3" class="anchored" data-anchor-id="sec-naming"><span class="header-section-number">9.3</span> Naming Things</h2>
+<section id="sec-naming" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="sec-naming"><span class="header-section-number">8.3</span> Naming Things</h2>
 <p>Naming things is an aspect of code style, but it merits a little extra attention because it is important to readability. In general, strive to make your code <em>self-documenting</em>, e.g., someone else should be able to read your code and understand what it’s doing without talking to you about it. Self-documenting is easier said than done, so code clearness is an essential type of feedback in code review.</p>
 <p>Use descriptive names for objects in code, e.g., <code>model_results</code> rather than <code>out</code> or <code>kangaroo_data</code> rather than <code>k</code>. However, do note prefer overly long names (e.g., three words is better than four or five).</p>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -398,9 +400,9 @@ Tip
 <p>Similarly, for functions, describe what the function is doing, preferably in verb format, e.g., <code>simulate_data()</code> is better than <code>f()</code> or <code>data_simulator()</code></p>
 <p>For both R and Python, prefer <code>snake_case</code> over <code>camelCase</code> and other naming style conventions unless otherwise appropriate, e.g., the name of a class for object-oriented programming in Python.</p>
 </section>
-<section id="project-organization" class="level2" data-number="9.4">
-<h2 data-number="9.4" class="anchored" data-anchor-id="project-organization"><span class="header-section-number">9.4</span> Project Organization</h2>
-<p>We try to be flexible about project organization, as being too prescriptive often backfires. The rule of thumb is to try to make it obvious where everything is by using descriptive folder and file names, e.g., <code>R/</code> or <code>scripts/</code> to organize source code and <code>output</code> or <code>reports</code> to organize research outputs. You should also include guidance on the organization of your project in a <code>README</code> (see <a href="#sec-readme" class="quarto-xref"><span>Section 9.7.2</span></a>).</p>
+<section id="project-organization" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="project-organization"><span class="header-section-number">8.4</span> Project Organization</h2>
+<p>We try to be flexible about project organization, as being too prescriptive often backfires. The rule of thumb is to try to make it obvious where everything is by using descriptive folder and file names, e.g., <code>R/</code> or <code>scripts/</code> to organize source code and <code>output</code> or <code>reports</code> to organize research outputs. You should also include guidance on the organization of your project in a <code>README</code> (see <a href="#sec-readme" class="quarto-xref"><span>Section 8.7.2</span></a>).</p>
 <p>For instance, an R project might look like this:</p>
 <pre><code>R/
 figures/
@@ -428,8 +430,8 @@ Tip
 </div>
 </div>
 <p>We also have a couple of essential guidelines for what is in a project.</p>
-<section id="dont-include-sensitive-information-on-git-and-github" class="level3" data-number="9.4.1">
-<h3 data-number="9.4.1" class="anchored" data-anchor-id="dont-include-sensitive-information-on-git-and-github"><span class="header-section-number">9.4.1</span> Don’t Include Sensitive Information on Git and GitHub</h3>
+<section id="dont-include-sensitive-information-on-git-and-github" class="level3" data-number="8.4.1">
+<h3 data-number="8.4.1" class="anchored" data-anchor-id="dont-include-sensitive-information-on-git-and-github"><span class="header-section-number">8.4.1</span> Don’t Include Sensitive Information on Git and GitHub</h3>
 <p><a href="https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files">.gitignore</a> any sensitive data. For instance, your <code>.gitignore</code> file should contain lines for <code>data/</code> and <code>data-raw/</code> if those two folders contain sensitive data. Another common source of information leaks is cached data, such as Jupyter checkpoints or a knitr cache.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -464,8 +466,8 @@ Tip
 </div>
 </div>
 </section>
-<section id="dont-include-absolute-directories-that-are-not-accessible-to-others" class="level3" data-number="9.4.2">
-<h3 data-number="9.4.2" class="anchored" data-anchor-id="dont-include-absolute-directories-that-are-not-accessible-to-others"><span class="header-section-number">9.4.2</span> Don’t Include Absolute Directories That Are Not Accessible to Others</h3>
+<section id="dont-include-absolute-directories-that-are-not-accessible-to-others" class="level3" data-number="8.4.2">
+<h3 data-number="8.4.2" class="anchored" data-anchor-id="dont-include-absolute-directories-that-are-not-accessible-to-others"><span class="header-section-number">8.4.2</span> Don’t Include Absolute Directories That Are Not Accessible to Others</h3>
 <p>A common mistake in code is to hardcode a path that only exists on your computer, e.g.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"/users/malcolmbarrett/Downloads/data.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Prefer file paths that are relative to the root directory of your project. <code>data.csv</code> should be in my project directory, which I can access with relative paths:</p>
@@ -484,8 +486,8 @@ Tip
 </div>
 </div>
 </section>
-<section id="be-clear-about-what-can-only-be-run-in-protected-environments" class="level3" data-number="9.4.3">
-<h3 data-number="9.4.3" class="anchored" data-anchor-id="be-clear-about-what-can-only-be-run-in-protected-environments"><span class="header-section-number">9.4.3</span> Be Clear About What Can Only Be Run In Protected Environments</h3>
+<section id="be-clear-about-what-can-only-be-run-in-protected-environments" class="level3" data-number="8.4.3">
+<h3 data-number="8.4.3" class="anchored" data-anchor-id="be-clear-about-what-can-only-be-run-in-protected-environments"><span class="header-section-number">8.4.3</span> Be Clear About What Can Only Be Run In Protected Environments</h3>
 <p>Some projects can only be run in a protected environments, while others can be run without these restrictions, such as on a local laptop. Many lab projects, though, have components of both. For example, a microsimulation project might depend on summary statistics calculated from sensitive data. The calculations themselves likely need to occur in a protected computational environment like Nero GCP (<a href="05-computing.html#sec-nero" class="quarto-xref"><span>Section 5.1</span></a>). However, the simulation itself may not need to. If the summary data meets requirements in the data use agreement to be taken out of the protected environment, then the simulation itself may not need to occur there.</p>
 <p>For these projects, we suggest:</p>
 <ol type="1">
@@ -495,8 +497,8 @@ Tip
 <p>While you can run such projects entirely in a protected environment, this approach allows you to use your local computer or HPC like Sherlock (<a href="05-computing.html#sec-sherlock" class="quarto-xref"><span>Section 5.2</span></a>) for the components that do not use protected data.</p>
 </section>
 </section>
-<section id="sec-quarto" class="level2" data-number="9.5">
-<h2 data-number="9.5" class="anchored" data-anchor-id="sec-quarto"><span class="header-section-number">9.5</span> Generate Reproducible Documents with Quarto</h2>
+<section id="sec-quarto" class="level2" data-number="8.5">
+<h2 data-number="8.5" class="anchored" data-anchor-id="sec-quarto"><span class="header-section-number">8.5</span> Generate Reproducible Documents with Quarto</h2>
 <p>Prefer using <a href="https://quarto.org/">Quarto</a> for documents, particularly those that generate a research product like a research plan or journal article. Quarto is a scientific publishing framework that weaves <a href="https://commonmark.org/help/tutorial/">Markdown-based</a> text with computational results from R, Python, Julia, etc. You can also mix languages in a single document.</p>
 <p>You can also use Quarto interactively in RStudio and VS Code much as you can with R Markdown or Jupyter notebooks.</p>
 <p>The documentation on the Quarto website is excellent, so check that for guidance on the latest features. A handy collection of pages for research is the <a href="https://quarto.org/docs/authoring/front-matter.html">Scholarly Writing</a> section of the Authoring guide.</p>
@@ -519,18 +521,18 @@ Tip
 </div>
 </div>
 </section>
-<section id="sec-git-github" class="level2" data-number="9.6">
-<h2 data-number="9.6" class="anchored" data-anchor-id="sec-git-github"><span class="header-section-number">9.6</span> Use Git and GitHub</h2>
+<section id="sec-git-github" class="level2" data-number="8.6">
+<h2 data-number="8.6" class="anchored" data-anchor-id="sec-git-github"><span class="header-section-number">8.6</span> Use Git and GitHub</h2>
 <p>You should manage your project with version control and hosted for collaborators to access. We use <a href="https://www.atlassian.com/git">Git</a> and <a href="https://docs.github.com/en/get-started/start-your-journey/hello-world">GitHub</a> for managing and hosting version-controlled repositories, respectfully. We also have a <a href="https://github.com/StanfordHPDS">GitHub organization</a> where we keep team projects.</p>
-<p>See <a href="08-code-review.html" class="quarto-xref"><span>Chapter 8</span></a> for how to manage code changes to your repository.</p>
-<section id="git-workflow" class="level3" data-number="9.6.1">
-<h3 data-number="9.6.1" class="anchored" data-anchor-id="git-workflow"><span class="header-section-number">9.6.1</span> Git Workflow</h3>
+<p>See <a href="09-code-review.html" class="quarto-xref"><span>Chapter 9</span></a> for how to manage code changes to your repository.</p>
+<section id="git-workflow" class="level3" data-number="8.6.1">
+<h3 data-number="8.6.1" class="anchored" data-anchor-id="git-workflow"><span class="header-section-number">8.6.1</span> Git Workflow</h3>
 <ol type="1">
-<li>From the beginning of a project, you should work in a git repository. You can either create one locally in your work environment and push to GitHub or create one <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository">via GitHub</a> and clone it to your work environment. If you create one on GitHub, prefer creating it directly in our <a href="https://github.com/StanfordHPDS">GitHub organization</a> by changing the Owner to <code>StanfordHPDS</code>.</li>
+<li>From the beginning of a project, you should work in a git repository. You can either create one locally in your work environment and push to GitHub or create one <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository">via GitHub</a> and clone it to your work environment. If you create one on GitHub, prefer creating it directly in our <a href="https://github.com/StanfordHPDS">GitHub organization</a> by changing the Owner to <code>StanfordHPDS</code>. For most projects, the repository should start as <a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility">private</a>.</li>
 <li>Make changes on branches. Prefer branch names that describe the intent of the change, e.g.&nbsp;<code>add-table</code> over <code>changes</code>.</li>
 <li>Push the branch to GitHub, e.g.&nbsp;<code>git push -u origin add-table</code> for the <code>add-table</code> branch.</li>
 <li>Open a <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request">pull request</a>.</li>
-<li>Follow the code review process outlined in <a href="08-code-review.html" class="quarto-xref"><span>Chapter 8</span></a></li>
+<li>Follow the code review process outlined in <a href="09-code-review.html" class="quarto-xref"><span>Chapter 9</span></a></li>
 <li>When your pull request is merged into your new branch, pull the changes in your local copy of the repository, delete the remote branch, and delete the local branch.</li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -543,21 +545,50 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>For R users, there are two helpful functions in usethis to manage your git setup for a project: <code>usethis::use_git()</code> will initialize a git repository and activate the git UI in RStudio; <code>usethis::use_github()</code> will create and link a GitHub repository, as well as make your first push. Note that <code>use_github()</code> has an <code>organisation</code> argument where you can specify a GitHub organization to create the repository under, such as <code>use_github(organisation = "StanfordHPDS")</code>.</p>
+<p>For R users, there are two helpful functions in usethis to manage your git setup for a project: <code>usethis::use_git()</code> will initialize a git repository and activate the git UI in RStudio; <code>usethis::use_github(private = TRUE)</code> will create and link a private GitHub repository, as well as make your first push. Note that <code>use_github()</code> has an <code>organisation</code> argument where you can specify a GitHub organization to create the repository under, such as <code>use_github(organisation = "StanfordHPDS", private = TRUE)</code>.</p>
 <p>See also the <a href="https://usethis.r-lib.org/articles/pr-functions.html">PR workflow vignette</a> for making and managing pull requests in R. You might also find <a href="https://happygitwithr.com/">Happy Git and GitHub for the useR</a> a helpful perspective.</p>
 </div>
 </div>
 </section>
-<section id="accessing-the-stanford-github-organization" class="level3" data-number="9.6.2">
-<h3 data-number="9.6.2" class="anchored" data-anchor-id="accessing-the-stanford-github-organization"><span class="header-section-number">9.6.2</span> Accessing the Stanford GitHub Organization</h3>
+<section id="gh" class="level3" data-number="8.6.2">
+<h3 data-number="8.6.2" class="anchored" data-anchor-id="gh"><span class="header-section-number">8.6.2</span> gh</h3>
+<p>The <a href="https://cli.github.com/">gh command line tool</a> is a useful tool for streamlining interactions with GitHub. gh makes it easy to <a href="https://cli.github.com/manual/gh_auth_login">login</a>, <a href="https://cli.github.com/manual/gh_repo_create">create repositories</a>, <a href="https://cli.github.com/manual/gh_repo_clone">clone repositories</a>, <a href="https://cli.github.com/manual/gh_pr">manage pull requests</a>, and more.</p>
+<p>For instance, to create a private repository in our organization based on an existing local git repository:</p>
+<pre><code>gh repo create StanfordHPDS/$(basename "$PWD") --private --source=. --push</code></pre>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You can also create aliases in gh. For instance, to store the above command as an alias called <code>create_repo</code>, run:</p>
+<pre><code>gh alias set create_hpds_repo --shell 'gh repo create StanfordHPDS/$(basename "$PWD") --private --source=. --push'</code></pre>
+<p>Then, you can use <code>gh create_hpds_repo</code> in any existing repository to create a new private repository in our organization.</p>
+</div>
+</div>
+<p>Clone an existing repository:</p>
+<pre><code>gh repo clone StanfordHPDS/name_of_repo</code></pre>
+<p>Create a pull request from a branch with changes:</p>
+<pre><code>gh pr create</code></pre>
+<p>Access an existing PR locally:</p>
+<pre><code>gh pr checkout</code></pre>
+<p>and merge a PR (including deleting the local branch, switching back to the main branch, and pulling, so it is useful even if you merge through the GitHub UI)</p>
+<pre><code>gh pr merge</code></pre>
+<p>Our Nero instances come with gh pre-installed. Sherlock also has gh but you must load it as a module (<code>ml gh</code>) first. You may also need to use an SSH key rather than https when you login.</p>
+</section>
+<section id="accessing-the-stanford-github-organization" class="level3" data-number="8.6.3">
+<h3 data-number="8.6.3" class="anchored" data-anchor-id="accessing-the-stanford-github-organization"><span class="header-section-number">8.6.3</span> Accessing the Stanford GitHub Organization</h3>
 <p>Our GitHub organization is housed in the larger <a href="https://uit.stanford.edu/service/github">Stanford-managed GitHub enterprise account</a>. This means you will need to authenticate via your Stanford account, such as through your login or your <a href="https://uit.stanford.edu/service/cardinalkey">Cardinal Key</a>. You will also need to authenticate for private GitHub repos.</p>
 <p>For most purposes, the simplest way to authenticate is with the <a href="https://cli.github.com/">gh command line tool</a>, running this in the terminal:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gh</span> auth login</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Our Nero instances come with gh pre-installed. Sherlock also has gh but you must load it as a module (<code>ml gh</code>) first. You may also need to use an SSH key rather than https when you login.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gh</span> auth login</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>For SSH keys, you need to <a href="https://docs.github.com/en/enterprise-cloud@latest/authentication/authenticating-with-single-sign-on/authorizing-an-ssh-key-for-use-with-single-sign-on">allow the key to authenticate via your Stanford account</a>.</p>
 </section>
-<section id="transferring-repositories" class="level3" data-number="9.6.3">
-<h3 data-number="9.6.3" class="anchored" data-anchor-id="transferring-repositories"><span class="header-section-number">9.6.3</span> Transferring Repositories</h3>
+<section id="transferring-repositories" class="level3" data-number="8.6.4">
+<h3 data-number="8.6.4" class="anchored" data-anchor-id="transferring-repositories"><span class="header-section-number">8.6.4</span> Transferring Repositories</h3>
 <p>If a repository for a Lab project exists on your personal account, <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/transferring-a-repository#transferring-a-repository-owned-by-your-personal-account">transfer it</a> to the <code>StanfordHPDS</code> GitHub organization.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -573,17 +604,24 @@ Tip
 </div>
 </div>
 </section>
-<section id="sec-gh-release" class="level3" data-number="9.6.4">
-<h3 data-number="9.6.4" class="anchored" data-anchor-id="sec-gh-release"><span class="header-section-number">9.6.4</span> Release on GitHub</h3>
+<section id="sec-gh-release" class="level3" data-number="8.6.5">
+<h3 data-number="8.6.5" class="anchored" data-anchor-id="sec-gh-release"><span class="header-section-number">8.6.5</span> Release on GitHub</h3>
 <p>GitHub has a mechanism for <a href="https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository">making formal releases of repositories</a>. This takes a snapshot of the repository at the time of release and attaches a name.</p>
 <p>Making a “release,” of course, has its origins in software versions. However, it’s also helpful in tracking significant milestones in a project. For instance, make a release upon submission to a journal and another upon publication. That allows you to easily revisit the state of the repository at those two time points. GitHub also makes downloading the repository in releases easy, making it an excellent point to direct people not using Git.</p>
 </section>
+<section id="sec-gh-public-archive" class="level3" data-number="8.6.6">
+<h3 data-number="8.6.6" class="anchored" data-anchor-id="sec-gh-public-archive"><span class="header-section-number">8.6.6</span> Creating a Public Repository and Archiving a Private Repository</h3>
+<p>When a project is ready to submit for publication, make a <strong>new, public</strong> repository. This should be separate from the repository you have been working in. Copy the existing codebase into the new repository, commit the results, and push it to the new repository. This results in a repository that has had its git history stripped. We follow this workflow as part of an effort to respect the privacy of trainees in the Lab while engaged in the training process, some of which occurs on GitHub.</p>
+<p>When you create a new repository, add a link to the public-facing repository in the <code>README</code>.</p>
+<p>If you need to make updates to the code, work in the private repository and copy the files to the public repository when complete. For instance, if changes are requested in a journal submission process, address the changes in the private, working repository, then copy the changes to the publicly available repository.</p>
+<p>When the submission process is complete, we will formally <a href="https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories">archive the private repository</a> to signal the completion of the work and avoid any confusion with respect to the duplicate repositories.</p>
 </section>
-<section id="documentation" class="level2" data-number="9.7">
-<h2 data-number="9.7" class="anchored" data-anchor-id="documentation"><span class="header-section-number">9.7</span> Documentation</h2>
-<p>The first step in documenting your code is writing clear, readable code. In other words, someone else should be able to read your code and understand what it’s doing. The best way to test this out is a code review: can somebody else understand your code? As discussed in <a href="#sec-naming" class="quarto-xref"><span>Section 9.3</span></a>, code that is itself readable is sometimes called <em>self-documenting</em> code. It’s not always possible and shouldn’t be the only type of documentation, but it’s an excellent goal to strive towards.</p>
-<section id="a-note-about-comments" class="level3" data-number="9.7.1">
-<h3 data-number="9.7.1" class="anchored" data-anchor-id="a-note-about-comments"><span class="header-section-number">9.7.1</span> A Note about Comments</h3>
+</section>
+<section id="documentation" class="level2" data-number="8.7">
+<h2 data-number="8.7" class="anchored" data-anchor-id="documentation"><span class="header-section-number">8.7</span> Documentation</h2>
+<p>The first step in documenting your code is writing clear, readable code. In other words, someone else should be able to read your code and understand what it’s doing. The best way to test this out is a code review: can somebody else understand your code? As discussed in <a href="#sec-naming" class="quarto-xref"><span>Section 8.3</span></a>, code that is itself readable is sometimes called <em>self-documenting</em> code. It’s not always possible and shouldn’t be the only type of documentation, but it’s an excellent goal to strive towards.</p>
+<section id="a-note-about-comments" class="level3" data-number="8.7.1">
+<h3 data-number="8.7.1" class="anchored" data-anchor-id="a-note-about-comments"><span class="header-section-number">8.7.1</span> A Note about Comments</h3>
 <p>Comments exist in virtually every programming language because programming languages are for humans, not computers. Adding commentary is essential to making it understandable to a person.</p>
 <p>That said, many comments are of two less helpful varieties: <a href="https://www.reddit.com/r/ProgrammerHumor/comments/8w54mx/code_comments_be_like/">what comments</a> and deodorant comments. “What” comments explain what the code is doing, usually redundantly. This type of comment is unnecessary because it’s clear from the code what is happening:</p>
 <pre><code># add 1 and 2 together
@@ -599,8 +637,8 @@ Tip
 <p>Again, code comments are <em>not</em> bad. They are helpful and sometimes downright necessary. Some code is unavoidably complex, so context as to why and what the code is doing makes it more understandable.</p>
 <p>When you get feedback in a code review that something is hard to understand, try to clarify the code, then add comments as necessary.</p>
 </section>
-<section id="sec-readme" class="level3" data-number="9.7.2">
-<h3 data-number="9.7.2" class="anchored" data-anchor-id="sec-readme"><span class="header-section-number">9.7.2</span> <code>README</code></h3>
+<section id="sec-readme" class="level3" data-number="8.7.2">
+<h3 data-number="8.7.2" class="anchored" data-anchor-id="sec-readme"><span class="header-section-number">8.7.2</span> <code>README</code></h3>
 <p>A <code>README</code> file is commonly included in a project to explain how to use it or other relevant information. <code>README.md</code> files have <a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes">special properties on GitHub</a>. These are text files that use markdown syntax. When you visit a repository on GitHub, the <code>README</code> is rendered and serves as a front page for your project. You can manually include a <code>README.md</code> file or render one with a <code>README.Rmd</code> or <code>README.qmd</code> file.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -619,23 +657,23 @@ Tip
 <ul>
 <li>A description of the project, such as an abstract</li>
 <li>A brief explanation of the file structure of the repository</li>
-<li>Details on how to run the code (<a href="#sec-running-code" class="quarto-xref"><span>Section 9.8</span></a>) in the project, such as installing dependencies, versions of R or Python for the project, etc.</li>
+<li>Details on how to run the code (<a href="#sec-running-code" class="quarto-xref"><span>Section 8.8</span></a>) in the project, such as installing dependencies, versions of R or Python for the project, etc.</li>
 <li>Any other necessary information to understand or use the project</li>
 </ul>
 <p>You can see examples of <code>README</code> files in our lab <a href="https://github.com/StanfordHPDS">GitHub organization</a>.</p>
 </section>
 </section>
-<section id="sec-running-code" class="level2" data-number="9.8">
-<h2 data-number="9.8" class="anchored" data-anchor-id="sec-running-code"><span class="header-section-number">9.8</span> Running Code</h2>
-<section id="use-a-blank-slate" class="level3" data-number="9.8.1">
-<h3 data-number="9.8.1" class="anchored" data-anchor-id="use-a-blank-slate"><span class="header-section-number">9.8.1</span> Use a Blank Slate</h3>
+<section id="sec-running-code" class="level2" data-number="8.8">
+<h2 data-number="8.8" class="anchored" data-anchor-id="sec-running-code"><span class="header-section-number">8.8</span> Running Code</h2>
+<section id="use-a-blank-slate" class="level3" data-number="8.8.1">
+<h3 data-number="8.8.1" class="anchored" data-anchor-id="use-a-blank-slate"><span class="header-section-number">8.8.1</span> Use a Blank Slate</h3>
 <p>You should regularly run your code in a <em>blank slate</em>—running everything from scratch.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false" href="">Python</a></li></ul>
 <div class="tab-content">
 <div id="tabset-5-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-5-1-tab">
 <p>By default, R stores and loads the interactive environment you use between R sessions. This is a bad default for reproducibility. Teach R not to do this by running this command once in your terminal:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_blank_slate</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_blank_slate</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Relatedly, your script should <em>not</em> contain <code>rm(list = ls())</code>. Using a blank slate and restarting your R session is the better approach because it <em>really</em> starts from scratch, whereas <code>rm(list = ls())</code> only clears objects in the global environment. See <a href="https://www.tidyverse.org/blog/2017/12/workflow-vs-script/">Project-Oriented Workflows</a> for a discussion on this.</p>
 </div>
 <div id="tabset-5-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-2-tab">
@@ -658,8 +696,8 @@ Tip
 </div>
 </div>
 </section>
-<section id="sec-pipelines" class="level3" data-number="9.8.2">
-<h3 data-number="9.8.2" class="anchored" data-anchor-id="sec-pipelines"><span class="header-section-number">9.8.2</span> Pipelines</h3>
+<section id="sec-pipelines" class="level3" data-number="8.8.2">
+<h3 data-number="8.8.2" class="anchored" data-anchor-id="sec-pipelines"><span class="header-section-number">8.8.2</span> Pipelines</h3>
 <p>Pipeline tools are software that manage the execution of code. What’s practical about this for research projects is that pipeline tools track the relationship between components in your project (meaning it knows which order to run things in automatically) and will only run those components when they are out of date (meaning you don’t necessarily need to rerun your entire project because you updated one part of the code). They are also very handy for reproducing code, because they only require a command or two to run the entire pipeline.</p>
 <p>Pipeline tools are helpful for projects of any size, but they are particularly suited to complex or computationally intense projects.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
@@ -677,13 +715,13 @@ Tip
 </div>
 </div>
 </section>
-<section id="provide-guidance-on-how-to-run-your-code" class="level3" data-number="9.8.3">
-<h3 data-number="9.8.3" class="anchored" data-anchor-id="provide-guidance-on-how-to-run-your-code"><span class="header-section-number">9.8.3</span> Provide Guidance on How to Run Your Code</h3>
-<p>Your <code>README</code> should include guidance on how to run your code. For instance, if there is a command to run the entire project, include information about that process (this is usually related to pipeline-managed code as discussed in <a href="#sec-pipelines" class="quarto-xref"><span>Section 9.8.2</span></a>). If you intend the user to run scripts in a particular order, describe how, but prefer using a pipeline tool to manage this instead.</p>
+<section id="provide-guidance-on-how-to-run-your-code" class="level3" data-number="8.8.3">
+<h3 data-number="8.8.3" class="anchored" data-anchor-id="provide-guidance-on-how-to-run-your-code"><span class="header-section-number">8.8.3</span> Provide Guidance on How to Run Your Code</h3>
+<p>Your <code>README</code> should include guidance on how to run your code. For instance, if there is a command to run the entire project, include information about that process (this is usually related to pipeline-managed code as discussed in <a href="#sec-pipelines" class="quarto-xref"><span>Section 8.8.2</span></a>). If you intend the user to run scripts in a particular order, describe how, but prefer using a pipeline tool to manage this instead.</p>
 </section>
 </section>
-<section id="sec-pkg-env" class="level2" data-number="9.9">
-<h2 data-number="9.9" class="anchored" data-anchor-id="sec-pkg-env"><span class="header-section-number">9.9</span> Lock your Package Versions</h2>
+<section id="sec-pkg-env" class="level2" data-number="8.9">
+<h2 data-number="8.9" class="anchored" data-anchor-id="sec-pkg-env"><span class="header-section-number">8.9</span> Lock your Package Versions</h2>
 <p>Installing project dependencies is a part of running code, but its peculiarities for reproducibility merit some attention of its own.</p>
 <p>Both packages within a language and languages themselves frequently change, making running code over time (as new versions are released) and space (the versions on your computer vs.&nbsp;someone else’s computer) difficult.</p>
 <p>A vital check of this problem is code review. The reviewer serves as a proxy for being able to run your code somewhere else. If it doesn’t work for your reviewer, discuss and document the process to make it so.</p>
@@ -709,56 +747,56 @@ Note
 <div id="tabset-7-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-7-1-tab">
 <p>In R, use the <a href="https://rstudio.github.io/renv/articles/renv.html">renv</a> package to manage R package versions. renv is an interactive tool, so you should use it primarily in the console.</p>
 <p>To initiate a project:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">init</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">init</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Among other things, this will create <code>renv.lock</code>, which needs to be included in your git repository.</p>
 <p>Check a project’s dependency status with</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">status</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">status</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>And update the packages in your lock file with</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">snapshot</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">snapshot</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>When you use renv, your project <code>README</code> should explain how to use it, e.g.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("renv")</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="co"># install the dependencies for the project</span></span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">restore</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("renv")</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="co"># install the dependencies for the project</span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">restore</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>One common problem in renv is that it keeps track of but does not manage the R version. If you need to switch between R versions, consider using <a href="https://github.com/r-lib/rig">rig</a>. Rig is not an R package but a separate software that lets you install and switch between R versions. On servers, <a href="https://docs.posit.co/ide/server-pro/user/rstudio-pro/guide/multiple-r-versions.html">RStudio Workbench will let you change versions</a>, as well, provided that they are installed.</p>
 </div>
 <div id="tabset-7-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-2-tab">
 <p>Note: The Python ecosystem for managing environments is vast. See <a href="https://alpopkes.com/posts/python/packaging_tools/" class="uri">https://alpopkes.com/posts/python/packaging_tools/</a> for an overview.</p>
 <p>We recommend <a href="https://docs.astral.sh/uv/getting-started/installation/">uv</a>. uv allows you to install packages, set up virtual environments, and control the version of Python. uv manages most of this for you and works well across operating systems. It’s also very fast.</p>
 <p><code>uv init</code> will set up a uv environment for you, creating several files: <code>pyproject.toml</code>, <code>.python-version</code>, and <code>main.py</code>, as well as a few other files if they don’t already exist, such as a <code>README</code> and <code>.gitignore</code> file. Once you start adding packages to the project, uv will also generate a lock file with the resolved package dependencies (<code>uv.lock</code>) and a virtual environment with <a href="https://docs.python.org/3/library/venv.html">venv</a> in the <code>.venv/</code> directory.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create a new project called my_new_project</span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> init my_new_project</span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="co"># or, from within an existing project, just run init</span></span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> init</span>
-<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="co"># manually sync the virtual environment</span></span>
-<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a><span class="co"># mostly uv will handle this for you but it can be handy</span></span>
-<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> sync</span>
-<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a><span class="co"># add a package to your environment</span></span>
-<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a><span class="co"># don't use pip! This will install from pip but manage the environment for you</span></span>
-<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> add polars</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create a new project called my_new_project</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> init my_new_project</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="co"># or, from within an existing project, just run init</span></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> init</span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a><span class="co"># manually sync the virtual environment</span></span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a><span class="co"># mostly uv will handle this for you but it can be handy</span></span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> sync</span>
+<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a><span class="co"># add a package to your environment</span></span>
+<span id="cb29-12"><a href="#cb29-12" aria-hidden="true" tabindex="-1"></a><span class="co"># don't use pip! This will install from pip but manage the environment for you</span></span>
+<span id="cb29-13"><a href="#cb29-13" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> add polars</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>To run scripts, use <code>uv run</code>. This is a drop-in replacement for <code>python script.py</code>; <code>uv run</code> always runs the script in the virtual environment for the project, so it is a good practice.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># run a script in the virtual environment</span></span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>uv run my_script.py</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># run a script in the virtual environment</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>uv run my_script.py</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>To manage Python versions, use <code>uv python</code></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install Python 3.12</span></span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>uv python install <span class="fl">3.12</span></span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="co"># and set it as the Python version for the project</span></span>
-<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>uv python pin <span class="fl">3.12</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install Python 3.12</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>uv python install <span class="fl">3.12</span></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="co"># and set it as the Python version for the project</span></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>uv python pin <span class="fl">3.12</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>To run development tools like <code>ruff</code>, use <code>uvx</code>, which allows you to use such tools without adding them as dependencies to your project.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>uvx ruff <span class="bu">format</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>uvx ruff <span class="bu">format</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
 <p>See the <a href="https://docs.astral.sh/uv/getting-started/features/">documentation</a> for other commands, particularly those under the Python versions, projects, and tools headings.</p>
 </section>
-<section id="sec-opt-in" class="level2" data-number="9.10">
-<h2 data-number="9.10" class="anchored" data-anchor-id="sec-opt-in"><span class="header-section-number">9.10</span> Opt-in Workflows</h2>
+<section id="sec-opt-in" class="level2" data-number="8.10">
+<h2 data-number="8.10" class="anchored" data-anchor-id="sec-opt-in"><span class="header-section-number">8.10</span> Opt-in Workflows</h2>
 <p>Opt-in workflows are things we do not require for a project but for which we offer guidance. Such workflows also allow the team to experiment with new things and see what works for projects and when.</p>
-<section id="sec-tests" class="level3" data-number="9.10.1">
-<h3 data-number="9.10.1" class="anchored" data-anchor-id="sec-tests"><span class="header-section-number">9.10.1</span> Testing</h3>
+<section id="sec-tests" class="level3" data-number="8.10.1">
+<h3 data-number="8.10.1" class="anchored" data-anchor-id="sec-tests"><span class="header-section-number">8.10.1</span> Testing</h3>
 <p>In scientific work, two types of code tests are useful: code expectations and data expectations. Code should <em>behave</em> the way you expect, and data should <em>exist</em> the way you expect. If that is not the case, you either have identified a problem with your code and data or a problem with your expectations.</p>
 <p>Automating such tests in code expectations is helpful because you can run them whenever you have code or data changes. Moreover, you’re probably already probing these expectations informally in some form or another.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
@@ -776,8 +814,8 @@ Note
 </div>
 </div>
 </section>
-<section id="sec-docker" class="level3" data-number="9.10.2">
-<h3 data-number="9.10.2" class="anchored" data-anchor-id="sec-docker"><span class="header-section-number">9.10.2</span> Docker</h3>
+<section id="sec-docker" class="level3" data-number="8.10.2">
+<h3 data-number="8.10.2" class="anchored" data-anchor-id="sec-docker"><span class="header-section-number">8.10.2</span> Docker</h3>
 <p><a href="https://docs.docker.com/get-started/overview/">Docker</a> is a tool for reproducing not just the software and packages used in an analysis but the entire computational environment. As it’s got more of a learning curve, we do not currently require it for projects. However, consider it for projects where reproducibility is crucial or where you want to feel more confident that the code will be runable for many years. Docker can also be very helpful when you are working across computational environments or operating systems.</p>
 <p>See our <a href="https://github.com/StanfordHPDS/training/tree/main/containers">training on containers</a> for an introduction to Docker.</p>
 <p>Docker is a general tool that works with R, Python, and just about anything else you like to use. We have numerous images available specific to our workflows: https://hub.docker.com/u/stanfordhpds. See the GitHub repository that hosts the source files for these images for descriptions of the different flavors: https://github.com/StanfordHPDS/docker. Broadly:</p>
@@ -1215,13 +1253,13 @@ Note
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../chapters/08-code-review.html" class="pagination-link" aria-label="Code Review">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Code Review</span></span>
+      <a href="../chapters/07-publications.html" class="pagination-link" aria-label="Publications">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Publications</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../chapters/10-pre-flight-checklist.html" class="pagination-link" aria-label="Pre-Flight Checklist for Publications">
-        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Pre-Flight Checklist for Publications</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../chapters/09-code-review.html" class="pagination-link" aria-label="Code Review">
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Code Review</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

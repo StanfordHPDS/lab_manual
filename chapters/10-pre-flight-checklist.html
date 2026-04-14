@@ -33,7 +33,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../chapters/09-code-workflow-agreements.html" rel="prev">
+<link href="../chapters/09-code-review.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -159,14 +159,14 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/08-code-review.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Code Review</span></span></a>
+  <a href="../chapters/08-code-workflow-agreements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Code Workflow Team Agreements</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/09-code-workflow-agreements.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Code Workflow Team Agreements</span></span></a>
+  <a href="../chapters/09-code-review.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Code Review</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -191,8 +191,9 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#repository-and-files" id="toc-repository-and-files" class="nav-link" data-scroll-target="#repository-and-files"><span class="header-section-number">10.2.1</span> Repository and Files</a></li>
   <li><a href="#code-and-reproducibility" id="toc-code-and-reproducibility" class="nav-link" data-scroll-target="#code-and-reproducibility"><span class="header-section-number">10.2.2</span> Code and Reproducibility</a></li>
   <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission"><span class="header-section-number">10.2.3</span> Submission</a></li>
-  <li><a href="#acceptance" id="toc-acceptance" class="nav-link" data-scroll-target="#acceptance"><span class="header-section-number">10.2.4</span> Acceptance</a></li>
-  <li><a href="#opt-in-workflows-sec-opt-in" id="toc-opt-in-workflows-sec-opt-in" class="nav-link" data-scroll-target="#opt-in-workflows-sec-opt-in"><span class="header-section-number">10.2.5</span> Opt-in Workflows (<span>Section 9.10</span>)</a></li>
+  <li><a href="#iteration" id="toc-iteration" class="nav-link" data-scroll-target="#iteration"><span class="header-section-number">10.2.4</span> Iteration</a></li>
+  <li><a href="#acceptance" id="toc-acceptance" class="nav-link" data-scroll-target="#acceptance"><span class="header-section-number">10.2.5</span> Acceptance</a></li>
+  <li><a href="#opt-in-workflows-sec-opt-in" id="toc-opt-in-workflows-sec-opt-in" class="nav-link" data-scroll-target="#opt-in-workflows-sec-opt-in"><span class="header-section-number">10.2.6</span> Opt-in Workflows (<span>Section 8.10</span>)</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -221,7 +222,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="crosscheck" class="level2" data-number="10.1">
 <h2 data-number="10.1" class="anchored" data-anchor-id="crosscheck"><span class="header-section-number">10.1</span> Crosscheck</h2>
-<p>As discussed in <a href="08-code-review.html" class="quarto-xref"><span>Chapter 8</span></a> and <a href="09-code-workflow-agreements.html" class="quarto-xref"><span>Chapter 9</span></a>, your analysis should be regularly checked for correctness and adherence to Lab agreements, <em>not</em> just at the end of the project. However, it’s useful to have a final check (by you and at least one other person) before submitting for publication. Regular code review will make this final check quicker and easier, so please do both.</p>
+<p>As discussed in <a href="09-code-review.html" class="quarto-xref"><span>Chapter 9</span></a> and <a href="08-code-workflow-agreements.html" class="quarto-xref"><span>Chapter 8</span></a>, your analysis should be regularly checked for correctness and adherence to Lab agreements, <em>not</em> just at the end of the project. However, it’s useful to have a final check (by you and at least one other person) before submitting for publication. Regular code review will make this final check quicker and easier, so please do both.</p>
 <p>Note: For pre-prints, run through this checklist for both uploading to the pre-print server as well as for when you formally submit the project to a journal.</p>
 </section>
 <section id="pre-flight-checklist" class="level2" data-number="10.2">
@@ -231,19 +232,21 @@ ul.task-list li input[type="checkbox"] {
 <ul class="task-list">
 <li><label><input type="checkbox">Confirm again that no sensitive data is included in the repository. Check files, Jupyter caches, etc.</label></li>
 <li><label><input type="checkbox">There is a <code>README</code> file (any of: <code>README.md</code>, <code>README.Rmd</code>, <code>README.qmd</code>).</label></li>
-<li><label><input type="checkbox"><code>README</code> contains clear instructions on how to run the code. See <a href="09-code-workflow-agreements.html#sec-readme" class="quarto-xref"><span>Section 9.7.2</span></a> for details.</label></li>
-<li><label><input type="checkbox">Create a new public repository for the project and archive the private repository.</label></li>
+<li><label><input type="checkbox"><code>README</code> contains clear instructions on how to run the code. See <a href="08-code-workflow-agreements.html#sec-readme" class="quarto-xref"><span>Section 8.7.2</span></a> for details.</label></li>
+<li><label><input type="checkbox">Create a new public repository for the project. Copy the files from the private repository to the public one and commit them. See <a href="08-code-workflow-agreements.html#sec-gh-public-archive" class="quarto-xref"><span>Section 8.6.6</span></a> for details.</label></li>
+<li><label><input type="checkbox">Add a link to the public repository to the <code>README</code> of the private repository</label></li>
 </ul>
 </section>
 <section id="code-and-reproducibility" class="level3" data-number="10.2.2">
 <h3 data-number="10.2.2" class="anchored" data-anchor-id="code-and-reproducibility"><span class="header-section-number">10.2.2</span> Code and Reproducibility</h3>
 <ul class="task-list">
-<li><label><input type="checkbox">The code follows the team style guide. See <a href="09-code-workflow-agreements.html#sec-code-style" class="quarto-xref"><span>Section 9.2</span></a> for details.</label></li>
+<li><label><input type="checkbox">The code follows the team style guide. See <a href="08-code-workflow-agreements.html#sec-code-style" class="quarto-xref"><span>Section 8.2</span></a> for details.</label></li>
 <li><label><input type="checkbox">Query code from user interfaces, e.g., Redivis or BigQuery, are up to date in version control.</label></li>
 <li><label><input type="checkbox">For any random processes such as simulation, a seed is set for reproducibility.</label></li>
-<li><label><input type="checkbox">The code uses a package environment to lock packages. See <a href="09-code-workflow-agreements.html#sec-pkg-env" class="quarto-xref"><span>Section 9.9</span></a> for details.</label></li>
-<li><label><input type="checkbox">Manuscript is generatable via Quarto. See <a href="09-code-workflow-agreements.html#sec-quarto" class="quarto-xref"><span>Section 9.5</span></a> for details.</label></li>
-<li><label><input type="checkbox">Run the code one last time in a fresh environment, preferably on a different computer. See <a href="09-code-workflow-agreements.html#sec-running-code" class="quarto-xref"><span>Section 9.8</span></a> for details.</label></li>
+<li><label><input type="checkbox">The code uses a package environment to lock packages. See <a href="08-code-workflow-agreements.html#sec-pkg-env" class="quarto-xref"><span>Section 8.9</span></a> for details.</label></li>
+<li><label><input type="checkbox">Manuscript is generatable via Quarto. See <a href="08-code-workflow-agreements.html#sec-quarto" class="quarto-xref"><span>Section 8.5</span></a> for details.</label></li>
+<li><label><input type="checkbox">Pipeline code is documented and with clear instructions in the <code>README</code> for running the pipeline. See <a href="08-code-workflow-agreements.html#sec-pipelines" class="quarto-xref"><span>Section 8.8.2</span></a> for details.</label></li>
+<li><label><input type="checkbox">Run the code one last time in a fresh environment, preferably on a different computer. See <a href="08-code-workflow-agreements.html#sec-running-code" class="quarto-xref"><span>Section 8.8</span></a> for details.</label></li>
 </ul>
 </section>
 <section id="submission" class="level3" data-number="10.2.3">
@@ -254,23 +257,30 @@ ul.task-list li input[type="checkbox"] {
 <li><label><input type="checkbox">Check figures and tables for correctness.</label></li>
 <li><label><input type="checkbox">Check <a href="https://www.zotero.org/styles" class="uri">https://www.zotero.org/styles</a> for a citation style file for the journal of interest. Include the file in your Quarto metadata and in the repository.</label></li>
 <li><label><input type="checkbox">For sensitive data, confirm small cell definition for the project. Check that no small cells are included in tables or figures. See for <a href="04-data.html" class="quarto-xref"><span>Chapter 4</span></a> for details.</label></li>
-<li><label><input type="checkbox">Use a GitHub release for the submission version. See <a href="09-code-workflow-agreements.html#sec-gh-release" class="quarto-xref"><span>Section 9.6.4</span></a> for details.</label></li>
 <li><label><input type="checkbox">If there are any research outputs other than a manuscript, such as a (simulated/synthetic) data, register them for a DOI at a service like OSF or Zenodo.</label></li>
 <li><label><input type="checkbox">Check that the appropriate funding sources have been acknowledged in the publication. Ask Dr.&nbsp;Rose to confirm this section is correct.</label></li>
+<li><label><input type="checkbox">When preparation is complete and all changes pushed to the repository, use a GitHub release for the submission version. See <a href="08-code-workflow-agreements.html#sec-gh-release" class="quarto-xref"><span>Section 8.6.5</span></a> for details.</label></li>
 </ul>
 </section>
-<section id="acceptance" class="level3" data-number="10.2.4">
-<h3 data-number="10.2.4" class="anchored" data-anchor-id="acceptance"><span class="header-section-number">10.2.4</span> Acceptance</h3>
+<section id="iteration" class="level3" data-number="10.2.4">
+<h3 data-number="10.2.4" class="anchored" data-anchor-id="iteration"><span class="header-section-number">10.2.4</span> Iteration</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">For any further work, such as for a new submission, resubmission, and so on, work in the private repository and copy to the public-facing repository when complete. See <a href="08-code-workflow-agreements.html#sec-gh-public-archive" class="quarto-xref"><span>Section 8.6.6</span></a> for details.</label></li>
+<li><label><input type="checkbox">When preparation is complete and all changes pushed to the repository, use a GitHub release for the changes since the last submission. See <a href="08-code-workflow-agreements.html#sec-gh-release" class="quarto-xref"><span>Section 8.6.5</span></a> for details.</label></li>
+</ul>
+</section>
+<section id="acceptance" class="level3" data-number="10.2.5">
+<h3 data-number="10.2.5" class="anchored" data-anchor-id="acceptance"><span class="header-section-number">10.2.5</span> Acceptance</h3>
 <ul class="task-list">
 <li><label><input type="checkbox">If the project exists as a pre-print, update the pre-print page to include information about the peer-reviewed publication.</label></li>
+<li><label><input type="checkbox"><a href="https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories">Archive</a> the private version of the repository on GitHub. If you do not have access to the archive feature for your repository, contact Malcolm or Dr.&nbsp;Rose for assistance.</label></li>
 </ul>
 </section>
-<section id="opt-in-workflows-sec-opt-in" class="level3" data-number="10.2.5">
-<h3 data-number="10.2.5" class="anchored" data-anchor-id="opt-in-workflows-sec-opt-in"><span class="header-section-number">10.2.5</span> Opt-in Workflows (<a href="09-code-workflow-agreements.html#sec-opt-in" class="quarto-xref"><span>Section 9.10</span></a>)</h3>
+<section id="opt-in-workflows-sec-opt-in" class="level3" data-number="10.2.6">
+<h3 data-number="10.2.6" class="anchored" data-anchor-id="opt-in-workflows-sec-opt-in"><span class="header-section-number">10.2.6</span> Opt-in Workflows (<a href="08-code-workflow-agreements.html#sec-opt-in" class="quarto-xref"><span>Section 8.10</span></a>)</h3>
 <ul class="task-list">
-<li><label><input type="checkbox">Opt-in: Pipeline code is documented and with clear instructions for running the pipeline. See <a href="09-code-workflow-agreements.html#sec-pipelines" class="quarto-xref"><span>Section 9.8.2</span></a> for details.</label></li>
-<li><label><input type="checkbox">Opt-in: If code contains tests, tests pass. See <a href="09-code-workflow-agreements.html#sec-tests" class="quarto-xref"><span>Section 9.10.1</span></a> for details.</label></li>
-<li><label><input type="checkbox">Opt-in: Dockerfile is included in repository with clear instructions for running the image. See <a href="09-code-workflow-agreements.html#sec-docker" class="quarto-xref"><span>Section 9.10.2</span></a> for details.</label></li>
+<li><label><input type="checkbox">Opt-in: If code contains tests, tests pass. See <a href="08-code-workflow-agreements.html#sec-tests" class="quarto-xref"><span>Section 8.10.1</span></a> for details.</label></li>
+<li><label><input type="checkbox">Opt-in: Dockerfile is included in repository with clear instructions for running the image. See <a href="08-code-workflow-agreements.html#sec-docker" class="quarto-xref"><span>Section 8.10.2</span></a> for details.</label></li>
 </ul>
 
 
@@ -680,8 +690,8 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../chapters/09-code-workflow-agreements.html" class="pagination-link" aria-label="Code Workflow Team Agreements">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Code Workflow Team Agreements</span></span>
+      <a href="../chapters/09-code-review.html" class="pagination-link" aria-label="Code Review">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Code Review</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
