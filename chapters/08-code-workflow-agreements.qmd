@@ -348,7 +348,7 @@ GitHub has a mechanism for [making formal releases of repositories](https://docs
 
 Making a "release," of course, has its origins in software versions. However, it's also helpful in tracking significant milestones in a project. For instance, make a release upon submission to a journal and another upon publication. That allows you to easily revisit the state of the repository at those two time points. GitHub also makes downloading the repository in releases easy, making it an excellent point to direct people not using Git.
 
-### Creating a public repository and archiving a private repository {#sec-gh-public-archive}
+### Creating a Public Repository and Archiving a Private Repository {#sec-gh-public-archive}
 
 When a project is ready to submit for publication, make a **new, public** repository. This should be separate from the repository you have been working in. Copy the existing codebase into the new repository, commit the results, and push it to the new repository. This results in a repository that has had its git history stripped. We follow this workflow as part of an effort to respect the privacy of trainees in the Lab while engaged in the training process, some of which occurs on GitHub.
 
@@ -356,7 +356,7 @@ When you create a new repository, add a link to the public-facing repository in 
 
 If you need to make updates to the code, work in the private repository and copy the files to the public repository when complete. For instance, if changes are requested in a journal submission process, address the changes in the private, working repository, then copy the changes to the publicly available repository.
 
-When the submission process is complete, we will formally [archive the private repository](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories) to signal the completion of the work and avoid any confusion with respect to the duplicate repositories. 
+When the submission process is complete, we will formally [archive the private repository](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories) to signal the completion of the work and avoid any confusion with respect to the duplicate repositories.
 
 ## Documentation
 
