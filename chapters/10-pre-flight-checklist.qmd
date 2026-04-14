@@ -13,7 +13,8 @@ Note: For pre-prints, run through this checklist for both uploading to the pre-p
 - [ ] Confirm again that no sensitive data is included in the repository. Check files, Jupyter caches, etc.
 - [ ] There is a `README` file (any of: `README.md`, `README.Rmd`, `README.qmd`).
 - [ ] `README` contains clear instructions on how to run the code. See @sec-readme for details.
-- [ ] Create a new public repository for the project and archive the private repository.
+- [ ] Create a new public repository for the project. Copy the files from the private repository to the public one and commit them. See @sec-gh-public-archive for details.
+- [ ] Add a link to the public repository to the `README` of the private repository
 
 ### Code and Reproducibility
 
@@ -22,6 +23,7 @@ Note: For pre-prints, run through this checklist for both uploading to the pre-p
 - [ ] For any random processes such as simulation, a seed is set for reproducibility.
 - [ ] The code uses a package environment to lock packages. See @sec-pkg-env for details.
 - [ ] Manuscript is generatable via Quarto. See @sec-quarto for details.
+- [ ] Pipeline code is documented and with clear instructions in the `README` for running the pipeline. See @sec-pipelines for details.
 - [ ] Run the code one last time in a fresh environment, preferably on a different computer. See @sec-running-code for details.
 
 ### Submission
@@ -31,16 +33,21 @@ Note: For pre-prints, run through this checklist for both uploading to the pre-p
 - [ ] Check figures and tables for correctness.
 - [ ] Check <https://www.zotero.org/styles> for a citation style file for the journal of interest. Include the file in your Quarto metadata and in the repository.
 - [ ] For sensitive data, confirm small cell definition for the project. Check that no small cells are included in tables or figures.  See for @sec-data for details.
-- [ ] Use a GitHub release for the submission version. See @sec-gh-release for details.
 - [ ] If there are any research outputs other than a manuscript, such as a (simulated/synthetic) data, register them for a DOI at a service like OSF or Zenodo.
 - [ ] Check that the appropriate funding sources have been acknowledged in the publication. Ask Dr. Rose to confirm this section is correct.
+- [ ] When preparation is complete and all changes pushed to the repository, use a GitHub release for the submission version. See @sec-gh-release for details.
+
+### Iteration
+
+- [ ] For any further work, such as for a new submission, resubmission, and so on, work in the private repository and copy to the public-facing repository when complete. See @sec-gh-public-archive for details.
+- [ ] When preparation is complete and all changes pushed to the repository, use a GitHub release for the changes since the last submission. See @sec-gh-release for details.
 
 ### Acceptance
 
 - [ ] If the project exists as a pre-print, update the pre-print page to include information about the peer-reviewed publication.
+- [ ] [Archive](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories) the private version of the repository on GitHub. If you do not have access to the archive feature for your repository, contact Malcolm or Dr. Rose for assistance.
 
 ### Opt-in Workflows (@sec-opt-in)
 
-- [ ] Opt-in: Pipeline code is documented and with clear instructions for running the pipeline. See @sec-pipelines for details.
 - [ ] Opt-in: If code contains tests, tests pass. See @sec-tests for details.
 - [ ] Opt-in: Dockerfile is included in repository with clear instructions for running the image. See @sec-docker for details.

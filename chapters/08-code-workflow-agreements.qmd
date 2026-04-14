@@ -262,6 +262,7 @@ See @sec-code-review for how to manage code changes to your repository.
 ### Git Workflow
 
 1. From the beginning of a project, you should work in a git repository. You can either create one locally in your work environment and push to GitHub or create one [via GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository) and clone it to your work environment. If you create one on GitHub, prefer creating it directly in our [GitHub organization](https://github.com/StanfordHPDS) by changing the Owner to `StanfordHPDS`.
+For most projects, the repository should start as [private](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility).
 1. Make changes on branches. Prefer branch names that describe the intent of the change, e.g. `add-table` over `changes`.
 1. Push the branch to GitHub, e.g. `git push -u origin add-table` for the `add-table` branch.
 1. Open a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
@@ -269,10 +270,56 @@ See @sec-code-review for how to manage code changes to your repository.
 1. When your pull request is merged into your new branch, pull the changes in your local copy of the repository, delete the remote branch, and delete the local branch.
 
 ::: callout-tip
-For R users, there are two helpful functions in usethis to manage your git setup for a project: `usethis::use_git()` will initialize a git repository and activate the git UI in RStudio; `usethis::use_github()` will create and link a GitHub repository, as well as make your first push. Note that `use_github()` has an `organisation` argument where you can specify a GitHub organization to create the repository under, such as `use_github(organisation = "StanfordHPDS")`.
+For R users, there are two helpful functions in usethis to manage your git setup for a project: `usethis::use_git()` will initialize a git repository and activate the git UI in RStudio; `usethis::use_github(private = TRUE)` will create and link a private GitHub repository, as well as make your first push. Note that `use_github()` has an `organisation` argument where you can specify a GitHub organization to create the repository under, such as `use_github(organisation = "StanfordHPDS", private = TRUE)`.
 
 See also the [PR workflow vignette](https://usethis.r-lib.org/articles/pr-functions.html) for making and managing pull requests in R. You might also find [Happy Git and GitHub for the useR](https://happygitwithr.com/) a helpful perspective.
 :::
+
+### gh
+
+The [gh command line tool](https://cli.github.com/) is a useful tool for streamlining interactions with GitHub. gh makes it easy to [login](https://cli.github.com/manual/gh_auth_login), [create repositories](https://cli.github.com/manual/gh_repo_create), [clone repositories](https://cli.github.com/manual/gh_repo_clone), [manage pull requests](https://cli.github.com/manual/gh_pr), and more.
+
+For instance, to create a private repository in our organization based on an existing local git repository:
+
+```
+gh repo create StanfordHPDS/$(basename "$PWD") --private --source=. --push
+```
+
+:::{.callout-tip}
+You can also create aliases in gh. For instance, to store the above command as an alias called `create_repo`, run:
+
+```
+gh alias set create_hpds_repo --shell 'gh repo create StanfordHPDS/$(basename "$PWD") --private --source=. --push'
+```
+
+Then, you can use `gh create_hpds_repo` in any existing repository to create a new private repository in our organization.
+:::
+
+Clone an existing repository:
+
+```
+gh repo clone StanfordHPDS/name_of_repo
+```
+
+Create a pull request from a branch with changes:
+
+```
+gh pr create
+```
+
+Access an existing PR locally:
+
+```
+gh pr checkout
+```
+
+and merge a PR (including deleting the local branch, switching back to the main branch, and pulling, so it is useful even if you merge through the GitHub UI)
+
+```
+gh pr merge
+```
+
+Our Nero instances come with gh pre-installed. Sherlock also has gh but you must load it as a module (`ml gh`) first. You may also need to use an SSH key rather than https when you login.
 
 ### Accessing the Stanford GitHub Organization
 
@@ -283,8 +330,6 @@ For most purposes, the simplest way to authenticate is with the [gh command line
 ```bash
 gh auth login
 ```
-
-Our Nero instances come with gh pre-installed. Sherlock also has gh but you must load it as a module (`ml gh`) first. You may also need to use an SSH key rather than https when you login.
 
 For SSH keys, you need to [allow the key to authenticate via your Stanford account](https://docs.github.com/en/enterprise-cloud@latest/authentication/authenticating-with-single-sign-on/authorizing-an-ssh-key-for-use-with-single-sign-on).
 
@@ -302,6 +347,16 @@ https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-gith
 GitHub has a mechanism for [making formal releases of repositories](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). This takes a snapshot of the repository at the time of release and attaches a name.
 
 Making a "release," of course, has its origins in software versions. However, it's also helpful in tracking significant milestones in a project. For instance, make a release upon submission to a journal and another upon publication. That allows you to easily revisit the state of the repository at those two time points. GitHub also makes downloading the repository in releases easy, making it an excellent point to direct people not using Git.
+
+### Creating a Public Repository and Archiving a Private Repository {#sec-gh-public-archive}
+
+When a project is ready to submit for publication, make a **new, public** repository. This should be separate from the repository you have been working in. Copy the existing codebase into the new repository, commit the results, and push it to the new repository. This results in a repository that has had its git history stripped. We follow this workflow as part of an effort to respect the privacy of trainees in the Lab while engaged in the training process, some of which occurs on GitHub.
+
+When you create a new repository, add a link to the public-facing repository in the `README`.
+
+If you need to make updates to the code, work in the private repository and copy the files to the public repository when complete. For instance, if changes are requested in a journal submission process, address the changes in the private, working repository, then copy the changes to the publicly available repository.
+
+When the submission process is complete, we will formally [archive the private repository](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories) to signal the completion of the work and avoid any confusion with respect to the duplicate repositories.
 
 ## Documentation
 
