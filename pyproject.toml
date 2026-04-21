@@ -1,0 +1,18 @@
+[project]
+name = "lab-manual"
+version = "0.1.0"
+requires-python = ">=3.14"
+dependencies = [
+    "great-tables>=0.21.0",
+    "jupyter>=1.1.1",
+    "matplotlib>=3.10.8",
+    "numpy>=2.4.4",
+    "palmerpenguins>=0.1.6",
+    "plotnine",
+    "polars>=1.39.3",
+    "pyarrow>=23.0.1",
+    "seaborn>=0.13.2",
+]
+
+[tool.uv.sources]
+plotnine = { git = "https://github.com/has2k1/plotnine" }

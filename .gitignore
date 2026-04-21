@@ -1,3 +1,6 @@
 /.quarto/
 .Rproj.user
 _book/
+scratch/
+
+**/*.quarto_ipynb
