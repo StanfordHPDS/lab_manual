@@ -480,13 +480,6 @@ Use `labs(tag="A")` on individual plots for panel tags. Use `plot_spacer()` to i
 ```{python}
 #| fig-cap: Composing plotnine plots
 #| code-fold: true
-#| # TODO: remove warning suppression when plotnine fixes the boxplot
-#| # stat_boxplot regression: geom_boxplot() with a categorical x and
-#| # continuous y produces a spurious warning about dropped ['y'] aesthetic
-#| # in the dev version (not present in 0.15.3). We need the dev version
-#| # for plot_layout(). see https://github.com/has2k1/plotnine/issues/1049
-#| warning: false
-
 from plotnine.composition import plot_layout
 
 p_box = (

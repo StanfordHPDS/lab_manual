@@ -1293,8 +1293,8 @@ wheels = [
 
 [[package]]
 name = "plotnine"
-version = "0.16.0a7.post9+gf844850dd"
-source = { git = "https://github.com/has2k1/plotnine#f844850ddd4a3d91a2ad7441887a351c5cc4fcbd" }
+version = "0.16.0a7.post20+g781f680ef"
+source = { git = "https://github.com/has2k1/plotnine#781f680ef29c9becda2be0fe348c152f7e12b369" }
 dependencies = [
     { name = "matplotlib" },
     { name = "mizani" },
